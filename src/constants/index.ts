@@ -742,6 +742,16 @@ const projects = [
     techStack: ["Go"],
     repoLink: "https://github.com/benjamindotdev/tictacgo",
   },
+  {
+    key: 13,
+    name: "TaskChunker",
+    image: "logos/taskchunker.png",
+    description: "A tool for chunking tasks into manageable pieces, using generative AI.",
+    status: "in progress",
+    techStack: ["React", "tailwindcss", "Python", "ChatGPT", "Netlify", "Railway"],
+    deployedLink: "https://taskchunker.netlify.app",
+    repoLink: "https://github.com/benjamindotdev/taskchunker-frontend",
+  }
 ] as Project[];
 
 const events = [

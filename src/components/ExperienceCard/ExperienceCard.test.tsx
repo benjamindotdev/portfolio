@@ -19,18 +19,18 @@ const mockExperience: ExperienceItem = {
 };
 
 test("renders experience card with correct information", () => {
-  render(
-    <BrowserRouter>
-      <ExperienceCard experience={mockExperience} />
-    </BrowserRouter>
-  );
-  
-  expect(screen.getByText("Test Developer @ Test Company")).toBeInTheDocument();
-  expect(screen.getByText("Full-time, Test City")).toBeInTheDocument();
-  expect(screen.getByText("2024 - Present")).toBeInTheDocument();
-  expect(screen.getByText("Current")).toBeInTheDocument();
-  expect(screen.getByText("Test description of the role and responsibilities.")).toBeInTheDocument();
-});test("renders experience card without current badge when not current", () => {
+    render(
+        <BrowserRouter>
+            <ExperienceCard experience={mockExperience} />
+        </BrowserRouter>
+    );
+
+    expect(screen.getByText("Test Developer @ Test Company")).toBeInTheDocument();
+    expect(screen.getByText("Full-time, Test City")).toBeInTheDocument();
+    expect(screen.getByText("2024 - Present")).toBeInTheDocument();
+    expect(screen.getByText("Current")).toBeInTheDocument();
+    expect(screen.getByText("Test description of the role and responsibilities.")).toBeInTheDocument();
+}); test("renders experience card without current badge when not current", () => {
     const pastExperience = { ...mockExperience, isCurrent: false };
     render(
         <BrowserRouter>

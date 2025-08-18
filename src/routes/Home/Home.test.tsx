@@ -29,13 +29,10 @@ describe("Home Component", () => {
       screen.getByText((content) => content.includes("Full-stack"))
     ).toBeInTheDocument();
     expect(
-      screen.getByText((content) => content.includes("web developer"))
+      screen.getByText((content) => content.includes("Web Dev"))
     ).toBeInTheDocument();
     expect(
       screen.getByText((content) => content.includes("Ironhack"))
-    ).toBeInTheDocument();
-    expect(
-      screen.getByText((content) => content.includes("TA"))
     ).toBeInTheDocument();
     expect(screen.getByAltText("Benjamin")).toHaveAttribute(
       "src",

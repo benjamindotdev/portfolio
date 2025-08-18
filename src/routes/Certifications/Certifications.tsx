@@ -1,23 +1,27 @@
-import { PageContainer } from "../../components/PageContainer/PageContainer";
-import { PageTitle } from "../../components/PageTitle/PageTitle";
-import { PageHeader } from "../../components/PageHeader/PageHeader";
-import { PageContent } from "../../components/PageContent/PageContent";
+import { PageContainer } from "../Layout/components/PageContainer/PageContainer";
+import { PageTitle } from "../Layout/components/PageTitle/PageTitle";
+import { PageHeader } from "../Layout/components/PageHeader/PageHeader";
+import { PageContent } from "../Layout/components/PageContent/PageContent";
 import type { Certification } from "../../global";
-import { CertificationList } from "../../components/CertificationList/CertificationList";
+import { ListContainer } from "../../components/shared/ListContainer/ListContainer";
 
 export const Certifications = ({
-  certifications,
+    certifications,
 }: {
-  certifications: Certification[];
+    certifications: Certification[];
 }) => {
-  return (
-    <PageContainer id="certifications">
-      <PageHeader>
-        <PageTitle text="Certifications" strongText="& Awards" main icon="📜" />
-      </PageHeader>
-      <PageContent>
-        <CertificationList certifications={certifications} />
-      </PageContent>
-    </PageContainer>
-  );
+    return (
+        <PageContainer id="certifications">
+            <PageHeader>
+                <PageTitle text="Certifications" strongText="& Awards" main icon="📜" />
+            </PageHeader>
+            <PageContent>
+                <ListContainer
+                    items={certifications}
+                    type="certification"
+                    layout="grid"
+                />
+            </PageContent>
+        </PageContainer>
+    );
 };

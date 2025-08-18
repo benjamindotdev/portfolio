@@ -1,11 +1,11 @@
 import { useMemo } from "react";
-import { PageContainer } from "../../components/PageContainer/PageContainer";
-import { PageTitle } from "../../components/PageTitle/PageTitle";
-import { PageHeader } from "../../components/PageHeader/PageHeader";
-import { PageContent } from "../../components/PageContent/PageContent";
-import { TechList } from "../../components/TechList/TechList";
+import { PageContainer } from "../Layout/components/PageContainer/PageContainer";
+import { PageTitle } from "../Layout/components/PageTitle/PageTitle";
+import { PageHeader } from "../Layout/components/PageHeader/PageHeader";
+import { PageContent } from "../Layout/components/PageContent/PageContent";
+import { TechList } from "./components/TechList/TechList";
 import type { Technology } from "../../global";
-import { CircleImage } from "../../components/CircleImage/CircleImage";
+import { CircleImage } from "./components/CircleImage/CircleImage";
 
 export const Home = ({
     technologies = [],
@@ -96,13 +96,13 @@ export const Home = ({
     return (
         <PageContainer id="home">
             <PageHeader>
-                <div className="home-page-header">
-                    <div className="home-title-wrapper">
+                <div className="w-full max-w-6xl flex flex-col md:flex-row items-center justify-between gap-8 py-8">
+                    <div className="flex flex-col items-start gap-4">
                         <PageTitle text="Hey, I'm" strongText={name} main icon="👋🏽" />
-                        <PageTitle text="Full-stack" strongText="web developer" icon="👨🏽‍💻" />
-                        <PageTitle text="Ironhack" strongText="TA" icon="🚀" />
+                        <PageTitle text="Full-stack" strongText="Web Dev" icon="👨🏽‍💻" />
+                        <PageTitle text="Ironhack" strongText="Alumni" icon="🤘🏽" />
                     </div>
-                    <CircleImage image={image || ""} text="Benjamin" />
+                    <CircleImage image={image || ""} text={name || "Benjamin"} />
                 </div>
             </PageHeader>
             <PageContent>

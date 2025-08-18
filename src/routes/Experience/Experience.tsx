@@ -1,9 +1,9 @@
-import { PageContainer } from "../../components/PageContainer/PageContainer";
-import { PageTitle } from "../../components/PageTitle/PageTitle";
-import { PageHeader } from "../../components/PageHeader/PageHeader";
-import { PageContent } from "../../components/PageContent/PageContent";
+import { PageContainer } from "../Layout/components/PageContainer/PageContainer";
+import { PageTitle } from "../Layout/components/PageTitle/PageTitle";
+import { PageHeader } from "../Layout/components/PageHeader/PageHeader";
+import { PageContent } from "../Layout/components/PageContent/PageContent";
 import type { ExperienceItem } from "../../global";
-import { ExperienceList } from "../../components/ExperienceList/ExperienceList";
+import { ExperienceList } from "./components/ExperienceList/ExperienceList";
 
 export const Experience = ({
     experience,

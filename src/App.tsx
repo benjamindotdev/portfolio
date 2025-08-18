@@ -6,11 +6,11 @@ import { Certifications } from "./routes/Certifications/Certifications";
 import { Experience } from "./routes/Experience/Experience";
 import { Projects } from "./routes/Projects/Projects";
 // import { Events } from "./routes/Events/Events";
-import "./stylesheets/App.scss";
+import "./index.css";
 import { benjamin } from "./constants";
 
 export const App = () => (
-    <main className="App">
+    <main className="min-h-screen text-center w-[90vw] mx-auto p-0 bg-portfolio-navy font-lunasima md:max-w-[90dvw] xl:max-w-[85dvw] 2xl:max-w-[80dvw]">
         <Routes>
             <Route
                 path="*"
@@ -45,7 +45,6 @@ export const App = () => (
                     path="projects"
                     element={<Projects projects={benjamin.projects} />}
                 />
-                {/* <Route path="events" element={<Events events={benjamin.events} />} /> */}
                 <Route path="*" element={<Navigate to="/" />} />
             </Route>
         </Routes>

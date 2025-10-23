@@ -10,7 +10,7 @@ export const ProjectCard = ({
 }: {
     project: Project;
 }) => {
-    const { name, description, techStack, deployedLink, repoLink, image, status } = project;
+    const { name, description, techStack, deployedLink, repoLink, image } = project;
 
     // Transform techStack similar to ProjectSection
     const transformTechStack = (

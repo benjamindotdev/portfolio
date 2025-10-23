@@ -1,8 +1,5 @@
 import { useMemo } from "react";
-import { PageContainer } from "../Layout/components/PageContainer/PageContainer";
 import { PageTitle } from "../Layout/components/PageTitle/PageTitle";
-import { PageHeader } from "../Layout/components/PageHeader/PageHeader";
-import { PageContent } from "../Layout/components/PageContent/PageContent";
 import { TechList } from "./components/TechList/TechList";
 import type { Technology } from "../../global";
 import { CircleImage } from "./components/CircleImage/CircleImage";
@@ -94,9 +91,10 @@ export const Home = ({
     );
 
     return (
-        <PageContainer id="home">
-            <PageHeader>
-                <div className="w-full max-w-6xl flex flex-col md:flex-row items-center justify-between gap-8 py-8">
+        <div className="h-screen overflow-y-scroll snap-y snap-mandatory">
+            {/* Top Section - Hero */}
+            <section className="h-screen w-full snap-start flex items-center justify-center bg-gradient-to-b from-gray-900 to-gray-800">
+                <div className="w-full max-w-6xl flex flex-col md:flex-row items-center justify-between gap-8 px-8">
                     <div className="flex flex-col items-start gap-4">
                         <PageTitle text="Hey, I'm" strongText={name} main icon="👋🏽" />
                         <PageTitle text="Full-stack" strongText="Web Dev" icon="👨🏽‍💻" />
@@ -104,15 +102,21 @@ export const Home = ({
                     </div>
                     <CircleImage image={image || ""} text={name || "Benjamin"} />
                 </div>
-            </PageHeader>
-            <PageContent>
-                {pageContent.map(
-                    (content) =>
-                        content.techs.length > 0 && (
-                            <TechList key={content.subHeading} {...content} />
-                        )
-                )}
-            </PageContent>
-        </PageContainer>
+            </section>
+
+            {/* Bottom Section - Tech Stack */}
+            <section className="min-h-screen w-full snap-start flex items-center justify-center bg-gray-800">
+                <div className="w-full max-w-6xl px-8 py-16">
+                    <div className="flex flex-col gap-8">
+                        {pageContent.map(
+                            (content) =>
+                                content.techs.length > 0 && (
+                                    <TechList key={content.subHeading} {...content} />
+                                )
+                        )}
+                    </div>
+                </div>
+            </section>
+        </div>
     );
 };

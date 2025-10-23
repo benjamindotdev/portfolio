@@ -676,7 +676,7 @@ const projects = [
             "MongoDB",
             "Vercel",
         ],
-        deployedLink: "https://storytime.netlify.app",
+    deployedLink: "https://storytime-by-benjamindotdev.vercel.app",
         repoLink: "https://github.com/benjamindotdev/storytime",
     }
 ] as Project[];

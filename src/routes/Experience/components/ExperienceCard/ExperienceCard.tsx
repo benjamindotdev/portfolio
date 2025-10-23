@@ -51,9 +51,9 @@ export const ExperienceCard = ({
     const techsForDisplay = techStack ? transformTechStack(techStack) : [];
 
     return (
-        <div className="w-full flex flex-col gap-4 text-white text-left">
-            {/* Header */}
-            <div className="w-full flex flex-row justify-between items-start">
+        <div className="w-[48%] h-[54%] grid [grid-template-rows:minmax(0,20%)_minmax(0,10%)_minmax(0,20%)_minmax(0,50%)] gap-2 text-white text-left border border-zinc-500 rounded-lg transition-all duration-300 hover:border-white p-4 grayscale hover:grayscale-0">
+            {/* Header - 20% */}
+            <div className="w-full flex flex-row justify-between items-start overflow-hidden">
                 <div className="flex flex-row items-center gap-6">
                     <LazyLoadImage
                         className="h-auto w-12 rounded"
@@ -62,16 +62,18 @@ export const ExperienceCard = ({
                         loading="lazy"
                     />
                     <div className="flex flex-col gap-2 flex-1">
-                        <div className="flex flex-row justify-between items-baseline gap-4 flex-wrap">
-                            <SubHeading text={`${title} @ ${company}`} />
+                        <SubHeading text={`${title} @ ${company}`} />
+                        <div className="flex flex-row items-center gap-4 flex-wrap">
                             <span className="text-sm opacity-80 whitespace-nowrap">{date}</span>
-                        </div>
-                        <div className="flex flex-row items-center gap-4">
-                            <p className="m-0">{type}, {location}</p>
+                            <span className="opacity-60">|</span>
+                            <p className="m-0 text-sm">{type}, {location}</p>
                             {isCurrent && (
-                                <span className="bg-zinc-600 text-zinc-300 px-2 py-1 rounded-xl text-xs font-bold">
-                                    Current
-                                </span>
+                                <>
+                                    <span className="opacity-60">|</span>
+                                    <span className="bg-green-600 text-green-100 px-2 py-1 rounded-xl text-xs font-bold">
+                                        Current
+                                    </span>
+                                </>
                             )}
                         </div>
                     </div>
@@ -79,14 +81,17 @@ export const ExperienceCard = ({
                 {link && <LinkButton link={link} />}
             </div>
 
-            {/* Content */}
-            <div className="w-full">
-                <p className="leading-relaxed m-0 mb-4">{description}</p>
+            {/* Description - 10% */}
+            <div className="w-full overflow-hidden">
+                <p className="leading-relaxed m-0 text-sm">{description}</p>
+            </div>
 
+            {/* Details/Bullet Points - 50% */}
+            <div className="w-full flex items-start overflow-hidden">
                 {details && details.length > 0 && (
-                    <ul className="mt-4 mb-0 pl-0 list-none">
+                    <ul className="m-0 pl-0 list-none text-sm">
                         {details.map((detail) => (
-                            <li key={detail.key} className="mb-2 leading-normal last:mb-0">
+                            <li key={detail.key} className="mb-1.5 leading-snug last:mb-0">
                                 ✅ {detail.text}
                             </li>
                         ))}
@@ -94,10 +99,12 @@ export const ExperienceCard = ({
                 )}
             </div>
 
-            {/* Tech Stack */}
+            {/* Tech Stack - 20% */}
             {techsForDisplay && techsForDisplay.length > 0 && (
-                <div className="w-full mt-2">
-                    <TechList techs={techsForDisplay} />
+                <div className="w-full overflow-hidden">
+                    <div className="h-full flex items-start">
+                        <TechList techs={techsForDisplay} />
+                    </div>
                 </div>
             )}
         </div>

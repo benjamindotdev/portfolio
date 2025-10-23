@@ -6,7 +6,7 @@ export const CircleImage = ({
     text: string;
 }) => {
     return (
-        <div className="w-48 aspect-square overflow-hidden rounded-2xl border-5 border-portfolio-white drop-shadow-[0px_0px_5px_white]">
+        <div className="w-full h-full aspect-square overflow-hidden rounded-2xl border-5 border-portfolio-white drop-shadow-[0px_0px_5px_white]">
             <img
                 src={image}
                 alt={text}

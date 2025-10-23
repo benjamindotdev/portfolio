@@ -1,8 +1,11 @@
-import { useMemo } from "react";
-import { PageTitle } from "../Layout/components/PageTitle/PageTitle";
+import { useMemo, useState, useEffect } from "react";
 import { TechList } from "./components/TechList/TechList";
 import type { Technology } from "../../global";
 import { CircleImage } from "./components/CircleImage/CircleImage";
+import { TechTicker } from "./components/TechTicker/TechTicker";
+import { CTAButton } from "../../components/shared/CTAButton/CTAButton";
+import { Rocket, BookOpen, Lightbulb } from "lucide-react";
+import { ScrollSection } from "../../components/shared/ScrollSection/ScrollSection";
 
 export const Home = ({
     technologies = [],
@@ -90,33 +93,86 @@ export const Home = ({
         ]
     );
 
-    return (
-        <div className="h-screen overflow-y-scroll snap-y snap-mandatory">
-            {/* Top Section - Hero */}
-            <section className="h-screen w-full snap-start flex items-center justify-center bg-gradient-to-b from-gray-900 to-gray-800">
-                <div className="w-full max-w-6xl flex flex-col md:flex-row items-center justify-between gap-8 px-8">
-                    <div className="flex flex-col items-start gap-4">
-                        <PageTitle text="Hey, I'm" strongText={name} main icon="👋🏽" />
-                        <PageTitle text="Full-stack" strongText="Web Dev" icon="👨🏽‍💻" />
-                        <PageTitle text="Ironhack" strongText="Alumni" icon="🤘🏽" />
-                    </div>
-                    <CircleImage image={image || ""} text={name || "Benjamin"} />
-                </div>
-            </section>
+    const [activeSection, setActiveSection] = useState(0);
 
-            {/* Bottom Section - Tech Stack */}
-            <section className="min-h-screen w-full snap-start flex items-center justify-center bg-gray-800">
-                <div className="w-full max-w-6xl px-8 py-16">
-                    <div className="flex flex-col gap-8">
-                        {pageContent.map(
-                            (content) =>
-                                content.techs.length > 0 && (
-                                    <TechList key={content.subHeading} {...content} />
-                                )
-                        )}
-                    </div>
+    useEffect(() => {
+        const scrollContainer = document.querySelector('.scroll-container');
+        if (!scrollContainer) return;
+
+        const handleScroll = () => {
+            const scrollPosition = scrollContainer.scrollTop;
+            const viewportHeight = window.innerHeight;
+            const sectionIndex = Math.round(scrollPosition / viewportHeight);
+            setActiveSection(sectionIndex);
+        };
+
+        scrollContainer.addEventListener('scroll', handleScroll);
+        return () => scrollContainer.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    const heroSection = (
+        <div className="w-full max-w-6xl flex flex-col md:flex-row items-center md:items-stretch justify-between gap-12 md:gap-16 px-8">
+            <div className="flex flex-col justify-between w-full md:w-2/3">
+                <h1 className="p-0 m-0 text-4xl md:text-5xl lg:text-6xl text-portfolio-cyan font-lunasima whitespace-nowrap">
+                    <strong className="text-portfolio-white">Hey, I'm</strong>
+                    <span className="text-portfolio-green text-[larger] drop-shadow-[0px_0px_20px_black]">
+                        {` ${name}`} 👋🏽
+                    </span>
+                </h1>
+                <div className="flex flex-col gap-4 text-portfolio-white text-lg md:text-xl font-lunasima text-left">
+                    <p>I'm the sole developer at Shep</p>
+                    <p>I'm an Ironhack alum and former assistant teacher</p>
+                    <p>I enjoy building cool solutions to people's pet peeves</p>
                 </div>
-            </section>
+                <div className="flex flex-wrap gap-4">
+                    <CTAButton
+                        onClick={() => document.getElementById('section-1')?.scrollIntoView({ behavior: 'smooth' })}
+                        text="My stack"
+                        icon={Rocket}
+                    />
+                    <CTAButton
+                        onClick={() => window.location.href = '/experience'}
+                        text="My story"
+                        icon={BookOpen}
+                    />
+                    <CTAButton
+                        onClick={() => window.location.href = '/projects'}
+                        text="My solutions"
+                        icon={Lightbulb}
+                    />
+                </div>
+            </div>
+            <div className="w-full md:w-1/3 aspect-square">
+                <CircleImage image="/images/hero.jpg" text={name || "Benjamin"} />
+            </div>
         </div>
+    );
+
+    const techSection = (
+        <div className="w-full max-w-6xl px-8 py-16 h-full flex items-center justify-center">
+            <div className="w-full flex flex-wrap gap-x-12 gap-y-8 items-start content-start">
+                {pageContent.map(
+                    (content) =>
+                        content.techs.length > 0 && (
+                            <TechList key={content.subHeading} {...content} />
+                        )
+                )}
+            </div>
+        </div>
+    );
+
+    return (
+        <>
+            <ScrollSection>
+                {[heroSection, techSection]}
+            </ScrollSection>
+
+            {/* Tech Ticker - positioned above footer */}
+            <div className="fixed bottom-[10dvh] left-0 right-0 w-full z-40 pointer-events-none">
+                <div className="pointer-events-auto">
+                    <TechTicker technologies={technologies} isVisible={activeSection === 0} />
+                </div>
+            </div>
+        </>
     );
 };

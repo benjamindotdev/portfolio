@@ -1,13 +1,13 @@
 import { PageText } from "../PageText/PageText";
-import { CircleImage } from "../../../Home/components/CircleImage/CircleImage";
+import { AboutImage } from "../AboutImage/AboutImage";
 
 export const AboutCard = ({ image, text }: { image: string; text: string }) => {
     return (
-        <div className="w-full flex flex-row items-center gap-16 px-8 md:px-16 lg:px-32">
-            <div className="flex-shrink-0">
-                <CircleImage image={image} text={text} />
+        <div className="w-full max-w-7xl flex flex-col md:flex-row items-center gap-8 md:gap-16 px-8">
+            <div className="w-full md:w-2/3">
+                <AboutImage src={image} alt={text} />
             </div>
-            <div className="flex-1 min-w-0">
+            <div className="w-full md:w-1/3">
                 <PageText>{text}</PageText>
             </div>
         </div>

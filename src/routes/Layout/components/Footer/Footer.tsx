@@ -4,14 +4,18 @@ import type { Social, Contact } from "../../../../global";
 export const Footer = ({
     socials,
     contacts,
+    isVisible = true,
 }: {
     socials: Social[];
     contacts: Contact[];
+    isVisible?: boolean;
 }) => {
     const year = new Date().getFullYear();
 
+    if (!isVisible) return null;
+
     return (
-        <footer className="min-h-[5dvh] flex items-center justify-center flex-grow-0 flex-shrink-0 py-8 justify-self-end gap-8">
+        <footer className="min-h-[5dvh] w-full flex items-center justify-center flex-grow-0 flex-shrink-0 py-8 gap-8">
             <div className="flex gap-8">
                 {socials.map((social) => (
                     <TechLogoImage

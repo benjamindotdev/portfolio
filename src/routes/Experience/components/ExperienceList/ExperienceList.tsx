@@ -1,18 +1,16 @@
 import type { ExperienceItem } from "../../../../global";
-import { ListContainer } from "../../../../components/shared/ListContainer/ListContainer";
+import { ExperienceCard } from "../ExperienceCard/ExperienceCard";
 
 export const ExperienceList = ({
     experience,
 }: {
     experience: ExperienceItem[];
 }) => {
-    const reversedExperience = [...experience].reverse();
-
     return (
-        <ListContainer
-            items={reversedExperience}
-            type="experience"
-            layout="grid"
-        />
+        <div className="w-full h-full flex flex-row flex-wrap justify-between gap-8">
+            {experience.map((item) => (
+                <ExperienceCard experience={item} key={item.key} />
+            ))}
+        </div>
     );
 };

@@ -676,7 +676,7 @@ const projects = [
             "MongoDB",
             "Vercel",
         ],
-    deployedLink: "https://storytime-by-benjamindotdev.vercel.app",
+        deployedLink: "https://storytime-by-benjamindotdev.vercel.app",
         repoLink: "https://github.com/benjamindotdev/storytime",
     }
 ] as Project[];
@@ -822,7 +822,7 @@ const benjamin = {
             location: "Berlin, Germany",
             date: "January 2025",
             description:
-                "An e-commerce platform for organic baby food, providing a wide range of products for parents.",
+                "An e-commerce platform for organic baby food, providing a range of products",
             details: [
                 {
                     key: 0,
@@ -857,7 +857,7 @@ const benjamin = {
             location: "Berlin, Germany",
             date: "April 2025 - June 2025",
             description:
-                "AI-powered bioinformatician, that creates plots and tables for user data visualization.",
+                "AI-powered bioinformatician, that creates plots and tables for user data visualization",
             details: [
                 {
                     key: 0,

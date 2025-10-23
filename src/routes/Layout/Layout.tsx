@@ -11,12 +11,23 @@ export const Layout = ({
     links: Link[];
     socials: Social[];
     contacts: Contact[];
-}) => (
-    <div className="min-h-screen w-full flex flex-col justify-start p-0 m-0">
-        <Header links={links} />
-        <section className="min-h-[80vh] w-full flex flex-col justify-start self-start">
-            <Outlet />
-        </section>
-        <Footer socials={socials} contacts={contacts} />
-    </div>
-);
+}) => {
+    return (
+        <div className="h-screen w-full flex flex-col overflow-hidden">
+            {/* Fixed Header */}
+            <div className="flex-shrink-0">
+                <Header links={links} />
+            </div>
+
+            {/* Scrollable Content Area */}
+            <section className="flex-1 w-full overflow-hidden">
+                <Outlet />
+            </section>
+
+            {/* Fixed Footer */}
+            <div className="flex-shrink-0">
+                <Footer socials={socials} contacts={contacts} isVisible={true} />
+            </div>
+        </div>
+    );
+};

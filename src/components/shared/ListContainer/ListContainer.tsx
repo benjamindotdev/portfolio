@@ -13,11 +13,11 @@ export const ListContainer = <T extends ExperienceItem | Certification | Project
     layout = 'single'
 }: ListContainerProps<T>) => {
     const containerClasses = layout === 'grid'
-        ? "w-full flex flex-wrap gap-8"
+        ? "w-full h-full flex flex-wrap gap-8"
         : "w-full flex flex-col gap-6";
 
     const itemClasses = layout === 'grid'
-        ? "w-full md:w-[calc(50%-1rem)] border border-zinc-500 rounded-lg transition-all duration-300 hover:border-white p-4 grayscale hover:grayscale-0"
+        ? "w-full h-full border border-zinc-500 rounded-lg transition-all duration-300 hover:border-white p-4 grayscale hover:grayscale-0"
         : "w-full border border-zinc-300 rounded-lg transition-colors duration-300 hover:border-white p-4";
 
     return (

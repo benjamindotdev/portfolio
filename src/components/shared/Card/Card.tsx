@@ -94,8 +94,8 @@ export const Card = ({ item, type }: CardProps) => {
     const techsForDisplay = cardData.techStack ? transformTechStack(cardData.techStack) : [];
 
     return (
-        <div className="w-full flex flex-col gap-4 text-white text-left">
-            {/* Header */}
+        <div className="w-full h-full grid grid-rows-[auto_auto_1fr_auto] gap-2 text-white text-left">
+            {/* Header - Row 1 */}
             <div className="w-full flex flex-row justify-between items-start">
                 <div className="flex flex-row items-center gap-6">
                     <img
@@ -104,21 +104,23 @@ export const Card = ({ item, type }: CardProps) => {
                         alt={cardData.title}
                     />
                     <div className="flex flex-col gap-2 flex-1">
-                        <div className="flex flex-row justify-between items-baseline gap-4 flex-wrap">
-                            <SubHeading text={cardData.title} />
+                        <SubHeading text={cardData.title} />
+                        <div className="flex flex-row items-center gap-4 flex-wrap">
                             {cardData.date && (
                                 <span className="text-sm opacity-80 whitespace-nowrap">{cardData.date}</span>
                             )}
-                        </div>
-                        <div className="flex flex-row items-center gap-4">
-                            {cardData.subtitle && <p className="m-0">{cardData.subtitle}</p>}
+                            {cardData.date && cardData.subtitle && <span className="opacity-60">|</span>}
+                            {cardData.subtitle && <p className="m-0 text-sm">{cardData.subtitle}</p>}
                             {cardData.status && (
-                                <span className={`px-2 py-1 rounded-xl text-xs font-bold ${cardData.status === 'Current'
-                                    ? 'bg-green-600 text-green-100'
-                                    : 'bg-zinc-600 text-zinc-300'
-                                    }`}>
-                                    {cardData.status}
-                                </span>
+                                <>
+                                    {(cardData.date || cardData.subtitle) && <span className="opacity-60">|</span>}
+                                    <span className={`px-2 py-1 rounded-xl text-xs font-bold ${cardData.status === 'Current'
+                                        ? 'bg-green-600 text-green-100'
+                                        : 'bg-zinc-600 text-zinc-300'
+                                        }`}>
+                                        {cardData.status}
+                                    </span>
+                                </>
                             )}
                         </div>
                     </div>
@@ -126,14 +128,17 @@ export const Card = ({ item, type }: CardProps) => {
                 {cardData.link && <LinkButton link={cardData.link} />}
             </div>
 
-            {/* Content */}
+            {/* Description - Row 2 */}
             <div className="w-full">
-                <p className="leading-relaxed m-0 mb-4">{cardData.description}</p>
+                <p className="leading-relaxed m-0">{cardData.description}</p>
+            </div>
 
+            {/* Details/Bullet Points - Row 3 (flexible) */}
+            <div className="w-full flex items-start">
                 {cardData.details && cardData.details.length > 0 && (
-                    <ul className="mt-4 mb-0 pl-0 list-none">
+                    <ul className="m-0 pl-0 list-none text-sm">
                         {cardData.details.map((detail) => (
-                            <li key={detail.key} className="mb-2 leading-normal last:mb-0">
+                            <li key={detail.key} className="mb-1.5 leading-snug last:mb-0">
                                 ✅ {detail.text}
                             </li>
                         ))}
@@ -141,10 +146,12 @@ export const Card = ({ item, type }: CardProps) => {
                 )}
             </div>
 
-            {/* Tech Stack */}
+            {/* Tech Stack - Row 4 */}
             {techsForDisplay && techsForDisplay.length > 0 && (
-                <div className="w-full mt-2">
-                    <TechList techs={techsForDisplay} />
+                <div className="w-full min-h-[4rem]">
+                    <div className="h-full flex items-start">
+                        <TechList techs={techsForDisplay} />
+                    </div>
                 </div>
             )}
         </div>

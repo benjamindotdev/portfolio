@@ -6,6 +6,7 @@ import { TechTicker } from "./components/TechTicker/TechTicker";
 import { CTAButton } from "../../components/shared/CTAButton/CTAButton";
 import { Rocket, BookOpen, Lightbulb } from "lucide-react";
 import { ScrollSection } from "../../components/shared/ScrollSection/ScrollSection";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export const Home = ({
     technologies = [],
@@ -120,7 +121,22 @@ export const Home = ({
                     </span>
                 </h1>
                 <div className="flex flex-col gap-4 text-portfolio-white text-lg md:text-xl font-lunasima text-left">
-                    <p>I'm the sole developer at Shep</p>
+                    <p>
+                        I'm the sole developer at{" "}
+                        <a
+                            href="https://www.shephq.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1 hover:underline"
+                        >
+                            Shep
+                        </a>
+                        <LazyLoadImage
+                            src="logos/shep.png"
+                            alt="Shep logo"
+                            className="inline-block w-8 h-8 ml-1 object-contain"
+                        />
+                    </p>
                     <p>I'm an Ironhack alum and former assistant teacher</p>
                     <p>I enjoy building cool solutions to people's pet peeves</p>
                 </div>

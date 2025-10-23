@@ -12,7 +12,6 @@ type Benjamin = {
     experience: ExperienceItem[];
     certifications: Certification[];
     projects: Project[];
-    events: Event[];
 };
 
 type AboutItem = {
@@ -118,17 +117,6 @@ type Project = {
     description: string;
     deployedLink?: string;
     repoLink?: string;
-    techStack: Technology[] | string[];
-};
-
-type Event = {
-    key: number;
-    name: string;
-    image: string;
-    date: string;
-    location: string;
-    description: string;
-    link: string;
     techStack: Technology[] | string[];
 };
 

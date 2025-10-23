@@ -615,25 +615,24 @@ const projects = [
     },
     {
         key: 1,
-        name: "TaskChunker",
-        image: "logos/taskchunker.png",
-        description: "Hackathon winning project, using generative AI to break tasks into manageable chunks.",
+        name: "Storytime",
+        image: "logos/storytime.png",
+        description: "AI generated bedtime stories for kids.",
         status: "completed",
-        techStack: ["React", "tailwindcss", "Python", "ChatGPT", "Netlify", "Railway"],
-        deployedLink: "https://taskchunker.netlify.app",
-        repoLink: "https://github.com/benjamindotdev/taskchunker-frontend",
+        techStack: [
+            "Typescript",
+            "Next.js",
+            "tailwindcss",
+            "ChatGPT",
+            "Prisma",
+            "MongoDB",
+            "Vercel",
+        ],
+        deployedLink: "https://storytime-by-benjamindotdev.vercel.app",
+        repoLink: "https://github.com/benjamindotdev/storytime",
     },
     {
         key: 2,
-        name: "stacyannelliott.com",
-        image: "images/stacy.jpg",
-        description: "A professional portfolio site for a journalist.",
-        status: "completed",
-        techStack: ["Wordpress"],
-        deployedLink: "https://stacyannelliott.wordpress.com/",
-    },
-    {
-        key: 3,
         name: "Frosch",
         image: "logos/Frosch.gif",
         description: "A web-game where you help a frog cross different terrain.",
@@ -643,7 +642,7 @@ const projects = [
         repoLink: "https://github.com/benjamindotdev/frosch",
     },
     {
-        key: 4,
+        key: 3,
         name: "littlelemon",
         image: "logos/littlelemon.svg",
         description: "Final project for the Meta Frontend Developer course.",
@@ -660,64 +659,9 @@ const projects = [
         ],
         deployedLink: "https://littlelemonbybenjamin.netlify.app/",
         repoLink: "https://github.com/benjamindotdev/LittleLemon",
-    },
-    {
-        key: 5,
-        name: "Storytime",
-        image: "logos/storytime.png",
-        description: "AI generated bedtime stories for kids.",
-        status: "completed",
-        techStack: [
-            "Typescript",
-            "Next.js",
-            "tailwindcss",
-            "ChatGPT",
-            "Prisma",
-            "MongoDB",
-            "Vercel",
-        ],
-        deployedLink: "https://storytime-by-benjamindotdev.vercel.app",
-        repoLink: "https://github.com/benjamindotdev/storytime",
     }
 ] as Project[];
 
-const events = [
-    {
-        key: 0,
-        name: "thegeekconf",
-        image: "logos/thegeekconf.png",
-        date: "August 2024",
-        location: "Villa Elisabeth, Berlin",
-        description:
-            "I attended thegeekconf, a conference for React Native development",
-        link: "https://www.thegeekconf.com/",
-        techStack: ["React Native", "Expo", "tailwindcss", "ChatGPT"],
-    },
-    {
-        key: 1,
-        name: "IronHackshow",
-        image: "logos/ironhack.png",
-        date: "September 2024",
-        location: "Ironhack, Berlin",
-        description:
-            "I won the Ironhack Berlin hackshow with my final project, asozial.dev. I was offered a position as a TA due to my helpful nature, coding knowledge and teamwork skills.",
-        link: "",
-        techStack: [
-            "Next.js",
-            "tailwindcss",
-            "shadcn",
-            "Node.js",
-            "Express",
-            "Mongoose",
-            "MongoDB",
-            "Vercel",
-            "Railway",
-            "Jest",
-            "React Testing Library",
-            "Taiga",
-        ],
-    },
-];
 
 const benjamin = {
     name: "Benjamin",
@@ -995,7 +939,6 @@ const benjamin = {
     ],
     projects,
     technologies,
-    events,
 } as Benjamin;
 
-export { benjamin, technologies, projects, events };
+export { benjamin, technologies, projects };

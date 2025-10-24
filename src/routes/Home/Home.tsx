@@ -127,7 +127,7 @@ export const Home = ({
                             href="https://www.shephq.com/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-1 hover:underline"
+                            className="inline-flex items-center gap-1 transition-colors duration-300 hover:text-portfolio-green"
                         >
                             Shep
                         </a>

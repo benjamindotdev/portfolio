@@ -32,10 +32,15 @@ module.exports = {
       },
       animation: {
         'rotate': 'rotate 10s linear infinite',
+        'fadeIn': 'fadeIn 0.5s ease-in',
       },
       keyframes: {
         rotate: {
           '100%': { transform: 'rotate(1turn)' },
+        },
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
         },
       },
       fontFamily: {

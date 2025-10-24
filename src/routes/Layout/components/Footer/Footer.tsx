@@ -1,4 +1,4 @@
-import { TechLogoImage } from "../../../../components/shared/TechLogoImage/TechLogoImage";
+import { LogoImage } from "../../../../components/shared/LogoImage/LogoImage";
 import type { Social, Contact } from "../../../../global";
 
 export const Footer = ({
@@ -18,7 +18,7 @@ export const Footer = ({
         <footer className="min-h-[5dvh] w-full flex items-center justify-center flex-grow-0 flex-shrink-0 py-8 gap-8" aria-label="Site footer">
             <nav className="flex gap-8" aria-label="Social media links">
                 {socials.map((social) => (
-                    <TechLogoImage
+                    <LogoImage
                         key={social.key}
                         image={social.image}
                         name={social.name}
@@ -29,7 +29,7 @@ export const Footer = ({
             <h3 className="text-portfolio-green text-portfolio-text">benjamin.dev {year}</h3>
             <nav className="flex gap-8" aria-label="Contact links">
                 {contacts.map((contact) => (
-                    <TechLogoImage
+                    <LogoImage
                         key={contact.key}
                         image={contact.icon}
                         name={contact.name}

@@ -52,7 +52,7 @@ export const ProjectCard = ({
     const link = deployedLink || repoLink;
 
     return (
-        <div className="w-[48%] h-[54%] grid [grid-template-rows:minmax(0,40%)_minmax(0,20%)_minmax(0,40%)] gap-2 text-white text-left border border-zinc-500 rounded-lg transition-all duration-300 hover:border-white p-4 grayscale hover:grayscale-0">
+        <div className="w-[48%] h-[54%] grid [grid-template-rows:minmax(0,40%)_minmax(0,20%)_minmax(0,40%)] gap-2 text-white text-left border border-zinc-500 rounded-lg transition-all duration-300 hover:border-portfolio-green p-4 grayscale hover:grayscale-0">
             <div className="w-full flex flex-row justify-between items-start overflow-hidden">
                 <div className="flex flex-row items-center gap-6">
                     <LazyLoadImage

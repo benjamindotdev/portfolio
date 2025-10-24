@@ -159,7 +159,7 @@ export const Home = ({
                 </div>
             </div>
             <div className="w-full md:w-1/3 aspect-square">
-                <CircleImage image="/images/hero.jpg" text={name || "Benjamin"} />
+                <CircleImage image="/images/hero.webp" text={name || "Benjamin"} />
             </div>
         </div>
     );

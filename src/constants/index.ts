@@ -665,21 +665,21 @@ const projects = [
 
 const benjamin = {
     name: "Benjamin",
-    hero: "images/benjamin.jpg",
+    hero: "images/hero.webp",
     about: [
         {
             key: 0,
-            image: "images/coachBenWithTeam.jpg",
+            image: "images/coachBenWithTeam.webp",
             text: "After growing up in London 🇬🇧, I spent a decade as a youth football coach in New Jersey, USA. I mentored players on and off the pitch—building resilience, teamwork, and confidence. Trophies were nice, but the real wins were the long-term relationships with players and their families. That experience shaped how I lead teams and communicate under pressure."
         },
         {
             key: 1,
-            image: "images/hackshow.jpeg",
+            image: "images/hackshow.webp",
             text: "After moving to Berlin 🇩🇪, I completed the Ironhack Web Development bootcamp in Berlin and won the Hackshow with my final project. I was then invited back as the Teaching Assistant for the course I just finished, where I taught solo, ran code reviews, and helped debug full-stack projects—sharpening my own skills while helping others level up."
         },
         {
             key: 2,
-            image: "images/dadWithMiles.jpg",
+            image: "images/dadWithMiles.webp",
             text: "Today I’m the sole developer at Shep, working directly alongside the two founders of this early-stage startup. With no dedicated tech team yet, I own the entire stack—from prototyping features to deploying production code—while helping shape the product vision and technical direction from the ground up. It’s fast, hands-on, and every line of code directly impacts the company’s future."
 
         }

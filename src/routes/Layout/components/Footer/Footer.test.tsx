@@ -40,10 +40,10 @@ test("renders the Footer component with provided props", () => {
             <Footer socials={mockSocials} contacts={mockContacts} />
         </BrowserRouter>
     );
-    expect(screen.getByText("github")).toBeInTheDocument();
-    expect(screen.getByText("linkedin")).toBeInTheDocument();
-    expect(screen.getByText("email")).toBeInTheDocument();
-    expect(screen.getByText("phone")).toBeInTheDocument();
+    expect(screen.getByAltText("github")).toBeInTheDocument();
+    expect(screen.getByAltText("linkedin")).toBeInTheDocument();
+    expect(screen.getByAltText("email")).toBeInTheDocument();
+    expect(screen.getByAltText("phone")).toBeInTheDocument();
     expect(screen.getAllByRole("img")).toHaveLength(4);
 });
 
@@ -70,7 +70,7 @@ test("renders the Footer component with different text", () => {
             />
         </BrowserRouter>
     );
-    expect(screen.getByText("facebook")).toBeInTheDocument();
-    expect(screen.getByText("email")).toBeInTheDocument();
+    expect(screen.getByAltText("facebook")).toBeInTheDocument();
+    expect(screen.getByAltText("email")).toBeInTheDocument();
     expect(screen.getAllByRole("img")).toHaveLength(2);
 });

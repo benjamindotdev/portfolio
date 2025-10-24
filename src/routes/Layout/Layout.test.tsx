@@ -32,8 +32,8 @@ test("renders the layout component", async () => {
   const aboutLink = await screen.findByText("About");
   const projectsLink = await screen.findByText("Projects");
   const certificationsLink = await screen.findByText("Certifications");
-  const githubLink = await screen.findByText("GitHub");
-  const linkedInLink = await screen.findByText("LinkedIn");
+  const githubLink = await screen.findByAltText("GitHub");
+  const linkedInLink = await screen.findByAltText("LinkedIn");
 
   expect(homeLink).toBeInTheDocument();
   expect(aboutLink).toBeInTheDocument();

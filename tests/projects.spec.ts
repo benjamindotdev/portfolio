@@ -31,8 +31,8 @@ test.describe('Projects Page', () => {
     });
 
     test('should have project descriptions', async ({ page }) => {
-        // Check for text content in project cards
-        const descriptions = page.locator('p').filter({ hasText: /./ });
+        // Check for text content in project cards (excluding hidden elements)
+        const descriptions = page.locator('p:visible').filter({ hasText: /./ });
         await expect(descriptions.first()).toBeVisible({ timeout: 10000 });
     });
 

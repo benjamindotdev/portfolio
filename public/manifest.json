@@ -1,6 +1,7 @@
 {
   "short_name": "Benjamin Elliott",
-  "name": "Junior front end web developer working in React.js & Vue.JS",
+  "name": "Benjamin Elliott - Full Stack Web Developer",
+  "description": "Full Stack Web Developer specializing in React, TypeScript, and modern web technologies",
   "icons": [
     {
       "src": "favicon.ico",
@@ -11,5 +12,5 @@
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "background_color": "#000000"
 }

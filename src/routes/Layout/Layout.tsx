@@ -1,6 +1,7 @@
 import { Header } from "./components/Header/Header";
 import { Outlet } from "react-router-dom";
 import { Footer } from "./components/Footer/Footer";
+import { ScrollToTop } from "../../components/shared/ScrollToTop/ScrollToTop";
 import type { Link, Social, Contact } from "../../global";
 
 export const Layout = ({
@@ -39,6 +40,9 @@ export const Layout = ({
             <div className="flex-shrink-0">
                 <Footer socials={socials} contacts={contacts} isVisible={true} />
             </div>
+
+            {/* Scroll to top button */}
+            <ScrollToTop />
         </div>
     );
 };

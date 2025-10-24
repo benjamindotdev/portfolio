@@ -113,11 +113,11 @@ export const Home = ({
 
     const heroSection = (
         <div className="w-full max-w-6xl flex flex-col md:flex-row items-center md:items-stretch justify-between gap-12 md:gap-16 px-8">
-            <div className="flex flex-col justify-between w-full md:w-2/3">
+            <div className="flex flex-col justify-between w-full md:w-2/3 items-start">
                 <h1 className="p-0 m-0 text-4xl md:text-5xl lg:text-6xl text-portfolio-cyan font-lunasima whitespace-nowrap">
                     <strong className="text-portfolio-white">Hey, I'm</strong>
                     <span className="text-portfolio-green text-[larger] drop-shadow-[0px_0px_20px_black]">
-                        {` ${name}`} 👋🏽
+                        {` ${name}`}
                     </span>
                 </h1>
                 <div className="flex flex-col gap-4 text-portfolio-white text-lg md:text-xl font-lunasima text-left">
@@ -138,7 +138,7 @@ export const Home = ({
                         />
                     </p>
                     <p>I'm an Ironhack alum and former assistant teacher</p>
-                    <p>I enjoy building cool solutions to people's pet peeves</p>
+                    <p>I build innovative solutions to people's pet peeves</p>
                 </div>
                 <div className="flex flex-wrap gap-4">
                     <CTAButton

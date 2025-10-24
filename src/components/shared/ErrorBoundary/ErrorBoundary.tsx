@@ -27,7 +27,20 @@ class ErrorBoundary extends Component<Props, State> {
     }
 
     componentDidCatch(error: Error, errorInfo: ErrorInfo): void {
+        // Log to console
         console.error("ErrorBoundary caught an error:", error, errorInfo);
+
+        // Send to analytics in production
+        if (process.env.NODE_ENV === 'production' && window.gtag) {
+            window.gtag('event', 'exception', {
+                description: error.toString(),
+                fatal: true,
+                error_component: errorInfo.componentStack?.split('\n')[1]?.trim() || 'unknown',
+            });
+        }
+
+        // In development, you could also send to error tracking service
+        // Example: Sentry.captureException(error, { contexts: { react: { componentStack: errorInfo.componentStack } } });
     }
 
     render(): ReactNode {

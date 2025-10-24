@@ -15,27 +15,27 @@ describe('ScrollToTop', () => {
 
     it('should render when scrollY is greater than 300', () => {
         render(<ScrollToTop />);
-        
+
         // Simulate scroll
         Object.defineProperty(window, 'scrollY', { value: 400, writable: true });
         fireEvent.scroll(window);
-        
+
         expect(screen.getByRole('button', { name: /scroll to top/i })).toBeInTheDocument();
     });
 
     it('should scroll to top when clicked', () => {
         const scrollToMock = jest.fn();
         window.scrollTo = scrollToMock;
-        
+
         render(<ScrollToTop />);
-        
+
         // Make button visible
         Object.defineProperty(window, 'scrollY', { value: 400, writable: true });
         fireEvent.scroll(window);
-        
+
         const button = screen.getByRole('button', { name: /scroll to top/i });
         fireEvent.click(button);
-        
+
         expect(scrollToMock).toHaveBeenCalledWith({
             top: 0,
             behavior: 'smooth',
@@ -44,11 +44,11 @@ describe('ScrollToTop', () => {
 
     it('should have proper ARIA attributes', () => {
         render(<ScrollToTop />);
-        
+
         // Make button visible
         Object.defineProperty(window, 'scrollY', { value: 400, writable: true });
         fireEvent.scroll(window);
-        
+
         const button = screen.getByRole('button', { name: /scroll to top/i });
         expect(button).toHaveAttribute('aria-label', 'Scroll to top');
         expect(button).toHaveAttribute('title', 'Scroll to top');
@@ -56,12 +56,12 @@ describe('ScrollToTop', () => {
 
     it('should cleanup scroll listener on unmount', () => {
         const removeEventListenerSpy = jest.spyOn(window, 'removeEventListener');
-        
+
         const { unmount } = render(<ScrollToTop />);
         unmount();
-        
+
         expect(removeEventListenerSpy).toHaveBeenCalledWith('scroll', expect.any(Function));
-        
+
         removeEventListenerSpy.mockRestore();
     });
 });

@@ -34,7 +34,7 @@ describe("TechTicker", () => {
         // Technologies are duplicated, so we use getAllByText
         const reactElements = screen.getAllByText("React");
         const typescriptElements = screen.getAllByText("TypeScript");
-        
+
         expect(reactElements.length).toBeGreaterThan(0);
         expect(typescriptElements.length).toBeGreaterThan(0);
     });
@@ -44,7 +44,7 @@ describe("TechTicker", () => {
 
         const reactImages = screen.getAllByAltText("React");
         const typescriptImages = screen.getAllByAltText("TypeScript");
-        
+
         expect(reactImages.length).toBeGreaterThan(0);
         expect(typescriptImages.length).toBeGreaterThan(0);
     });

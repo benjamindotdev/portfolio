@@ -24,9 +24,8 @@ export const PageTransition = ({ children }: { children: React.ReactNode }) => {
 
     return (
         <div
-            className={`transition-opacity duration-300 ${
-                transitionStage === 'fade-out' ? 'opacity-0' : 'opacity-100'
-            }`}
+            className={`h-full transition-opacity duration-300 ${transitionStage === 'fade-out' ? 'opacity-0' : 'opacity-100'
+                }`}
         >
             {children}
         </div>

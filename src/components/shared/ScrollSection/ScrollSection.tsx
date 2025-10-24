@@ -1,5 +1,4 @@
 import { useState, useEffect, ReactNode } from "react";
-import { useSpring, animated } from "@react-spring/web";
 
 export const ScrollSection = ({
     children,
@@ -9,11 +8,6 @@ export const ScrollSection = ({
     showBreadcrumbs?: boolean;
 }) => {
     const [activeSection, setActiveSection] = useState(0);
-
-    const springs = useSpring({
-        from: { opacity: 0, scale: 0.75 },
-        to: { opacity: 1, scale: 1 },
-    });
 
     // Ensure children is always an array
     const childrenArray = Array.isArray(children) ? children : [children];
@@ -43,8 +37,8 @@ export const ScrollSection = ({
                             key={index}
                             href={`#section-${index}`}
                             className={`w-3 h-3 rounded-full transition-colors ${activeSection === index
-                                    ? 'bg-portfolio-green'
-                                    : 'bg-white/30 hover:bg-white/60'
+                                ? 'bg-portfolio-green'
+                                : 'bg-white/30 hover:bg-white/60'
                                 }`}
                             aria-label={`Section ${index + 1}`}
                         />
@@ -52,7 +46,7 @@ export const ScrollSection = ({
                 </nav>
             )}
 
-            <animated.div className="h-full overflow-y-scroll snap-y snap-mandatory scrollbar-hide scroll-container" style={{ ...springs }}>
+            <div className="h-full overflow-y-scroll snap-y snap-mandatory scrollbar-hide scroll-container">
                 {childrenArray.map((child, index) => (
                     <section
                         key={index}
@@ -62,7 +56,7 @@ export const ScrollSection = ({
                         {child}
                     </section>
                 ))}
-            </animated.div>
+            </div>
         </div>
     );
 };

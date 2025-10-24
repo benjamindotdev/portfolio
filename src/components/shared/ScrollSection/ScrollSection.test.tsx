@@ -25,7 +25,7 @@ describe("ScrollSection", () => {
 
         const nav = screen.getByRole("navigation");
         expect(nav).toBeInTheDocument();
-        
+
         const breadcrumbs = screen.getAllByRole("link");
         expect(breadcrumbs).toHaveLength(2);
     });

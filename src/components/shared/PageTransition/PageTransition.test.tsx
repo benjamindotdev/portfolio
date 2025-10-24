@@ -19,7 +19,7 @@ describe('PageTransition', () => {
                 </PageTransition>
             </BrowserRouter>
         );
-        
+
         expect(screen.getByText('Test content')).toBeInTheDocument();
     });
 
@@ -49,7 +49,7 @@ describe('PageTransition', () => {
                 </Routes>
             </BrowserRouter>
         );
-        
+
         expect(screen.getByText('Home')).toBeInTheDocument();
     });
 });

@@ -941,4 +941,4 @@ const benjamin = {
     technologies,
 } as Benjamin;
 
-export { benjamin, technologies, projects };
+export { benjamin };

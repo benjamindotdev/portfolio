@@ -3,7 +3,7 @@ import { ExperienceItem, Tech, Technology } from "../../../../global";
 import { LinkButton } from "../../../../components/shared/LinkButton/LinkButton";
 import { SubHeading } from "../../../../components/shared/SubHeading/SubHeading";
 import { TechList } from "../../../Home/components/TechList/TechList";
-import { technologies } from "../../../../constants";
+import { benjamin } from "../../../../constants";
 
 export const ExperienceCard = ({
     experience,
@@ -18,7 +18,7 @@ export const ExperienceCard = ({
     ): Tech[] => {
         return techStack.map((tech, index) => {
             if (typeof tech === "string") {
-                const foundTech = technologies.find(
+                const foundTech = benjamin.technologies.find(
                     (technology) => technology.name === tech
                 );
                 if (foundTech) {

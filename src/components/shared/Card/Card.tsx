@@ -2,7 +2,7 @@ import { ExperienceItem, Certification, Project, Tech, Technology } from "../../
 import { LinkButton } from "../LinkButton/LinkButton";
 import { SubHeading } from "../SubHeading/SubHeading";
 import { TechList } from "../../../routes/Home/components/TechList/TechList";
-import { technologies } from "../../../constants";
+import { benjamin } from "../../../constants";
 
 type CardProps = {
     item: ExperienceItem | Certification | Project;
@@ -16,7 +16,7 @@ export const Card = ({ item, type }: CardProps) => {
     ): Tech[] => {
         return techStack.map((tech, index) => {
             if (typeof tech === "string") {
-                const foundTech = technologies.find(
+                const foundTech = benjamin.technologies.find(
                     (technology) => technology.name === tech
                 );
                 if (foundTech) {

@@ -180,7 +180,10 @@ export const Home = ({
     return (
         <>
             <ScrollSection>
-                {[heroSection, techSection]}
+                {[
+                    <div key="hero-section">{heroSection}</div>,
+                    <div key="tech-section">{techSection}</div>
+                ]}
             </ScrollSection>
 
             {/* Tech Ticker - positioned above footer */}

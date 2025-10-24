@@ -4,15 +4,11 @@ import { BrowserRouter } from "react-router-dom";
 import { ExperienceList } from "./ExperienceList";
 import type { ExperienceItem } from "../../../../global";
 
-// Mock the universal ListContainer component
-jest.mock("../../../../components/shared/ListContainer/ListContainer", () => ({
-    ListContainer: ({ items, type, layout }: any) => (
-        <div data-testid="list-container" data-type={type} data-layout={layout}>
-            {items.map((item: ExperienceItem) => (
-                <div key={item.key} data-testid="experience-item">
-                    {item.title}
-                </div>
-            ))}
+// Mock the ExperienceCard component
+jest.mock("../ExperienceCard/ExperienceCard", () => ({
+    ExperienceCard: ({ experience }: { experience: ExperienceItem }) => (
+        <div data-testid="experience-card">
+            {experience.title}
         </div>
     ),
 }));
@@ -51,29 +47,29 @@ describe("ExperienceList", () => {
                 <ExperienceList experience={mockExperience} />
             </BrowserRouter>
         );
-        expect(screen.getByTestId("list-container")).toBeInTheDocument();
+        const cards = screen.getAllByTestId("experience-card");
+        expect(cards).toHaveLength(2);
     });
 
-    it("passes correct props to ListContainer", () => {
+    it("renders all experience items", () => {
         render(
             <BrowserRouter>
                 <ExperienceList experience={mockExperience} />
             </BrowserRouter>
         );
-        const container = screen.getByTestId("list-container");
-        expect(container).toHaveAttribute("data-type", "experience");
-        expect(container).toHaveAttribute("data-layout", "grid");
+        expect(screen.getByText("Senior Developer")).toBeInTheDocument();
+        expect(screen.getByText("Junior Developer")).toBeInTheDocument();
     });
 
-    it("renders experience items in reverse order", () => {
+    it("renders experience items in correct order", () => {
         render(
             <BrowserRouter>
                 <ExperienceList experience={mockExperience} />
             </BrowserRouter>
         );
-        const items = screen.getAllByTestId("experience-item");
-        expect(items[0]).toHaveTextContent("Junior Developer");
-        expect(items[1]).toHaveTextContent("Senior Developer");
+        const items = screen.getAllByTestId("experience-card");
+        expect(items[0]).toHaveTextContent("Senior Developer");
+        expect(items[1]).toHaveTextContent("Junior Developer");
     });
 
     it("handles empty experience list", () => {
@@ -82,8 +78,7 @@ describe("ExperienceList", () => {
                 <ExperienceList experience={[]} />
             </BrowserRouter>
         );
-        const container = screen.getByTestId("list-container");
-        expect(container).toBeInTheDocument();
-        expect(screen.queryByTestId("experience-item")).not.toBeInTheDocument();
+        const items = screen.queryAllByTestId("experience-card");
+        expect(items).toHaveLength(0);
     });
 });

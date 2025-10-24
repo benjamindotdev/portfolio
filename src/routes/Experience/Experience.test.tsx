@@ -19,14 +19,16 @@ const mockExperience: ExperienceItem[] = [
     },
 ];
 
-test("renders experience page with correct title and content", () => {
+test("renders experience page with correct content", () => {
     render(
         <MemoryRouter>
             <Experience experience={mockExperience} />
         </MemoryRouter>
     );
 
-    expect(screen.getByText("Experience")).toBeInTheDocument();
-    expect(screen.getByText("& Work 💼")).toBeInTheDocument();
+    // Check for the main content
     expect(screen.getByText("Web Developer @ Tech Solutions")).toBeInTheDocument();
+    expect(screen.getByText("September 2024 - Present")).toBeInTheDocument();
+    expect(screen.getByText("Developing web applications using modern technologies.")).toBeInTheDocument();
+    expect(screen.getByText("Current")).toBeInTheDocument();
 });

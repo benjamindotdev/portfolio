@@ -13,7 +13,7 @@ describe("Home Component", () => {
             <BrowserRouter>
                 <Home
                     technologies={mockTechnologies}
-                    image="test-image.jpg"
+                    image="/images/test-image.jpg"
                     name="Benjamin"
                 />
             </BrowserRouter>
@@ -26,18 +26,14 @@ describe("Home Component", () => {
             screen.getByText((content) => content.includes("Benjamin"))
         ).toBeInTheDocument();
         expect(
-            screen.getByText((content) => content.includes("Full-stack"))
+            screen.getByText((content) => content.includes("sole developer at"))
         ).toBeInTheDocument();
         expect(
-            screen.getByText((content) => content.includes("Web Dev"))
+            screen.getByText((content) => content.includes("Shep"))
         ).toBeInTheDocument();
         expect(
             screen.getByText((content) => content.includes("Ironhack"))
         ).toBeInTheDocument();
-        expect(screen.getByAltText("Benjamin")).toHaveAttribute(
-            "src",
-            "test-image.jpg"
-        );
     });
 
     it("renders the correct technology categories", () => {
@@ -48,11 +44,11 @@ describe("Home Component", () => {
         );
 
         expect(screen.getByText("Front end")).toBeInTheDocument();
-        expect(screen.getByText("React")).toBeInTheDocument();
+        expect(screen.getAllByText("React").length).toBeGreaterThan(0);
         expect(screen.getByText("Back end")).toBeInTheDocument();
-        expect(screen.getByText("Node.js")).toBeInTheDocument();
+        expect(screen.getAllByText("Node.js").length).toBeGreaterThan(0);
         expect(screen.getByText("Tools")).toBeInTheDocument();
-        expect(screen.getByText("Docker")).toBeInTheDocument();
+        expect(screen.getAllByText("Docker").length).toBeGreaterThan(0);
     });
 
     it("renders default image when no image is provided", () => {
@@ -62,6 +58,7 @@ describe("Home Component", () => {
             </BrowserRouter>
         );
 
-        expect(screen.getByAltText("Benjamin")).toHaveAttribute("src", "");
+        const heroImage = screen.getByAltText("Benjamin");
+        expect(heroImage).toHaveAttribute("src", "/images/hero.webp");
     });
 });

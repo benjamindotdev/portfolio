@@ -11,7 +11,8 @@ export const CircleImage = ({
                 src={image}
                 alt={text}
                 className="w-full h-full object-cover"
-                loading="lazy"
+                loading="eager"
+                fetchPriority="high"
             />
         </div>
     );

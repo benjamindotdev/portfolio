@@ -23,6 +23,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --watchAll=false",
+    "test:coverage": "react-scripts test --watchAll=false --coverage",
+    "test:coverage:watch": "react-scripts test --coverage",
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",
     "test:e2e:headed": "playwright test --headed",

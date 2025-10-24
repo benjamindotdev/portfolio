@@ -4,7 +4,7 @@ import { TechLogoImage } from "../../../../components/shared/TechLogoImage/TechL
 
 export const Header = ({ links }: { links: Link[] }) => {
     return (
-        <nav className="w-full min-h-[5vh] pt-4 m-0 flex flex-col md:flex-row items-center justify-between gap-4 md:gap-0 flex-shrink-0">
+        <nav className="w-full min-h-[5vh] pt-4 m-0 flex flex-col md:flex-row items-center justify-between gap-4 md:gap-0 flex-shrink-0" aria-label="Main navigation">
             <TechLogoImage image="images/B.webp" name="benjamin.dev" link="/" />
             <ul className="flex flex-row items-center gap-12 p-0 list-none">
                 {links.map((link) => (

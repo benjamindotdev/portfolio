@@ -1,10 +1,11 @@
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { Layout } from "./routes/Layout/Layout";
 import { Home } from "./routes/Home/Home";
 import { About } from "./routes/About/About";
 import { Certifications } from "./routes/Certifications/Certifications";
 import { Experience } from "./routes/Experience/Experience";
 import { Projects } from "./routes/Projects/Projects";
+import { NotFound } from "./routes/NotFound/NotFound";
 // import { Events } from "./routes/Events/Events";
 import "./index.css";
 import { benjamin } from "./constants";
@@ -45,7 +46,7 @@ export const App = () => (
                     path="projects"
                     element={<Projects projects={benjamin.projects} />}
                 />
-                <Route path="*" element={<Navigate to="/" />} />
+                <Route path="*" element={<NotFound />} />
             </Route>
         </Routes>
     </main>

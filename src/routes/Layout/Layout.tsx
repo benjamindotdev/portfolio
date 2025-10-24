@@ -2,6 +2,7 @@ import { Header } from "./components/Header/Header";
 import { Outlet } from "react-router-dom";
 import { Footer } from "./components/Footer/Footer";
 import { ScrollToTop } from "../../components/shared/ScrollToTop/ScrollToTop";
+import { PageTransition } from "../../components/shared/PageTransition/PageTransition";
 import type { Link, Social, Contact } from "../../global";
 
 export const Layout = ({
@@ -33,7 +34,9 @@ export const Layout = ({
                 className="flex-1 w-full overflow-hidden"
                 aria-label="Main content"
             >
-                <Outlet />
+                <PageTransition>
+                    <Outlet />
+                </PageTransition>
             </section>
 
             {/* Fixed Footer */}

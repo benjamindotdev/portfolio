@@ -164,3 +164,70 @@ convert your-logo.png -resize 512x512 -background black -gravity center -extent 
 ```
 
 Current placeholder icons are copies of `favicon.ico` and should be replaced with properly sized PNG images for optimal PWA experience.
+
+## 🎯 Optimization Guide
+
+### Image Optimization
+
+#### Recommended Formats
+- **WebP**: Modern format with superior compression (use for hero images, logos)
+- **AVIF**: Even better compression but check browser support
+- **PNG**: Use for images requiring transparency
+- **JPEG**: Use for photos without transparency
+
+#### Optimization Tools
+```bash
+# Convert to WebP
+cwebp -q 80 input.jpg -o output.webp
+
+# Bulk optimization with Squoosh CLI
+npm install -g @squoosh/cli
+squoosh-cli --webp auto public/images/*.jpg
+
+# Or use online tools:
+# - https://squoosh.app/
+# - https://tinypng.com/
+```
+
+#### Best Practices
+- Use WebP format for all images (current implementation)
+- Implement lazy loading (already done via react-lazy-load-image-component)
+- Preload critical images (hero.webp already preloaded)
+- Optimize image sizes: hero ~200KB, logos ~20KB, thumbnails ~50KB
+
+### Bundle Size Optimization
+
+Check your bundle size:
+```bash
+npm run build
+
+# Analyze bundle
+npm install -g source-map-explorer
+source-map-explorer 'build/static/js/*.js'
+```
+
+Current optimizations:
+- Code splitting via React.lazy (can be implemented for routes)
+- Tree shaking (automatic with Create React App)
+- Minification in production build
+
+### Performance Checklist
+- [ ] All images converted to WebP format
+- [x] Critical resources preloaded
+- [x] Lazy loading for images
+- [x] Web Vitals monitoring active
+- [ ] Service Worker for offline support (future enhancement)
+- [x] Resource hints (dns-prefetch, preconnect)
+- [x] CSP headers configured
+
+### Monitoring
+
+Track performance in production:
+```bash
+# Web Vitals are automatically reported to Google Analytics
+# Check console in development for detailed metrics
+
+# Lighthouse CI (optional)
+npm install -g @lhci/cli
+lhci autorun
+```

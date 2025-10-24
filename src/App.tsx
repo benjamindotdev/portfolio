@@ -11,7 +11,7 @@ import "./index.css";
 import { benjamin } from "./constants";
 
 export const App = () => (
-    <main className="min-h-screen text-center w-[90vw] mx-auto p-0 bg-portfolio-navy font-lunasima md:max-w-[90dvw] xl:max-w-[85dvw] 2xl:max-w-[80dvw]">
+    <main id="main-content" tabIndex={-1} className="min-h-screen text-center w-[90vw] mx-auto p-0 bg-portfolio-navy font-lunasima md:max-w-[90dvw] xl:max-w-[85dvw] 2xl:max-w-[80dvw]">
         <Routes>
             <Route
                 path="*"

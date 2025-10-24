@@ -1,4 +1,5 @@
 import React, { Component, ErrorInfo, ReactNode } from "react";
+import { config } from "../../../config/env";
 
 interface Props {
     children: ReactNode;
@@ -31,7 +32,7 @@ class ErrorBoundary extends Component<Props, State> {
         console.error("ErrorBoundary caught an error:", error, errorInfo);
 
         // Send to analytics in production
-        if (process.env.NODE_ENV === 'production' && window.gtag) {
+        if (config.isProduction && window.gtag) {
             window.gtag('event', 'exception', {
                 description: error.toString(),
                 fatal: true,
@@ -65,7 +66,7 @@ class ErrorBoundary extends Component<Props, State> {
                         >
                             Refresh Page
                         </button>
-                        {process.env.NODE_ENV === "development" && this.state.error && (
+                        {config.isDevelopment && this.state.error && (
                             <details className="mt-8 text-left">
                                 <summary className="cursor-pointer text-red-400 mb-2">
                                     Error Details (Development Only)

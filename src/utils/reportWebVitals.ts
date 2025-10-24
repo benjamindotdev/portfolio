@@ -24,7 +24,7 @@ export const sendToAnalytics = ({ name, delta, value, id }: Metric) => {
     }
 
     // Log to console in development
-    if (process.env.NODE_ENV === 'development') {
+    if (import.meta.env.DEV) {
         console.log(`[Web Vitals] ${name}:`, {
             value: Math.round(value),
             delta: Math.round(delta),

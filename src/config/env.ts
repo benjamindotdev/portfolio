@@ -1,9 +1,9 @@
 // Environment configuration
 export const config = {
-    isDevelopment: process.env.NODE_ENV === 'development',
-    isProduction: process.env.NODE_ENV === 'production',
-    baseUrl: process.env.PUBLIC_URL || '',
-    version: process.env.REACT_APP_VERSION || '1.0.0',
+    isDevelopment: import.meta.env.DEV,
+    isProduction: import.meta.env.PROD,
+    baseUrl: import.meta.env.BASE_URL || '/',
+    version: import.meta.env.VITE_VERSION || '1.0.0',
 } as const;
 
 // API endpoints (if needed in the future)

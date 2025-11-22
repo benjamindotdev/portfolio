@@ -34,11 +34,22 @@ npm install
 cp .env.example .env
 ```
 
+### Development Workflow
+This project follows a structured Git workflow. See [WORKFLOW.md](./WORKFLOW.md) for detailed guidelines.
+
+**Quick Summary:**
+- Create feature branches from `dev` for all new work
+- Run tests (`npm test`) before merging
+- Build locally (`npm run build`) to verify
+- Merge to `dev` when ready
+- Merge to `main` only after manual approval
+
 ### Available Scripts
 
 ```bash
 # Development
-npm start                    # Start development server (http://localhost:3000)
+npm run dev                  # Start Vite dev server (http://localhost:5173)
+npm start                    # Alias for npm run dev
 
 # Testing
 npm test                     # Run unit tests

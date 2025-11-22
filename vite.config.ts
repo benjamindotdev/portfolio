@@ -33,6 +33,8 @@ export default defineConfig({
     build: {
         outDir: 'build',
         sourcemap: true,
+        // Copy public assets including _redirects
+        copyPublicDir: true,
         // Optimize chunk splitting
         rollupOptions: {
             output: {

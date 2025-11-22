@@ -36,8 +36,8 @@ export const ScrollSection = ({
                         <a
                             key={index}
                             href={`#section-${index}`}
-                            className={`w-3 h-3 rounded-full transition-colors ${activeSection === index
-                                ? 'bg-portfolio-green'
+                            className={`w-8 h-3 rounded transition-all ${activeSection === index
+                                ? 'bg-portfolio-green h-32'
                                 : 'bg-white/30 hover:bg-white/60'
                                 }`}
                             aria-label={`Section ${index + 1}`}

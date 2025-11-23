@@ -27,7 +27,7 @@ export const TechLogoImage = ({
                 {isLearning && (
                     <GraduationCap
                         size={20}
-                        className="absolute -top-5 left-1/2 transform -translate-x-1/2 text-portfolio-white text-portfolio-text text-center whitespace-nowrap group-hover:opacity-0 transition-opacity duration-500"
+                        className="absolute -top-5 left-1/2 transform -translate-x-1/2 text-slate-700 dark:text-portfolio-white text-portfolio-text text-center whitespace-nowrap group-hover:opacity-0 transition-opacity duration-500"
                     />
                 )}
                 <LazyLoadImage
@@ -36,7 +36,7 @@ export const TechLogoImage = ({
                     alt={name}
                     loading="lazy"
                 />
-                <p className="absolute -bottom-[30px] left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-portfolio-white text-portfolio-text text-center whitespace-nowrap translate-y-[-10px]">
+                <p className="absolute -bottom-[30px] left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-slate-700 dark:text-portfolio-white text-portfolio-text text-center whitespace-nowrap translate-y-[-10px]">
                     {name}
                 </p>
             </Link>

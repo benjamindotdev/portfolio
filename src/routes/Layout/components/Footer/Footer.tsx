@@ -15,8 +15,8 @@ export const Footer = ({
     if (!isVisible) return null;
 
     return (
-        <footer className="min-h-[5dvh] w-full flex items-center justify-center flex-grow-0 flex-shrink-0 py-8 gap-8" aria-label="Site footer">
-            <nav className="flex gap-8" aria-label="Social media links">
+        <footer className="min-h-[5dvh] w-full flex items-end justify-end flex-grow-0 flex-shrink-0 py-8 gap-8" aria-label="Site footer">
+            <nav className="flex flex-row gap-8 items-end" aria-label="Social media links">
                 {socials.map((social) => (
                     <LogoImage
                         key={social.key}
@@ -25,9 +25,6 @@ export const Footer = ({
                         link={social.link as string}
                     />
                 ))}
-            </nav>
-            <h3 className="text-portfolio-green text-portfolio-text">benjamin.dev {year}</h3>
-            <nav className="flex gap-8" aria-label="Contact links">
                 {contacts.map((contact) => (
                     <LogoImage
                         key={contact.key}
@@ -36,6 +33,7 @@ export const Footer = ({
                         link={contact.link as string}
                     />
                 ))}
+                <h3 className="text-slate-700 dark:text-white text-portfolio-text">© benjamin.dev {year}</h3>
             </nav>
         </footer>
     );

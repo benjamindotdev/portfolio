@@ -118,6 +118,14 @@ type Project = {
     deployedLink?: string;
     repoLink?: string;
     techStack: Technology[] | string[];
+    type?: "personal" | "freelance";
+    client?: {
+        name: string;
+        linkedIn?: string;
+        position?: string;
+        testimonial?: string;
+        image?: string;
+    };
 };
 
 export type {

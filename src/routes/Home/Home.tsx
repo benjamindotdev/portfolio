@@ -115,12 +115,12 @@ export const Home = ({
         <div className="w-full max-w-6xl flex flex-col md:flex-row items-center md:items-stretch justify-between gap-12 md:gap-16 px-8">
             <div className="flex flex-col justify-between w-full md:w-2/3 items-start">
                 <h1 className="p-0 m-0 text-4xl md:text-5xl lg:text-6xl text-portfolio-cyan font-lunasima whitespace-nowrap">
-                    <strong className="text-portfolio-white">Hey, I'm</strong>
-                    <span className="text-portfolio-green text-[larger] drop-shadow-[0px_0px_20px_black]">
+                    <strong className="text-slate-700 dark:text-portfolio-white">Hey, I'm</strong>
+                    <span className="text-portfolio-green text-[larger]">
                         {` ${name}`}
                     </span>
                 </h1>
-                <div className="flex flex-col gap-4 text-portfolio-white text-lg md:text-xl font-lunasima text-left">
+                <div className="flex flex-col gap-4 text-slate-700 dark:text-portfolio-white text-lg md:text-xl font-lunasima text-left">
                     <p>
                         I'm the sole developer at{" "}
                         <a

@@ -5,13 +5,14 @@ import { About } from "./routes/About/About";
 import { Certifications } from "./routes/Certifications/Certifications";
 import { Experience } from "./routes/Experience/Experience";
 import { Projects } from "./routes/Projects/Projects";
+import { Freelance } from "./routes/Freelance/Freelance";
 import { NotFound } from "./routes/NotFound/NotFound";
 // import { Events } from "./routes/Events/Events";
 import "./index.css";
 import { benjamin } from "./constants";
 
 export const App = () => (
-    <main id="main-content" tabIndex={-1} className="min-h-screen text-center w-[90vw] mx-auto p-0 bg-portfolio-navy font-lunasima md:max-w-[90dvw] xl:max-w-[85dvw] 2xl:max-w-[80dvw]">
+    <main id="main-content" tabIndex={-1} className="min-h-screen text-center w-full p-0 bg-white dark:bg-portfolio-navy font-lunasima">
         <Routes>
             <Route
                 path="*"
@@ -45,6 +46,10 @@ export const App = () => (
                 <Route
                     path="projects"
                     element={<Projects projects={benjamin.projects} />}
+                />
+                <Route
+                    path="freelance"
+                    element={<Freelance projects={benjamin.projects} />}
                 />
                 <Route path="*" element={<NotFound />} />
             </Route>

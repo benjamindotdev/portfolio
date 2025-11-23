@@ -14,7 +14,7 @@ test("renders the PageTitle component with provided strongText", () => {
 
 test("renders the PageTitle component with main prop", () => {
     render(<PageTitle text="testing" main />);
-    expect(screen.getByText("testing")).toHaveClass("text-portfolio-white");
+    expect(screen.getByText("testing")).toHaveClass("text-slate-700", "dark:text-portfolio-white");
 });
 
 test("renders the PageTitle component with icon", () => {

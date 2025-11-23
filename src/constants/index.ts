@@ -604,6 +604,7 @@ const projects = [
         image: "logos/solitaire.png",
         description: "A modern take on the classic solitaire games.",
         status: "completed",
+        type: "freelance",
         techStack: [
             "Next.js",
             "tailwindcss",
@@ -612,9 +613,36 @@ const projects = [
         ],
         deployedLink: "https://solitairedaily.com",
         repoLink: "https://github.com/benjamindotdev/solitairedaily",
+        client: {
+            name: "SolitaireDaily",
+        },
     },
     {
         key: 1,
+        name: "sh.coach",
+        image: "logos/shcoach.svg",
+        description: "Leadership coaching portfolio for Stephanie Herre. Modern responsive site with custom layouts and interactive features.",
+        status: "completed",
+        type: "freelance",
+        techStack: [
+            "React",
+            "Typescript",
+            "Vite",
+            "tailwindcss",
+            "React Router",
+            "Netlify"
+        ],
+        deployedLink: "https://sh.coach",
+        repoLink: "https://github.com/benjamindotdev/sh",
+        client: {
+            name: "Stephanie Herre",
+            linkedIn: "https://www.linkedin.com/in/stephanie-herre/",
+            position: "Leadership Coach & Consultant",
+            testimonial: "Benjamin delivered a beautiful, performant website that perfectly captures my coaching brand. His attention to detail and technical expertise made the process smooth and enjoyable.",
+        },
+    },
+    {
+        key: 2,
         name: "Storytime",
         image: "logos/storytime.png",
         description: "AI generated bedtime stories for kids.",
@@ -632,7 +660,7 @@ const projects = [
         repoLink: "https://github.com/benjamindotdev/storytime",
     },
     {
-        key: 2,
+        key: 3,
         name: "Frosch",
         image: "logos/Frosch.gif",
         description: "A web-game where you help a frog cross different terrain.",
@@ -642,7 +670,7 @@ const projects = [
         repoLink: "https://github.com/benjamindotdev/frosch",
     },
     {
-        key: 3,
+        key: 4,
         name: "littlelemon",
         image: "logos/littlelemon.svg",
         description: "Final project for the Meta Frontend Developer course.",
@@ -690,13 +718,7 @@ const benjamin = {
             name: "email",
             link: "mailto:hello@benjamin.dev",
             icon: "icons/email.svg",
-        },
-        {
-            key: 1,
-            name: "phone",
-            link: "tel:+4917684306586",
-            icon: "icons/phone.svg",
-        },
+        }
     ],
     socials: [
         {
@@ -871,28 +893,28 @@ const benjamin = {
     links: [
         {
             key: 0,
-            title: "Home",
-            route: "/",
-        },
-        {
-            key: 1,
             title: "About",
             route: "/about",
         },
         {
-            key: 2,
-            title: "Certifications",
-            route: "/certifications",
-        },
-        {
-            key: 3,
+            key: 1,
             title: "Experience",
             route: "/experience",
         },
         {
-            key: 4,
+            key: 2,
+            title: "Freelance",
+            route: "/freelance",
+        },
+        {
+            key: 3,
             title: "Projects",
             route: "/projects",
+        },
+        {
+            key: 4,
+            title: "Certifications",
+            route: "/certifications",
         },
     ],
     certifications: [

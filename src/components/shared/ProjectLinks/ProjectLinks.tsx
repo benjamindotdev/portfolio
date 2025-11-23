@@ -20,7 +20,7 @@ export const ProjectLinks = ({
 
     return (
         <article className="flex justify-end items-center gap-4">
-            <p className="text-portfolio-text text-portfolio-white">
+            <p className="text-portfolio-text text-slate-700 dark:text-portfolio-white">
                 {status[0].toLocaleUpperCase() +
                     status.slice(1, status.length) +
                     " " +

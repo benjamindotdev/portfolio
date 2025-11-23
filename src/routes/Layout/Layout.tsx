@@ -25,13 +25,13 @@ export const Layout = ({
             </a>
 
             {/* Fixed Header */}
-            <div className="flex-shrink-0">
+            <div className="flex-shrink-0 w-full px-[5vw] md:px-[5dvw] xl:px-[7.5dvw] 2xl:px-[10dvw]">
                 <Header links={links} />
             </div>
 
             {/* Scrollable Content Area */}
             <section
-                className="flex-1 w-full overflow-hidden"
+                className="flex-1 w-full overflow-hidden px-[5vw] md:px-[5dvw] xl:px-[7.5dvw] 2xl:px-[10dvw]"
                 aria-label="Main content"
             >
                 <PageTransition>
@@ -40,7 +40,7 @@ export const Layout = ({
             </section>
 
             {/* Fixed Footer */}
-            <div className="flex-shrink-0">
+            <div className="flex-shrink-0 w-full px-[5vw] md:px-[5dvw] xl:px-[7.5dvw] 2xl:px-[10dvw]">
                 <Footer socials={socials} contacts={contacts} isVisible={true} />
             </div>
 

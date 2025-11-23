@@ -40,7 +40,7 @@ export const TechTicker = ({
                             alt={tech.name}
                             className="w-6 h-6 object-contain transition-transform group-hover:scale-125"
                         />
-                        <span className="text-portfolio-white font-lunasima transition-colors group-hover:text-portfolio-green">
+                        <span className="text-slate-700 dark:text-portfolio-white font-lunasima transition-colors group-hover:text-portfolio-green">
                             {tech.name}
                         </span>
                     </div>

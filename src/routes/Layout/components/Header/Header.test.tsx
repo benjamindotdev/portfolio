@@ -3,6 +3,7 @@ import "@testing-library/jest-dom";
 import { Header } from "./Header";
 import { BrowserRouter } from "react-router-dom";
 import type { Link } from "../../../../global";
+import { ThemeProvider } from "../../../../contexts/ThemeContext";
 
 const mockLinks: Link[] = [
     {
@@ -19,9 +20,11 @@ const mockLinks: Link[] = [
 
 test("renders the Header component with provided props", () => {
     render(
-        <BrowserRouter>
-            <Header links={mockLinks} />
-        </BrowserRouter>
+        <ThemeProvider>
+            <BrowserRouter>
+                <Header links={mockLinks} />
+            </BrowserRouter>
+        </ThemeProvider>
     );
     expect(screen.getByText("link1")).toBeInTheDocument();
     expect(screen.getByText("link2")).toBeInTheDocument();
@@ -30,17 +33,19 @@ test("renders the Header component with provided props", () => {
 
 test("renders the Header component with different text", () => {
     render(
-        <BrowserRouter>
-            <Header
-                links={[
-                    {
-                        key: 1,
-                        title: "link3",
-                        route: "/link3",
-                    },
-                ]}
-            />
-        </BrowserRouter>
+        <ThemeProvider>
+            <BrowserRouter>
+                <Header
+                    links={[
+                        {
+                            key: 1,
+                            title: "link3",
+                            route: "/link3",
+                        },
+                    ]}
+                />
+            </BrowserRouter>
+        </ThemeProvider>
     );
     expect(screen.getByText("link3")).toBeInTheDocument();
 });

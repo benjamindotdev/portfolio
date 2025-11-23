@@ -717,20 +717,29 @@ const benjamin = {
             key: 0,
             name: "email",
             link: "mailto:hello@benjamin.dev",
-            icon: "icons/email.svg",
+            icon: {
+                lightImage: "icons/email-light.svg",
+                darkImage: "icons/email-dark.svg"
+            },
         }
     ],
     socials: [
         {
             key: 0,
             name: "LinkedIn",
-            image: "logos/linkedin.svg",
+            image: {
+                lightImage: "logos/linkedInBlack.png",
+                darkImage: "logos/linkedInWhite.png"
+            },
             link: "https://www.linkedin.com/in/benjamin-elliott-163280280/",
         },
         {
             key: 1,
             name: "Github",
-            image: "logos/github.svg",
+            image: {
+                lightImage: "logos/githubBlack.png",
+                darkImage: "logos/githubWhite.png",
+            },
             link: "https://github.com/benjamindotdev",
         }
     ],
@@ -908,11 +917,16 @@ const benjamin = {
         },
         {
             key: 3,
+            title: "Stack",
+            route: "/stack",
+        },
+        {
+            key: 4,
             title: "Projects",
             route: "/projects",
         },
         {
-            key: 4,
+            key: 5,
             title: "Certifications",
             route: "/certifications",
         },

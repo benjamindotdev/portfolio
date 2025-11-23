@@ -6,6 +6,7 @@ import { Certifications } from "./routes/Certifications/Certifications";
 import { Experience } from "./routes/Experience/Experience";
 import { Projects } from "./routes/Projects/Projects";
 import { Freelance } from "./routes/Freelance/Freelance";
+import { Stack } from "./routes/Stack/Stack";
 import { NotFound } from "./routes/NotFound/NotFound";
 // import { Events } from "./routes/Events/Events";
 import "./index.css";
@@ -50,6 +51,10 @@ export const App = () => (
                 <Route
                     path="freelance"
                     element={<Freelance projects={benjamin.projects} />}
+                />
+                <Route
+                    path="stack"
+                    element={<Stack technologies={benjamin.technologies} />}
                 />
                 <Route path="*" element={<NotFound />} />
             </Route>

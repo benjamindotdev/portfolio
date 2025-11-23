@@ -2,6 +2,7 @@ import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { Footer } from "./Footer";
 import { BrowserRouter } from "react-router-dom";
+import { ThemeProvider } from "../../../../contexts/ThemeContext";
 import type { Social, Contact } from "../../../../global";
 
 const mockSocials: Social[] = [
@@ -36,9 +37,11 @@ const mockContacts: Contact[] = [
 
 test("renders the Footer component with provided props", () => {
     render(
-        <BrowserRouter>
-            <Footer socials={mockSocials} contacts={mockContacts} />
-        </BrowserRouter>
+        <ThemeProvider>
+            <BrowserRouter>
+                <Footer socials={mockSocials} contacts={mockContacts} />
+            </BrowserRouter>
+        </ThemeProvider>
     );
     expect(screen.getByAltText("github")).toBeInTheDocument();
     expect(screen.getByAltText("linkedin")).toBeInTheDocument();
@@ -49,26 +52,28 @@ test("renders the Footer component with provided props", () => {
 
 test("renders the Footer component with different text", () => {
     render(
-        <BrowserRouter>
-            <Footer
-                socials={[
-                    {
-                        name: "facebook",
-                        link: "",
-                        image: "",
-                        key: 1,
-                    },
-                ]}
-                contacts={[
-                    {
-                        name: "email",
-                        link: "",
-                        icon: "",
-                        key: 1,
-                    },
-                ]}
-            />
-        </BrowserRouter>
+        <ThemeProvider>
+            <BrowserRouter>
+                <Footer
+                    socials={[
+                        {
+                            name: "facebook",
+                            link: "",
+                            image: "",
+                            key: 1,
+                        },
+                    ]}
+                    contacts={[
+                        {
+                            name: "email",
+                            link: "",
+                            icon: "",
+                            key: 1,
+                        },
+                    ]}
+                />
+            </BrowserRouter>
+        </ThemeProvider>
     );
     expect(screen.getByAltText("facebook")).toBeInTheDocument();
     expect(screen.getByAltText("email")).toBeInTheDocument();

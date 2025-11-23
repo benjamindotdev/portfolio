@@ -25,8 +25,8 @@
       content="
         default-src 'self';
         script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com;
-        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-        font-src 'self' https://fonts.gstatic.com;
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://api.fontshare.com;
+        font-src 'self' https://fonts.gstatic.com https://cdn.fontshare.com;
         img-src 'self' data: https:;
         connect-src 'self' https://www.google-analytics.com;
         frame-src 'none';
@@ -85,6 +85,8 @@
     <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://api.fontshare.com" />
+    <link rel="preconnect" href="https://api.fontshare.com" />
     
     <!-- Preload critical resources -->
     <link rel="preload" href="%PUBLIC_URL%/images/hero.webp" as="image" type="image/webp" />
@@ -98,6 +100,10 @@
       rel="stylesheet"
       media="print"
       onload="this.media='all'"
+    />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=satoshi@900&display=swap"
+      rel="stylesheet"
     />
     <noscript>
       <link

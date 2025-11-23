@@ -16,7 +16,7 @@ export const PageTitle = ({
         : "text-4xl md:text-5xl lg:text-6xl";
 
     return (
-        <h2 className={`p-0 m-0 ${sizeClass} text-portfolio-cyan font-lunasima`}>
+        <h2 className={`p-0 m-0 ${sizeClass} text-portfolio-cyan font-satoshi tracking-wide`}>
             <strong className="text-slate-700 dark:text-portfolio-white">{text}</strong>
             <span className={`${main ? "text-portfolio-green text-[larger] drop-shadow-[0px_0px_20px_black]" : ""}`}>
                 {strongText ? ` ${strongText}` : ""} {icon}

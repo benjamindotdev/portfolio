@@ -1,28 +1,37 @@
 import { Link } from "react-router-dom";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import { useTheme } from "../../../contexts/ThemeContext";
 
 export const LogoImage = ({
     image,
     name,
     link,
 }: {
-    image: string;
+    image: string | { lightImage: string; darkImage: string };
     name: string;
     link: string;
 }) => {
+    const { theme } = useTheme();
     const isInternal = link.startsWith('/');
+
+    // Determine which image to use
+    const imageUrl = typeof image === 'string'
+        ? image
+        : theme === 'dark'
+            ? image.darkImage
+            : image.lightImage;
 
     return (
         <Link
             to={link}
             target={isInternal ? undefined : "_blank"}
             rel={isInternal ? undefined : "noreferrer"}
-            className="group"
+            className="group text-black dark:text-white"
             aria-label={name}
         >
             <LazyLoadImage
-                className="h-icon-s w-auto transition-all duration-300 hover:brightness-150 hover:drop-shadow-[0_0_8px_#2bf38b]"
-                src={image}
+                className="h-icon-s w-auto transition-all duration-300 hover:brightness-150 hover:drop-shadow-[0_0_8px_#2bf38b] text-black dark:text-white"
+                src={imageUrl}
                 alt={name}
                 loading="lazy"
                 style={{

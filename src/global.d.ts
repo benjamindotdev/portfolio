@@ -55,14 +55,14 @@ type Skill = {
 type Contact = {
     key: number;
     name: string;
-    icon: string;
+    icon: string | { lightImage: string; darkImage: string };
     link: string;
 };
 
 type Social = {
     key: number;
     name: string;
-    image: string;
+    image: string | { lightImage: string; darkImage: string };
     link: string;
 };
 

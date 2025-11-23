@@ -1,17 +1,20 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { BrowserRouter } from "react-router-dom";
+import { ThemeProvider } from "../../../contexts/ThemeContext";
 import { LogoImage } from "./LogoImage";
 
 describe("LogoImage", () => {
     it("renders logo image with link", () => {
         render(
             <BrowserRouter>
-                <LogoImage
-                    image="test.png"
-                    name="Test Logo"
-                    link="https://example.com"
-                />
+                <ThemeProvider>
+                    <LogoImage
+                        image="test.png"
+                        name="Test Logo"
+                        link="https://example.com"
+                    />
+                </ThemeProvider>
             </BrowserRouter>
         );
 
@@ -25,11 +28,13 @@ describe("LogoImage", () => {
     it("renders internal link without target blank", () => {
         render(
             <BrowserRouter>
-                <LogoImage
-                    image="test.png"
-                    name="Home Logo"
-                    link="/"
-                />
+                <ThemeProvider>
+                    <LogoImage
+                        image="test.png"
+                        name="Home Logo"
+                        link="/"
+                    />
+                </ThemeProvider>
             </BrowserRouter>
         );
 
@@ -43,11 +48,13 @@ describe("LogoImage", () => {
     it("renders image with correct alt text", () => {
         render(
             <BrowserRouter>
-                <LogoImage
-                    image="logo.svg"
-                    name="Company Logo"
-                    link="https://company.com"
-                />
+                <ThemeProvider>
+                    <LogoImage
+                        image="logo.svg"
+                        name="Company Logo"
+                        link="https://company.com"
+                    />
+                </ThemeProvider>
             </BrowserRouter>
         );
 

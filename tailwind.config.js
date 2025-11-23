@@ -44,6 +44,7 @@ module.exports = {
       },
       fontFamily: {
         lunasima: ["Lunasima", "sans-serif"],
+        satoshi: ["Satoshi", "sans-serif"],
       },
       borderWidth: {
         5: "5px",

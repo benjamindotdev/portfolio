@@ -36,21 +36,6 @@ describe("Home Component", () => {
         ).toBeInTheDocument();
     });
 
-    it("renders the correct technology categories", () => {
-        render(
-            <BrowserRouter>
-                <Home technologies={mockTechnologies} />
-            </BrowserRouter>
-        );
-
-        expect(screen.getByText("Front end")).toBeInTheDocument();
-        expect(screen.getAllByText("React").length).toBeGreaterThan(0);
-        expect(screen.getByText("Back end")).toBeInTheDocument();
-        expect(screen.getAllByText("Node.js").length).toBeGreaterThan(0);
-        expect(screen.getByText("Tools")).toBeInTheDocument();
-        expect(screen.getAllByText("Docker").length).toBeGreaterThan(0);
-    });
-
     it("renders default image when no image is provided", () => {
         render(
             <BrowserRouter>

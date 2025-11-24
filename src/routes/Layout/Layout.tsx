@@ -30,14 +30,14 @@ export const Layout = ({
             </div>
 
             {/* Scrollable Content Area */}
-            <section
-                className="flex-1 w-full overflow-hidden px-[5vw] md:px-[5dvw] xl:px-[7.5dvw] 2xl:px-[10dvw]"
+            <main
+                className="flex-1 w-full h-full overflow-hidden px-[5vw] md:px-[5dvw] xl:px-[7.5dvw] 2xl:px-[10dvw]"
                 aria-label="Main content"
             >
                 <PageTransition>
                     <Outlet />
                 </PageTransition>
-            </section>
+            </main>
 
             {/* Fixed Footer */}
             <div className="flex-shrink-0 w-full px-[5vw] md:px-[5dvw] xl:px-[7.5dvw] 2xl:px-[10dvw]">

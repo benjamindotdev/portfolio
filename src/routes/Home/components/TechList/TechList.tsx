@@ -10,7 +10,7 @@ export const TechList = ({
     subHeading?: string;
 }) => {
     return (
-        <article className="flex flex-col gap-8 text-left px-4 py-2 rounded-2xl">
+        <article className="flex flex-col gap-8 text-center px-4 py-2 rounded-2xl">
             <SubHeading text={subHeading ? subHeading : ""} />
             <ul className="flex flex-wrap flex-row justify-start items-start text-portfolio-h3 gap-8">
                 {techs &&

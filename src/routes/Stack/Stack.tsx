@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import { TechList } from "../Home/components/TechList/TechList";
 import type { Technology } from "../../global";
+import { PageContainer } from "../Layout/components";
 
 export const Stack = ({
     technologies = [],
@@ -49,15 +50,13 @@ export const Stack = ({
     );
 
     return (
-        <div className="w-full max-w-6xl px-8 py-16 h-full flex items-center justify-center">
-            <div className="w-full flex flex-wrap gap-x-12 gap-y-8 items-start content-start">
-                {pageContent.map(
-                    (content) =>
-                        content.techs.length > 0 && (
-                            <TechList key={content.subHeading} {...content} />
-                        )
-                )}
-            </div>
-        </div>
+        <PageContainer id="stack">
+            {pageContent.map(
+                (content) =>
+                    content.techs.length > 0 && (
+                        <TechList key={content.subHeading} {...content} />
+                    )
+            )}
+        </PageContainer>
     );
 };

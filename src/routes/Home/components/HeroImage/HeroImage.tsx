@@ -1,4 +1,4 @@
-export const CircleImage = ({
+export const HeroImage = ({
     image,
     text,
 }: {

@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { MemoryRouter } from "react-router-dom";
+import { ThemeProvider } from "../../contexts/ThemeContext";
 import { Experience } from "./Experience";
 import { ExperienceItem } from "../../global";
 
@@ -22,7 +23,9 @@ const mockExperience: ExperienceItem[] = [
 test("renders experience page with correct content", () => {
     render(
         <MemoryRouter>
-            <Experience experience={mockExperience} />
+            <ThemeProvider>
+                <Experience experience={mockExperience} />
+            </ThemeProvider>
         </MemoryRouter>
     );
 

@@ -2,6 +2,7 @@ import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { TechLogoImage } from "./TechLogoImage";
 import { BrowserRouter } from "react-router-dom";
+import { ThemeProvider } from "../../../contexts/ThemeContext";
 
 const mockImage = {
     key: 1,
@@ -13,11 +14,13 @@ const mockImage = {
 test("renders the TechLogoImage component with provided props", () => {
     render(
         <BrowserRouter>
-            <TechLogoImage
-                image={mockImage.image}
-                name={mockImage.name}
-                link={mockImage.link}
-            />
+            <ThemeProvider>
+                <TechLogoImage
+                    image={mockImage.image}
+                    name={mockImage.name}
+                    link={mockImage.link}
+                />
+            </ThemeProvider>
         </BrowserRouter>
     );
     expect(screen.getByText("test")).toBeInTheDocument();
@@ -27,11 +30,13 @@ test("renders the TechLogoImage component with provided props", () => {
 test("renders the TechLogoImage component with different text", () => {
     render(
         <BrowserRouter>
-            <TechLogoImage
-                image="another test"
-                name="another test"
-                link="/another-test"
-            />
+            <ThemeProvider>
+                <TechLogoImage
+                    image="another test"
+                    name="another test"
+                    link="/another-test"
+                />
+            </ThemeProvider>
         </BrowserRouter>
     );
     expect(screen.getByText("another test")).toBeInTheDocument();
@@ -40,11 +45,13 @@ test("renders the TechLogoImage component with different text", () => {
 test("renders the TechLogoImage component with correct Tailwind classes", () => {
     render(
         <BrowserRouter>
-            <TechLogoImage
-                image={mockImage.image}
-                name={mockImage.name}
-                link={mockImage.link}
-            />
+            <ThemeProvider>
+                <TechLogoImage
+                    image={mockImage.image}
+                    name={mockImage.name}
+                    link={mockImage.link}
+                />
+            </ThemeProvider>
         </BrowserRouter>
     );
     expect(screen.getByRole("link")).toHaveClass("relative");

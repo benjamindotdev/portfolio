@@ -13,7 +13,7 @@ export const PageTransition = ({ children }: { children: React.ReactNode }) => {
 
     return (
         <div
-            className={`h-full transition-opacity duration-300 ${isVisible ? 'opacity-100' : 'opacity-0'
+            className={`h-full transition-opacity duration-900 ${isVisible ? 'opacity-100' : 'opacity-0'
                 }`}
         >
             {children}

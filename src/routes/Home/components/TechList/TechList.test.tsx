@@ -2,6 +2,7 @@ import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { TechList } from "./TechList";
 import { BrowserRouter } from "react-router-dom";
+import { ThemeProvider } from "../../../../contexts/ThemeContext";
 import type { Tech } from "../../../../global";
 
 const mockTechs: Tech[] = [
@@ -22,7 +23,9 @@ const mockTechs: Tech[] = [
 test("renders the TechList component with provided props", () => {
     render(
         <BrowserRouter>
-            <TechList techs={mockTechs} />
+            <ThemeProvider>
+                <TechList techs={mockTechs} />
+            </ThemeProvider>
         </BrowserRouter>
     );
     expect(screen.getByText("tech1")).toBeInTheDocument();
@@ -33,16 +36,18 @@ test("renders the TechList component with provided props", () => {
 test("renders the TechList component with different text", () => {
     render(
         <BrowserRouter>
-            <TechList
-                techs={[
-                    {
-                        key: 1,
-                        name: "tech3",
-                        image: "image3",
-                        link: "link3",
-                    },
-                ]}
-            />
+            <ThemeProvider>
+                <TechList
+                    techs={[
+                        {
+                            key: 1,
+                            name: "tech3",
+                            image: "image3",
+                            link: "link3",
+                        },
+                    ]}
+                />
+            </ThemeProvider>
         </BrowserRouter>
     );
     expect(screen.getByText("tech3")).toBeInTheDocument();
@@ -51,7 +56,9 @@ test("renders the TechList component with different text", () => {
 test("renders the TechList component with correct Tailwind classes", () => {
     render(
         <BrowserRouter>
-            <TechList techs={mockTechs} />
+            <ThemeProvider>
+                <TechList techs={mockTechs} />
+            </ThemeProvider>
         </BrowserRouter>
     );
     expect(screen.getByRole("article")).toHaveClass("flex");
@@ -63,7 +70,9 @@ test("renders the TechList component with correct Tailwind classes", () => {
 test("renders the Techlist component with subHeading", () => {
     render(
         <BrowserRouter>
-            <TechList techs={mockTechs} subHeading="subHeading" />
+            <ThemeProvider>
+                <TechList techs={mockTechs} subHeading="subHeading" />
+            </ThemeProvider>
         </BrowserRouter>
     );
     expect(screen.getByText("subHeading")).toBeInTheDocument();

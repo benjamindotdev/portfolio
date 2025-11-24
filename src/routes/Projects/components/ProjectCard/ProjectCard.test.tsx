@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { BrowserRouter } from "react-router-dom";
+import { ThemeProvider } from "../../../../contexts/ThemeContext";
 import { ProjectCard } from "./ProjectCard";
 import type { Project } from "../../../../global";
 
@@ -19,7 +20,9 @@ describe("ProjectCard", () => {
     it("renders project details correctly", () => {
         render(
             <BrowserRouter>
-                <ProjectCard project={mockProject} />
+                <ThemeProvider>
+                    <ProjectCard project={mockProject} />
+                </ThemeProvider>
             </BrowserRouter>
         );
 
@@ -30,7 +33,9 @@ describe("ProjectCard", () => {
     it("renders project image", () => {
         render(
             <BrowserRouter>
-                <ProjectCard project={mockProject} />
+                <ThemeProvider>
+                    <ProjectCard project={mockProject} />
+                </ThemeProvider>
             </BrowserRouter>
         );
 
@@ -42,7 +47,9 @@ describe("ProjectCard", () => {
     it("renders link button when deployedLink is provided", () => {
         render(
             <BrowserRouter>
-                <ProjectCard project={mockProject} />
+                <ThemeProvider>
+                    <ProjectCard project={mockProject} />
+                </ThemeProvider>
             </BrowserRouter>
         );
 
@@ -55,7 +62,9 @@ describe("ProjectCard", () => {
         const projectWithOnlyRepo = { ...mockProject, deployedLink: "" };
         render(
             <BrowserRouter>
-                <ProjectCard project={projectWithOnlyRepo} />
+                <ThemeProvider>
+                    <ProjectCard project={projectWithOnlyRepo} />
+                </ThemeProvider>
             </BrowserRouter>
         );
 
@@ -67,7 +76,9 @@ describe("ProjectCard", () => {
         const projectWithoutLinks = { ...mockProject, deployedLink: "", repoLink: "" };
         render(
             <BrowserRouter>
-                <ProjectCard project={projectWithoutLinks} />
+                <ThemeProvider>
+                    <ProjectCard project={projectWithoutLinks} />
+                </ThemeProvider>
             </BrowserRouter>
         );
 
@@ -79,7 +90,9 @@ describe("ProjectCard", () => {
         const projectWithoutTech = { ...mockProject, techStack: [] };
         render(
             <BrowserRouter>
-                <ProjectCard project={projectWithoutTech} />
+                <ThemeProvider>
+                    <ProjectCard project={projectWithoutTech} />
+                </ThemeProvider>
             </BrowserRouter>
         );
 

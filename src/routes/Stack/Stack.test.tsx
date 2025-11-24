@@ -2,6 +2,7 @@ import { render, screen } from "@testing-library/react";
 import { Stack } from "./Stack";
 import { benjamin } from "../../constants";
 import { BrowserRouter } from "react-router-dom";
+import { ThemeProvider } from "../../contexts/ThemeContext";
 import type { Technology } from "../../global";
 import "@testing-library/jest-dom";
 
@@ -11,7 +12,9 @@ describe("Stack Component", () => {
     it("renders the Stack component with technologies", () => {
         render(
             <BrowserRouter>
-                <Stack technologies={mockTechnologies} />
+                <ThemeProvider>
+                    <Stack technologies={mockTechnologies} />
+                </ThemeProvider>
             </BrowserRouter>
         );
 
@@ -22,7 +25,9 @@ describe("Stack Component", () => {
     it("renders the correct technology categories", () => {
         render(
             <BrowserRouter>
-                <Stack technologies={mockTechnologies} />
+                <ThemeProvider>
+                    <Stack technologies={mockTechnologies} />
+                </ThemeProvider>
             </BrowserRouter>
         );
 
@@ -37,7 +42,9 @@ describe("Stack Component", () => {
     it("renders empty when no technologies are provided", () => {
         const { container } = render(
             <BrowserRouter>
-                <Stack technologies={[]} />
+                <ThemeProvider>
+                    <Stack technologies={[]} />
+                </ThemeProvider>
             </BrowserRouter>
         );
 

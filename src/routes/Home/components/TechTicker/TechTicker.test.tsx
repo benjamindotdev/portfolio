@@ -1,5 +1,6 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom";
+import { ThemeProvider } from "../../../../contexts/ThemeContext";
 import { TechTicker } from "./TechTicker";
 import type { Technology } from "../../../../global";
 
@@ -29,7 +30,11 @@ describe("TechTicker", () => {
     });
 
     it("renders technologies correctly", () => {
-        render(<TechTicker technologies={mockTechnologies} />);
+        render(
+            <ThemeProvider>
+                <TechTicker technologies={mockTechnologies} />
+            </ThemeProvider>
+        );
 
         // Technologies are duplicated, so we use getAllByText
         const reactElements = screen.getAllByText("React");
@@ -40,7 +45,11 @@ describe("TechTicker", () => {
     });
 
     it("renders technology images", () => {
-        render(<TechTicker technologies={mockTechnologies} />);
+        render(
+            <ThemeProvider>
+                <TechTicker technologies={mockTechnologies} />
+            </ThemeProvider>
+        );
 
         const reactImages = screen.getAllByAltText("React");
         const typescriptImages = screen.getAllByAltText("TypeScript");
@@ -50,7 +59,11 @@ describe("TechTicker", () => {
     });
 
     it("does not render when isVisible is false", () => {
-        render(<TechTicker technologies={mockTechnologies} isVisible={false} />);
+        render(
+            <ThemeProvider>
+                <TechTicker technologies={mockTechnologies} isVisible={false} />
+            </ThemeProvider>
+        );
 
         expect(screen.queryByText("React")).not.toBeInTheDocument();
     });
@@ -59,7 +72,11 @@ describe("TechTicker", () => {
         const mockOpen = jest.fn();
         window.open = mockOpen;
 
-        render(<TechTicker technologies={mockTechnologies} />);
+        render(
+            <ThemeProvider>
+                <TechTicker technologies={mockTechnologies} />
+            </ThemeProvider>
+        );
 
         const reactElement = screen.getAllByText("React")[0];
         fireEvent.click(reactElement);

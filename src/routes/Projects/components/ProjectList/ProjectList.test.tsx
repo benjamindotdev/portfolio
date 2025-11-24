@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { BrowserRouter } from "react-router-dom";
+import { ThemeProvider } from "../../../../contexts/ThemeContext";
 import { ProjectList } from "./ProjectList";
 import type { Project } from "../../../../global";
 
@@ -41,7 +42,9 @@ describe("ProjectList", () => {
     it("renders all projects", () => {
         render(
             <BrowserRouter>
-                <ProjectList projects={mockProjects} />
+                <ThemeProvider>
+                    <ProjectList projects={mockProjects} />
+                </ThemeProvider>
             </BrowserRouter>
         );
 
@@ -53,7 +56,9 @@ describe("ProjectList", () => {
     it("renders correct number of project cards", () => {
         render(
             <BrowserRouter>
-                <ProjectList projects={mockProjects} />
+                <ThemeProvider>
+                    <ProjectList projects={mockProjects} />
+                </ThemeProvider>
             </BrowserRouter>
         );
 
@@ -64,7 +69,9 @@ describe("ProjectList", () => {
     it("renders empty list when no projects provided", () => {
         render(
             <BrowserRouter>
-                <ProjectList projects={[]} />
+                <ThemeProvider>
+                    <ProjectList projects={[]} />
+                </ThemeProvider>
             </BrowserRouter>
         );
 
@@ -74,7 +81,9 @@ describe("ProjectList", () => {
     it("renders all project descriptions", () => {
         render(
             <BrowserRouter>
-                <ProjectList projects={mockProjects} />
+                <ThemeProvider>
+                    <ProjectList projects={mockProjects} />
+                </ThemeProvider>
             </BrowserRouter>
         );
 

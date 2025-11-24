@@ -1,13 +1,13 @@
 import type { AboutItem } from "../../global";
 import { AboutCard } from "./components/AboutCard/AboutCard";
-import { ScrollSection } from "../../components/shared/ScrollSection/ScrollSection";
+import { PageContainer } from "../Layout/components";
 
 export const About = ({ aboutItems }: { aboutItems?: AboutItem[] }) => {
     return (
-        <ScrollSection>
+        <PageContainer id="about" layout="scroll">
             {aboutItems && aboutItems.map((item) => (
                 <AboutCard key={item.key} image={item.image} text={item.text} showCTAs={item.showCTAs} />
             ))}
-        </ScrollSection>
+        </PageContainer>
     );
 };

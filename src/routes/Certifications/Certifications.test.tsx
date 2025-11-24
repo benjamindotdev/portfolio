@@ -3,6 +3,7 @@ import "@testing-library/jest-dom";
 import { Certifications } from "./Certifications";
 import { Certification } from "../../global";
 import { BrowserRouter } from "react-router-dom";
+import { ThemeProvider } from "../../contexts/ThemeContext";
 
 test("loads and displays certifications", async () => {
     const mockCertifications: Certification[] = [
@@ -58,7 +59,9 @@ test("loads and displays certifications", async () => {
 
     render(
         <BrowserRouter>
-            <Certifications certifications={mockCertifications} />
+            <ThemeProvider>
+                <Certifications certifications={mockCertifications} />
+            </ThemeProvider>
         </BrowserRouter>
     );
 

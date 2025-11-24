@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { BrowserRouter } from "react-router-dom";
+import { ThemeProvider } from "../../../../contexts/ThemeContext";
 import { ExperienceCard } from "./ExperienceCard";
 import type { ExperienceItem } from "../../../../global";
 
@@ -21,7 +22,9 @@ describe("ExperienceCard", () => {
     it("renders experience details correctly", () => {
         render(
             <BrowserRouter>
-                <ExperienceCard experience={mockExperience} />
+                <ThemeProvider>
+                    <ExperienceCard experience={mockExperience} />
+                </ThemeProvider>
             </BrowserRouter>
         );
 
@@ -34,7 +37,9 @@ describe("ExperienceCard", () => {
     it("renders current badge when isCurrent is true", () => {
         render(
             <BrowserRouter>
-                <ExperienceCard experience={mockExperience} />
+                <ThemeProvider>
+                    <ExperienceCard experience={mockExperience} />
+                </ThemeProvider>
             </BrowserRouter>
         );
 
@@ -45,7 +50,9 @@ describe("ExperienceCard", () => {
         const pastExperience = { ...mockExperience, isCurrent: false };
         render(
             <BrowserRouter>
-                <ExperienceCard experience={pastExperience} />
+                <ThemeProvider>
+                    <ExperienceCard experience={pastExperience} />
+                </ThemeProvider>
             </BrowserRouter>
         );
 
@@ -55,7 +62,9 @@ describe("ExperienceCard", () => {
     it("renders company logo", () => {
         render(
             <BrowserRouter>
-                <ExperienceCard experience={mockExperience} />
+                <ThemeProvider>
+                    <ExperienceCard experience={mockExperience} />
+                </ThemeProvider>
             </BrowserRouter>
         );
 
@@ -67,7 +76,9 @@ describe("ExperienceCard", () => {
     it("renders technologies from techStack", () => {
         render(
             <BrowserRouter>
-                <ExperienceCard experience={mockExperience} />
+                <ThemeProvider>
+                    <ExperienceCard experience={mockExperience} />
+                </ThemeProvider>
             </BrowserRouter>
         );
 

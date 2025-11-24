@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { BrowserRouter } from "react-router-dom";
+import { ThemeProvider } from "../../../contexts/ThemeContext";
 import { ListContainer } from "./ListContainer";
 import { ExperienceItem } from "../../../global";
 
@@ -23,11 +24,13 @@ describe("ListContainer", () => {
     it("renders items in single column layout", () => {
         render(
             <BrowserRouter>
-                <ListContainer
-                    items={[mockExperience]}
-                    type="experience"
-                    layout="single"
-                />
+                <ThemeProvider>
+                    <ListContainer
+                        items={[mockExperience]}
+                        type="experience"
+                        layout="single"
+                    />
+                </ThemeProvider>
             </BrowserRouter>
         );
 
@@ -37,11 +40,13 @@ describe("ListContainer", () => {
     it("renders items in grid layout", () => {
         render(
             <BrowserRouter>
-                <ListContainer
-                    items={[mockExperience]}
-                    type="experience"
-                    layout="grid"
-                />
+                <ThemeProvider>
+                    <ListContainer
+                        items={[mockExperience]}
+                        type="experience"
+                        layout="grid"
+                    />
+                </ThemeProvider>
             </BrowserRouter>
         );
 

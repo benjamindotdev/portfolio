@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { BrowserRouter } from "react-router-dom";
+import { ThemeProvider } from "../../../contexts/ThemeContext";
 import { Card } from "./Card";
 import { ExperienceItem, Certification, Project } from "../../../global";
 
@@ -50,7 +51,9 @@ describe("Card", () => {
     it("renders experience card correctly", () => {
         render(
             <BrowserRouter>
-                <Card item={mockExperience} type="experience" />
+                <ThemeProvider>
+                    <Card item={mockExperience} type="experience" />
+                </ThemeProvider>
             </BrowserRouter>
         );
 
@@ -64,7 +67,9 @@ describe("Card", () => {
     it("renders certification card correctly", () => {
         render(
             <BrowserRouter>
-                <Card item={mockCertification} type="certification" />
+                <ThemeProvider>
+                    <Card item={mockCertification} type="certification" />
+                </ThemeProvider>
             </BrowserRouter>
         );
 
@@ -76,7 +81,9 @@ describe("Card", () => {
     it("renders project card correctly", () => {
         render(
             <BrowserRouter>
-                <Card item={mockProject} type="project" />
+                <ThemeProvider>
+                    <Card item={mockProject} type="project" />
+                </ThemeProvider>
             </BrowserRouter>
         );
 

@@ -31,8 +31,8 @@ test("renders the PageContainer component with HTML elements", async () => {
 
 test("renders the PageContainer component with the correct Tailwind classes", async () => {
     render(<PageContainer id="4">testing</PageContainer>);
-    const element = await screen.findByText("testing");
-    expect(element).toHaveClass("min-h-screen");
-    expect(element).toHaveClass("w-full");
-    expect(element).toHaveClass("flex");
+    const mainElement = screen.getByRole("main");
+    expect(mainElement).toHaveClass("min-h-screen");
+    expect(mainElement).toHaveClass("w-full");
+    expect(mainElement).toHaveClass("flex");
 });

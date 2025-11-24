@@ -3,6 +3,7 @@ import "@testing-library/jest-dom";
 import { Freelance } from "./Freelance";
 import type { Project } from "../../global";
 import { BrowserRouter } from "react-router-dom";
+import { ThemeProvider } from "../../contexts/ThemeContext";
 
 describe("Freelance Component", () => {
     const mockProjects: Project[] = [
@@ -22,7 +23,9 @@ describe("Freelance Component", () => {
     it("renders the Freelance component with provided props", () => {
         render(
             <BrowserRouter>
-                <Freelance projects={mockProjects} />
+                <ThemeProvider>
+                    <Freelance projects={mockProjects} />
+                </ThemeProvider>
             </BrowserRouter>
         );
         expect(screen.getByText("Test Freelance Project")).toBeInTheDocument();

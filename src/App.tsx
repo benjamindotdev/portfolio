@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { Layout } from "./routes/Layout/Layout";
 import { Home } from "./routes/Home/Home";
 import { About } from "./routes/About/About";
@@ -7,7 +7,6 @@ import { Experience } from "./routes/Experience/Experience";
 import { Projects } from "./routes/Projects/Projects";
 import { Freelance } from "./routes/Freelance/Freelance";
 import { Stack } from "./routes/Stack/Stack";
-import { NotFound } from "./routes/NotFound/NotFound";
 // import { Events } from "./routes/Events/Events";
 import "./index.css";
 import { benjamin } from "./constants";
@@ -56,7 +55,7 @@ export const App = () => (
                     path="stack"
                     element={<Stack technologies={benjamin.technologies} />}
                 />
-                <Route path="*" element={<NotFound />} />
+                <Route path="*" element={<Navigate to="/" replace />} />
             </Route>
         </Routes>
     </main>

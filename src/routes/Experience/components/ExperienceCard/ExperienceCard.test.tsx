@@ -30,7 +30,8 @@ describe("ExperienceCard", () => {
 
         expect(screen.getByText("Senior Developer @ Tech Corp")).toBeInTheDocument();
         expect(screen.getByText("2024 - Present")).toBeInTheDocument();
-        expect(screen.getByText(/Full-time, San Francisco, CA/)).toBeInTheDocument();
+        expect(screen.getByText("Full-time")).toBeInTheDocument();
+        expect(screen.getByText("San Francisco, CA")).toBeInTheDocument();
         expect(screen.getByText("Leading development of web applications.")).toBeInTheDocument();
     });
 

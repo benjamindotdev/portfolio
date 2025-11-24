@@ -74,7 +74,8 @@ describe("Card", () => {
         );
 
         expect(screen.getByText("React Developer")).toBeInTheDocument();
-        expect(screen.getByText("React Org, Remote")).toBeInTheDocument();
+        expect(screen.getByText("React Org")).toBeInTheDocument();
+        expect(screen.getByText("Remote")).toBeInTheDocument();
         expect(screen.getByText("Advanced React certification")).toBeInTheDocument();
     });
 

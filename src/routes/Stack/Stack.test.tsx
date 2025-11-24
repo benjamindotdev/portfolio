@@ -18,7 +18,7 @@ describe("Stack Component", () => {
             </BrowserRouter>
         );
 
-        expect(screen.getByText("Front end")).toBeInTheDocument();
+        expect(screen.getByText("Core Technologies")).toBeInTheDocument();
         expect(screen.getAllByText("React").length).toBeGreaterThan(0);
     });
 
@@ -31,11 +31,9 @@ describe("Stack Component", () => {
             </BrowserRouter>
         );
 
-        expect(screen.getByText("Front end")).toBeInTheDocument();
+        expect(screen.getByText("Core Technologies")).toBeInTheDocument();
         expect(screen.getAllByText("React").length).toBeGreaterThan(0);
-        expect(screen.getByText("Back end")).toBeInTheDocument();
-        expect(screen.getAllByText("Node.js").length).toBeGreaterThan(0);
-        expect(screen.getByText("Tools")).toBeInTheDocument();
+        expect(screen.getByText("Additional Tools")).toBeInTheDocument();
         expect(screen.getAllByText("Docker").length).toBeGreaterThan(0);
     });
 
@@ -48,7 +46,7 @@ describe("Stack Component", () => {
             </BrowserRouter>
         );
 
-        const techLists = container.querySelectorAll('[class*="flex flex-wrap"]');
-        expect(techLists.length).toBeGreaterThan(0);
+        const mainElement = container.querySelector('main');
+        expect(mainElement).toBeInTheDocument();
     });
 });

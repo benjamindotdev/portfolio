@@ -3,6 +3,7 @@ import "@testing-library/jest-dom";
 import { Projects } from "./Projects";
 import { Project } from "../../global";
 import { BrowserRouter } from "react-router-dom";
+import { ThemeProvider } from "../../contexts/ThemeContext";
 
 test("loads and displays project items", async () => {
   const mockProjects: Project[] = [
@@ -28,7 +29,9 @@ test("loads and displays project items", async () => {
 
   render(
     <BrowserRouter>
-      <Projects projects={mockProjects} />
+      <ThemeProvider>
+        <Projects projects={mockProjects} />
+      </ThemeProvider>
     </BrowserRouter>
   );
 

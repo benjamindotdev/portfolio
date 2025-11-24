@@ -3,7 +3,7 @@ import "@testing-library/jest-dom";
 import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "../../../../contexts/ThemeContext";
 import { ProjectList } from "./ProjectList";
-import type { Project } from "../../../../global";
+import type { Project } from "@/global";
 
 const mockProjects: Project[] = [
     {

@@ -1,7 +1,7 @@
-import { PageContainer } from "../Layout/components/PageContainer/PageContainer";
-import type { Certification } from "../../global";
-import { ListContainer } from "../../components/shared/ListContainer/ListContainer";
-import { SubHeading } from "../../components/shared/SubHeading/SubHeading";
+import { PageContainer } from "@/routes/Layout/components/PageContainer/PageContainer";
+import type { Certification } from "@/global";
+import { ListContainer } from "@/components/shared/ListContainer/ListContainer";
+import { SubHeading } from "@/components/shared/SubHeading/SubHeading";
 
 export const Certifications = ({
     certifications,

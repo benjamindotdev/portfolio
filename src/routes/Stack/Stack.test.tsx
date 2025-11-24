@@ -1,9 +1,9 @@
 import { render, screen } from "@testing-library/react";
 import { Stack } from "./Stack";
-import { benjamin } from "../../constants";
+import { benjamin } from "@/constants";
 import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "../../contexts/ThemeContext";
-import type { Technology } from "../../global";
+import type { Technology } from "@/global";
 import "@testing-library/jest-dom";
 
 const mockTechnologies = benjamin.technologies as Technology[];
@@ -46,7 +46,7 @@ describe("Stack Component", () => {
             </BrowserRouter>
         );
 
-        const mainElement = container.querySelector('main');
-        expect(mainElement).toBeInTheDocument();
+        const sectionElement = container.querySelector('section');
+        expect(sectionElement).toBeInTheDocument();
     });
 });

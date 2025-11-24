@@ -1,4 +1,4 @@
-import type { ExperienceItem } from "../../../../global";
+import type { ExperienceItem } from "@/global";
 import { ExperienceCard } from "../ExperienceCard/ExperienceCard";
 
 export const ExperienceList = ({

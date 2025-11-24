@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { Layout } from "./Layout";
-import { Link, Social, Contact } from "../../global";
+import { Link, Social, Contact } from "@/global";
 import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "../../contexts/ThemeContext";
 

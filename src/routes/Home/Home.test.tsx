@@ -1,9 +1,9 @@
 import { render, screen } from "@testing-library/react";
 import { Home } from "./Home";
-import { benjamin } from "../../constants";
+import { benjamin } from "@/constants";
 import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "../../contexts/ThemeContext";
-import type { Technology } from "../../global";
+import type { Technology } from "@/global";
 import "@testing-library/jest-dom";
 
 const mockTechnologies = benjamin.technologies as Technology[];

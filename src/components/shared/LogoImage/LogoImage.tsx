@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import { useTheme } from "../../../contexts/ThemeContext";
+import { useTheme } from "@/contexts/ThemeContext";
 
 export const LogoImage = ({
     image,

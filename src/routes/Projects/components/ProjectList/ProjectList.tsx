@@ -1,4 +1,4 @@
-import type { Project } from "../../../../global";
+import type { Project } from "@/global";
 import { ProjectCard } from "../ProjectCard/ProjectCard";
 
 export const ProjectList = ({

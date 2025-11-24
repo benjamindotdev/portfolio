@@ -3,7 +3,7 @@ import "@testing-library/jest-dom";
 import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "../../../../contexts/ThemeContext";
 import { ExperienceCard } from "./ExperienceCard";
-import type { ExperienceItem } from "../../../../global";
+import type { ExperienceItem } from "@/global";
 
 const mockExperience: ExperienceItem = {
     key: 0,

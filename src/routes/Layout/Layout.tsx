@@ -1,9 +1,8 @@
 import { Header } from "./components/Header/Header";
 import { Outlet } from "react-router-dom";
 import { Footer } from "./components/Footer/Footer";
-import { ScrollToTop } from "../../components/shared/ScrollToTop/ScrollToTop";
-import { PageTransition } from "../../components/shared/PageTransition/PageTransition";
-import type { Link, Social, Contact } from "../../global";
+import { ScrollToTop } from "@/components/shared/ScrollToTop/ScrollToTop";
+import type { Link, Social, Contact } from "@/global";
 
 export const Layout = ({
     links,
@@ -15,7 +14,7 @@ export const Layout = ({
     contacts: Contact[];
 }) => {
     return (
-        <div className="h-screen w-full flex flex-col overflow-hidden">
+        <div className="h-screen w-full flex flex-col overflow-hidden px-[5vw] md:px-[5dvw] xl:px-[7.5dvw] 2xl:px-[10dvw]">
             {/* Skip to main content link for accessibility */}
             <a
                 href="#main-content"
@@ -24,27 +23,17 @@ export const Layout = ({
                 Skip to main content
             </a>
 
-            {/* Fixed Header */}
-            <div className="flex-shrink-0 w-full px-[5vw] md:px-[5dvw] xl:px-[7.5dvw] 2xl:px-[10dvw]">
-                <Header links={links} />
-            </div>
+            <Header links={links} />
 
-            {/* Scrollable Content Area */}
             <main
-                className="flex-1 w-full h-full overflow-hidden px-[5vw] md:px-[5dvw] xl:px-[7.5dvw] 2xl:px-[10dvw]"
+                className="flex-1 w-full h-full overflow-hidden"
                 aria-label="Main content"
             >
-                <PageTransition>
-                    <Outlet />
-                </PageTransition>
+                <Outlet />
             </main>
 
-            {/* Fixed Footer */}
-            <div className="flex-shrink-0 w-full px-[5vw] md:px-[5dvw] xl:px-[7.5dvw] 2xl:px-[10dvw]">
-                <Footer socials={socials} contacts={contacts} isVisible={true} />
-            </div>
+            <Footer socials={socials} contacts={contacts} isVisible={true} />
 
-            {/* Scroll to top button */}
             <ScrollToTop />
         </div>
     );

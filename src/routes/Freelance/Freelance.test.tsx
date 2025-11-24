@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { Freelance } from "./Freelance";
-import type { Project } from "../../global";
+import type { Project } from "@/global";
 import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "../../contexts/ThemeContext";
 

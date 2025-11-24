@@ -1,6 +1,6 @@
-import type { AboutItem } from "../../global";
+import type { AboutItem } from "@/global";
 import { AboutCard } from "./components/AboutCard/AboutCard";
-import { PageContainer } from "../Layout/components";
+import { PageContainer } from "@/routes/Layout/components";
 
 export const About = ({ aboutItems }: { aboutItems?: AboutItem[] }) => {
     return (

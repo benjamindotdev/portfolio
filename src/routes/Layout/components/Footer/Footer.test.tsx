@@ -3,7 +3,7 @@ import "@testing-library/jest-dom";
 import { Footer } from "./Footer";
 import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "../../../../contexts/ThemeContext";
-import type { Social, Contact } from "../../../../global";
+import type { Social, Contact } from "@/global";
 
 const mockSocials: Social[] = [
     {

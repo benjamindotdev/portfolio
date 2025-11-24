@@ -1,6 +1,6 @@
-import { SubHeading } from "../../../../components/shared/SubHeading/SubHeading";
-import { TechLogoImage } from "../../../../components/shared/TechLogoImage/TechLogoImage";
-import type { Tech } from "../../../../global";
+import { SubHeading } from "../SubHeading/SubHeading";
+import { TechLogoImage } from "../TechLogoImage/TechLogoImage";
+import type { Tech } from "@/global";
 
 export const TechList = ({
     techs,

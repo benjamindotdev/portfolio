@@ -1,9 +1,9 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { BrowserRouter } from "react-router-dom";
-import { ThemeProvider } from "../../../contexts/ThemeContext";
+import { ThemeProvider } from "@/contexts/ThemeContext";
 import { Card } from "./Card";
-import { ExperienceItem, Certification, Project } from "../../../global";
+import { ExperienceItem, Certification, Project } from "@/global";
 
 const mockExperience: ExperienceItem = {
     key: 1,

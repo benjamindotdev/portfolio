@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useTheme } from "../../../contexts/ThemeContext";
+import { useTheme } from "@/contexts/ThemeContext";
 
 export function Logo(props: React.SVGProps<SVGSVGElement>) {
     const { theme } = useTheme();

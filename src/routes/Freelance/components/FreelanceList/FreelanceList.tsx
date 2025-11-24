@@ -1,4 +1,4 @@
-import type { Project } from "../../../../global";
+import type { Project } from "@/global";
 import { FreelanceCard } from "../FreelanceCard/FreelanceCard";
 
 export const FreelanceList = ({

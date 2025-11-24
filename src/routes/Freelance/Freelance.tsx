@@ -1,5 +1,5 @@
-import { PageContainer } from "../Layout/components/PageContainer/PageContainer";
-import type { Project } from "../../global";
+import { PageContainer } from "@/routes/Layout/components/PageContainer/PageContainer";
+import type { Project } from "@/global";
 import { FreelanceCard } from "./components/FreelanceCard/FreelanceCard";
 
 export const Freelance = ({ projects }: { projects?: Project[] }) => {

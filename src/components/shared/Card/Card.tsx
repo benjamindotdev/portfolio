@@ -1,9 +1,9 @@
-import { ExperienceItem, Certification, Project, Tech, Technology } from "../../../global";
+import { ExperienceItem, Certification, Project, Tech, Technology } from "@/global";
 import { LinkButton } from "../LinkButton/LinkButton";
 import { SubHeading } from "../SubHeading/SubHeading";
-import { TechList } from "../../../routes/Home/components/TechList/TechList";
-import { benjamin } from "../../../constants";
-import { useTheme } from "../../../contexts/ThemeContext";
+import { TechList } from "../TechList/TechList";
+import { benjamin } from "@/constants";
+import { useTheme } from "@/contexts/ThemeContext";
 import { Separator } from "../Separator/Separator";
 import { Badge } from "../Badge/Badge";
 import { MetadataText } from "../MetadataText/MetadataText";

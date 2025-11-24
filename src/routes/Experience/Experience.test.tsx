@@ -3,7 +3,7 @@ import "@testing-library/jest-dom";
 import { MemoryRouter } from "react-router-dom";
 import { ThemeProvider } from "../../contexts/ThemeContext";
 import { Experience } from "./Experience";
-import { ExperienceItem } from "../../global";
+import { ExperienceItem } from "@/global";
 
 const mockExperience: ExperienceItem[] = [
     {

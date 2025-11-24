@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { BrowserRouter } from "react-router-dom";
 import { ExperienceList } from "./ExperienceList";
-import type { ExperienceItem } from "../../../../global";
+import type { ExperienceItem } from "@/global";
 
 // Mock the ExperienceCard component
 jest.mock("../ExperienceCard/ExperienceCard", () => ({

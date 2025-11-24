@@ -1,4 +1,4 @@
-import type { Benjamin, Technology, Project } from "../global";
+import type { Benjamin, Technology, Project } from "@/global";
 
 const technologies = [
     // Frontend Technologies

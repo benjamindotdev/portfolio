@@ -1,5 +1,5 @@
 import { useMemo, useCallback } from 'react';
-import type { Technology } from '../global';
+import type { Technology } from '@/global';
 
 /**
  * Custom hook to filter and sort technologies by type

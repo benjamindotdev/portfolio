@@ -1,4 +1,4 @@
-import type { AboutItem } from "../../../../global";
+import type { AboutItem } from "@/global";
 import { AboutCard } from "../AboutCard/AboutCard";
 
 export const AboutList = ({ aboutItems }: { aboutItems: AboutItem[] }) => {

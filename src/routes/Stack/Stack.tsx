@@ -1,7 +1,7 @@
 import { useMemo } from "react";
-import { TechList } from "../Home/components/TechList/TechList";
-import type { Technology } from "../../global";
-import { PageContainer } from "../Layout/components";
+import { TechList } from "@/components/shared/TechList/TechList";
+import type { Technology } from "@/global";
+import { PageContainer } from "@/routes/Layout/components";
 
 export const Stack = ({
     technologies = [],

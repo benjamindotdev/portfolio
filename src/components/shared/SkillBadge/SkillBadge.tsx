@@ -1,4 +1,4 @@
-import { useTheme } from "../../../contexts/ThemeContext";
+import { useTheme } from "@/contexts/ThemeContext";
 
 export const SkillBadge = ({ skill }: { skill: string }) => {
     const { theme } = useTheme();

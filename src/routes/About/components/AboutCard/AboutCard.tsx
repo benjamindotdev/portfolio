@@ -1,6 +1,6 @@
 import { PageText } from "../PageText/PageText";
 import { AboutImage } from "../AboutImage/AboutImage";
-import { CTAButton } from "../../../../components/shared/CTAButton/CTAButton";
+import { CTAButton } from "@/components/shared/CTAButton/CTAButton";
 import { Briefcase, FolderGit2, Mail } from "lucide-react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 

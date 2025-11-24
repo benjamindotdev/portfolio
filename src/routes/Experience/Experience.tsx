@@ -1,5 +1,5 @@
-import { PageContainer } from "../Layout/components/PageContainer/PageContainer";
-import type { ExperienceItem } from "../../global";
+import { PageContainer } from "@/routes/Layout/components/PageContainer/PageContainer";
+import type { ExperienceItem } from "@/global";
 import { ExperienceList } from "./components/ExperienceList/ExperienceList";
 
 export const Experience = ({

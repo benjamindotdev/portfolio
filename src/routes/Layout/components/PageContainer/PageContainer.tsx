@@ -1,4 +1,4 @@
-import { ScrollSection } from "../../../../components/shared/ScrollSection/ScrollSection";
+import { ScrollSection } from "@/components/shared/ScrollSection/ScrollSection";
 
 export const PageContainer = ({
     id,
@@ -45,8 +45,8 @@ export const PageContainer = ({
     };
 
     return (
-        <main id={id} className={getLayoutClasses()}>
+        <section id={id} className={getLayoutClasses()}>
             {renderContent()}
-        </main>
+        </section>
     );
 };

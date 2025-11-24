@@ -1,21 +1,20 @@
-import type { Technology } from "../../global";
-import { HeroImage } from "./components/HeroImage/HeroImage";
-import { TechTicker } from "./components/TechTicker/TechTicker";
-import { CTAButton } from "../../components/shared/CTAButton/CTAButton";
-import { PixelBClipDefs } from "../../components/shared/PixelBClipDefs/PixelBClipDefs";
-import { TechLogoImage } from "../../components/shared/TechLogoImage/TechLogoImage";
+import type { Technology } from "@/global";
+import { HeroImage } from "@/components/shared/HeroImage/HeroImage";
+import { CTAButton } from "@/components/shared/CTAButton/CTAButton";
+import { PixelBClipDefs } from "@/components/shared/PixelBClipDefs/PixelBClipDefs";
+import { TechLogoImage } from "@/components/shared/TechLogoImage/TechLogoImage";
 import { Rocket, BookOpen, Lightbulb } from "lucide-react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import { PageContainer } from "../Layout/components/PageContainer/PageContainer";
+import { PageContainer } from "@/routes/Layout/components/PageContainer/PageContainer";
 
 export const Home = ({
     technologies = [],
-    image,
     name,
+    image,
 }: {
     technologies?: Technology[];
-    image?: string;
     name?: string;
+    image?: string;
 }) => {
     const homepageTechs = technologies.filter(tech => tech.homepage);
 

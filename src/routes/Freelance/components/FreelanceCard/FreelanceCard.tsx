@@ -1,12 +1,12 @@
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import { Project, Tech, Technology } from "../../../../global";
-import { LinkButton } from "../../../../components/shared/LinkButton/LinkButton";
-import { SubHeading } from "../../../../components/shared/SubHeading/SubHeading";
-import { TechList } from "../../../Home/components/TechList/TechList";
-import { benjamin } from "../../../../constants";
-import { Separator } from "../../../../components/shared/Separator/Separator";
-import { MetadataText } from "../../../../components/shared/MetadataText/MetadataText";
-import { ViewClientBadge } from "../../../../components/shared/ViewClientBadge/ViewClientBadge";
+import { Project, Tech, Technology } from "@/global";
+import { LinkButton } from "@/components/shared/LinkButton/LinkButton";
+import { SubHeading } from "@/components/shared/SubHeading/SubHeading";
+import { TechList } from "@/components/shared/TechList/TechList";
+import { benjamin } from "@/constants";
+import { Separator } from "@/components/shared/Separator/Separator";
+import { MetadataText } from "@/components/shared/MetadataText/MetadataText";
+import { ViewClientBadge } from "@/components/shared/ViewClientBadge/ViewClientBadge";
 
 export const FreelanceCard = ({
     project,

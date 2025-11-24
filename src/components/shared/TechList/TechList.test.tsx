@@ -2,8 +2,8 @@ import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { TechList } from "./TechList";
 import { BrowserRouter } from "react-router-dom";
-import { ThemeProvider } from "../../../../contexts/ThemeContext";
-import type { Tech } from "../../../../global";
+import { ThemeProvider } from "@/contexts/ThemeContext";
+import type { Tech } from "@/global";
 
 const mockTechs: Tech[] = [
     {

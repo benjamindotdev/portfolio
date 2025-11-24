@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { BrowserRouter } from "react-router-dom";
-import { ThemeProvider } from "../../../contexts/ThemeContext";
+import { ThemeProvider } from "@/contexts/ThemeContext";
 import { LogoImage } from "./LogoImage";
 
 describe("LogoImage", () => {

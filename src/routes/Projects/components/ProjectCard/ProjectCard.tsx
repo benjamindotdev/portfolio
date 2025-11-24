@@ -1,9 +1,9 @@
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import { Project, Tech, Technology } from "../../../../global";
-import { LinkButton } from "../../../../components/shared/LinkButton/LinkButton";
-import { SubHeading } from "../../../../components/shared/SubHeading/SubHeading";
-import { TechList } from "../../../Home/components/TechList/TechList";
-import { benjamin } from "../../../../constants";
+import { Project, Tech, Technology } from "@/global";
+import { LinkButton } from "@/components/shared/LinkButton/LinkButton";
+import { SubHeading } from "@/components/shared/SubHeading/SubHeading";
+import { TechList } from "@/components/shared/TechList/TechList";
+import { benjamin } from "@/constants";
 
 export const ProjectCard = ({
     project,

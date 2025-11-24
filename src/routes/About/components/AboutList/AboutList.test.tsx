@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { AboutList } from "./AboutList";
-import type { AboutItem } from "../../../../global";
+import type { AboutItem } from "@/global";
 
 const mockAboutItems: AboutItem[] = [
     {

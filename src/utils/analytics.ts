@@ -1,5 +1,5 @@
 // Google Analytics initialization
-import { config } from '../config/env';
+import { config } from '@/config/env';
 
 declare global {
     interface Window {

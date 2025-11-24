@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { About } from "./About";
-import { AboutItem } from "../../global";
+import { AboutItem } from "@/global";
 
 test("loads and displays about items", async () => {
   const mockAboutItems: AboutItem[] = [

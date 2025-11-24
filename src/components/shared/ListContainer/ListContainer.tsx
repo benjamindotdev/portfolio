@@ -1,5 +1,5 @@
 import { Card } from "../Card/Card";
-import { ExperienceItem, Certification, Project } from "../../../global";
+import { ExperienceItem, Certification, Project } from "@/global";
 
 type ListContainerProps<T> = {
     items: T[];

@@ -1,14 +1,14 @@
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import { ExperienceItem, Tech, Technology } from "../../../../global";
-import { LinkButton } from "../../../../components/shared/LinkButton/LinkButton";
-import { SubHeading } from "../../../../components/shared/SubHeading/SubHeading";
-import { TechList } from "../../../Home/components/TechList/TechList";
-import { benjamin } from "../../../../constants";
+import { ExperienceItem, Tech, Technology } from "@/global";
+import { LinkButton } from "@/components/shared/LinkButton/LinkButton";
+import { SubHeading } from "@/components/shared/SubHeading/SubHeading";
+import { TechList } from "@/components/shared/TechList/TechList";
+import { benjamin } from "@/constants";
 import { useTheme } from "../../../../contexts/ThemeContext";
-import { Separator } from "../../../../components/shared/Separator/Separator";
-import { Badge } from "../../../../components/shared/Badge/Badge";
-import { SkillBadge } from "../../../../components/shared/SkillBadge/SkillBadge";
-import { MetadataText } from "../../../../components/shared/MetadataText/MetadataText";
+import { Separator } from "@/components/shared/Separator/Separator";
+import { Badge } from "@/components/shared/Badge/Badge";
+import { SkillBadge } from "@/components/shared/SkillBadge/SkillBadge";
+import { MetadataText } from "@/components/shared/MetadataText/MetadataText";
 
 export const ExperienceCard = ({
     experience,

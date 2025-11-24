@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { TechLogoImage } from "./TechLogoImage";
 import { BrowserRouter } from "react-router-dom";
-import { ThemeProvider } from "../../../contexts/ThemeContext";
+import { ThemeProvider } from "@/contexts/ThemeContext";
 
 const mockImage = {
     key: 1,

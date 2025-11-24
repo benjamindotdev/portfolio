@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { Header } from "./Header";
 import { BrowserRouter } from "react-router-dom";
-import type { Link } from "../../../../global";
+import type { Link } from "@/global";
 import { ThemeProvider } from "../../../../contexts/ThemeContext";
 
 const mockLinks: Link[] = [

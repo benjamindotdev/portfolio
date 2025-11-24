@@ -47,7 +47,7 @@ test("renders the Footer component with provided props", () => {
     expect(screen.getByAltText("linkedin")).toBeInTheDocument();
     expect(screen.getByAltText("email")).toBeInTheDocument();
     expect(screen.getByAltText("phone")).toBeInTheDocument();
-    expect(screen.getAllByRole("img")).toHaveLength(4);
+    expect(screen.getAllByRole("img")).toHaveLength(6); // 2 flags + 4 icons
 });
 
 test("renders the Footer component with different text", () => {
@@ -77,5 +77,5 @@ test("renders the Footer component with different text", () => {
     );
     expect(screen.getByAltText("facebook")).toBeInTheDocument();
     expect(screen.getByAltText("email")).toBeInTheDocument();
-    expect(screen.getAllByRole("img")).toHaveLength(2);
+    expect(screen.getAllByRole("img")).toHaveLength(4); // 2 flags + 2 icons
 });

@@ -44,6 +44,6 @@ describe("Home Component", () => {
         );
 
         const heroImage = screen.getByAltText("Benjamin");
-        expect(heroImage).toHaveAttribute("src", "/images/hero.webp");
+        expect(heroImage).toHaveAttribute("src", "/images/heroCropped4.webp");
     });
 });

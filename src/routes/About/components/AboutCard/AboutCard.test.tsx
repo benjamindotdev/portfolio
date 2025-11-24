@@ -22,6 +22,6 @@ test("renders the AboutCard component with different text", () => {
 
 test("fails to render the AboutCard component with missing props", () => {
     // @ts-ignore
-    render(<AboutCard />);
+    render(<AboutCard text="" />);
     expect(screen.queryByText("text1")).toBeNull();
 });

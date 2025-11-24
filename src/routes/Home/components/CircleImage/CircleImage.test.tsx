@@ -14,6 +14,5 @@ test("renders the CircleImage component with different text", () => {
 
 test("renders the CircleImage component with the correct Tailwind classes", () => {
     render(<CircleImage image="test-image" text="test-image-text" />);
-    expect(screen.getByRole("img")).toHaveClass("w-full");
-    expect(screen.getByRole("img")).toHaveClass("object-cover");
+    expect(screen.getByRole("img")).toHaveClass("object-contain");
 });

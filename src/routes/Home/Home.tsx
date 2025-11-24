@@ -3,6 +3,7 @@ import { CircleImage } from "./components/CircleImage/CircleImage";
 import { TechTicker } from "./components/TechTicker/TechTicker";
 import { CTAButton } from "../../components/shared/CTAButton/CTAButton";
 import { PixelBClipDefs } from "../../components/shared/PixelBClipDefs/PixelBClipDefs";
+import { TechLogoImage } from "../../components/shared/TechLogoImage/TechLogoImage";
 import { Rocket, BookOpen, Lightbulb } from "lucide-react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
@@ -15,6 +16,8 @@ export const Home = ({
     image?: string;
     name?: string;
 }) => {
+    const homepageTechs = technologies.filter(tech => tech.homepage);
+
     return (
         <>
             <PixelBClipDefs />
@@ -22,10 +25,10 @@ export const Home = ({
                 <div className="w-full max-w-6xl flex flex-col md:flex-row items-center justify-between gap-12 md:gap-16">
                     <div className="flex flex-col gap-12 w-full md:w-2/3 text-left">
                         <h1 className="p-0 m-0 text-4xl md:text-5xl lg:text-6xl text-portfolio-cyan font-satoshi font-bold tracking-wide whitespace-nowrap">
-                            <strong className="text-slate-700 dark:text-portfolio-white">Hey, I'm</strong>
-                            <span className="text-portfolio-green text-[larger]">
+                            <span className="text-slate-700 dark:text-portfolio-white">Hey, I'm</span>
+                            <strong className="text-portfolio-green">
                                 {` ${name}`}
-                            </span>
+                            </strong>
                         </h1>
                         <div className="flex flex-col gap-4 text-slate-700 dark:text-portfolio-white text-lg md:text-xl font-lunasima">
                             <p>
@@ -45,7 +48,20 @@ export const Home = ({
                                 />
                             </p>
                             <p>I'm an Ironhack alum and former assistant teacher</p>
-                            <p>I build fast, user-focused web applications with modern full-stack tools</p>
+                            <p>I'm ocused on modern JavaScript, full-stack development, and clean UX:</p>
+                        </div>
+                        <div className="flex flex-wrap items-center gap-6">
+                            {homepageTechs.map((tech, index) => (
+                                <>
+                                    <TechLogoImage
+                                        key={tech.key}
+                                        image={tech.image}
+                                        name={tech.name}
+                                        link={tech.link}
+                                        isLearning={tech.isLearning}
+                                    />
+                                </>
+                            ))}
                         </div>
                         <div className="flex flex-wrap gap-4">
                             <CTAButton
@@ -59,13 +75,13 @@ export const Home = ({
                                 icon={BookOpen}
                             />
                             <CTAButton
-                                onClick={() => window.location.href = '/projects'}
+                                onClick={() => window.location.href = '/freelance'}
                                 text="My solutions"
                                 icon={Lightbulb}
                             />
                         </div>
                     </div>
-                    <div className="w-full md:w-1/3 aspect-square">
+                    <div className="w-full h-full md:w-1/3 aspect-square">
                         <CircleImage image="/images/heroCropped4.webp" text={name || "Benjamin"} />
                     </div>
                 </div>

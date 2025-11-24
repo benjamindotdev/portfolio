@@ -16,8 +16,9 @@ type Benjamin = {
 
 type AboutItem = {
     key: number;
-    image: string;
+    image?: string;
     text: string;
+    showCTAs?: boolean;
 };
 
 type ExperienceItem = {
@@ -32,6 +33,7 @@ type ExperienceItem = {
         text: string;
     }[];
     techStack: Technology[] | string[];
+    skills?: string[];
     link?: string;
     logo: string;
     type: "Full-time" | "Part-time" | "Internship" | "Contract" | "Freelance" | "Volunteer";
@@ -75,17 +77,22 @@ type Link = {
 type Certification = {
     key: number;
     name: string;
-    logo: string;
-    link: string;
+    logo: string | { lightImage: string; darkImage: string };
+    link?: string;
     company: string;
     location: "On site" | "Remote";
     description: string;
+    category: "Professional Certifications" | "Skills Courses" | "Awards & Achievements";
+    level: "Bootcamp" | "Specialization" | "Short Course" | "Hackathon Winner";
+    date: string;
+    repoLink?: string;
+    deployedLink?: string;
 };
 
 type Technology = {
     key: number;
     name: string;
-    image: string;
+    image: string | { lightImage: string; darkImage: string };
     type:
     | "Frontend"
     | "Backend"
@@ -99,12 +106,14 @@ type Technology = {
     | "";
     isLearning: boolean;
     link: string;
+    homepage?: boolean;
+    stackSection?: "Core Technologies" | "Additional Tools" | "Other Experience" | "Currently Exploring";
 };
 
 type Tech = {
     key: number;
     name: string;
-    image: string;
+    image: string | { lightImage: string; darkImage: string };
     link: string;
     isLearning?: boolean;
 };

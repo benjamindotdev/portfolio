@@ -6,11 +6,11 @@ export const CircleImage = ({
     text: string;
 }) => {
     return (
-        <div className="w-full h-full aspect-square rounded-2xl dark:border-portfolio-white  [clip-path:url(#pixelBClip)]">
+        <div className="w-full h-full aspect-square rounded-2xl [clip-path:url(#pixelBClip)]">
             <img
                 src={image}
                 alt={text}
-                className="w-full h-full object-contain object-center"
+                className="w-full h-full object-contain object-center grayscale"
                 loading="eager"
                 fetchPriority="high"
             />

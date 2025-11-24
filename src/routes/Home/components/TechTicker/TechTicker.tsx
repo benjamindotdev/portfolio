@@ -1,4 +1,5 @@
 import type { Technology } from "../../../../global";
+import { useTheme } from "../../../../contexts/ThemeContext";
 
 export const TechTicker = ({
     technologies,
@@ -7,6 +8,8 @@ export const TechTicker = ({
     technologies: Technology[];
     isVisible?: boolean;
 }) => {
+    const { theme } = useTheme();
+
     const handleTickerClick = () => {
         document.getElementById('tech')?.scrollIntoView({ behavior: 'smooth' });
     };
@@ -16,6 +19,14 @@ export const TechTicker = ({
         if (link) {
             window.open(link, '_blank', 'noopener,noreferrer');
         }
+    };
+
+    const getImageSrc = (image: string | { lightImage: string; darkImage: string }) => {
+        return typeof image === "string"
+            ? image
+            : theme === "dark"
+                ? image.darkImage
+                : image.lightImage;
     };
 
     // Duplicate the technologies array multiple times to create seamless loop
@@ -36,7 +47,7 @@ export const TechTicker = ({
                         className="inline-flex items-center gap-2 mx-4 cursor-pointer group transition-all"
                     >
                         <img
-                            src={tech.image}
+                            src={getImageSrc(tech.image)}
                             alt={tech.name}
                             className="w-6 h-6 object-contain transition-transform group-hover:scale-125"
                         />

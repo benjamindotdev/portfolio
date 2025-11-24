@@ -25,6 +25,8 @@ const technologies = [
         link: "https://www.typescriptlang.org/",
         type: "Frontend",
         isLearning: false,
+        homepage: true,
+        stackSection: "Core Technologies",
     },
     {
         key: 3,
@@ -33,62 +35,20 @@ const technologies = [
         link: "https://react.dev/",
         type: "Frontend",
         isLearning: false,
+        homepage: true,
+        stackSection: "Core Technologies",
     },
     {
         key: 4,
         name: "Next.js",
-        image: "logos/nextjs.svg",
+        image: {
+            lightImage: "logos/Next.jsBlack.png",
+            darkImage: "logos/Next.jsWhite.png",
+        },
         link: "https://nextjs.org/",
         type: "Frontend",
         isLearning: false,
-    },
-    {
-        key: 5,
-        name: "Vue.JS",
-        image: "logos/vue.svg",
-        link: "https://vuejs.org/",
-        type: "Frontend",
-        isLearning: true,
-    },
-    {
-        key: 6,
-        name: "Angular",
-        image: "logos/angular.svg",
-        link: "https://angular.io/",
-        type: "Frontend",
-        isLearning: true,
-    },
-    {
-        key: 7,
-        name: "Svelte",
-        image: "logos/svelte.png",
-        link: "https://svelte.dev/",
-        type: "Frontend",
-        isLearning: true,
-    },
-    {
-        key: 8,
-        name: "SolidJS",
-        image: "logos/solid.svg",
-        link: "https://www.solidjs.com/",
-        type: "Frontend",
-        isLearning: true,
-    },
-    {
-        key: 9,
-        name: "RedwoodJS",
-        image: "logos/redwood.svg",
-        link: "https://redwoodjs.com/",
-        type: "Frontend",
-        isLearning: true,
-    },
-    {
-        key: 10,
-        name: "Redux",
-        image: "logos/redux.svg",
-        link: "https://redux.js.org/",
-        type: "Frontend",
-        isLearning: true,
+        homepage: true,
     },
     {
         key: 11,
@@ -99,20 +59,13 @@ const technologies = [
         isLearning: false,
     },
     {
-        key: 12,
-        name: "Astro",
-        image: "logos/astro.svg",
-        link: "https://astro.build/",
-        type: "Frontend",
-        isLearning: true,
-    },
-    {
         key: 13,
         name: "Zustand",
         image: "logos/zustand.svg",
         link: "https://github.com/pmndrs/zustand",
         type: "Frontend",
         isLearning: false,
+        stackSection: "Additional Tools",
     },
     {
         key: 30,
@@ -137,6 +90,8 @@ const technologies = [
         link: "https://tailwindcss.com/",
         type: "Frontend",
         isLearning: false,
+        homepage: true,
+        stackSection: "Core Technologies",
     },
 
     {
@@ -154,6 +109,7 @@ const technologies = [
         link: "https://material-ui.com/",
         type: "Frontend",
         isLearning: false,
+        stackSection: "Other Experience",
     },
     {
         key: 35,
@@ -164,20 +120,13 @@ const technologies = [
         isLearning: false,
     },
     {
-        key: 36,
-        name: "DaisyUI",
-        image: "logos/daisyui.png",
-        link: "https://daisyui.com/",
-        type: "Frontend",
-        isLearning: false,
-    },
-    {
         key: 37,
         name: "shadcn",
         image: "logos/shadcn.png",
         link: "https://ui.shadcn.com/",
         type: "Frontend",
         isLearning: false,
+        stackSection: "Other Experience",
     },
     {
         key: 38,
@@ -186,16 +135,21 @@ const technologies = [
         link: "https://mantine.dev/",
         type: "Frontend",
         isLearning: false,
+        stackSection: "Other Experience",
     },
 
     // Backend Technologies
     {
         key: 50,
         name: "Node.js",
-        image: "logos/nodejs.png",
+        image: {
+            lightImage: "logos/nodejsDark.svg",
+            darkImage: "logos/nodejsLight.svg",
+        },
         link: "https://nodejs.org/",
         type: "Backend",
         isLearning: false,
+        homepage: true,
     },
     {
         key: 51,
@@ -211,15 +165,7 @@ const technologies = [
         image: "logos/python.svg",
         link: "https://www.python.org/",
         type: "Backend",
-        isLearning: true,
-    },
-    {
-        key: 57,
-        name: "Redis",
-        image: "logos/redis.png",
-        link: "https://redis.io/",
-        type: "Backend",
-        isLearning: true,
+        isLearning: false,
     },
     {
         key: 58,
@@ -228,30 +174,7 @@ const technologies = [
         link: "https://graphql.org/",
         type: "Backend",
         isLearning: true,
-    },
-    {
-        key: 59,
-        name: "Socket.io",
-        image: "logos/socket.svg",
-        link: "https://socket.io/",
-        type: "Backend",
-        isLearning: true,
-    },
-    {
-        key: 60,
-        name: "Deno",
-        image: "logos/deno.svg",
-        link: "https://deno.com/",
-        type: "Backend",
-        isLearning: true,
-    },
-    {
-        key: 61,
-        name: "Bun",
-        image: "logos/bun.svg",
-        link: "https://bun.sh/",
-        type: "Backend",
-        isLearning: true,
+        stackSection: "Currently Exploring",
     },
     {
         key: 62,
@@ -259,47 +182,7 @@ const technologies = [
         image: "logos/nestjs.svg",
         link: "https://nestjs.com/",
         type: "Backend",
-        isLearning: true,
-    },
-    {
-        key: 63,
-        name: "Go",
-        image: "logos/go.svg",
-        link: "https://golang.org/",
-        type: "Backend",
-        isLearning: true,
-    },
-    {
-        key: 64,
-        name: "PHP",
-        image: "logos/PHP.png",
-        link: "https://www.php.net/",
-        type: "Backend",
         isLearning: false,
-    },
-    {
-        key: 65,
-        name: "Apache",
-        image: "logos/apache.png",
-        link: "https://httpd.apache.org/",
-        type: "Backend",
-        isLearning: false,
-    },
-    {
-        key: 66,
-        name: "XAMPP",
-        image: "logos/xampp.svg",
-        link: "https://www.apachefriends.org/index.html",
-        type: "Backend",
-        isLearning: false,
-    },
-    {
-        key: 67,
-        name: "Laravel",
-        image: "logos/laravel.svg",
-        link: "https://laravel.com/",
-        type: "Backend",
-        isLearning: true,
     },
     {
         key: 68,
@@ -330,10 +213,15 @@ const technologies = [
     {
         key: 54,
         name: "Prisma",
-        image: "logos/prisma.svg",
+        image: {
+            lightImage: "logos/Prisma.svg",
+            darkImage: "logos/Prisma.svg"
+        },
         link: "https://www.prisma.io/",
         type: "Database",
         isLearning: false,
+        homepage: true,
+        stackSection: "Core Technologies",
     },
     {
         key: 55,
@@ -342,25 +230,22 @@ const technologies = [
         link: "https://www.postgresql.org/",
         type: "Database",
         isLearning: false,
+        homepage: true,
+        stackSection: "Core Technologies",
     },
+
+    // Mobile
     {
-        key: 68,
-        name: "mySQL",
-        image: "logos/mysql.png",
-        link: "https://www.mysql.com/",
-        type: "Database",
-        isLearning: false,
+        key: 101,
+        name: "Expo",
+        image: "logos/expo.png",
+        link: "https://expo.dev/",
+        type: "Mobile",
+        isLearning: true,
+        stackSection: "Currently Exploring",
     },
 
     // Tools
-    {
-        key: 70,
-        name: "Storybook",
-        image: "logos/storybook.png",
-        link: "https://storybook.js.org/",
-        type: "Tool",
-        isLearning: true,
-    },
     {
         key: 71,
         name: "Figma",
@@ -368,6 +253,7 @@ const technologies = [
         link: "https://www.figma.com",
         type: "Tool",
         isLearning: false,
+        stackSection: "Additional Tools",
     },
     {
         key: 72,
@@ -384,6 +270,7 @@ const technologies = [
         link: "https://vitejs.dev/",
         type: "Tool",
         isLearning: false,
+        stackSection: "Additional Tools",
     },
     {
         key: 74,
@@ -392,6 +279,7 @@ const technologies = [
         link: "https://github.com/features/copilot",
         type: "Tool",
         isLearning: false,
+        stackSection: "Additional Tools",
     },
     {
         key: 75,
@@ -408,9 +296,19 @@ const technologies = [
         link: "https://www.stripe.com/",
         type: "Tool",
         isLearning: false,
+        stackSection: "Additional Tools",
     },
 
     // CI/CD
+    {
+        key: 86,
+        name: "Docker",
+        image: "logos/docker.svg",
+        link: "https://www.docker.com/",
+        type: "CI/CD",
+        isLearning: true,
+        stackSection: "Currently Exploring",
+    },
     {
         key: 80,
         name: "Jest",
@@ -418,6 +316,7 @@ const technologies = [
         link: "https://jestjs.io/",
         type: "CI/CD",
         isLearning: false,
+        stackSection: "Additional Tools",
     },
     {
         key: 81,
@@ -426,22 +325,15 @@ const technologies = [
         link: "https://testing-library.com/docs/react-testing-library/intro/",
         type: "CI/CD",
         isLearning: false,
+        stackSection: "Additional Tools",
     },
     {
-        key: 82,
+        key: 83,
         name: "Playwright",
         image: "logos/playwright.svg",
         link: "https://playwright.dev/",
         type: "CI/CD",
         isLearning: false,
-    },
-    {
-        key: 83,
-        name: "Cypress",
-        image: "logos/cypress.svg",
-        link: "https://www.cypress.io/",
-        type: "CI/CD",
-        isLearning: true,
     },
     {
         key: 84,
@@ -460,20 +352,13 @@ const technologies = [
         isLearning: false,
     },
     {
-        key: 86,
-        name: "Docker",
-        image: "logos/docker.svg",
-        link: "https://www.docker.com/",
-        type: "CI/CD",
-        isLearning: true,
-    },
-    {
         key: 87,
         name: "Vercel",
         image: "logos/vercel.svg",
         link: "https://vercel.com/",
         type: "CI/CD",
         isLearning: false,
+        stackSection: "Additional Tools",
     },
     {
         key: 88,
@@ -482,6 +367,7 @@ const technologies = [
         link: "https://www.netlify.com/",
         type: "CI/CD",
         isLearning: false,
+        stackSection: "Other Experience",
     },
     {
         key: 89,
@@ -490,6 +376,7 @@ const technologies = [
         link: "https://www.railway.app/",
         type: "CI/CD",
         isLearning: false,
+        stackSection: "Other Experience",
     },
     {
         key: 90,
@@ -500,24 +387,6 @@ const technologies = [
         isLearning: false,
     },
 
-    // Mobile Technologies
-    {
-        key: 100,
-        name: "React Native",
-        image: "logos/reactnative.svg",
-        link: "https://reactnative.dev/",
-        type: "Mobile",
-        isLearning: true,
-    },
-    {
-        key: 101,
-        name: "Expo",
-        image: "logos/expo.png",
-        link: "https://expo.dev/",
-        type: "Mobile",
-        isLearning: true,
-    },
-
     // Project Management
     {
         key: 110,
@@ -526,6 +395,7 @@ const technologies = [
         link: "https://www.notion.so/",
         type: "Project Management",
         isLearning: false,
+        stackSection: "Other Experience",
     },
     {
         key: 111,
@@ -534,6 +404,7 @@ const technologies = [
         link: "https://www.trello.com/",
         type: "Project Management",
         isLearning: false,
+        stackSection: "Other Experience",
     },
     {
         key: 112,
@@ -542,6 +413,7 @@ const technologies = [
         link: "https://www.slack.com/",
         type: "Project Management",
         isLearning: false,
+        stackSection: "Other Experience",
     },
     {
         key: 113,
@@ -579,22 +451,6 @@ const technologies = [
         type: "Cloud",
         isLearning: false,
     },
-    {
-        key: 131,
-        name: "Azure",
-        image: "logos/azure.png",
-        link: "https://azure.microsoft.com/",
-        type: "Cloud",
-        isLearning: true,
-    },
-    {
-        key: 132,
-        name: "Google Cloud",
-        image: "logos/googlecloud.png",
-        link: "https://cloud.google.com/",
-        type: "Cloud",
-        isLearning: true,
-    },
 ] as Technology[];
 
 const projects = [
@@ -629,7 +485,6 @@ const projects = [
             "Typescript",
             "Vite",
             "tailwindcss",
-            "React Router",
             "Netlify"
         ],
         deployedLink: "https://sh.coach",
@@ -658,35 +513,6 @@ const projects = [
         ],
         deployedLink: "https://storytime-by-benjamindotdev.vercel.app",
         repoLink: "https://github.com/benjamindotdev/storytime",
-    },
-    {
-        key: 3,
-        name: "Frosch",
-        image: "logos/Frosch.gif",
-        description: "A web-game where you help a frog cross different terrain.",
-        status: "completed",
-        techStack: ["HTML5", "CSS3", "Javascript", "Webpack", "Netlify"],
-        deployedLink: "https://playfrosch.netlify.app",
-        repoLink: "https://github.com/benjamindotdev/frosch",
-    },
-    {
-        key: 4,
-        name: "littlelemon",
-        image: "logos/littlelemon.svg",
-        description: "Final project for the Meta Frontend Developer course.",
-        status: "completed",
-        techStack: [
-            "React",
-            "CSS3",
-            "Typescript",
-            "Chakra UI",
-            "Stripe",
-            "Jest",
-            "React Testing Library",
-            "Netlify",
-        ],
-        deployedLink: "https://littlelemonbybenjamin.netlify.app/",
-        repoLink: "https://github.com/benjamindotdev/LittleLemon",
     }
 ] as Project[];
 
@@ -698,18 +524,17 @@ const benjamin = {
         {
             key: 0,
             image: "images/coachBenWithTeam.webp",
-            text: "After growing up in London 🇬🇧, I spent a decade as a youth football coach in New Jersey, USA. I mentored players on and off the pitch—building resilience, teamwork, and confidence. Trophies were nice, but the real wins were the long-term relationships with players and their families. That experience shaped how I lead teams and communicate under pressure."
+            text: "After growing up in London 🇬🇧, I spent a decade coaching youth football in New Jersey, USA. Beyond training sessions, I mentored players on resilience, teamwork, and confidence. Those years shaped how I communicate, lead under pressure, and build trust — skills I now rely on in engineering just as much as I did on the pitch.",
         },
         {
             key: 1,
             image: "images/hackshow.webp",
-            text: "After moving to Berlin 🇩🇪, I completed the Ironhack Web Development bootcamp in Berlin and won the Hackshow with my final project. I was then invited back as the Teaching Assistant for the course I just finished, where I taught solo, ran code reviews, and helped debug full-stack projects—sharpening my own skills while helping others level up."
+            text: "After moving to Berlin 🇩🇪, I completed the Ironhack Web Development bootcamp and won the Hackshow with my final project. I was then invited to join as a Teaching Assistant, where I taught solo, reviewed student projects, and debugged full-stack applications daily — accelerating my technical growth through teaching and hands-on problem solving.",
         },
         {
             key: 2,
-            image: "images/dadWithMiles.webp",
-            text: "Today I’m the sole developer at Shep, working directly alongside the two founders of this early-stage startup. With no dedicated tech team yet, I own the entire stack—from prototyping features to deploying production code—while helping shape the product vision and technical direction from the ground up. It’s fast, hands-on, and every line of code directly impacts the company’s future."
-
+            text: "Today I'm the sole developer at Shep, working directly with the two founders of this early-stage fintech startup. I own the entire stack — from prototyping features to shipping production-ready code — and help define the architecture and product direction. Every feature is built end-to-end, which has given me strong experience in autonomy, stakeholder communication, and rapid iteration.",
+            showCTAs: true,
         }
     ],
     contacts: [
@@ -751,40 +576,27 @@ const benjamin = {
             location: "Berlin, Germany",
             date: "September 2024 - December 2024",
             description:
-                "Tech bootcamp providing 12 week programs for web dev, UX / UI and data science",
+                "12-week web development bootcamp covering full-stack JavaScript, modern frontend frameworks, and project-based learning",
             details: [
                 {
                     key: 0,
-                    text: "Teaching lesson content in shifts with the lead teacher",
+                    text: "Delivered lessons alongside the lead instructor and provided one-to-one student support",
                 },
                 {
                     key: 1,
-                    text: "Guiding students through the curriculum, providing feedback and support",
+                    text: "Debugged and reviewed student projects, offering technical guidance and code feedback",
                 },
                 {
                     key: 2,
-                    text: "Solving technical issues, giving career advice, being approachable and helpful.",
+                    text: "Assisted with curriculum delivery, troubleshooting, and general student mentorship",
                 },
             ],
             techStack: [
-                "HTML5",
-                "CSS3",
-                "Javascript",
                 "React",
                 "Typescript",
-                "Next.js",
                 "tailwindcss",
-                "shadcn",
-                "Node.js",
-                "Express",
-                "Mongoose",
-                "MongoDB",
-                "Vercel",
-                "Railway",
-                "Jest",
-                "React Testing Library",
-                "Taiga",
             ],
+            skills: ["Teaching"],
             link: "www.ironhack.com/de-en",
             logo: "logos/Ironhack_idvM-wR3Mf_6.svg",
             type: "Full-time",
@@ -797,19 +609,19 @@ const benjamin = {
             location: "Berlin, Germany",
             date: "January 2025",
             description:
-                "An e-commerce platform for organic baby food, providing a range of products",
+                "E-commerce platform offering organic baby food products across Europe",
             details: [
                 {
                     key: 0,
-                    text: "Working in a team to develop and maintain the frontend of the website",
+                    text: "Developed and maintained frontend features for a live production storefront",
                 },
                 {
                     key: 1,
-                    text: "Improving the page load speed and performance",
+                    text: "Improved page load speed and general site performance through targeted optimizations",
                 },
                 {
                     key: 2,
-                    text: "Collaborating with the backend team to integrate APIs and ensure smooth data flow",
+                    text: "Integrated frontend components with backend APIs, ensuring smooth data flow and stable user experience",
                 },
             ],
             techStack: [
@@ -817,9 +629,9 @@ const benjamin = {
                 "CSS3",
                 "Javascript",
                 "Webpack",
-                "Wordpress",
                 "Shopify",
             ],
+            skills: ["Basic integration"],
             link: "www.organicsbestshop.com",
             logo: "logos/organicsbest.webp",
             type: "Internship",
@@ -832,31 +644,32 @@ const benjamin = {
             location: "Berlin, Germany",
             date: "April 2025 - June 2025",
             description:
-                "AI-powered bioinformatician, that creates plots and tables for user data visualization",
+                "Bioinformatics platform for generating interactive scientific plots, tables, and data visualizations",
             details: [
                 {
                     key: 0,
-                    text: "Redesigning the frontend to comply with UX/UI principles and best practices",
+                    text: "Redesigned the entire frontend to align with modern UX/UI best practices and scientific workflows",
                 },
                 {
                     key: 1,
-                    text: "Implementing Zustand for better state management across components",
+                    text: "Introduced consistent state management patterns (Zustand) to improve reliability across complex components",
                 },
                 {
                     key: 2,
-                    text: "Creating RESTful API architecture for improved data flow and security",
+                    text: "Implemented a clean REST architecture to streamline data ingestion, transformations, and visual output",
+                },
+                {
+                    key: 3,
+                    text: "Collaborated closely with the founder on rapid prototyping and refinement of user-facing features",
                 },
             ],
             techStack: [
-                "Typescript",
                 "React",
-                "tailwindcss",
+                "Typescript",
                 "Zustand",
-                "Material-UI",
-                "Python",
-                "PostgreSQL",
-                "AWS"
+                "tailwindcss",
             ],
+            skills: ["REST APIs"],
             link: "www.genietechbio.com",
             logo: "logos/genie.jpeg",
             type: "Full-time",
@@ -869,29 +682,32 @@ const benjamin = {
             location: "Berlin, Germany",
             date: "July 2025 - Present",
             description:
-                "AI-powered financial dashboard, allowing visibility across other tools and services",
+                "AI-powered financial dashboard enabling unified visibility across multiple SaaS tools and analytics sources",
             details: [
                 {
                     key: 0,
-                    text: "Building the MVP from the ground up with cutting–edge industry tools",
+                    text: "Designed and built the initial MVP architecture using industry-standard full-stack tools (Next.js, TypeScript, Tailwind, Prisma, Convex)",
                 },
                 {
                     key: 1,
-                    text: "Dealing with handling state from multiple different APIs at the same time",
+                    text: "Engineered robust data flows aggregating information from multiple third-party APIs",
                 },
                 {
                     key: 2,
-                    text: "Being the technical lead to implement product requirements and deliverables",
+                    text: "Led technical decisions end-to-end, translating business requirements into deliverable features",
                 },
+                {
+                    key: 3,
+                    text: "Implemented scalable state and API patterns to support rapid iteration and future product expansion",
+                }
             ],
             techStack: [
                 "Next.js",
                 "Typescript",
                 "tailwindcss",
-                "shadcn",
                 "Convex",
-            ]
-            ,
+            ],
+            skills: ["Full-stack architecture"],
             link: "https://www.shephq.com/",
             logo: "logos/shep.png",
             type: "Full-time",
@@ -920,11 +736,11 @@ const benjamin = {
             title: "Stack",
             route: "/stack",
         },
-        {
-            key: 4,
-            title: "Projects",
-            route: "/projects",
-        },
+        // {
+        //     key: 4,
+        //     title: "Projects",
+        //     route: "/projects",
+        // },
         {
             key: 5,
             title: "Certifications",
@@ -935,42 +751,95 @@ const benjamin = {
         {
             key: 0,
             name: "Web Development Bootcamp (full-time)",
-            logo: "logos/Ironhack_idVsNwhECC_4.svg",
+            logo: {
+                lightImage: "logos/IronhackLight.png",
+                darkImage: "logos/IronhackDark.png",
+            },
             description:
-                "Completed in September 2024. Won hackshow with asozial.dev. Offered a position as a TA afterwards, due to my passion and willingness to help my colleagues.",
+                "Full-time program covering full-stack JavaScript, modern frameworks, and project-based learning. Won cohort hackathon (Hackshow), later invited as Teaching Assistant",
             link: "https://www.ironhack.com/de-en",
-            company: "Ironhack",
+            company: "Ironhack Berlin",
             location: "On site",
+            category: "Professional Certifications",
+            level: "Bootcamp",
+            date: "June 2024 - September 2024",
         },
         {
             key: 1,
             name: "Meta Front-End Developer",
             logo: "logos/coursera.svg",
             description:
-                "Complete in August 2023. Learned the latest React best practices, straight from Meta themselves.",
+                "A structured program focused on modern React, frontend architecture, UI patterns, and production best practices",
             link: "https://coursera.org/verify/professional-cert/5GMTVUAPTVM2",
             company: "Coursera",
             location: "Remote",
+            category: "Professional Certifications",
+            level: "Specialization",
+            date: "August 2023",
         },
         {
             key: 2,
             name: "Responsive Web Design",
-            logo: "logos/freecodecamp.svg",
+            logo: {
+                lightImage: "logos/FCCLight.png",
+                darkImage: "logos/FCCDark.png",
+            },
             description:
-                "Completed in April 2019. Specialized in creating responsive pages with HTML, CSS and Javascipt.",
+                "Hands-on practice building accessible, responsive pages using semantic HTML and CSS",
             link: "https://www.freecodecamp.org/certification/benjaminelliott/responsive-web-design",
             company: "freecodecamp",
             location: "Remote",
+            category: "Skills Courses",
+            level: "Short Course",
+            date: "July 2023",
         },
         {
             key: 3,
             name: "Legacy Javascript Algorithms & Data Structures",
-            logo: "logos/freecodecamp.svg",
+            logo: {
+                lightImage: "logos/FCCLight.png",
+                darkImage: "logos/FCCDark.png",
+            },
             description:
-                "Completed in August 2023. Javascript algorithms and data sctuctures, specializing in using different data types and structures in Javascript ES6",
+                "Foundational training in core algorithms, problem-solving, and ES6+ patterns",
             link: "https://freecodecamp.org/certification/benjaminelliott/javascript-algorithms-and-data-structures",
             company: "freecodecamp",
             location: "Remote",
+            category: "Skills Courses",
+            level: "Short Course",
+            date: "August 2023",
+        },
+        {
+            key: 4,
+            name: "Ironhack Hackshow",
+            logo: {
+                lightImage: "logos/IronhackLight.png",
+                darkImage: "logos/IronhackDark.png",
+            },
+            description:
+                "Won the Ironhack Berlin Hackshow in September 2024 with asozial.dev, a social platform connecting users through shared interests and activities",
+            company: "Ironhack Berlin",
+            location: "On site",
+            category: "Awards & Achievements",
+            level: "Hackathon Winner",
+            date: "September 2024",
+            repoLink: "https://github.com/benjamindotdev/asozial",
+        },
+        {
+            key: 5,
+            name: "Code Hackday X GitHub X global AI",
+            logo: {
+                lightImage: "logos/CodeLight.png",
+                darkImage: "logos/CodeDark.png",
+            },
+            description:
+                "Won the Code University Hackday with TaskChunker, an AI-powered task management app that breaks down complex projects into manageable tasks. Built in 5 hours",
+            company: "Code University",
+            location: "On site",
+            category: "Awards & Achievements",
+            level: "Hackathon Winner",
+            date: "May 2023",
+            repoLink: "https://github.com/benjamindotdev/taskchunker-frontend",
         },
     ],
     projects,

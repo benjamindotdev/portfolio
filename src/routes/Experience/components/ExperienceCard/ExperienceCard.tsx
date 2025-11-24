@@ -4,13 +4,19 @@ import { LinkButton } from "../../../../components/shared/LinkButton/LinkButton"
 import { SubHeading } from "../../../../components/shared/SubHeading/SubHeading";
 import { TechList } from "../../../Home/components/TechList/TechList";
 import { benjamin } from "../../../../constants";
+import { useTheme } from "../../../../contexts/ThemeContext";
+import { Separator } from "../../../../components/shared/Separator/Separator";
+import { Badge } from "../../../../components/shared/Badge/Badge";
+import { SkillBadge } from "../../../../components/shared/SkillBadge/SkillBadge";
+import { MetadataText } from "../../../../components/shared/MetadataText/MetadataText";
 
 export const ExperienceCard = ({
     experience,
 }: {
     experience: ExperienceItem;
 }) => {
-    const { title, company, location, date, description, details, techStack, link, logo, type, isCurrent } = experience;
+    const { theme } = useTheme();
+    const { title, company, location, date, description, details, techStack, skills, link, logo, type, isCurrent } = experience;
 
     // Transform techStack similar to ProjectSection
     const transformTechStack = (
@@ -51,7 +57,10 @@ export const ExperienceCard = ({
     const techsForDisplay = techStack ? transformTechStack(techStack) : [];
 
     return (
-        <div className="w-[48%] h-[54%] grid [grid-template-rows:minmax(0,20%)_minmax(0,10%)_minmax(0,20%)_minmax(0,50%)] gap-2 text-white text-left border border-zinc-500 rounded-lg transition-all duration-300 hover:border-portfolio-green p-4 grayscale hover:grayscale-0">
+        <div
+            className="w-[48%] grid gap-2 text-slate-700 dark:text-white text-left border border-zinc-500 rounded-lg transition-all duration-300 hover:border-portfolio-green p-4 grayscale hover:grayscale-0"
+            style={{ gridTemplateRows: 'auto auto auto auto' }}
+        >
             {/* Header - 20% */}
             <div className="w-full flex flex-row justify-between items-start overflow-hidden">
                 <div className="flex flex-row items-center gap-6">
@@ -64,15 +73,15 @@ export const ExperienceCard = ({
                     <div className="flex flex-col gap-2 flex-1">
                         <SubHeading text={`${title} @ ${company}`} />
                         <div className="flex flex-row items-center gap-4 flex-wrap">
-                            <span className="text-sm opacity-80 whitespace-nowrap">{date}</span>
-                            <span className="opacity-60">|</span>
-                            <p className="m-0 text-sm">{type}, {location}</p>
+                            <MetadataText>{date}</MetadataText>
+                            <Separator />
+                            <MetadataText>{type}</MetadataText>
+                            <Separator />
+                            <MetadataText>{location}</MetadataText>
                             {isCurrent && (
                                 <>
-                                    <span className="opacity-60">|</span>
-                                    <span className="bg-green-600 text-green-100 px-2 py-1 rounded-xl text-xs font-bold">
-                                        Current
-                                    </span>
+                                    <Separator />
+                                    <Badge text="Current" variant="default" />
                                 </>
                             )}
                         </div>
@@ -83,13 +92,13 @@ export const ExperienceCard = ({
 
             {/* Description - 10% */}
             <div className="w-full overflow-hidden">
-                <p className="leading-relaxed m-0 text-sm">{description}</p>
+                <p className="leading-relaxed m-0 text-sm text-slate-700 dark:text-portfolio-white">{description}</p>
             </div>
 
             {/* Details/Bullet Points - 50% */}
-            <div className="w-full flex items-start overflow-hidden">
+            <div className="w-full flex items-start">
                 {details && details.length > 0 && (
-                    <ul className="m-0 pl-0 list-none text-sm">
+                    <ul className="m-0 pl-0 list-none text-sm text-slate-700 dark:text-portfolio-white">
                         {details.map((detail) => (
                             <li key={detail.key} className="mb-1.5 leading-snug last:mb-0">
                                 ✅ {detail.text}
@@ -100,13 +109,22 @@ export const ExperienceCard = ({
             </div>
 
             {/* Tech Stack - 20% */}
-            {techsForDisplay && techsForDisplay.length > 0 && (
-                <div className="w-full overflow-hidden">
-                    <div className="h-full flex items-start">
-                        <TechList techs={techsForDisplay} />
+            {(techsForDisplay && techsForDisplay.length > 0) || (skills && skills.length > 0) ? (
+                <div className="w-full h-full flex items-end">
+                    <div className="w-full flex items-start justify-between gap-3">
+                        {techsForDisplay && techsForDisplay.length > 0 && (
+                            <TechList techs={techsForDisplay} />
+                        )}
+                        {skills && skills.length > 0 && (
+                            <div className="flex flex-wrap gap-2 items-center self-end pb-2">
+                                {skills.map((skill, index) => (
+                                    <SkillBadge key={index} skill={skill} />
+                                ))}
+                            </div>
+                        )}
                     </div>
                 </div>
-            )}
+            ) : null}
         </div>
     );
 };

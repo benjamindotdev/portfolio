@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { GraduationCap } from "lucide-react";
+import { useTheme } from "../../../contexts/ThemeContext";
 
 export const TechLogoImage = ({
     image,
@@ -8,12 +9,19 @@ export const TechLogoImage = ({
     link,
     isLearning,
 }: {
-    image: string;
+    image: string | { lightImage: string; darkImage: string };
     name: string;
     link: string;
     isLearning?: boolean;
 }) => {
+    const { theme } = useTheme();
     const isReactLogo = name === "React";
+
+    const imageSrc = typeof image === "string"
+        ? image
+        : theme === "dark"
+            ? image.darkImage
+            : image.lightImage;
 
     return (
         <li>
@@ -31,8 +39,8 @@ export const TechLogoImage = ({
                     />
                 )}
                 <LazyLoadImage
-                    className={`h-icon-s w-auto transition-all duration-500 drop-shadow-[0px_0px_2px_white] group-hover:scale-125 group-hover:translate-y-[-10px] ${isReactLogo ? "animate-rotate" : ""}`}
-                    src={image}
+                    className={`h-icon-s w-auto transition-all duration-500  group-hover:scale-125 group-hover:translate-y-[-10px] ${isReactLogo ? "animate-rotate" : ""}`}
+                    src={imageSrc}
                     alt={name}
                     loading="lazy"
                 />

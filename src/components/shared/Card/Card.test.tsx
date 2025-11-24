@@ -30,6 +30,9 @@ const mockCertification: Certification = {
     link: "https://certification.com",
     company: "React Org",
     location: "Remote",
+    category: "Professional Certifications",
+    level: "Specialization",
+    date: "January 2024",
 };
 
 const mockProject: Project = {

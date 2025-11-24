@@ -7,80 +7,44 @@ export const Stack = ({
 }: {
     technologies?: Technology[];
 }) => {
-    const filterAndSortTechnologies = (
+    const filterBySection = (
         technologies: Technology[],
-        type: string
+        section: string
     ): Technology[] => {
         return technologies
-            ?.filter((tech) => tech.type === type)
-            .sort((a, b) => {
-                if (a.isLearning === b.isLearning) {
-                    return a.isLearning ? a.key - b.key : a.key - b.key;
-                }
-                return a.isLearning ? 1 : -1;
-            });
+            ?.filter((tech) => tech.stackSection === section)
+            .sort((a, b) => a.key - b.key);
     };
 
-    const frontEnd = useMemo(
-        () => filterAndSortTechnologies(technologies, "Frontend"),
+    const coreTechnologies = useMemo(
+        () => filterBySection(technologies, "Core Technologies"),
         [technologies]
     );
-    const backEnd = useMemo(
-        () => filterAndSortTechnologies(technologies, "Backend"),
+    const additionalTools = useMemo(
+        () => filterBySection(technologies, "Additional Tools"),
         [technologies]
     );
-    const database = useMemo(
-        () => filterAndSortTechnologies(technologies, "Database"),
+    const otherExperience = useMemo(
+        () => filterBySection(technologies, "Other Experience"),
         [technologies]
     );
-    const cicd = useMemo(
-        () => filterAndSortTechnologies(technologies, "CI/CD"),
-        [technologies]
-    );
-    const projectManagement = useMemo(
-        () => filterAndSortTechnologies(technologies, "Project Management"),
-        [technologies]
-    );
-    const contentManagement = useMemo(
-        () => filterAndSortTechnologies(technologies, "Content Management"),
-        [technologies]
-    );
-    const tools = useMemo(
-        () => filterAndSortTechnologies(technologies, "Tool"),
-        [technologies]
-    );
-    const mobile = useMemo(
-        () => filterAndSortTechnologies(technologies, "Mobile"),
-        [technologies]
-    );
-
-    const cloud = useMemo(
-        () => filterAndSortTechnologies(technologies, "Cloud"),
+    const currentlyExploring = useMemo(
+        () => filterBySection(technologies, "Currently Exploring"),
         [technologies]
     );
 
     const pageContent = useMemo(
         () => [
-            { techs: frontEnd, subHeading: "Front end" },
-            { techs: backEnd, subHeading: "Back end" },
-            { techs: mobile, subHeading: "Mobile" },
-            { techs: database, subHeading: "Databases, ORMs & ODMs" },
-            { techs: cicd, subHeading: "CI/CD" },
-            { techs: projectManagement, subHeading: "Project Management" },
-            { techs: contentManagement, subHeading: "CMS" },
-            { techs: cloud, subHeading: "Cloud" },
-            { techs: tools, subHeading: "Tools" },
+            { techs: coreTechnologies, subHeading: "Core Technologies" },
+            { techs: additionalTools, subHeading: "Additional Tools" },
+            { techs: otherExperience, subHeading: "Other Experience" },
+            { techs: currentlyExploring, subHeading: "Currently Exploring" },
         ],
         [
-            frontEnd,
-            backEnd,
-            mobile,
-            database,
-            cicd,
-            projectManagement,
-            contentManagement,
-            cloud,
-            tools,
+            coreTechnologies,
+            additionalTools,
+            otherExperience,
+            currentlyExploring,
         ]
     );
 

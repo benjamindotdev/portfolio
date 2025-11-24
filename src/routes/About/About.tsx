@@ -6,7 +6,7 @@ export const About = ({ aboutItems }: { aboutItems?: AboutItem[] }) => {
     return (
         <ScrollSection>
             {aboutItems && aboutItems.map((item) => (
-                <AboutCard key={item.key} image={item.image} text={item.text} />
+                <AboutCard key={item.key} image={item.image} text={item.text} showCTAs={item.showCTAs} />
             ))}
         </ScrollSection>
     );

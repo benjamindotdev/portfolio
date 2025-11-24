@@ -3,6 +3,10 @@ import { LinkButton } from "../LinkButton/LinkButton";
 import { SubHeading } from "../SubHeading/SubHeading";
 import { TechList } from "../../../routes/Home/components/TechList/TechList";
 import { benjamin } from "../../../constants";
+import { useTheme } from "../../../contexts/ThemeContext";
+import { Separator } from "../Separator/Separator";
+import { Badge } from "../Badge/Badge";
+import { MetadataText } from "../MetadataText/MetadataText";
 
 type CardProps = {
     item: ExperienceItem | Certification | Project;
@@ -10,6 +14,8 @@ type CardProps = {
 };
 
 export const Card = ({ item, type }: CardProps) => {
+    const { theme } = useTheme();
+
     // Transform techStack for consistent display
     const transformTechStack = (
         techStack: Technology[] | string[]
@@ -65,14 +71,17 @@ export const Card = ({ item, type }: CardProps) => {
             const cert = item as Certification;
             return {
                 title: cert.name,
-                subtitle: `${cert.company}, ${cert.location}`,
-                date: undefined,
+                subtitle: cert.company,
+                subtitle2: cert.location,
+                date: cert.date,
                 description: cert.description,
                 logo: cert.logo,
                 link: cert.link,
+                repoLink: cert.repoLink,
+                deployedLink: cert.deployedLink,
                 techStack: undefined,
                 details: undefined,
-                status: undefined,
+                status: cert.level,
             };
         } else {
             const proj = item as Project;
@@ -93,50 +102,78 @@ export const Card = ({ item, type }: CardProps) => {
     const cardData = getCardData();
     const techsForDisplay = cardData.techStack ? transformTechStack(cardData.techStack) : [];
 
+    // Get the appropriate logo image based on theme
+    const getLogoSrc = (logo: string | { lightImage: string; darkImage: string }) => {
+        if (typeof logo === "string") {
+            return logo;
+        }
+        return theme === "dark" ? logo.darkImage : logo.lightImage;
+    };
+
     return (
-        <div className="w-full h-full grid grid-rows-[auto_auto_1fr_auto] gap-2 text-white text-left">
+        <div className="w-full h-full grid grid-rows-[auto_auto_1fr_auto] gap-2 text-slate-700 dark:text-white text-left">
             {/* Header - Row 1 */}
             <div className="w-full flex flex-row justify-between items-start">
                 <div className="flex flex-row items-center gap-6">
                     <img
                         className="h-auto w-12 rounded"
-                        src={cardData.logo}
+                        src={getLogoSrc(cardData.logo)}
                         alt={cardData.title}
                     />
                     <div className="flex flex-col gap-2 flex-1">
                         <SubHeading text={cardData.title} />
                         <div className="flex flex-row items-center gap-4 flex-wrap">
+                            {cardData.subtitle && <MetadataText>{cardData.subtitle}</MetadataText>}
+                            {cardData.subtitle && cardData.subtitle2 && <Separator />}
+                            {cardData.subtitle2 && <MetadataText>{cardData.subtitle2}</MetadataText>}
+                            {(cardData.subtitle || cardData.subtitle2) && cardData.date && <Separator />}
                             {cardData.date && (
-                                <span className="text-sm opacity-80 whitespace-nowrap">{cardData.date}</span>
+                                <span className="text-sm opacity-80 whitespace-nowrap text-slate-700 dark:text-portfolio-white">{cardData.date}</span>
                             )}
-                            {cardData.date && cardData.subtitle && <span className="opacity-60">|</span>}
-                            {cardData.subtitle && <p className="m-0 text-sm">{cardData.subtitle}</p>}
                             {cardData.status && (
                                 <>
-                                    {(cardData.date || cardData.subtitle) && <span className="opacity-60">|</span>}
-                                    <span className={`px-2 py-1 rounded-xl text-xs font-bold ${cardData.status === 'Current'
-                                        ? 'bg-green-600 text-green-100'
-                                        : 'bg-zinc-600 text-zinc-300'
-                                        }`}>
-                                        {cardData.status}
-                                    </span>
+                                    {(cardData.date || cardData.subtitle || cardData.subtitle2) && <Separator />}
+                                    <Badge
+                                        text={cardData.status}
+                                        variant={cardData.status === 'Current' ? 'current' : 'default'}
+                                    />
                                 </>
                             )}
                         </div>
                     </div>
                 </div>
-                {cardData.link && <LinkButton link={cardData.link} />}
+                <div className="flex flex-row gap-2">
+                    {cardData.repoLink && (
+                        <a href={cardData.repoLink} target="_blank" rel="noopener noreferrer">
+                            <img
+                                className="h-6 w-6 opacity-70 hover:opacity-100 transition-opacity"
+                                src="logos/github.svg"
+                                alt="GitHub Repository"
+                            />
+                        </a>
+                    )}
+                    {cardData.deployedLink && (
+                        <a href={cardData.deployedLink} target="_blank" rel="noopener noreferrer">
+                            <img
+                                className="h-6 w-6 opacity-70 hover:opacity-100 transition-opacity"
+                                src="icons/link.svg"
+                                alt="Live Site"
+                            />
+                        </a>
+                    )}
+                    {cardData.link && <LinkButton link={cardData.link} />}
+                </div>
             </div>
 
             {/* Description - Row 2 */}
             <div className="w-full">
-                <p className="leading-relaxed m-0">{cardData.description}</p>
+                <p className="leading-relaxed m-0 text-slate-700 dark:text-portfolio-white">{cardData.description}</p>
             </div>
 
             {/* Details/Bullet Points - Row 3 (flexible) */}
             <div className="w-full flex items-start">
                 {cardData.details && cardData.details.length > 0 && (
-                    <ul className="m-0 pl-0 list-none text-sm">
+                    <ul className="m-0 pl-0 list-none text-sm text-slate-700 dark:text-portfolio-white">
                         {cardData.details.map((detail) => (
                             <li key={detail.key} className="mb-1.5 leading-snug last:mb-0">
                                 ✅ {detail.text}

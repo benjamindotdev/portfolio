@@ -14,6 +14,9 @@ test("loads and displays certifications", async () => {
       location: "Remote",
       description: "https://aws.amazon.com/",
       link: "https://aws.amazon.com/",
+      category: "Professional Certifications",
+      level: "Specialization",
+      date: "January 2024",
     },
     {
       key: 2,
@@ -23,6 +26,9 @@ test("loads and displays certifications", async () => {
       location: "Remote",
       description: "https://cloud.google.com/",
       link: "https://cloud.google.com/",
+      category: "Professional Certifications",
+      level: "Specialization",
+      date: "February 2024",
     },
     {
       key: 3,
@@ -32,6 +38,9 @@ test("loads and displays certifications", async () => {
       location: "Remote",
       description: "https://azure.microsoft.com/",
       link: "https://azure.microsoft.com/",
+      category: "Skills Courses",
+      level: "Short Course",
+      date: "March 2024",
     },
     {
       key: 4,
@@ -41,6 +50,9 @@ test("loads and displays certifications", async () => {
       location: "Remote",
       description: "https://www.comptia.org/certifications/security",
       link: "https://www.comptia.org/certifications/security",
+      category: "Professional Certifications",
+      level: "Specialization",
+      date: "April 2024",
     },
   ];
 

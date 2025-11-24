@@ -9,7 +9,10 @@ export const ExperienceList = ({
     return (
         <div className="w-full h-full flex flex-row flex-wrap justify-between gap-8">
             {experience.map((item) => (
-                <ExperienceCard experience={item} key={item.key} />
+                <ExperienceCard
+                    experience={item}
+                    key={item.key}
+                />
             ))}
         </div>
     );

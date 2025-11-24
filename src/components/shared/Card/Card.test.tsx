@@ -92,4 +92,81 @@ describe("Card", () => {
         expect(screen.getByText("A great application")).toBeInTheDocument();
         expect(screen.getByText("Completed")).toBeInTheDocument();
     });
+
+    it("handles tech not found in benjamin.technologies", () => {
+        const projectWithUnknownTech: Project = {
+            ...mockProject,
+            techStack: ["UnknownTech"],
+        };
+
+        render(
+            <BrowserRouter>
+                <ThemeProvider>
+                    <Card item={projectWithUnknownTech} type="project" />
+                </ThemeProvider>
+            </BrowserRouter>
+        );
+
+        expect(screen.getByText("My App")).toBeInTheDocument();
+    });
+
+    it("renders certification with both repo and deployed links", () => {
+        const certWithLinks: Certification = {
+            ...mockCertification,
+            repoLink: "https://github.com/test",
+            deployedLink: "https://deployed.com",
+        };
+
+        render(
+            <BrowserRouter>
+                <ThemeProvider>
+                    <Card item={certWithLinks} type="certification" />
+                </ThemeProvider>
+            </BrowserRouter>
+        );
+
+        const repoLink = screen.getByAltText("GitHub Repository").closest("a");
+        const deployedLink = screen.getByAltText("Live Site").closest("a");
+
+        expect(repoLink).toHaveAttribute("href", "https://github.com/test");
+        expect(deployedLink).toHaveAttribute("href", "https://deployed.com");
+    });
+
+    it("renders experience with current status", () => {
+        const currentExp: ExperienceItem = {
+            ...mockExperience,
+            isCurrent: true,
+        };
+
+        render(
+            <BrowserRouter>
+                <ThemeProvider>
+                    <Card item={currentExp} type="experience" />
+                </ThemeProvider>
+            </BrowserRouter>
+        );
+
+        expect(screen.getByText("Current")).toBeInTheDocument();
+    });
+
+    it("handles logo as object with light and dark images", () => {
+        const expWithThemeLogo: ExperienceItem = {
+            ...mockExperience,
+            logo: {
+                lightImage: "logo-light.png",
+                darkImage: "logo-dark.png",
+            },
+        };
+
+        render(
+            <BrowserRouter>
+                <ThemeProvider>
+                    <Card item={expWithThemeLogo} type="experience" />
+                </ThemeProvider>
+            </BrowserRouter>
+        );
+
+        const logoImg = screen.getByAltText("Software Engineer @ Tech Corp");
+        expect(logoImg).toBeInTheDocument();
+    });
 });

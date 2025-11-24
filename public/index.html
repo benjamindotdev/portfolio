@@ -1,6 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="background-color: #031926;">
   <head>
+    <style>
+      /* Prevent flash of white before JS loads */
+      html { background-color: #031926; }
+      body { background-color: #031926; }
+    </style>
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-D2K49DL955"></script>
     <script>
@@ -14,6 +19,30 @@
     </script>
     
     <meta charset="utf-8" />
+    
+    <!-- Theme initialization script - must run before body renders to prevent flash -->
+    <script>
+      (function() {
+        try {
+          // Check localStorage first, then system preference, fallback to dark
+          const savedTheme = localStorage.getItem('theme');
+          const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+          
+          if (theme === 'dark') {
+            document.documentElement.classList.add('dark');
+            document.documentElement.style.backgroundColor = '#031926';
+          } else {
+            document.documentElement.style.backgroundColor = '#ffffff';
+          }
+        } catch (e) {
+          // If localStorage is blocked, default to dark
+          document.documentElement.classList.add('dark');
+          document.documentElement.style.backgroundColor = '#031926';
+        }
+      })();
+    </script>
+    
     <link rel="icon" href="%PUBLIC_URL%/favicon.svg?v=2" type="image/svg+xml" />
     <link rel="alternate icon" href="%PUBLIC_URL%/favicon.svg?v=2" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/favicon.svg?v=2" />

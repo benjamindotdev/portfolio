@@ -87,4 +87,102 @@ describe("ExperienceCard", () => {
         // We just check that the component renders without crashing
         expect(screen.getByText("Senior Developer @ Tech Corp")).toBeInTheDocument();
     });
+
+    it("renders details when provided", () => {
+        const expWithDetails: ExperienceItem = {
+            ...mockExperience,
+            details: [
+                { key: 1, text: "Built scalable APIs" },
+                { key: 2, text: "Improved performance by 50%" }
+            ]
+        };
+
+        render(
+            <BrowserRouter>
+                <ThemeProvider>
+                    <ExperienceCard experience={expWithDetails} />
+                </ThemeProvider>
+            </BrowserRouter>
+        );
+
+        expect(screen.getByText("✅ Built scalable APIs")).toBeInTheDocument();
+        expect(screen.getByText("✅ Improved performance by 50%")).toBeInTheDocument();
+    });
+
+    it("renders skills when provided", () => {
+        const expWithSkills: ExperienceItem = {
+            ...mockExperience,
+            techStack: [],
+            skills: ["Leadership", "Agile", "Mentoring"]
+        };
+
+        render(
+            <BrowserRouter>
+                <ThemeProvider>
+                    <ExperienceCard experience={expWithSkills} />
+                </ThemeProvider>
+            </BrowserRouter>
+        );
+
+        expect(screen.getByText(/Leadership/)).toBeInTheDocument();
+        expect(screen.getByText(/Agile/)).toBeInTheDocument();
+        expect(screen.getByText(/Mentoring/)).toBeInTheDocument();
+    });
+
+    it("renders both techStack and skills", () => {
+        const expWithBoth: ExperienceItem = {
+            ...mockExperience,
+            skills: ["Team Management"]
+        };
+
+        render(
+            <BrowserRouter>
+                <ThemeProvider>
+                    <ExperienceCard experience={expWithBoth} />
+                </ThemeProvider>
+            </BrowserRouter>
+        );
+
+        // Check that skills are rendered (should show "Skill: " prefix)
+        expect(screen.getByText(/Team Management/)).toBeInTheDocument();
+    });
+
+    it("renders without link when not provided", () => {
+        const expWithoutLink: ExperienceItem = {
+            ...mockExperience,
+            link: undefined
+        };
+
+        render(
+            <BrowserRouter>
+                <ThemeProvider>
+                    <ExperienceCard experience={expWithoutLink} />
+                </ThemeProvider>
+            </BrowserRouter>
+        );
+
+        expect(screen.getByText("Senior Developer @ Tech Corp")).toBeInTheDocument();
+    });
+
+    it("handles theme-aware logo", () => {
+        const expWithThemeLogo: ExperienceItem = {
+            ...mockExperience,
+            logo: {
+                lightImage: "logos/light.png",
+                darkImage: "logos/dark.png"
+            }
+        };
+
+        render(
+            <BrowserRouter>
+                <ThemeProvider>
+                    <ExperienceCard experience={expWithThemeLogo} />
+                </ThemeProvider>
+            </BrowserRouter>
+        );
+
+        const logo = screen.getByAltText("Tech Corp");
+        expect(logo).toBeInTheDocument();
+    });
 });
+

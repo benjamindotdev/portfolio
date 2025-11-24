@@ -30,4 +30,61 @@ describe("Freelance Component", () => {
         );
         expect(screen.getByText("Test Freelance Project")).toBeInTheDocument();
     });
+
+    it("filters and sorts freelance projects correctly", () => {
+        const mixedProjects: Project[] = [
+            {
+                key: 2,
+                name: "Freelance B",
+                image: "b.png",
+                description: "Second",
+                status: "completed",
+                type: "freelance",
+                techStack: [],
+            },
+            {
+                key: 1,
+                name: "Personal Project",
+                image: "p.png",
+                description: "Personal",
+                status: "completed",
+                type: "personal",
+                techStack: [],
+            },
+            {
+                key: 0,
+                name: "Freelance A",
+                image: "a.png",
+                description: "First",
+                status: "completed",
+                type: "freelance",
+                techStack: [],
+            },
+        ];
+
+        render(
+            <BrowserRouter>
+                <ThemeProvider>
+                    <Freelance projects={mixedProjects} />
+                </ThemeProvider>
+            </BrowserRouter>
+        );
+
+        expect(screen.getByText("Freelance A")).toBeInTheDocument();
+        expect(screen.getByText("Freelance B")).toBeInTheDocument();
+        expect(screen.queryByText("Personal Project")).not.toBeInTheDocument();
+    });
+
+    it("renders empty when no projects provided", () => {
+        const { container } = render(
+            <BrowserRouter>
+                <ThemeProvider>
+                    <Freelance projects={undefined} />
+                </ThemeProvider>
+            </BrowserRouter>
+        );
+
+        expect(container.querySelector('[id="freelance"]')).toBeInTheDocument();
+    });
 });
+

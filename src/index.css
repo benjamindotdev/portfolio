@@ -44,16 +44,17 @@ html {
   padding: 0;
   margin: 0;
   font-family: "Lunasima", sans-serif;
+  background-color: #031926; /* Default to dark to prevent flash */
+}
+
+html.light {
+  background-color: #ffffff;
 }
 
 body {
   padding: 0;
   margin: 0;
-  background-color: #ffffff;
-}
-
-body.dark {
-  background-color: #031926;
+  background-color: var(--bg-primary);
 }
 
 li {

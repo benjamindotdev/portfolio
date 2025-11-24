@@ -33,7 +33,7 @@ export const PageContainer = ({
 
         if (layout === "hero") {
             return (
-                <div className="w-full max-w-6xl flex flex-col md:flex-row items-center justify-between gap-12 md:gap-16">
+                <div className="w-full max-w-6xl flex flex-col md:flex-row items-center justify-between gap-12 md:gap-16 animate-fadeIn">
                     {children}
                 </div>
             );
@@ -41,7 +41,7 @@ export const PageContainer = ({
 
         // default layout
         return (
-            <div className="h-full w-full flex items-start justify-center px-4 md:px-8 overflow-y-auto scrollbar scrollbar-thumb-portfolio-green scrollbar-track-transparent hover:scrollbar-thumb-portfolio-green/80">
+            <div className="h-full w-full flex items-start justify-center px-4 md:px-8 overflow-y-auto scrollbar scrollbar-thumb-portfolio-green scrollbar-track-transparent hover:scrollbar-thumb-portfolio-green/80 animate-fadeIn">
                 <div className={`w-full flex flex-col gap-8 ${className}`.trim()}>
                     {children}
                 </div>

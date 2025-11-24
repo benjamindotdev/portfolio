@@ -10,11 +10,9 @@ import { PageContainer } from "@/routes/Layout/components/PageContainer/PageCont
 export const Home = ({
     technologies = [],
     name,
-    image,
 }: {
     technologies?: Technology[];
     name?: string;
-    image?: string;
 }) => {
     const homepageTechs = technologies.filter(tech => tech.homepage);
 

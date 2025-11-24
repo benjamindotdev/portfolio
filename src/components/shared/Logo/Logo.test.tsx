@@ -56,4 +56,24 @@ describe("Logo", () => {
             expect(rect).toHaveAttribute("fill", "#2bf38b");
         });
     });
+
+    it("resets color on mouse leave", () => {
+        const { container } = render(
+            <ThemeProvider>
+                <Logo />
+            </ThemeProvider>
+        );
+        
+        const svg = container.querySelector("svg")!;
+        const rects = container.querySelectorAll("rect");
+        
+        // Hover
+        fireEvent.mouseEnter(svg);
+        expect(rects[0]).toHaveAttribute("fill", "#2bf38b");
+        
+        // Leave hover
+        fireEvent.mouseLeave(svg);
+        // Should reset to default dark theme color
+        expect(rects[0]).toHaveAttribute("fill", "#ffffff");
+    });
 });

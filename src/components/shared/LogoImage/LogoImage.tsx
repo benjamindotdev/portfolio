@@ -26,7 +26,7 @@ export const LogoImage = ({
             to={link}
             target={isInternal ? undefined : "_blank"}
             rel={isInternal ? undefined : "noreferrer"}
-            className="group text-black dark:text-white"
+            className="group"
             aria-label={name}
         >
             <LazyLoadImage

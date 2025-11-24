@@ -61,8 +61,9 @@ test("renders the TechList component with correct Tailwind classes", () => {
             </ThemeProvider>
         </BrowserRouter>
     );
-    expect(screen.getByRole("article")).toHaveClass("flex");
-    expect(screen.getByRole("article")).toHaveClass("flex-col");
+    const container = screen.getByRole("list").parentElement;
+    expect(container).toHaveClass("flex");
+    expect(container).toHaveClass("flex-col");
     expect(screen.getByRole("list")).toHaveClass("flex");
     expect(screen.getByRole("list")).toHaveClass("flex-wrap");
 });

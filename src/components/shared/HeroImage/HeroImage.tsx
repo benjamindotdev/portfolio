@@ -6,7 +6,7 @@ export const HeroImage = ({
     text: string;
 }) => {
     return (
-        <div className="w-full h-full aspect-square rounded-2xl [clip-path:url(#pixelBClip)]">
+        <div className="w-full h-full aspect-square rounded-2xl [clip-path:url(#pixelBClip)] ">
             <img
                 src={image}
                 alt={text}

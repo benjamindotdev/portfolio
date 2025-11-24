@@ -29,10 +29,11 @@ test("renders the PageContainer component with HTML elements", async () => {
     expect(await screen.findByText("nested element")).toBeInTheDocument();
 });
 
-test("renders the PageContainer component with the correct Tailwind classes", async () => {
+test("renders the PageContainer component with the correct Tailwind classes", () => {
     const { container } = render(<PageContainer id="4">testing</PageContainer>);
     const sectionElement = container.querySelector('section');
-    expect(sectionElement).toHaveClass("min-h-screen");
     expect(sectionElement).toHaveClass("w-full");
+    expect(sectionElement).toHaveClass("h-full");
     expect(sectionElement).toHaveClass("flex");
+    expect(sectionElement).toHaveClass("flex-col");
 });

@@ -4,21 +4,26 @@ export const PageContainer = ({
     id,
     children,
     layout = "default",
+    className = "",
 }: {
     id: string;
     children: React.ReactNode;
     layout?: "default" | "scroll" | "hero";
+    className?: string;
 }) => {
     const getLayoutClasses = () => {
-        switch (layout) {
-            case "scroll":
-                return "min-h-screen w-full h-full flex flex-col justify-center items-center";
-            case "hero":
-                return "w-full h-full flex items-center justify-center px-8 py-12";
-            case "default":
-            default:
-                return "min-h-screen w-full h-full flex flex-col justify-center items-center";
-        }
+        const baseClasses = (() => {
+            switch (layout) {
+                case "scroll":
+                    return "w-full h-full flex flex-col justify-center items-center";
+                case "hero":
+                    return "w-full h-full flex items-center justify-center px-8 py-12";
+                case "default":
+                default:
+                    return "w-full h-full flex flex-col justify-center items-center";
+            }
+        })();
+        return `${baseClasses} ${className}`.trim();
     };
 
     const renderContent = () => {
@@ -36,8 +41,8 @@ export const PageContainer = ({
 
         // default layout
         return (
-            <div className="h-full w-full flex items-stretch justify-center p-4 md:p-8">
-                <div className="w-full flex flex-col gap-8">
+            <div className="h-full w-full flex items-start justify-center px-4 md:px-8 overflow-y-auto scrollbar scrollbar-thumb-portfolio-green scrollbar-track-transparent hover:scrollbar-thumb-portfolio-green/80">
+                <div className={`w-full flex flex-col gap-8 ${className}`.trim()}>
                     {children}
                 </div>
             </div>
@@ -45,7 +50,7 @@ export const PageContainer = ({
     };
 
     return (
-        <section id={id} className={getLayoutClasses()}>
+        <section id={id} className={getLayoutClasses().replace(className, '').trim()}>
             {renderContent()}
         </section>
     );

@@ -31,7 +31,6 @@ export const Card = ({ item, type }: CardProps) => {
                         name: foundTech.name,
                         image: foundTech.image,
                         link: foundTech.link,
-                        isLearning: foundTech.isLearning,
                     };
                 }
                 return {
@@ -39,7 +38,6 @@ export const Card = ({ item, type }: CardProps) => {
                     name: tech,
                     image: "",
                     link: "",
-                    isLearning: false,
                 };
             }
             return {
@@ -47,7 +45,6 @@ export const Card = ({ item, type }: CardProps) => {
                 name: tech.name,
                 image: tech.image || "",
                 link: tech.link || "",
-                isLearning: tech.isLearning || false,
             };
         });
     };

@@ -13,7 +13,7 @@ export const AboutCard = ({ image, text, showCTAs }: { image?: string; text: str
                 <p
                     className="text-slate-700 dark:text-portfolio-white text-lg md:text-xl lg:text-2xl/10 text-left"
                     dangerouslySetInnerHTML={{
-                        __html: `${parts[0]}<a href="https://www.shephq.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 transition-colors duration-300 hover:text-portfolio-green">Shep</a><img src="logos/shep.png" alt="Shep logo" class="inline-block w-8 h-8 ml-1 object-contain" />${parts[1]}`
+                        __html: `${parts[0]}<a href="https://www.shephq.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 transition-colors duration-300 hover:text-portfolio-green">Shep</a><img src="logos/experience/shep.png" alt="Shep logo" class="inline-block w-8 h-8 ml-1 object-contain" />${parts[1]}`
                     }}
                 />
             );
@@ -27,7 +27,7 @@ export const AboutCard = ({ image, text, showCTAs }: { image?: string; text: str
     };
 
     return (
-        <div className={`w-full max-w-7xl flex flex-col md:flex-row items-center gap-8 md:gap-16 px-8 ${!image ? 'justify-center' : ''}`}>
+        <div className={`w-full max-w-7xl h-full flex flex-col md:flex-row items-center gap-8 md:gap-16 px-8 ${!image ? 'justify-center' : ''}`}>
             {image && (
                 <div className="w-full md:w-2/3">
                     <AboutImage src={image} alt={text} />

@@ -48,13 +48,13 @@ export const ScrollSection = ({
 
             <div className="h-full overflow-y-scroll snap-y snap-mandatory scrollbar-hide scroll-container">
                 {childrenArray.map((child, index) => (
-                    <section
+                    <article
                         key={index}
                         id={`section-${index}`}
                         className="h-full w-full snap-start snap-always flex items-center justify-center overflow-hidden animate-fadeIn"
                     >
                         {child}
-                    </section>
+                    </article>
                 ))}
             </div>
         </div>

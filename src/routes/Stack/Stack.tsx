@@ -50,13 +50,15 @@ export const Stack = ({
     );
 
     return (
-        <PageContainer id="stack">
-            {pageContent.map(
-                (content) =>
-                    content.techs.length > 0 && (
-                        <TechList key={content.subHeading} {...content} />
-                    )
-            )}
+        <PageContainer id="stack" layout="hero">
+            <div className="w-full flex flex-col items-center justify-center gap-20">
+                {pageContent.map(
+                    (content) =>
+                        content.techs.length > 0 && (
+                            <TechList key={content.subHeading} {...content} />
+                        )
+                )}
+            </div>
         </PageContainer>
     );
 };

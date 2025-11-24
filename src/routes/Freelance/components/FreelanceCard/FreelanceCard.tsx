@@ -7,13 +7,22 @@ import { benjamin } from "@/constants";
 import { Separator } from "@/components/shared/Separator/Separator";
 import { MetadataText } from "@/components/shared/MetadataText/MetadataText";
 import { ViewClientBadge } from "@/components/shared/ViewClientBadge/ViewClientBadge";
+import { useTheme } from "@/contexts/ThemeContext";
+import { LogoImage } from "@/components/shared/LogoImage/LogoImage";
 
 export const FreelanceCard = ({
     project,
 }: {
     project: Project;
 }) => {
-    const { name, description, techStack, deployedLink, repoLink, image, client } = project;
+    const { theme } = useTheme();
+    const { name, description, subTitle, techStack, deployedLink, repoLink, image, client } = project;
+
+    const imageSrc = typeof image === "string"
+        ? image
+        : theme === "dark"
+            ? image.darkImage
+            : image.lightImage;
 
     // Transform techStack similar to ProjectSection
     const transformTechStack = (
@@ -30,7 +39,6 @@ export const FreelanceCard = ({
                         name: foundTech.name,
                         image: foundTech.image,
                         link: foundTech.link,
-                        isLearning: foundTech.isLearning,
                     };
                 }
                 return {
@@ -38,7 +46,6 @@ export const FreelanceCard = ({
                     name: tech,
                     image: "",
                     link: "",
-                    isLearning: false,
                 };
             }
             return {
@@ -46,7 +53,6 @@ export const FreelanceCard = ({
                 name: tech.name,
                 image: tech.image || "",
                 link: tech.link || "",
-                isLearning: tech.isLearning || false,
             };
         });
     };
@@ -56,66 +62,93 @@ export const FreelanceCard = ({
 
     return (
         <div
-            className="w-full grid gap-2 text-slate-700 dark:text-white text-left border border-zinc-500 rounded-lg transition-all duration-300 hover:border-portfolio-green p-4 grayscale hover:grayscale-0"
+            className="w-full flex flex-col gap-4 text-slate-700 dark:text-white text-left border border-zinc-500 rounded-lg transition-all duration-300 hover:border-portfolio-green p-4"
             style={{ gridTemplateRows: 'auto auto auto auto' }}
         >
             {/* Header */}
-            <div className="w-full flex flex-row justify-between items-start overflow-hidden">
+            <div className="w-full flex flex-row justify-between items-start">
                 <div className="flex flex-row items-center gap-6">
                     <LazyLoadImage
                         className="h-auto w-12 rounded"
-                        src={image}
+                        src={imageSrc}
                         alt={name}
                         loading="lazy"
                     />
                     <div className="flex flex-col gap-2 flex-1">
                         <SubHeading text={name} />
-                        {client && (
-                            <div className="flex flex-row items-center gap-4 flex-wrap">
-                                <span className="text-sm opacity-80 whitespace-nowrap text-slate-700 dark:text-portfolio-white">Client: {client.name}</span>
-                                {client.position && (
-                                    <>
-                                        <Separator />
-                                        <MetadataText>{client.position}</MetadataText>
-                                    </>
-                                )}
-                            </div>
-                        )}
+
                     </div>
                 </div>
                 {link && <LinkButton link={link} />}
             </div>
 
-            {/* Description */}
-            <div className="w-full overflow-hidden">
-                <p className="leading-relaxed m-0 text-sm text-slate-700 dark:text-portfolio-white">{description}</p>
+
+            <div className="flex gap-2 items-baseline">
+
+                <p className="text-base font-semibold m-0 text-slate-700 dark:text-portfolio-white">{subTitle}</p>
+
+                <p className="leading-relaxed m-0 text-sm italic text-slate-700 dark:text-portfolio-white">{description}</p>
+
             </div>
 
-            {/* Testimonial (if exists) */}
-            {client?.testimonial && (
-                <div className="w-full flex items-start">
-                    <blockquote className="m-0 pl-4 border-l-2 border-portfolio-green text-sm italic opacity-90 text-slate-700 dark:text-portfolio-white">
-                        "{client.testimonial}"
-                        {client.name && (
-                            <footer className="text-xs opacity-70 mt-2 not-italic">
-                                — {client.name}{client.position && `, ${client.position}`}
-                            </footer>
-                        )}
-                    </blockquote>
+            {/* Client Need, Solution & Challenge */}
+            {(client?.needed || client?.solution || client?.challenge) && (
+                <div className="grid grid-cols-[auto_1fr] gap-x-3 gap-y-2 items-center">
+                    {client.needed && (
+                        <>
+                            <span className="text-sm">🎯</span>
+                            <p className="text-sm leading-relaxed m-0 text-slate-700 dark:text-portfolio-white">{client.needed}</p>
+                        </>
+                    )}
+                    {client.solution && (
+                        <>
+                            <span className="text-sm">🧠</span>
+                            <p className="text-sm leading-relaxed m-0 text-slate-700 dark:text-portfolio-white">{client.solution}</p>
+                        </>
+                    )}
+                    {client.challenge && (
+                        <>
+                            <span className="text-sm">⚙️</span>
+                            <p className="text-sm leading-relaxed m-0 text-slate-700 dark:text-portfolio-white">{client.challenge}</p>
+                        </>
+                    )}
                 </div>
             )}
 
+            {client?.image && client?.name &&
+                <div className="w-full grid grid-cols-[auto_auto_1fr] gap-4 items-start">
+                    <div className="flex items-center gap-4">
+                        <img src={client.image} alt={client.name} className="w-12 h-12 rounded-full object-cover" />
+                        <div className="flex flex-col justify-center">
+                            <p className="text-sm font-medium text-slate-700 dark:text-portfolio-white text-nowrap">{client.name}</p>
+                            <p className="text-xs opacity-80 text-slate-700 dark:text-portfolio-white text-nowrap">{client.position}</p>
+                        </div>
+                    </div>
+
+                    {client.linkedIn && (
+                        <div className="flex h-full items-center">
+
+                            <LogoImage
+                                image={{
+                                    lightImage: "logos/socials/linkedInBlack.png",
+                                    darkImage: "logos/socials/linkedInWhite.png"
+                                }}
+                                name="LinkedIn"
+                                link={client.linkedIn}
+                            />
+                        </div>
+                    )}
+
+                    <blockquote className="text-sm italic opacity-90 text-slate-700 dark:text-portfolio-white">
+                        "{client.testimonial}"
+                    </blockquote>
+                </div>
+            }
+
             {/* Tech Stack */}
             {techsForDisplay && techsForDisplay.length > 0 && (
-                <div className="w-full h-full flex items-end">
-                    <div className="w-full flex items-start justify-between gap-3">
-                        <TechList techs={techsForDisplay} />
-                        {client?.linkedIn && (
-                            <div className="flex flex-wrap gap-2 items-center self-end pb-2">
-                                <ViewClientBadge linkedIn={client.linkedIn} />
-                            </div>
-                        )}
-                    </div>
+                <div className="w-full flex">
+                    <TechList techs={techsForDisplay} />
                 </div>
             )}
         </div>

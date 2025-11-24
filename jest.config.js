@@ -3,9 +3,12 @@ module.exports = {
   testEnvironment: "jsdom",
   setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
   transform: {
-    "^.+\\.tsx?$": ["ts-jest", {
-      tsconfig: "tsconfig.jest.json",
-    }],
+    "^.+\\.tsx?$": [
+      "ts-jest",
+      {
+        tsconfig: "tsconfig.jest.json",
+      },
+    ],
   },
   moduleNameMapper: {
     "^@/(.*)$": "<rootDir>/src/$1",
@@ -13,16 +16,16 @@ module.exports = {
     "\\.(jpg|jpeg|png|gif|svg|webp)$": "<rootDir>/__mocks__/fileMock.js",
   },
   globals: {
-    'import.meta': {
+    "import.meta": {
       env: {
-        DEV: process.env.NODE_ENV === 'development',
-        PROD: process.env.NODE_ENV === 'production',
-        MODE: process.env.NODE_ENV || 'test',
-        BASE_URL: '/',
-        VITE_GA_ID: 'test-ga-id',
-        VITE_SITE_URL: 'http://localhost:3000',
-        VITE_SITE_NAME: 'Test Site',
-        VITE_VERSION: '1.0.0',
+        DEV: process.env.NODE_ENV === "development",
+        PROD: process.env.NODE_ENV === "production",
+        MODE: process.env.NODE_ENV || "test",
+        BASE_URL: "/",
+        VITE_GA_ID: "test-ga-id",
+        VITE_SITE_URL: "http://localhost:3000",
+        VITE_SITE_NAME: "Test Site",
+        VITE_VERSION: "1.0.0",
       },
     },
   },
@@ -30,7 +33,7 @@ module.exports = {
   testPathIgnorePatterns: [
     "/node_modules/",
     "/build/",
-    "/tests/",  // Ignore Playwright E2E tests
+    "/tests/", // Ignore Playwright E2E tests
   ],
   // Coverage configuration
   collectCoverageFrom: [

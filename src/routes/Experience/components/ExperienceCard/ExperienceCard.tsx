@@ -18,6 +18,12 @@ export const ExperienceCard = ({
     const { theme } = useTheme();
     const { title, company, location, date, description, details, techStack, skills, link, logo, type, isCurrent } = experience;
 
+    const logoSrc = typeof logo === "string"
+        ? logo
+        : theme === "dark"
+            ? logo.darkImage
+            : logo.lightImage;
+
     // Transform techStack similar to ProjectSection
     const transformTechStack = (
         techStack: Technology[] | string[]
@@ -33,7 +39,6 @@ export const ExperienceCard = ({
                         name: foundTech.name,
                         image: foundTech.image,
                         link: foundTech.link,
-                        isLearning: foundTech.isLearning,
                     };
                 }
                 return {
@@ -41,7 +46,6 @@ export const ExperienceCard = ({
                     name: tech,
                     image: "",
                     link: "",
-                    isLearning: false,
                 };
             }
             return {
@@ -49,7 +53,6 @@ export const ExperienceCard = ({
                 name: tech.name,
                 image: tech.image || "",
                 link: tech.link || "",
-                isLearning: tech.isLearning || false,
             };
         });
     };
@@ -58,7 +61,7 @@ export const ExperienceCard = ({
 
     return (
         <div
-            className="w-[48%] grid gap-2 text-slate-700 dark:text-white text-left border border-zinc-500 rounded-lg transition-all duration-300 hover:border-portfolio-green p-4 grayscale hover:grayscale-0"
+            className="w-[48%] grid gap-4 text-slate-700 dark:text-white text-left border border-zinc-500 rounded-lg transition-all duration-300 hover:border-portfolio-green p-4"
             style={{ gridTemplateRows: 'auto auto auto auto' }}
         >
             {/* Header - 20% */}
@@ -66,7 +69,7 @@ export const ExperienceCard = ({
                 <div className="flex flex-row items-center gap-6">
                     <LazyLoadImage
                         className="h-auto w-12 rounded"
-                        src={logo}
+                        src={logoSrc}
                         alt={company}
                         loading="lazy"
                     />
@@ -110,8 +113,8 @@ export const ExperienceCard = ({
 
             {/* Tech Stack - 20% */}
             {(techsForDisplay && techsForDisplay.length > 0) || (skills && skills.length > 0) ? (
-                <div className="w-full h-full flex items-end">
-                    <div className="w-full flex items-start justify-between gap-3">
+                <div className="w-full h-full flex items-center">
+                    <div className="w-full flex items-center justify-between">
                         {techsForDisplay && techsForDisplay.length > 0 && (
                             <TechList techs={techsForDisplay} />
                         )}

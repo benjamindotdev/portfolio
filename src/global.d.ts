@@ -35,7 +35,7 @@ type ExperienceItem = {
     techStack: Technology[] | string[];
     skills?: string[];
     link?: string;
-    logo: string;
+    logo: string | { lightImage: string; darkImage: string };
     type: "Full-time" | "Part-time" | "Internship" | "Contract" | "Freelance" | "Volunteer";
     isCurrent?: boolean;
 };
@@ -104,7 +104,6 @@ type Technology = {
     | "Content Management"
     | "Cloud"
     | "";
-    isLearning: boolean;
     link: string;
     homepage?: boolean;
     stackSection?: "Core Technologies" | "Additional Tools" | "Other Experience" | "Currently Exploring";
@@ -115,15 +114,15 @@ type Tech = {
     name: string;
     image: string | { lightImage: string; darkImage: string };
     link: string;
-    isLearning?: boolean;
 };
 
 type Project = {
     key: number;
     name: string;
-    image: string;
+    image: string | { lightImage: string; darkImage: string };
     status: "completed" | "in progress" | "planning";
     description: string;
+    subTitle?: string;
     deployedLink?: string;
     repoLink?: string;
     techStack: Technology[] | string[];
@@ -134,6 +133,9 @@ type Project = {
         position?: string;
         testimonial?: string;
         image?: string;
+        needed?: string;
+        solution?: string;
+        challenge?: string;
     };
 };
 

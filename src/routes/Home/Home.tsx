@@ -41,7 +41,7 @@ export const Home = ({
                                 Shep
                             </a>
                             <LazyLoadImage
-                                src="logos/shep.png"
+                                src="logos/experience/shep.png"
                                 alt="Shep logo"
                                 className="inline-block w-8 h-8 ml-1 object-contain"
                             />
@@ -57,7 +57,6 @@ export const Home = ({
                                     image={tech.image}
                                     name={tech.name}
                                     link={tech.link}
-                                    isLearning={tech.isLearning}
                                 />
                             </>
                         ))}

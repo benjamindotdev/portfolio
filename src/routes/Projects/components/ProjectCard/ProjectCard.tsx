@@ -4,13 +4,21 @@ import { LinkButton } from "@/components/shared/LinkButton/LinkButton";
 import { SubHeading } from "@/components/shared/SubHeading/SubHeading";
 import { TechList } from "@/components/shared/TechList/TechList";
 import { benjamin } from "@/constants";
+import { useTheme } from "@/contexts/ThemeContext";
 
 export const ProjectCard = ({
     project,
 }: {
     project: Project;
 }) => {
+    const { theme } = useTheme();
     const { name, description, techStack, deployedLink, repoLink, image } = project;
+
+    const imageSrc = typeof image === "string"
+        ? image
+        : theme === "dark"
+            ? image.darkImage
+            : image.lightImage;
 
     // Transform techStack similar to ProjectSection
     const transformTechStack = (
@@ -27,7 +35,6 @@ export const ProjectCard = ({
                         name: foundTech.name,
                         image: foundTech.image,
                         link: foundTech.link,
-                        isLearning: foundTech.isLearning,
                     };
                 }
                 return {
@@ -35,7 +42,6 @@ export const ProjectCard = ({
                     name: tech,
                     image: "",
                     link: "",
-                    isLearning: false,
                 };
             }
             return {
@@ -43,7 +49,6 @@ export const ProjectCard = ({
                 name: tech.name,
                 image: tech.image || "",
                 link: tech.link || "",
-                isLearning: tech.isLearning || false,
             };
         });
     };
@@ -52,12 +57,12 @@ export const ProjectCard = ({
     const link = deployedLink || repoLink;
 
     return (
-        <div className="w-[48%] h-[54%] grid [grid-template-rows:minmax(0,40%)_minmax(0,20%)_minmax(0,40%)] gap-2 text-slate-700 dark:text-white text-left border border-zinc-500 rounded-lg transition-all duration-300 hover:border-portfolio-green p-4 grayscale hover:grayscale-0">
+        <div className="w-[48%] h-[54%] grid [grid-template-rows:minmax(0,40%)_minmax(0,20%)_minmax(0,40%)] gap-2 text-slate-700 dark:text-white text-left border border-zinc-500 rounded-lg transition-all duration-300 hover:border-portfolio-green p-4">
             <div className="w-full flex flex-row justify-between items-start overflow-hidden">
                 <div className="flex flex-row items-center gap-6">
                     <LazyLoadImage
                         className="h-auto w-12 rounded"
-                        src={image}
+                        src={imageSrc}
                         alt={name}
                         loading="lazy"
                     />

@@ -158,7 +158,7 @@ export const Card = ({ item, type }: CardProps) => {
                             />
                         </a>
                     )}
-                    {cardData.link && <LinkButton link={cardData.link} />}
+                    {cardData.link && !cardData.repoLink && !cardData.deployedLink && <LinkButton link={cardData.link} />}
                 </div>
             </div>
 

@@ -742,7 +742,7 @@ const benjamin = {
             location: "On site",
             category: "Awards & Achievements",
             level: "Hackathon Winner",
-            date: "September 2024",
+            date: "2024",
             repoLink: "https://github.com/benjamindotdev/asozial",
         },
         {
@@ -758,7 +758,7 @@ const benjamin = {
             location: "On site",
             category: "Awards & Achievements",
             level: "Hackathon Winner",
-            date: "May 2023",
+            date: "2025",
             repoLink: "https://github.com/benjamindotdev/taskchunker-frontend",
         },
     ],

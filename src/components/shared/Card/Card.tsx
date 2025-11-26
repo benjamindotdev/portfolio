@@ -7,6 +7,7 @@ import { useTheme } from "@/contexts/ThemeContext";
 import { Separator } from "../Separator/Separator";
 import { Badge } from "../Badge/Badge";
 import { MetadataText } from "../MetadataText/MetadataText";
+import { FolderGit, ExternalLink } from "lucide-react";
 
 type CardProps = {
     item: ExperienceItem | Certification | Project;
@@ -141,21 +142,13 @@ export const Card = ({ item, type }: CardProps) => {
                 </div>
                 <div className="flex flex-row gap-2">
                     {cardData.repoLink && (
-                        <a href={cardData.repoLink} target="_blank" rel="noopener noreferrer">
-                            <img
-                                className="h-6 w-6 opacity-70 hover:opacity-100 transition-opacity"
-                                src="logos/github.svg"
-                                alt="GitHub Repository"
-                            />
+                        <a href={cardData.repoLink} target="_blank" rel="noopener noreferrer" className="opacity-70 hover:opacity-100 transition-opacity">
+                            <FolderGit size={24} className="text-slate-700 dark:text-portfolio-white" />
                         </a>
                     )}
                     {cardData.deployedLink && (
-                        <a href={cardData.deployedLink} target="_blank" rel="noopener noreferrer">
-                            <img
-                                className="h-6 w-6 opacity-70 hover:opacity-100 transition-opacity"
-                                src="icons/link.svg"
-                                alt="Live Site"
-                            />
+                        <a href={cardData.deployedLink} target="_blank" rel="noopener noreferrer" className="opacity-70 hover:opacity-100 transition-opacity">
+                            <ExternalLink size={24} className="text-slate-700 dark:text-portfolio-white" />
                         </a>
                     )}
                     {cardData.link && !cardData.repoLink && !cardData.deployedLink && <LinkButton link={cardData.link} />}

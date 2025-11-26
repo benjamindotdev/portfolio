@@ -14,13 +14,13 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
         // Check localStorage first, then system preference, fallback to dark
         const savedTheme = localStorage.getItem('theme') as Theme;
         if (savedTheme) return savedTheme;
-        
+
         // Check browser/system preference (with fallback for test environments)
         if (typeof window !== 'undefined' && window.matchMedia) {
             const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
             return prefersDark ? 'dark' : 'light';
         }
-        
+
         return 'dark';
     });
 

@@ -125,10 +125,13 @@ describe("Card", () => {
             </BrowserRouter>
         );
 
-        const repoLink = screen.getByAltText("GitHub Repository").closest("a");
-        const deployedLink = screen.getByAltText("Live Site").closest("a");
+        const links = screen.getAllByRole("link");
+        const repoLink = links.find(link => link.getAttribute("href") === "https://github.com/test");
+        const deployedLink = links.find(link => link.getAttribute("href") === "https://deployed.com");
 
+        expect(repoLink).toBeInTheDocument();
         expect(repoLink).toHaveAttribute("href", "https://github.com/test");
+        expect(deployedLink).toBeInTheDocument();
         expect(deployedLink).toHaveAttribute("href", "https://deployed.com");
     });
 

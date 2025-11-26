@@ -63,7 +63,7 @@ describe("ErrorBoundary", () => {
 
     it("sends error to gtag in production when available", () => {
         const originalGtag = (window as any).gtag;
-        
+
         const mockGtag = jest.fn();
         (window as any).gtag = mockGtag;
 

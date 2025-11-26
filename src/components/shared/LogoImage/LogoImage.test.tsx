@@ -79,9 +79,9 @@ describe("LogoImage", () => {
         // LazyLoadImage wraps the img in a span, so we need to find the actual img element
         const images = container.querySelectorAll('img');
         const image = Array.from(images).find(img => img.alt === 'Test Logo');
-        
+
         expect(image).toBeInTheDocument();
-        
+
         // The component has onMouseEnter and onMouseLeave handlers
         // Just verify the component renders with the handlers
         expect(image).toHaveAttribute('src', 'test.png');

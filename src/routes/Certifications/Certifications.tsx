@@ -28,7 +28,7 @@ export const Certifications = ({
                     <SubHeading text={category} />
                     <div className="flex flex-col md:flex-row gap-4 md:gap-8 flex-wrap">
                         {items.map((cert) => (
-                            <div key={cert.key} className="flex-1 min-w-[300px]">
+                            <div key={cert.key} className="flex-1 min-w-full md:min-w-[300px]">
                                 <ListContainer
                                     items={[cert]}
                                     type="certification"

@@ -14,7 +14,7 @@ export const Layout = ({
     contacts: Contact[];
 }) => {
     return (
-        <div className="h-screen w-full flex flex-col overflow-hidden px-[5vw] md:px-[5dvw] xl:px-[7.5dvw] 2xl:px-[10dvw]">
+        <div className="h-[100dvh] w-full flex flex-col overflow-hidden px-[5vw] md:px-[5dvw] xl:px-[7.5dvw] 2xl:px-[10dvw]">
             {/* Skip to main content link for accessibility */}
             <a
                 href="#main-content"

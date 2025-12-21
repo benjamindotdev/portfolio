@@ -6,7 +6,7 @@ export const AboutImage = ({
     alt: string;
 }) => {
     return (
-        <div className="w-full max-w-2xl h-[500px] mx-auto overflow-hidden rounded-2xl   ">
+        <div className="w-full max-w-2xl h-[300px] md:h-[500px] mx-auto overflow-hidden rounded-2xl   ">
             <img
                 src={src}
                 alt={alt}

@@ -21,7 +21,7 @@ export const Home = ({
             <PixelBClipDefs />
             <PageContainer id="home" layout="hero">
                 <div className="flex flex-col gap-12 w-full md:w-2/3 text-left">
-                    <h1 className="p-0 m-0 text-4xl md:text-5xl lg:text-6xl text-portfolio-cyan font-satoshi font-bold tracking-wide whitespace-nowrap">
+                    <h1 className="p-0 m-0 text-4xl md:text-5xl lg:text-6xl text-portfolio-cyan font-satoshi font-bold tracking-wide whitespace-normal md:whitespace-nowrap">
                         <span className="text-slate-700 dark:text-portfolio-white">Hey, I'm</span>
                         <strong className="text-portfolio-green">
                             {` ${name}`}

@@ -28,7 +28,8 @@ describe("Freelance Component", () => {
                 </ThemeProvider>
             </BrowserRouter>
         );
-        expect(screen.getByText("Test Freelance Project")).toBeInTheDocument();
+        const elements = screen.getAllByText("Test Freelance Project");
+        expect(elements.length).toBeGreaterThan(0);
     });
 
     it("filters and sorts freelance projects correctly", () => {
@@ -70,8 +71,12 @@ describe("Freelance Component", () => {
             </BrowserRouter>
         );
 
-        expect(screen.getByText("Freelance A")).toBeInTheDocument();
-        expect(screen.getByText("Freelance B")).toBeInTheDocument();
+        const freelanceAElements = screen.getAllByText("Freelance A");
+        expect(freelanceAElements.length).toBeGreaterThan(0);
+        
+        const freelanceBElements = screen.getAllByText("Freelance B");
+        expect(freelanceBElements.length).toBeGreaterThan(0);
+
         expect(screen.queryByText("Personal Project")).not.toBeInTheDocument();
     });
 
@@ -84,7 +89,8 @@ describe("Freelance Component", () => {
             </BrowserRouter>
         );
 
-        expect(container.querySelector('[id="freelance"]')).toBeInTheDocument();
+        expect(container.querySelector('[id="freelance-mobile"]')).toBeInTheDocument();
+        expect(container.querySelector('[id="freelance-desktop"]')).toBeInTheDocument();
     });
 });
 

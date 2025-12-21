@@ -601,7 +601,7 @@ const benjamin = {
             details: [
                 {
                     key: 0,
-                    text: "Designed and built the initial MVP architecture using industry-standard full-stack tools (Next.js, TypeScript, Tailwind, Prisma, Convex)",
+                    text: "Designed and built the initial MVP architecture using industry-standard full-stack tools",
                 },
                 {
                     key: 1,

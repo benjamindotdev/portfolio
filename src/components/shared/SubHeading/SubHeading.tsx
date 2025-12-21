@@ -1,6 +1,6 @@
-export const SubHeading = ({ text, icon }: { text: string; icon?: string }) => {
+export const SubHeading = ({ text, icon, className = "" }: { text: string; icon?: string; className?: string }) => {
     return (
-        <h4 className="text-portfolio-green text-portfolio-h3 font-satoshi tracking-wide">
+        <h4 className={`text-portfolio-green md:text-portfolio-h3 font-satoshi tracking-wide ${className}`.trim()}>
             {text} {icon || ""}
         </h4>
     );

@@ -39,7 +39,7 @@ export const Header = ({ links }: { links: Link[] }) => {
                 {links.map((link) => (
                     <li key={link.title} className="group">
                         <NavLink
-                            className="text-slate-700 dark:text-portfolio-white no-underline text-portfolio-h3 font-satoshi tracking-wide group-hover:!text-portfolio-green transition-all duration-500 hover:scale-110 block"
+                            className="text-slate-700 dark:text-portfolio-white no-underline text-xl md:text-portfolio-h3 font-satoshi tracking-wide group-hover:!text-portfolio-green transition-all duration-500 hover:scale-110 block"
                             to={link.route}
                             onClick={() => setIsMenuOpen(false)}
                             style={({ isActive }) => {

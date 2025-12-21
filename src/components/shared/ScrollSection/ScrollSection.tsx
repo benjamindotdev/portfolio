@@ -31,12 +31,12 @@ export const ScrollSection = ({
         <div className="h-full overflow-hidden snap-y snap-mandatory scrollbar-hide relative">
             {/* Breadcrumb Navigation */}
             {showBreadcrumbs && (
-                <nav className="fixed right-8 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-4">
+                <nav className="fixed right-4 md:right-8 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-4">
                     {childrenArray.map((_, index) => (
                         <a
                             key={index}
                             href={`#section-${index}`}
-                            className={`w-8 h-3 rounded transition-all ${activeSection === index
+                            className={`w-4 md:w-8 h-3 rounded transition-all ${activeSection === index
                                 ? 'bg-portfolio-green h-32'
                                 : 'bg-slate-400 dark:bg-white/30 hover:bg-slate-600 dark:hover:bg-white/60 w-4'
                                 }`}

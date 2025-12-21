@@ -4,9 +4,6 @@ import { LinkButton } from "@/components/shared/LinkButton/LinkButton";
 import { SubHeading } from "@/components/shared/SubHeading/SubHeading";
 import { TechList } from "@/components/shared/TechList/TechList";
 import { benjamin } from "@/constants";
-import { Separator } from "@/components/shared/Separator/Separator";
-import { MetadataText } from "@/components/shared/MetadataText/MetadataText";
-import { ViewClientBadge } from "@/components/shared/ViewClientBadge/ViewClientBadge";
 import { useTheme } from "@/contexts/ThemeContext";
 import { LogoImage } from "@/components/shared/LogoImage/LogoImage";
 

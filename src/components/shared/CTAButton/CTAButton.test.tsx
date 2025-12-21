@@ -27,6 +27,6 @@ describe("CTAButton", () => {
         render(<CTAButton onClick={mockOnClick} text="Click Me" icon={Rocket} />);
 
         const button = screen.getByRole("button");
-        expect(button).toHaveClass("px-6", "py-3", "bg-transparent", "border-2");
+        expect(button).toHaveClass("px-4", "md:px-6", "py-3", "bg-transparent", "border-2");
     });
 });

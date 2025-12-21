@@ -30,8 +30,8 @@ test("renders experience page with correct content", () => {
     );
 
     // Check for the main content
-    expect(screen.getByText("Web Developer @ Tech Solutions")).toBeInTheDocument();
-    expect(screen.getByText("September 2024 - Present")).toBeInTheDocument();
-    expect(screen.getByText("Developing web applications using modern technologies.")).toBeInTheDocument();
-    expect(screen.getByText("Current")).toBeInTheDocument();
+    expect(screen.getAllByText("Web Developer @ Tech Solutions")[0]).toBeInTheDocument();
+    expect(screen.getAllByText("September 2024 - Present")[0]).toBeInTheDocument();
+    expect(screen.getAllByText("Developing web applications using modern technologies.")[0]).toBeInTheDocument();
+    expect(screen.getAllByText("Current")[0]).toBeInTheDocument();
 });

@@ -56,5 +56,6 @@ test("renders the TechLogoImage component with correct Tailwind classes", () => 
     );
     expect(screen.getByRole("link")).toHaveClass("relative");
     expect(screen.getByRole("link")).toHaveClass("group");
-    expect(screen.getByRole("img")).toHaveClass("h-icon-s");
+    expect(screen.getByRole("img")).toHaveClass("h-6");
+    expect(screen.getByRole("img")).toHaveClass("md:h-8");
 });

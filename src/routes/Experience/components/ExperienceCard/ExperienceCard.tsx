@@ -61,7 +61,7 @@ export const ExperienceCard = ({
 
     return (
         <div
-            className="w-[48%] grid gap-4 text-slate-700 dark:text-white text-left border border-zinc-500 rounded-lg transition-all duration-300 hover:border-portfolio-green p-4"
+            className="w-[90%] md:w-[48%] grid gap-4 text-slate-700 dark:text-white text-left border border-zinc-500 rounded-lg transition-all duration-300 hover:border-portfolio-green p-4"
             style={{ gridTemplateRows: 'auto auto auto auto' }}
         >
             {/* Header - 20% */}

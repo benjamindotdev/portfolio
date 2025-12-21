@@ -15,12 +15,12 @@ export const PageContainer = ({
         const baseClasses = (() => {
             switch (layout) {
                 case "scroll":
-                    return "w-full h-full flex flex-col justify-center items-center";
+                    return "w-full h-full flex flex-col justify-start md:justify-center items-center";
                 case "hero":
-                    return "w-full h-full flex items-center justify-center px-4 md:px-8 py-12 overflow-y-auto";
+                    return "w-full h-full flex items-start md:items-center justify-center px-4 md:px-8 py-12 overflow-y-auto";
                 case "default":
                 default:
-                    return "w-full h-full flex flex-col justify-center items-center";
+                    return "w-full h-full flex flex-col justify-start md:justify-center items-center";
             }
         })();
         return `${baseClasses} ${className}`.trim();

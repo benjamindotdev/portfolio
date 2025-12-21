@@ -6,10 +6,14 @@ export const TechLogoImage = ({
     image,
     name,
     link,
+    className = "",
+    containerClassName = "",
 }: {
     image: string | { lightImage: string; darkImage: string };
     name: string;
     link: string;
+    className?: string;
+    containerClassName?: string;
 }) => {
     const { theme } = useTheme();
     const isReactLogo = name === "React";
@@ -23,7 +27,7 @@ export const TechLogoImage = ({
             : image.lightImage;
 
     return (
-        <li className="list-none flex flex-col items-center justify-center">
+        <li className={`list-none flex flex-col items-center justify-center ${containerClassName}`.trim()}>
             <Link
                 to={link}
                 target="_blank"
@@ -31,7 +35,7 @@ export const TechLogoImage = ({
                 className="relative group inline-flex flex-col items-center justify-center"
             >
                 <LazyLoadImage
-                    className={`h-icon-s w-auto max-w-24 object-contain transition-all duration-500 group-hover:scale-125 group-hover:translate-y-[-10px] ${isReactLogo ? "animate-rotate" : ""} ${needsWhiteBorder && theme === "dark" ? `border border-white ${isRoundBorder ? "rounded-full" : "rounded-sm"}` : ""}`}
+                    className={`h-6 md:h-8 w-auto max-w-24 object-contain transition-all duration-500 group-hover:scale-125 group-hover:translate-y-[-10px] ${isReactLogo ? "animate-rotate" : ""} ${needsWhiteBorder && theme === "dark" ? `border border-white ${isRoundBorder ? "rounded-full" : "rounded-sm"}` : ""} ${className}`.trim()}
                     src={imageSrc}
                     alt={name}
                     loading="lazy"

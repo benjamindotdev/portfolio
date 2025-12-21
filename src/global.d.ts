@@ -114,6 +114,7 @@ type Tech = {
     name: string;
     image: string | { lightImage: string; darkImage: string };
     link: string;
+    className?: string;
 };
 
 type Project = {

@@ -108,4 +108,29 @@ describe("LogoImage", () => {
         // In test environment, theme defaults to dark
         expect(image).toHaveAttribute("src", "logo-dark.png");
     });
+
+    it("applies custom className, linkClassName, and logoClassName", () => {
+        render(
+            <BrowserRouter>
+                <ThemeProvider>
+                    <LogoImage
+                        image="test.png"
+                        name="Test Logo"
+                        link="https://example.com"
+                        className="root-class"
+                        linkClassName="link-class"
+                        logoClassName="logo-class"
+                    />
+                </ThemeProvider>
+            </BrowserRouter>
+        );
+
+        const link = screen.getByRole("link", { name: "Test Logo" });
+        expect(link).toHaveClass("group");
+        expect(link).toHaveClass("root-class");
+        expect(link).toHaveClass("link-class");
+
+        const image = screen.getByAltText("Test Logo");
+        expect(image).toHaveClass("logo-class");
+    });
 });

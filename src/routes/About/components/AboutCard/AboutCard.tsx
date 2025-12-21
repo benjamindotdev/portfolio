@@ -27,7 +27,7 @@ export const AboutCard = ({ image, text, showCTAs }: { image?: string; text: str
     };
 
     return (
-        <div className={`w-full max-w-7xl h-full flex flex-col md:flex-row items-center gap-8 md:gap-16 px-8 ${!image ? 'justify-center' : ''}`}>
+        <div className="w-full max-w-7xl h-full flex flex-col md:flex-row items-center justify-center gap-12 md:gap-16 px-8">
             {image && (
                 <div className="w-full md:w-2/3">
                     <AboutImage src={image} alt={text} />

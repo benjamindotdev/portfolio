@@ -6,10 +6,16 @@ export const LogoImage = ({
     image,
     name,
     link,
+    className,
+    linkClassName,
+    logoClassName,
 }: {
     image: string | { lightImage: string; darkImage: string };
     name: string;
     link: string;
+    className?: string;
+    linkClassName?: string;
+    logoClassName?: string;
 }) => {
     const { theme } = useTheme();
     const isInternal = link.startsWith('/');
@@ -26,11 +32,11 @@ export const LogoImage = ({
             to={link}
             target={isInternal ? undefined : "_blank"}
             rel={isInternal ? undefined : "noreferrer"}
-            className="group"
+            className={`group ${className || ""} ${linkClassName || ""}`.trim()}
             aria-label={name}
         >
             <LazyLoadImage
-                className="h-icon-s w-auto transition-all duration-300 hover:brightness-150 hover:drop-shadow-[0_0_8px_#2bf38b] text-black dark:text-white"
+                className={`h-8 md:h-icon-s w-auto transition-all duration-300 hover:brightness-150 hover:drop-shadow-[0_0_8px_#2bf38b] text-black dark:text-white ${logoClassName || ""}`.trim()}
                 src={imageUrl}
                 alt={name}
                 loading="lazy"

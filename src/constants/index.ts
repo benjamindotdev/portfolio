@@ -450,8 +450,8 @@ const benjamin = {
             name: "email",
             link: "mailto:hello@benjamin.dev",
             icon: {
-                lightImage: "icons/email-light.svg",
-                darkImage: "icons/email-dark.svg"
+                lightImage: "icons/mailLight.png",
+                darkImage: "icons/mailDark.png"
             },
         }
     ],
@@ -480,7 +480,7 @@ const benjamin = {
             key: 0,
             title: "Teaching Assistant",
             company: "Ironhack",
-            location: "Berlin, Germany",
+            location: "Berlin, DE",
             date: "September 2024 - December 2024",
             description:
                 "12-week web development bootcamp covering full-stack JavaScript, modern frontend frameworks, and project-based learning",
@@ -518,7 +518,7 @@ const benjamin = {
             key: 1,
             title: "Web Development Intern",
             company: "OrganicsBest",
-            location: "Berlin, Germany",
+            location: "Berlin, DE",
             date: "January 2025",
             description:
                 "E-commerce platform offering organic baby food products across Europe",
@@ -554,7 +554,7 @@ const benjamin = {
             key: 4,
             title: "Full Stack Web Developer",
             company: "Genie TechBio",
-            location: "Berlin, Germany",
+            location: "Berlin, DE",
             date: "April 2025 - June 2025",
             description:
                 "Bioinformatics platform for generating interactive scientific plots, tables, and data visualizations",
@@ -594,7 +594,7 @@ const benjamin = {
             key: 6,
             title: "Full Stack Web Developer",
             company: "Shep",
-            location: "Berlin, Germany",
+            location: "Berlin, DE",
             date: "July 2025 - Present",
             description:
                 "AI-powered financial dashboard enabling unified visibility across multiple SaaS tools and analytics sources",
@@ -619,6 +619,7 @@ const benjamin = {
             techStack: [
                 "Next.js",
                 "Typescript",
+                "shadcn",
                 "tailwindcss",
                 "Convex",
             ],

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Link } from "@/global";
@@ -7,8 +7,29 @@ import ThemeToggle from "@/components/shared/ThemeToggle/ThemeToggle";
 
 export const Header = ({ links }: { links: Link[] }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const menuRef = useRef<HTMLUListElement>(null);
+    const buttonRef = useRef<HTMLButtonElement>(null);
 
     const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (
+                isMenuOpen &&
+                menuRef.current &&
+                !menuRef.current.contains(event.target as Node) &&
+                buttonRef.current &&
+                !buttonRef.current.contains(event.target as Node)
+            ) {
+                setIsMenuOpen(false);
+            }
+        };
+
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [isMenuOpen]);
 
     return (
         <nav className="w-full p-4 md:p-8 flex flex-row items-center justify-between flex-shrink-0 relative z-50" aria-label="Main navigation">
@@ -18,6 +39,7 @@ export const Header = ({ links }: { links: Link[] }) => {
 
             {/* Mobile Menu Button */}
             <button
+                ref={buttonRef}
                 className="md:hidden text-slate-700 dark:text-portfolio-white p-2 hover:text-portfolio-green transition-colors"
                 onClick={toggleMenu}
                 aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -27,6 +49,7 @@ export const Header = ({ links }: { links: Link[] }) => {
 
             {/* Navigation Links */}
             <ul
+                ref={menuRef}
                 className={`
                     flex items-center gap-8 list-none
                     ${isMenuOpen

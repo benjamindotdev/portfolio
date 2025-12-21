@@ -28,7 +28,7 @@ export const Certifications = ({
             <div className="md:hidden w-full h-full">
                 <PageContainer id="certifications-mobile" layout="scroll">
                     {groupedCertifications.map(({ category, items }) => (
-                        <div key={category} className="w-full h-full flex flex-col items-center justify-start pt-8 pb-20 gap-6 overflow-y-auto scrollbar-hide">
+                        <div key={category} className="w-full h-full flex flex-col items-center justify-start gap-6 scrollbar-hide">
                             <SubHeading text={category} className="w-full text-2xl text-center" />
                             <div className="w-full flex flex-col items-start gap-6 pl-4">
                                 {items.map((cert) => (

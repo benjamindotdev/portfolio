@@ -733,7 +733,7 @@ const benjamin = {
                 darkImage: "logos/certifications/IronhackDark.png",
             },
             description:
-                "Won the Ironhack Berlin Hackshow in September 2024 with asozial.dev, a social platform connecting users through shared interests and activities",
+                "Won the Ironhack Berlin Hackshow in September 2024 with asozial.dev, a social platform connecting lonely devs to work on projects together",
             company: "Ironhack Berlin",
             location: "On site",
             category: "Awards & Achievements",
@@ -749,11 +749,11 @@ const benjamin = {
                 darkImage: "logos/certifications/CodeDark.png",
             },
             description:
-                "Won the Code University Hackday with TaskChunker, an AI-powered task management app that breaks down complex projects into manageable tasks. Built in 5 hours",
+                "Won the Code University Hackday with TaskChunker, an AI-powered task management app that breaks down complex projects into manageable tasks",
             company: "Code University",
             location: "On site",
             category: "Awards & Achievements",
-            level: "Hackathon Winner",
+            level: "Hackday Winner",
             date: "February 2025",
             repoLink: "https://github.com/benjamindotdev/taskchunker-frontend",
         },

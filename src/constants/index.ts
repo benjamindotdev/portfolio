@@ -37,10 +37,7 @@ const technologies = [
     {
         key: 4,
         name: "Next.js",
-        image: {
-            lightImage: "logos/stack/Next.jsBlack.png",
-            darkImage: "logos/stack/Next.jsWhite.png",
-        },
+        image: "logos/stack/nextjs.svg",
         link: "https://nextjs.org/",
         type: "Frontend",
         stackSection: "Core Technologies",
@@ -107,10 +104,7 @@ const technologies = [
     {
         key: 50,
         name: "Node.js",
-        image: {
-            lightImage: "logos/stack/nodejsDark.svg",
-            darkImage: "logos/stack/nodejsLight.svg",
-        },
+        image: "logos/stack/nodejs.svg",
         link: "https://nodejs.org/",
         type: "Backend",
         stackSection: "Core Technologies",
@@ -144,10 +138,7 @@ const technologies = [
     {
         key: 68,
         name: "Convex",
-        image: {
-            lightImage: "logos/stack/convexLight.svg",
-            darkImage: "logos/stack/convexDark.svg",
-        },
+        image: "logos/stack/convex.svg",
         link: "https://www.convex.dev/",
         type: "Backend",
         stackSection: "Other Experience",
@@ -157,9 +148,13 @@ const technologies = [
     {
         key: 52,
         name: "MongoDB",
-        image: "logos/stack/mongodb.svg",
+        image: {
+            lightImage: "logos/stack/mongoDBLight.svg",
+            darkImage: "logos/stack/mongoDBDark.svg",
+        },
         link: "https://www.mongodb.com/",
         type: "Database",
+        stackSection: "Other Experience",
     },
     {
         key: 54,

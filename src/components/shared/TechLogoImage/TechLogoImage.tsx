@@ -13,6 +13,8 @@ export const TechLogoImage = ({
 }) => {
     const { theme } = useTheme();
     const isReactLogo = name === "React";
+    const needsWhiteBorder = ["Next.js", "shadcn"].includes(name);
+    const isRoundBorder = name === "Next.js";
 
     const imageSrc = typeof image === "string"
         ? image
@@ -29,7 +31,7 @@ export const TechLogoImage = ({
                 className="relative group inline-flex flex-col items-center justify-center"
             >
                 <LazyLoadImage
-                    className={`h-icon-s w-auto max-w-24 object-contain transition-all duration-500 group-hover:scale-125 group-hover:translate-y-[-10px] ${isReactLogo ? "animate-rotate" : ""}`}
+                    className={`h-icon-s w-auto max-w-24 object-contain transition-all duration-500 group-hover:scale-125 group-hover:translate-y-[-10px] ${isReactLogo ? "animate-rotate" : ""} ${needsWhiteBorder && theme === "dark" ? `border border-white ${isRoundBorder ? "rounded-full" : "rounded-sm"}` : ""}`}
                     src={imageSrc}
                     alt={name}
                     loading="lazy"

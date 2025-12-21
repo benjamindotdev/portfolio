@@ -58,7 +58,11 @@ export const Stack = ({
                             <TechList
                                 key={content.subHeading}
                                 {...content}
-                                className="flex flex-wrap justify-center gap-4 md:gap-8 items-center"
+                                className={`flex flex-wrap justify-center items-center ${
+                                    content.subHeading === "Currently Exploring"
+                                        ? "gap-8"
+                                        : "gap-4 md:gap-8"
+                                }`}
                                 itemClassName="w-[16%] md:w-auto"
                             />
                         )

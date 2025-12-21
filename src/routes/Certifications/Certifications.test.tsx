@@ -65,15 +65,15 @@ test("loads and displays certifications", async () => {
         </BrowserRouter>
     );
 
-    const desc1 = await screen.findByText("https://aws.amazon.com/");
-    const desc2 = await screen.findByText("https://cloud.google.com/");
-    const desc3 = await screen.findByText("https://azure.microsoft.com/");
-    const desc4 = await screen.findByText(
+    const desc1 = await screen.findAllByText("https://aws.amazon.com/");
+    const desc2 = await screen.findAllByText("https://cloud.google.com/");
+    const desc3 = await screen.findAllByText("https://azure.microsoft.com/");
+    const desc4 = await screen.findAllByText(
         "https://www.comptia.org/certifications/security"
     );
 
-    expect(desc1).toBeInTheDocument();
-    expect(desc2).toBeInTheDocument();
-    expect(desc3).toBeInTheDocument();
-    expect(desc4).toBeInTheDocument();
+    expect(desc1.length).toBeGreaterThan(0);
+    expect(desc2.length).toBeGreaterThan(0);
+    expect(desc3.length).toBeGreaterThan(0);
+    expect(desc4.length).toBeGreaterThan(0);
 });

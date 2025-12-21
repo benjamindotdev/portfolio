@@ -58,8 +58,8 @@ export const MobileFreelanceCard = ({
     const link = deployedLink || repoLink;
 
     return (
-        <div className="w-full h-full flex items-center justify-start pl-4">
-            <div className="w-[92%] max-h-[80vh] flex flex-col gap-2 text-slate-700 dark:text-white text-left border border-zinc-500 rounded-lg p-6 overflow-y-auto ">
+        <div className="w-full h-full flex items-center justify-center px-4">
+            <div className="w-full max-h-[80vh] flex flex-col gap-2 text-slate-700 dark:text-white text-left border border-zinc-500 rounded-lg p-6 overflow-y-auto scrollbar-hide">
                 {/* Header */}
                 <div className="w-full flex flex-row justify-between items-start">
                     <div className="flex flex-row items-center gap-6">

@@ -61,7 +61,7 @@ export const MobileExperienceCard = ({
 
     return (
         <div className="w-full h-full flex items-center justify-start pl-4">
-            <div className="w-[92%] max-h-[80vh] flex flex-col gap-4 text-slate-700 dark:text-white text-left border border-zinc-500 rounded-lg p-6 overflow-y-auto ">
+            <div className="w-[92%] flex flex-col gap-4 text-slate-700 dark:text-white text-left border border-zinc-500 rounded-lg p-6 overflow-y-auto ">
                 {/* Header */}
                 <div className="flex flex-col gap-3 w-full">
                     {/* Row 1: Title */}

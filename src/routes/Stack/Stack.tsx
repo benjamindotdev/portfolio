@@ -55,7 +55,12 @@ export const Stack = ({
                 {pageContent.map(
                     (content) =>
                         content.techs.length > 0 && (
-                            <TechList key={content.subHeading} {...content} />
+                            <TechList
+                                key={content.subHeading}
+                                {...content}
+                                className="flex flex-wrap justify-center gap-4 md:gap-8 items-center"
+                                itemClassName="w-[16%] md:w-auto"
+                            />
                         )
                 )}
             </div>

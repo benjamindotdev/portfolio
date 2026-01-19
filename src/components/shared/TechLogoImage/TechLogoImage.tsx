@@ -17,8 +17,8 @@ export const TechLogoImage = ({
 }) => {
     const { theme } = useTheme();
     const isReactLogo = name === "React";
-    const needsWhiteBorder = ["Next.js", "shadcn"].includes(name);
-    const isRoundBorder = name === "Next.js";
+    const needsWhiteBorder = ["Next.js", "shadcn", "dnd-kit", "tsup"].includes(name);
+    const isRoundBorder = ["Next.js"].includes(name);
 
     const imageSrc = typeof image === "string"
         ? image

@@ -427,23 +427,6 @@ const projects = [
         tags: ["Dev Tool", "CLI Tool", "Open Source"],
         packageLink: "https://www.npmjs.com/package/stackscan",
         repoLink: "https://github.com/benjamindotdev/stackscan",
-    },
-    {
-        key: 4,
-        name: "Mock Contrib Project",
-        image: "logos/stack/react.svg",
-        description: "A mock project to demonstrate the contributor section.",
-        status: "completed",
-        type: "personal",
-        createdBy: {
-            name: "Other Creator",
-            image: "logos/stack/githubWhite.png",
-            link: "https://github.com/other"
-        },
-        stackscanKey: "mock-project",
-        techStack: ["React"],
-        tags: ["Mock"],
-        repoLink: "https://github.com/other/project",
     }
 ] as Project[];
 

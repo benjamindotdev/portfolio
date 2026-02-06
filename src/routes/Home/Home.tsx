@@ -6,6 +6,7 @@ import { TechLogoImage } from "@/components/shared/TechLogoImage/TechLogoImage";
 import { Rocket, BookOpen, Lightbulb } from "lucide-react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { PageContainer } from "@/routes/Layout/components/PageContainer/PageContainer";
+import { useTheme } from "@/contexts/ThemeContext";
 
 export const Home = ({
     technologies = [],
@@ -14,6 +15,7 @@ export const Home = ({
     technologies?: Technology[];
     name?: string;
 }) => {
+    const { theme } = useTheme();
     const homepageTechs = technologies.filter(tech => tech.homepage);
 
     return (
@@ -45,19 +47,25 @@ export const Home = ({
                                     className="inline-block w-8 h-8 ml-1 object-contain"
                                 />
                             </p>
-                            <p>I'm an Ironhack alum and former assistant teacher</p>
-                            <p>I'm focused on modern JavaScript, full-stack development, and clean UX:</p>
+                            <p>
+                                I'm an
+                                <LazyLoadImage
+                                    src={theme === "dark" ? "logos/experience/IronhackDark.png" : "logos/experience/IronhackLight.png"}
+                                    alt="Ironhack"
+                                    className="inline-block h-5 md:h-6 w-auto mx-1.5 object-contain align-text-bottom"
+                                />
+                                alum and former assistant teacher
+                            </p>
+                            <p>I'm focused on modern JavaScript, full-stack development, and clean UX</p>
                         </div>
                         <div className="flex flex-wrap items-center gap-6">
                             {homepageTechs.map((tech, index) => (
-                                <>
-                                    <TechLogoImage
-                                        key={tech.key}
-                                        image={tech.image}
-                                        name={tech.name}
-                                        link={tech.link}
-                                    />
-                                </>
+                                <TechLogoImage
+                                    key={tech.key}
+                                    image={tech.image}
+                                    name={tech.name}
+                                    link={tech.link}
+                                />
                             ))}
                         </div>
                         <div className="grid grid-cols-2 md:flex md:flex-row gap-4 w-full">

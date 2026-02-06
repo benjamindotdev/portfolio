@@ -343,11 +343,18 @@ const technologies = [
     },
 ] as Technology[];
 
+const me = {
+    name: "Benjamin",
+    image: "https://github.com/benjamindotdev.png",
+    link: "https://github.com/benjamindotdev",
+};
+
 const projects = [
     {
         key: 0,
         name: "solitairedaily.com",
         image: "logos/clients/solitaire.png",
+        createdBy: me,
         date: "2025",
         subTitle: "A modern take on classic solitaire games.",
         description: "Clean UI, ease-of-use features, and engaging gameplay.",
@@ -386,6 +393,7 @@ const projects = [
         status: "completed",
         type: "freelance",
         stackscanKey: "sh.coach",
+        createdBy: me,
         techStack: [
             "React",
             "Typescript",
@@ -413,11 +421,29 @@ const projects = [
         description: "Automatically detect the tech stack of any project and generate structured output (JSON, Markdown, or badges).",
         status: "completed",
         type: "personal",
+        createdBy: me,
         stackscanKey: "stackscan",
         techStack: [],
         tags: ["Dev Tool", "CLI Tool", "Open Source"],
         packageLink: "https://www.npmjs.com/package/stackscan",
         repoLink: "https://github.com/benjamindotdev/stackscan",
+    },
+    {
+        key: 4,
+        name: "Mock Contrib Project",
+        image: "logos/stack/react.svg",
+        description: "A mock project to demonstrate the contributor section.",
+        status: "completed",
+        type: "personal",
+        createdBy: {
+            name: "Other Creator",
+            image: "logos/stack/githubWhite.png",
+            link: "https://github.com/other"
+        },
+        stackscanKey: "mock-project",
+        techStack: ["React"],
+        tags: ["Mock"],
+        repoLink: "https://github.com/other/project",
     }
 ] as Project[];
 

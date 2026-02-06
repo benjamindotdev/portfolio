@@ -130,6 +130,11 @@ type Project = {
     stackscanKey?: string;
     techStack: Technology[] | string[];
     tags?: string[];
+    createdBy?: {
+        name: string;
+        image: string;
+        link?: string;
+    };
     type?: "personal" | "freelance";
     client?: {
         name: string;

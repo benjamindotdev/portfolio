@@ -8,12 +8,34 @@ export const Projects = ({ projects }: { projects?: Project[] }) => {
         ?.filter((project) => project.status === "completed" && project.type === "personal")
         .sort((a, b) => a.key - b.key) || [];
 
+    const createdProjects = sortedProjects.filter(project => 
+        !project.createdBy || project.createdBy.name === "Benjamin"
+    );
+
+    const contributedProjects = sortedProjects.filter(project => 
+        project.createdBy && project.createdBy.name !== "Benjamin"
+    );
+
     return (
         <PageContainer id="projects">
-            <div className="flex-1 flex flex-col md:flex-row gap-4 md:gap-8">
-                <div className="flex-1">
-                    <ProjectList projects={sortedProjects} />
-                </div>
+            <div className="flex-1 flex flex-col gap-8">
+                {createdProjects.length > 0 && (
+                    <div className="flex flex-col gap-4">
+                        <h2 className="text-2xl font-bold text-slate-700 dark:text-portfolio-white">
+                            Created
+                        </h2>
+                        <ProjectList projects={createdProjects} />
+                    </div>
+                )}
+                
+                {contributedProjects.length > 0 && (
+                    <div className="flex flex-col gap-4">
+                        <h2 className="text-2xl font-bold text-slate-700 dark:text-portfolio-white">
+                            Contributed To
+                        </h2>
+                        <ProjectList projects={contributedProjects} />
+                    </div>
+                )}
             </div>
         </PageContainer>
     );

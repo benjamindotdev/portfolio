@@ -13,7 +13,7 @@ export const ProjectCard = ({
     project: Project;
 }) => {
     const { theme } = useTheme();
-    const { name, description, deployedLink, repoLink, packageLink, image, tags } = project;
+    const { name, description, deployedLink, repoLink, packageLink, image, tags, createdBy } = project;
 
     const imageSrc = typeof image === "string"
         ? image
@@ -25,8 +25,8 @@ export const ProjectCard = ({
     const link = deployedLink || repoLink || packageLink;
 
     return (
-        <div className="w-full md:w-[48%] min-h-[300px] md:h-[54%] grid [grid-template-rows:minmax(0,40%)_minmax(0,20%)_minmax(0,40%)] gap-2 text-slate-700 dark:text-white text-left border border-zinc-500 rounded-lg transition-all duration-300 hover:border-portfolio-green p-4">
-            <div className="w-full flex flex-row justify-between items-start overflow-hidden">
+        <div className="w-full md:w-[48%] min-h-[300px] flex flex-col gap-4 text-slate-700 dark:text-white text-left border border-zinc-500 rounded-lg transition-all duration-300 hover:border-portfolio-green p-4">
+            <div className="w-full flex flex-row justify-between items-start overflow-hidden shrink-0">
                 <div className="flex flex-row items-center gap-6">
                     <LazyLoadImage
                         className="h-auto w-12 rounded"
@@ -53,12 +53,24 @@ export const ProjectCard = ({
                 </div>
             </div>
 
-            <div className="w-full overflow-hidden">
+            {createdBy && (
+                <div className="w-full flex items-center gap-2 shrink-0">
+                    <a href={createdBy.link} target="_blank" rel="noopener noreferrer" title={createdBy.name}>
+                        <img 
+                            src={createdBy.image} 
+                            alt={createdBy.name} 
+                            className="w-8 h-8 rounded-full border border-zinc-200 dark:border-zinc-700 hover:scale-110 transition-transform" 
+                        />
+                    </a>
+                </div>
+            )}
+
+            <div className="w-full overflow-hidden flex-1">
                 <p className="leading-relaxed m-0 text-sm text-slate-700 dark:text-portfolio-white">{description}</p>
             </div>
 
             {(techsForDisplay && techsForDisplay.length > 0) || (tags && tags.length > 0) ? (
-                <div className="w-full overflow-hidden">
+                <div className="w-full overflow-hidden shrink-0 mt-auto">
                     <div className="h-full flex items-center justify-between">
                         {techsForDisplay && techsForDisplay.length > 0 && (
                             <TechList techs={techsForDisplay} />

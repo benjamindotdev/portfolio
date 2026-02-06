@@ -415,6 +415,7 @@ const projects = [
         type: "personal",
         stackscanKey: "stackscan",
         techStack: [],
+        tags: ["Dev Tool", "CLI Tool", "Open Source"],
         packageLink: "https://www.npmjs.com/package/stackscan",
         repoLink: "https://github.com/benjamindotdev/stackscan",
     }

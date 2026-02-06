@@ -3,6 +3,7 @@ import { Project } from "@/global";
 import { LinkButton } from "@/components/shared/LinkButton/LinkButton";
 import { SubHeading } from "@/components/shared/SubHeading/SubHeading";
 import { TechList } from "@/components/shared/TechList/TechList";
+import { SkillBadge } from "@/components/shared/SkillBadge/SkillBadge";
 import { LogoImage } from "@/components/shared/LogoImage/LogoImage";
 import { useTheme } from "@/contexts/ThemeContext";
 import { useStackscanTechs } from "@/hooks/useStackscanTechs";
@@ -13,7 +14,7 @@ export const MobileFreelanceCard = ({
     project: Project;
 }) => {
     const { theme } = useTheme();
-    const { name, description, subTitle, deployedLink, repoLink, packageLink, image, client } = project;
+    const { name, description, subTitle, deployedLink, repoLink, packageLink, image, client, tags } = project;
 
     const imageSrc = typeof image === "string"
         ? image
@@ -117,9 +118,18 @@ export const MobileFreelanceCard = ({
                 )}
 
                 {/* Tech Stack */}
-                {techsForDisplay.length > 0 && (
-                    <div className="w-full mt-auto">
-                        <TechList techs={techsForDisplay} />
+                {(techsForDisplay.length > 0 || (tags && tags.length > 0)) && (
+                    <div className="w-full mt-auto flex flex-col gap-2">
+                        {techsForDisplay.length > 0 && (
+                            <TechList techs={techsForDisplay} />
+                        )}
+                        {tags && tags.length > 0 && (
+                            <div className="flex flex-wrap gap-2 items-center">
+                                {tags.map((tag, index) => (
+                                    <SkillBadge key={index} skill={tag} />
+                                ))}
+                            </div>
+                        )}
                     </div>
                 )}
             </div>

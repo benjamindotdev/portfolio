@@ -3,6 +3,7 @@ import { Project } from "@/global";
 import { LinkButton } from "@/components/shared/LinkButton/LinkButton";
 import { SubHeading } from "@/components/shared/SubHeading/SubHeading";
 import { TechList } from "@/components/shared/TechList/TechList";
+import { SkillBadge } from "@/components/shared/SkillBadge/SkillBadge";
 import { useTheme } from "@/contexts/ThemeContext";
 import { useStackscanTechs } from "@/hooks/useStackscanTechs";
 
@@ -12,7 +13,7 @@ export const ProjectCard = ({
     project: Project;
 }) => {
     const { theme } = useTheme();
-    const { name, description, deployedLink, repoLink, packageLink, image } = project;
+    const { name, description, deployedLink, repoLink, packageLink, image, tags } = project;
 
     const imageSrc = typeof image === "string"
         ? image
@@ -56,13 +57,22 @@ export const ProjectCard = ({
                 <p className="leading-relaxed m-0 text-sm text-slate-700 dark:text-portfolio-white">{description}</p>
             </div>
 
-            {techsForDisplay && techsForDisplay.length > 0 && (
+            {(techsForDisplay && techsForDisplay.length > 0) || (tags && tags.length > 0) ? (
                 <div className="w-full overflow-hidden">
-                    <div className="h-full flex items-start">
-                        <TechList techs={techsForDisplay} />
+                    <div className="h-full flex items-center justify-between">
+                        {techsForDisplay && techsForDisplay.length > 0 && (
+                            <TechList techs={techsForDisplay} />
+                        )}
+                        {tags && tags.length > 0 && (
+                            <div className="flex flex-wrap gap-2 items-center self-end pb-2">
+                                {tags.map((tag, index) => (
+                                    <SkillBadge key={index} skill={tag} />
+                                ))}
+                            </div>
+                        )}
                     </div>
                 </div>
-            )}
+            ) : null}
         </div>
     );
 };

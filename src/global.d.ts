@@ -129,6 +129,7 @@ type Project = {
     packageLink?: string;
     stackscanKey?: string;
     techStack: Technology[] | string[];
+    tags?: string[];
     type?: "personal" | "freelance";
     client?: {
         name: string;

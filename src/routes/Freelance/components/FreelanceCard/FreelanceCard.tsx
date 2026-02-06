@@ -3,6 +3,7 @@ import { Project } from "@/global";
 import { LinkButton } from "@/components/shared/LinkButton/LinkButton";
 import { SubHeading } from "@/components/shared/SubHeading/SubHeading";
 import { TechList } from "@/components/shared/TechList/TechList";
+import { SkillBadge } from "@/components/shared/SkillBadge/SkillBadge";
 import { useTheme } from "@/contexts/ThemeContext";
 import { LogoImage } from "@/components/shared/LogoImage/LogoImage";
 import { useStackscanTechs } from "@/hooks/useStackscanTechs";
@@ -13,7 +14,7 @@ export const FreelanceCard = ({
     project: Project;
 }) => {
     const { theme } = useTheme();
-    const { name, description, subTitle, deployedLink, repoLink, packageLink, image, client } = project;
+    const { name, description, subTitle, deployedLink, repoLink, packageLink, image, client, tags } = project;
 
     const imageSrc = typeof image === "string"
         ? image
@@ -122,9 +123,18 @@ export const FreelanceCard = ({
             }
 
             {/* Tech Stack */}
-            {techsForDisplay && techsForDisplay.length > 0 && (
-                <div className="w-full flex">
-                    <TechList techs={techsForDisplay} />
+            {((techsForDisplay && techsForDisplay.length > 0) || (tags && tags.length > 0)) && (
+                <div className="w-full flex justify-between items-center">
+                    {techsForDisplay && techsForDisplay.length > 0 && (
+                        <TechList techs={techsForDisplay} />
+                    )}
+                    {tags && tags.length > 0 && (
+                        <div className="flex flex-wrap gap-2 items-center">
+                            {tags.map((tag, index) => (
+                                <SkillBadge key={index} skill={tag} />
+                            ))}
+                        </div>
+                    )}
                 </div>
             )}
         </div>

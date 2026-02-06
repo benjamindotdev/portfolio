@@ -1,11 +1,11 @@
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import { Project, Tech, Technology } from "@/global";
+import { Project } from "@/global";
 import { LinkButton } from "@/components/shared/LinkButton/LinkButton";
 import { SubHeading } from "@/components/shared/SubHeading/SubHeading";
 import { TechList } from "@/components/shared/TechList/TechList";
-import { benjamin } from "@/constants";
 import { useTheme } from "@/contexts/ThemeContext";
 import { LogoImage } from "@/components/shared/LogoImage/LogoImage";
+import { useStackscanTechs } from "@/hooks/useStackscanTechs";
 
 export const FreelanceCard = ({
     project,
@@ -13,7 +13,7 @@ export const FreelanceCard = ({
     project: Project;
 }) => {
     const { theme } = useTheme();
-    const { name, description, subTitle, techStack, deployedLink, repoLink, image, client } = project;
+    const { name, description, subTitle, deployedLink, repoLink, packageLink, image, client } = project;
 
     const imageSrc = typeof image === "string"
         ? image
@@ -21,41 +21,8 @@ export const FreelanceCard = ({
             ? image.darkImage
             : image.lightImage;
 
-    // Transform techStack similar to ProjectSection
-    const transformTechStack = (
-        techStack: Technology[] | string[]
-    ): Tech[] => {
-        return techStack.map((tech, index) => {
-            if (typeof tech === "string") {
-                const foundTech = benjamin.technologies.find(
-                    (technology) => technology.name === tech
-                );
-                if (foundTech) {
-                    return {
-                        key: foundTech.key,
-                        name: foundTech.name,
-                        image: foundTech.image,
-                        link: foundTech.link,
-                    };
-                }
-                return {
-                    key: index,
-                    name: tech,
-                    image: "",
-                    link: "",
-                };
-            }
-            return {
-                key: tech.key || index,
-                name: tech.name,
-                image: tech.image || "",
-                link: tech.link || "",
-            };
-        });
-    };
-
-    const techsForDisplay = techStack ? transformTechStack(techStack) : [];
-    const link = deployedLink || repoLink;
+    const techsForDisplay = useStackscanTechs(project);
+    const link = deployedLink || repoLink || packageLink;
 
     return (
         <div
@@ -76,7 +43,19 @@ export const FreelanceCard = ({
 
                     </div>
                 </div>
-                {link && <LinkButton link={link} />}
+                <div className="flex items-center gap-2">
+                    {packageLink && (
+                        <a href={packageLink} target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100 transition-opacity">
+                            <img src="logos/socials/npm.png" alt="npm" className="h-6" />
+                        </a>
+                    )}
+                    {repoLink && (
+                        <a href={repoLink} target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100 transition-opacity">
+                            <img src={theme === "dark" ? "logos/socials/githubWhite.png" : "logos/socials/githubBlack.png"} alt="GitHub" className="w-6 h-6" />
+                        </a>
+                    )}
+                    {link && <LinkButton link={link} />}
+                </div>
             </div>
 
 

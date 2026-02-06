@@ -1,0 +1,90 @@
+[
+  {
+    "name": "Lodash",
+    "slug": "lodash",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/utility/lodash.svg",
+    "type": "utility",
+    "color": "#3492FF",
+    "relativePath": "./public/assets/logos/utility/lodash.svg"
+  },
+  {
+    "name": "Next.js",
+    "slug": "next",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/frontend/nextdotjs.svg",
+    "type": "frontend",
+    "color": null,
+    "relativePath": "./public/assets/logos/frontend/nextdotjs.svg"
+  },
+  {
+    "name": "React",
+    "slug": "react",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/frontend/react.svg",
+    "type": "frontend",
+    "color": "#61DAFB",
+    "relativePath": "./public/assets/logos/frontend/react.svg"
+  },
+  {
+    "name": "Testing Library",
+    "slug": "@testing-library/react",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/testing/testinglibrary.svg",
+    "type": "testing",
+    "color": "#E33332",
+    "relativePath": "./public/assets/logos/testing/testinglibrary.svg"
+  },
+  {
+    "name": "ESLint",
+    "slug": "eslint",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/lint/eslint.svg",
+    "type": "lint",
+    "color": "#4B32C3",
+    "relativePath": "./public/assets/logos/lint/eslint.svg"
+  },
+  {
+    "name": "Husky",
+    "slug": "husky",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/lint/husky.svg",
+    "type": "lint",
+    "color": null,
+    "relativePath": "./public/assets/logos/lint/husky.svg"
+  },
+  {
+    "name": "Jest",
+    "slug": "jest",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/testing/jest.svg",
+    "type": "testing",
+    "color": "#C21325",
+    "relativePath": "./public/assets/logos/testing/jest.svg"
+  },
+  {
+    "name": "Lint-staged",
+    "slug": "lint-staged",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/lint/lintstaged.svg",
+    "type": "lint",
+    "color": null,
+    "relativePath": "./public/assets/logos/lint/lintstaged.svg"
+  },
+  {
+    "name": "PostCSS",
+    "slug": "postcss",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/css/postcss.svg",
+    "type": "css",
+    "color": "#DD3A0A",
+    "relativePath": "./public/assets/logos/css/postcss.svg"
+  },
+  {
+    "name": "TailwindCSS",
+    "slug": "tailwindcss",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/css/tailwindcss.svg",
+    "type": "css",
+    "color": "#06B6D4",
+    "relativePath": "./public/assets/logos/css/tailwindcss.svg"
+  },
+  {
+    "name": "TypeScript",
+    "slug": "typescript",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/language/typescript.svg",
+    "type": "language",
+    "color": "#3178C6",
+    "relativePath": "./public/assets/logos/language/typescript.svg"
+  }
+]

@@ -126,6 +126,8 @@ type Project = {
     subTitle?: string;
     deployedLink?: string;
     repoLink?: string;
+    packageLink?: string;
+    stackscanKey?: string;
     techStack: Technology[] | string[];
     type?: "personal" | "freelance";
     client?: {

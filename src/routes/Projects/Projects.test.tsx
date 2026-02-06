@@ -14,6 +14,7 @@ test("loads and displays project items", async () => {
             techStack: ["React", "TypeScript"],
             image: "",
             status: "completed",
+            type: "personal",
             deployedLink: "https://example.com",
         },
         {
@@ -23,6 +24,7 @@ test("loads and displays project items", async () => {
             techStack: ["React", "TypeScript"],
             image: "",
             status: "completed",
+            type: "personal",
             deployedLink: "https://example.com",
         },
     ];

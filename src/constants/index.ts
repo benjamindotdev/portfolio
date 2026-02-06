@@ -353,13 +353,15 @@ const projects = [
         description: "Clean UI, ease-of-use features, and engaging gameplay.",
         status: "completed",
         type: "freelance",
+        stackscanKey: "solitairedaily.com",
         techStack: [
             "Next.js",
+            "Typescript",
             "tailwindcss",
             "Vercel"
         ],
         deployedLink: "https://solitairedaily.com",
-        repoLink: "https://github.com/benjamindotdev/solitairedaily",
+        repoLink: "https://github.com/benjamindotdev/solitaire-case-study",
         client: {
             name: "Steve M.",
             image: "images/clients/Steve.jpg",
@@ -383,6 +385,7 @@ const projects = [
         description: "Modern, responsive site with custom layouts and interactive features.",
         status: "completed",
         type: "freelance",
+        stackscanKey: "sh.coach",
         techStack: [
             "React",
             "Typescript",
@@ -391,7 +394,7 @@ const projects = [
             "Netlify"
         ],
         deployedLink: "https://sh.coach",
-        repoLink: "https://github.com/benjamindotdev/sh",
+        repoLink: "https://github.com/benjamindotdev/sh-case-study",
         client: {
             name: "Stephanie H.",
             image: "images/clients/Steph.webp",
@@ -404,22 +407,16 @@ const projects = [
         },
     },
     {
-        key: 2,
-        name: "Storytime",
-        image: "logos/stack/storytime.png",
-        description: "AI generated bedtime stories for kids.",
+        key: 3,
+        name: "stackscan",
+        image: "logos/clients/stackscan.svg",
+        description: "Automatically detect the tech stack of any project and generate structured output (JSON, Markdown, or badges).",
         status: "completed",
-        techStack: [
-            "Typescript",
-            "Next.js",
-            "tailwindcss",
-            "ChatGPT",
-            "Prisma",
-            "MongoDB",
-            "Vercel",
-        ],
-        deployedLink: "https://storytime-by-benjamindotdev.vercel.app",
-        repoLink: "https://github.com/benjamindotdev/storytime",
+        type: "personal",
+        stackscanKey: "stackscan",
+        techStack: [],
+        packageLink: "https://www.npmjs.com/package/stackscan",
+        repoLink: "https://github.com/benjamindotdev/stackscan",
     }
 ] as Project[];
 
@@ -652,11 +649,11 @@ const benjamin = {
             title: "Stack",
             route: "/stack",
         },
-        // {
-        //     key: 4,
-        //     title: "Projects",
-        //     route: "/projects",
-        // },
+        {
+            key: 4,
+            title: "Projects",
+            route: "/projects",
+        },
         {
             key: 5,
             title: "Certifications",

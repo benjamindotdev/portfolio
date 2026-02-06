@@ -5,7 +5,7 @@ import { ProjectList } from "./components/ProjectList/ProjectList";
 export const Projects = ({ projects }: { projects?: Project[] }) => {
     // Sort by key (ascending order)
     const sortedProjects = projects
-        ?.filter((project) => project.status === "completed")
+        ?.filter((project) => project.status === "completed" && project.type === "personal")
         .sort((a, b) => a.key - b.key) || [];
 
     return (

@@ -1,10 +1,10 @@
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import { Project, Tech, Technology } from "@/global";
+import { Project } from "@/global";
 import { LinkButton } from "@/components/shared/LinkButton/LinkButton";
 import { SubHeading } from "@/components/shared/SubHeading/SubHeading";
 import { TechList } from "@/components/shared/TechList/TechList";
-import { benjamin } from "@/constants";
 import { useTheme } from "@/contexts/ThemeContext";
+import { useStackscanTechs } from "@/hooks/useStackscanTechs";
 
 export const ProjectCard = ({
     project,
@@ -12,7 +12,7 @@ export const ProjectCard = ({
     project: Project;
 }) => {
     const { theme } = useTheme();
-    const { name, description, techStack, deployedLink, repoLink, image } = project;
+    const { name, description, deployedLink, repoLink, packageLink, image } = project;
 
     const imageSrc = typeof image === "string"
         ? image
@@ -20,44 +20,11 @@ export const ProjectCard = ({
             ? image.darkImage
             : image.lightImage;
 
-    // Transform techStack similar to ProjectSection
-    const transformTechStack = (
-        techStack: Technology[] | string[]
-    ): Tech[] => {
-        return techStack.map((tech, index) => {
-            if (typeof tech === "string") {
-                const foundTech = benjamin.technologies.find(
-                    (technology) => technology.name === tech
-                );
-                if (foundTech) {
-                    return {
-                        key: foundTech.key,
-                        name: foundTech.name,
-                        image: foundTech.image,
-                        link: foundTech.link,
-                    };
-                }
-                return {
-                    key: index,
-                    name: tech,
-                    image: "",
-                    link: "",
-                };
-            }
-            return {
-                key: tech.key || index,
-                name: tech.name,
-                image: tech.image || "",
-                link: tech.link || "",
-            };
-        });
-    };
-
-    const techsForDisplay = techStack ? transformTechStack(techStack) : [];
-    const link = deployedLink || repoLink;
+    const techsForDisplay = useStackscanTechs(project);
+    const link = deployedLink || repoLink || packageLink;
 
     return (
-        <div className="w-[48%] h-[54%] grid [grid-template-rows:minmax(0,40%)_minmax(0,20%)_minmax(0,40%)] gap-2 text-slate-700 dark:text-white text-left border border-zinc-500 rounded-lg transition-all duration-300 hover:border-portfolio-green p-4">
+        <div className="w-full md:w-[48%] min-h-[300px] md:h-[54%] grid [grid-template-rows:minmax(0,40%)_minmax(0,20%)_minmax(0,40%)] gap-2 text-slate-700 dark:text-white text-left border border-zinc-500 rounded-lg transition-all duration-300 hover:border-portfolio-green p-4">
             <div className="w-full flex flex-row justify-between items-start overflow-hidden">
                 <div className="flex flex-row items-center gap-6">
                     <LazyLoadImage
@@ -70,7 +37,19 @@ export const ProjectCard = ({
                         <SubHeading text={name} />
                     </div>
                 </div>
-                {link && <LinkButton link={link} />}
+                <div className="flex items-center gap-2">
+                    {packageLink && (
+                        <a href={packageLink} target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100 transition-opacity">
+                            <img src="logos/socials/npm.png" alt="npm" className="h-6" />
+                        </a>
+                    )}
+                    {repoLink && (
+                        <a href={repoLink} target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100 transition-opacity">
+                            <img src={theme === "dark" ? "logos/socials/githubWhite.png" : "logos/socials/githubBlack.png"} alt="GitHub" className="w-6 h-6" />
+                        </a>
+                    )}
+                    {link && <LinkButton link={link} />}
+                </div>
             </div>
 
             <div className="w-full overflow-hidden">

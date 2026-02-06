@@ -417,7 +417,10 @@ const projects = [
     {
         key: 3,
         name: "stackscan",
-        image: "logos/clients/stackscan.svg",
+        image: {
+            lightImage: "logos/clients/stackscanBlack.svg",
+            darkImage: "logos/clients/stackscanWhite.svg",
+        },
         description: "Automatically detect the tech stack of any project and generate structured output (JSON, Markdown, or badges).",
         status: "completed",
         type: "personal",

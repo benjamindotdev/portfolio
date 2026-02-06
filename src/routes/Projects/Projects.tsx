@@ -1,6 +1,7 @@
 import { PageContainer } from "@/routes/Layout/components/PageContainer/PageContainer";
 import type { Project } from "@/global";
 import { ProjectList } from "./components/ProjectList/ProjectList";
+import { SubHeading } from "@/components/shared/SubHeading/SubHeading";
 
 export const Projects = ({ projects }: { projects?: Project[] }) => {
     // Sort by key (ascending order)
@@ -21,18 +22,14 @@ export const Projects = ({ projects }: { projects?: Project[] }) => {
             <div className="flex-1 flex flex-col gap-8">
                 {createdProjects.length > 0 && (
                     <div className="flex flex-col gap-4">
-                        <h2 className="text-2xl font-bold text-slate-700 dark:text-portfolio-white">
-                            Created
-                        </h2>
+                        <SubHeading text="Created" />
                         <ProjectList projects={createdProjects} />
                     </div>
                 )}
                 
                 {contributedProjects.length > 0 && (
                     <div className="flex flex-col gap-4">
-                        <h2 className="text-2xl font-bold text-slate-700 dark:text-portfolio-white">
-                            Contributed To
-                        </h2>
+                        <SubHeading text="Contributed To" />
                         <ProjectList projects={contributedProjects} />
                     </div>
                 )}

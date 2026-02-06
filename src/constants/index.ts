@@ -201,6 +201,17 @@ const technologies = [
         stackSection: "Additional Tools",
     },
     {
+        key: 72,
+        name: "Commander",
+        image: {
+            lightImage: "logos/stack/commanderBlack.svg",
+            darkImage: "logos/stack/commanderWhite.svg",
+        },
+        link: "https://github.com/tj/commander.js",
+        type: "Tool",
+        stackSection: "Additional Tools",
+    },
+    {
         key: 73,
         name: "Vite",
         image: "logos/stack/vite.svg",

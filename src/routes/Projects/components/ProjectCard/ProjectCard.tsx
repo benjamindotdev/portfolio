@@ -70,7 +70,7 @@ export const ProjectCard = ({
             </div>
 
             {(techsForDisplay && techsForDisplay.length > 0) || (tags && tags.length > 0) ? (
-                <div className="w-full overflow-hidden shrink-0 mt-auto">
+                <div className="w-full shrink-0 mt-auto">
                     <div className="h-full flex items-center justify-between">
                         {techsForDisplay && techsForDisplay.length > 0 && (
                             <TechList techs={techsForDisplay} />

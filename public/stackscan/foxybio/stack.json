@@ -32,6 +32,22 @@
     "relativePath": "./public/assets/logos/auth/firebase.svg"
   },
   {
+    "name": "Stripe",
+    "slug": "stripe",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/payment/stripe.svg",
+    "type": "payment",
+    "color": "#635BFF",
+    "relativePath": "./public/assets/logos/payment/stripe.svg"
+  },
+  {
+    "name": "OpenAI SDK",
+    "slug": "openai",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/ai/openai.svg",
+    "type": "ai",
+    "color": "#412991",
+    "relativePath": "./public/assets/logos/ai/openai.svg"
+  },
+  {
     "name": "PostCSS",
     "slug": "postcss",
     "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/css/postcss.svg",
@@ -48,12 +64,12 @@
     "relativePath": "./public/assets/logos/css/tailwindcss.svg"
   },
   {
-    "name": "Docker",
-    "slug": "docker",
-    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/container/docker.svg",
-    "type": "container",
-    "color": "#2496ED",
-    "relativePath": "./public/assets/logos/container/docker.svg"
+    "name": "ESLint",
+    "slug": "eslint",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/lint/eslint.svg",
+    "type": "lint",
+    "color": "#4B32C3",
+    "relativePath": "./public/assets/logos/lint/eslint.svg"
   },
   {
     "name": "Vite",
@@ -64,27 +80,11 @@
     "relativePath": "./public/assets/logos/build/vite.svg"
   },
   {
-    "name": "ESLint",
-    "slug": "eslint",
-    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/lint/eslint.svg",
-    "type": "lint",
-    "color": "#4B32C3",
-    "relativePath": "./public/assets/logos/lint/eslint.svg"
-  },
-  {
-    "name": "OpenAI SDK",
-    "slug": "openai",
-    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/ai/openai.svg",
-    "type": "ai",
-    "color": "#412991",
-    "relativePath": "./public/assets/logos/ai/openai.svg"
-  },
-  {
-    "name": "Stripe",
-    "slug": "stripe",
-    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/payment/stripe.svg",
-    "type": "payment",
-    "color": "#635BFF",
-    "relativePath": "./public/assets/logos/payment/stripe.svg"
+    "name": "Docker",
+    "slug": "docker",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/container/docker.svg",
+    "type": "container",
+    "color": "#2496ED",
+    "relativePath": "./public/assets/logos/container/docker.svg"
   }
 ]

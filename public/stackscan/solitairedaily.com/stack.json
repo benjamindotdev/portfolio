@@ -40,22 +40,6 @@
     "relativePath": "./public/assets/logos/css/tailwindcss.svg"
   },
   {
-    "name": "Jest",
-    "slug": "jest",
-    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/testing/jest.svg",
-    "type": "testing",
-    "color": "#C21325",
-    "relativePath": "./public/assets/logos/testing/jest.svg"
-  },
-  {
-    "name": "Testing Library",
-    "slug": "@testing-library/react",
-    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/testing/testinglibrary.svg",
-    "type": "testing",
-    "color": "#E33332",
-    "relativePath": "./public/assets/logos/testing/testinglibrary.svg"
-  },
-  {
     "name": "ESLint",
     "slug": "eslint",
     "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/lint/eslint.svg",
@@ -78,6 +62,22 @@
     "type": "lint",
     "color": null,
     "relativePath": "./public/assets/logos/lint/lintstaged.svg"
+  },
+  {
+    "name": "Jest",
+    "slug": "jest",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/testing/jest.svg",
+    "type": "testing",
+    "color": "#C21325",
+    "relativePath": "./public/assets/logos/testing/jest.svg"
+  },
+  {
+    "name": "Testing Library",
+    "slug": "@testing-library/react",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/testing/testinglibrary.svg",
+    "type": "testing",
+    "color": "#E33332",
+    "relativePath": "./public/assets/logos/testing/testinglibrary.svg"
   },
   {
     "name": "Lodash",

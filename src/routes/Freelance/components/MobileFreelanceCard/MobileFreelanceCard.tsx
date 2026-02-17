@@ -1,11 +1,12 @@
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import { Project, Tech, Technology } from "@/global";
+import { Project } from "@/global";
 import { LinkButton } from "@/components/shared/LinkButton/LinkButton";
 import { SubHeading } from "@/components/shared/SubHeading/SubHeading";
 import { TechList } from "@/components/shared/TechList/TechList";
+import { SkillBadge } from "@/components/shared/SkillBadge/SkillBadge";
 import { LogoImage } from "@/components/shared/LogoImage/LogoImage";
-import { benjamin } from "@/constants";
 import { useTheme } from "@/contexts/ThemeContext";
+import { useStackscanTechs } from "@/hooks/useStackscanTechs";
 
 export const MobileFreelanceCard = ({
     project,
@@ -13,7 +14,7 @@ export const MobileFreelanceCard = ({
     project: Project;
 }) => {
     const { theme } = useTheme();
-    const { name, description, subTitle, techStack, deployedLink, repoLink, image, client } = project;
+    const { name, description, subTitle, deployedLink, repoLink, packageLink, image, client, tags } = project;
 
     const imageSrc = typeof image === "string"
         ? image
@@ -21,41 +22,8 @@ export const MobileFreelanceCard = ({
             ? image.darkImage
             : image.lightImage;
 
-    // Transform techStack similar to ProjectSection
-    const transformTechStack = (
-        techStack: Technology[] | string[]
-    ): Tech[] => {
-        return techStack.map((tech, index) => {
-            if (typeof tech === "string") {
-                const foundTech = benjamin.technologies.find(
-                    (technology) => technology.name === tech
-                );
-                if (foundTech) {
-                    return {
-                        key: foundTech.key,
-                        name: foundTech.name,
-                        image: foundTech.image,
-                        link: foundTech.link,
-                    };
-                }
-                return {
-                    key: index,
-                    name: tech,
-                    image: "",
-                    link: "",
-                };
-            }
-            return {
-                key: tech.key || index,
-                name: tech.name,
-                image: tech.image || "",
-                link: tech.link || "",
-            };
-        });
-    };
-
-    const techsForDisplay = techStack ? transformTechStack(techStack) : [];
-    const link = deployedLink || repoLink;
+    const techsForDisplay = useStackscanTechs(project);
+    const link = deployedLink || repoLink || packageLink;
 
     return (
         <div className="w-full h-full flex items-center justify-center px-4">
@@ -73,7 +41,19 @@ export const MobileFreelanceCard = ({
                             <SubHeading text={name} className="text-xl"/>
                         </div>
                     </div>
-                    {link && <LinkButton link={link} />}
+                    <div className="flex items-center gap-2">
+                        {packageLink && (
+                            <a href={packageLink} target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100 transition-opacity">
+                                <img src="logos/socials/npm.png" alt="npm" className="h-6" />
+                            </a>
+                        )}
+                        {repoLink && (
+                            <a href={repoLink} target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100 transition-opacity">
+                                <img src={theme === "dark" ? "logos/socials/githubWhite.png" : "logos/socials/githubBlack.png"} alt="GitHub" className="w-6 h-6" />
+                            </a>
+                        )}
+                        {link && <LinkButton link={link} />}
+                    </div>
                 </div>
 
                 <div className="flex gap-2 items-baseline flex-wrap">
@@ -138,9 +118,18 @@ export const MobileFreelanceCard = ({
                 )}
 
                 {/* Tech Stack */}
-                {techsForDisplay.length > 0 && (
-                    <div className="w-full mt-auto">
-                        <TechList techs={techsForDisplay} />
+                {(techsForDisplay.length > 0 || (tags && tags.length > 0)) && (
+                    <div className="w-full mt-auto flex flex-col gap-2">
+                        {techsForDisplay.length > 0 && (
+                            <TechList techs={techsForDisplay} />
+                        )}
+                        {tags && tags.length > 0 && (
+                            <div className="flex flex-wrap gap-2 items-center">
+                                {tags.map((tag, index) => (
+                                    <SkillBadge key={index} skill={tag} />
+                                ))}
+                            </div>
+                        )}
                     </div>
                 )}
             </div>

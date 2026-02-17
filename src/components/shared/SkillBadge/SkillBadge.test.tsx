@@ -10,7 +10,7 @@ describe("SkillBadge", () => {
                 <SkillBadge skill="TypeScript" />
             </ThemeProvider>
         );
-        expect(screen.getByText("Skill: TypeScript")).toBeInTheDocument();
+        expect(screen.getByText("TypeScript")).toBeInTheDocument();
     });
 
     it("applies correct styling classes", () => {
@@ -20,7 +20,7 @@ describe("SkillBadge", () => {
             </ThemeProvider>
         );
         
-        const badge = screen.getByText("Skill: React");
+        const badge = screen.getByText("React");
         expect(badge).toHaveClass(
             "text-sm",
             "px-3",
@@ -36,13 +36,13 @@ describe("SkillBadge", () => {
                 <SkillBadge skill="JavaScript" />
             </ThemeProvider>
         );
-        expect(screen.getByText("Skill: JavaScript")).toBeInTheDocument();
+        expect(screen.getByText("JavaScript")).toBeInTheDocument();
 
         rerender(
             <ThemeProvider>
                 <SkillBadge skill="Node.js" />
             </ThemeProvider>
         );
-        expect(screen.getByText("Skill: Node.js")).toBeInTheDocument();
+        expect(screen.getByText("Node.js")).toBeInTheDocument();
     });
 });

@@ -93,6 +93,7 @@ type Technology = {
     key: number;
     name: string;
     image: string | { lightImage: string; darkImage: string };
+    category?: string;
     type:
     | "Frontend"
     | "Backend"
@@ -126,7 +127,15 @@ type Project = {
     subTitle?: string;
     deployedLink?: string;
     repoLink?: string;
+    packageLink?: string;
+    stackscanKey?: string;
     techStack: Technology[] | string[];
+    tags?: string[];
+    createdBy?: {
+        name: string;
+        image: string;
+        link?: string;
+    };
     type?: "personal" | "freelance";
     client?: {
         name: string;

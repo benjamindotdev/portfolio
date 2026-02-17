@@ -1,10 +1,11 @@
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import { Project, Tech, Technology } from "@/global";
+import { Project } from "@/global";
 import { LinkButton } from "@/components/shared/LinkButton/LinkButton";
 import { SubHeading } from "@/components/shared/SubHeading/SubHeading";
 import { TechList } from "@/components/shared/TechList/TechList";
-import { benjamin } from "@/constants";
+import { SkillBadge } from "@/components/shared/SkillBadge/SkillBadge";
 import { useTheme } from "@/contexts/ThemeContext";
+import { useStackscanTechs } from "@/hooks/useStackscanTechs";
 
 export const ProjectCard = ({
     project,
@@ -12,7 +13,7 @@ export const ProjectCard = ({
     project: Project;
 }) => {
     const { theme } = useTheme();
-    const { name, description, techStack, deployedLink, repoLink, image } = project;
+    const { name, description, deployedLink, repoLink, packageLink, image, tags, createdBy } = project;
 
     const imageSrc = typeof image === "string"
         ? image
@@ -20,45 +21,12 @@ export const ProjectCard = ({
             ? image.darkImage
             : image.lightImage;
 
-    // Transform techStack similar to ProjectSection
-    const transformTechStack = (
-        techStack: Technology[] | string[]
-    ): Tech[] => {
-        return techStack.map((tech, index) => {
-            if (typeof tech === "string") {
-                const foundTech = benjamin.technologies.find(
-                    (technology) => technology.name === tech
-                );
-                if (foundTech) {
-                    return {
-                        key: foundTech.key,
-                        name: foundTech.name,
-                        image: foundTech.image,
-                        link: foundTech.link,
-                    };
-                }
-                return {
-                    key: index,
-                    name: tech,
-                    image: "",
-                    link: "",
-                };
-            }
-            return {
-                key: tech.key || index,
-                name: tech.name,
-                image: tech.image || "",
-                link: tech.link || "",
-            };
-        });
-    };
-
-    const techsForDisplay = techStack ? transformTechStack(techStack) : [];
-    const link = deployedLink || repoLink;
+    const techsForDisplay = useStackscanTechs(project);
+    const link = deployedLink || repoLink || packageLink;
 
     return (
-        <div className="w-[48%] h-[54%] grid [grid-template-rows:minmax(0,40%)_minmax(0,20%)_minmax(0,40%)] gap-2 text-slate-700 dark:text-white text-left border border-zinc-500 rounded-lg transition-all duration-300 hover:border-portfolio-green p-4">
-            <div className="w-full flex flex-row justify-between items-start overflow-hidden">
+        <div className="w-full md:w-[48%] min-h-[300px] flex flex-col gap-4 text-slate-700 dark:text-white text-left border border-zinc-500 rounded-lg transition-all duration-300 hover:border-portfolio-green p-4">
+            <div className="w-full flex flex-row justify-between items-start overflow-hidden shrink-0">
                 <div className="flex flex-row items-center gap-6">
                     <LazyLoadImage
                         className="h-auto w-12 rounded"
@@ -70,20 +38,53 @@ export const ProjectCard = ({
                         <SubHeading text={name} />
                     </div>
                 </div>
-                {link && <LinkButton link={link} />}
+                <div className="flex items-center gap-2">
+                    {packageLink && (
+                        <a href={packageLink} target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100 transition-opacity">
+                            <img src="logos/socials/npm.png" alt="npm" className="h-6" />
+                        </a>
+                    )}
+                    {repoLink && (
+                        <a href={repoLink} target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100 transition-opacity">
+                            <img src={theme === "dark" ? "logos/socials/githubWhite.png" : "logos/socials/githubBlack.png"} alt="GitHub" className="w-6 h-6" />
+                        </a>
+                    )}
+                    {link && <LinkButton link={link} />}
+                </div>
             </div>
 
-            <div className="w-full overflow-hidden">
+            {createdBy && (
+                <div className="w-full flex items-center gap-2 shrink-0">
+                    <a href={createdBy.link} target="_blank" rel="noopener noreferrer" title={createdBy.name}>
+                        <img 
+                            src={createdBy.image} 
+                            alt={createdBy.name} 
+                            className="w-8 h-8 rounded-full border border-zinc-200 dark:border-zinc-700 hover:scale-110 transition-transform" 
+                        />
+                    </a>
+                </div>
+            )}
+
+            <div className="w-full overflow-hidden flex-1">
                 <p className="leading-relaxed m-0 text-sm text-slate-700 dark:text-portfolio-white">{description}</p>
             </div>
 
-            {techsForDisplay && techsForDisplay.length > 0 && (
-                <div className="w-full overflow-hidden">
-                    <div className="h-full flex items-start">
-                        <TechList techs={techsForDisplay} />
+            {(techsForDisplay && techsForDisplay.length > 0) || (tags && tags.length > 0) ? (
+                <div className="w-full shrink-0 mt-auto">
+                    <div className="h-full flex items-center justify-between">
+                        {techsForDisplay && techsForDisplay.length > 0 && (
+                            <TechList techs={techsForDisplay} />
+                        )}
+                        {tags && tags.length > 0 && (
+                            <div className="flex flex-wrap gap-2 items-center self-end pb-2">
+                                {tags.map((tag, index) => (
+                                    <SkillBadge key={index} skill={tag} />
+                                ))}
+                            </div>
+                        )}
                     </div>
                 </div>
-            )}
+            ) : null}
         </div>
     );
 };

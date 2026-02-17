@@ -50,7 +50,7 @@ describe("Home Component", () => {
             screen.getByText((content) => content.includes("Shep"))
         ).toBeInTheDocument();
         expect(
-            screen.getByText((content) => content.includes("Ironhack"))
+            screen.getByAltText("Ironhack")
         ).toBeInTheDocument();
     });
 

@@ -1,0 +1,74 @@
+[
+  {
+    "name": "TypeScript",
+    "slug": "typescript",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/language/typescript.svg",
+    "type": "language",
+    "color": "#3178C6",
+    "relativePath": "./public/assets/logos/language/typescript.svg"
+  },
+  {
+    "name": "React",
+    "slug": "react",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/frontend/react.svg",
+    "type": "frontend",
+    "color": "#61DAFB",
+    "relativePath": "./public/assets/logos/frontend/react.svg"
+  },
+  {
+    "name": "PostCSS",
+    "slug": "postcss",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/css/postcss.svg",
+    "type": "css",
+    "color": "#DD3A0A",
+    "relativePath": "./public/assets/logos/css/postcss.svg"
+  },
+  {
+    "name": "TailwindCSS",
+    "slug": "tailwindcss",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/css/tailwindcss.svg",
+    "type": "css",
+    "color": "#06B6D4",
+    "relativePath": "./public/assets/logos/css/tailwindcss.svg"
+  },
+  {
+    "name": "Testing Library",
+    "slug": "@testing-library/react",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/testing/testinglibrary.svg",
+    "type": "testing",
+    "color": "#E33332",
+    "relativePath": "./public/assets/logos/testing/testinglibrary.svg"
+  },
+  {
+    "name": "Vitest",
+    "slug": "vitest",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/testing/vitest.svg",
+    "type": "testing",
+    "color": "#6E9F18",
+    "relativePath": "./public/assets/logos/testing/vitest.svg"
+  },
+  {
+    "name": "Vite",
+    "slug": "vite",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/build/vite.svg",
+    "type": "build",
+    "color": null,
+    "relativePath": "./public/assets/logos/build/vite.svg"
+  },
+  {
+    "name": "ESLint",
+    "slug": "eslint",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/lint/eslint.svg",
+    "type": "lint",
+    "color": "#4B32C3",
+    "relativePath": "./public/assets/logos/lint/eslint.svg"
+  },
+  {
+    "name": "Husky",
+    "slug": "husky",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/lint/husky.svg",
+    "type": "lint",
+    "color": null,
+    "relativePath": "./public/assets/logos/lint/husky.svg"
+  }
+]

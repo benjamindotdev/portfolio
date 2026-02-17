@@ -93,6 +93,7 @@ type Technology = {
     key: number;
     name: string;
     image: string | { lightImage: string; darkImage: string };
+    category?: string;
     type:
     | "Frontend"
     | "Backend"

@@ -10,7 +10,7 @@ export const SkillBadge = ({ skill }: { skill: string }) => {
                     : "bg-slate-200 border border-slate-400 text-slate-700"
                 }`}
         >
-            Skill: {skill}
+            {skill}
         </div>
     );
 };

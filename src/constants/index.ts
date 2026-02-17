@@ -362,7 +362,7 @@ const me = {
 
 const projects = [
     {
-        key: 0,
+        key: 3,
         name: "solitairedaily.com",
         image: "logos/clients/solitaire.png",
         createdBy: me,
@@ -380,6 +380,7 @@ const projects = [
         ],
         deployedLink: "https://solitairedaily.com",
         repoLink: "https://github.com/benjamindotdev/solitaire-case-study",
+        tags: ["Performance Optimization"],
         client: {
             name: "Steve M.",
             image: "images/clients/Steve.jpg",
@@ -392,7 +393,7 @@ const projects = [
         },
     },
     {
-        key: 1,
+        key: 0,
         name: "sh.coach",
         image: {
             darkImage: "logos/clients/SH-white.svg",
@@ -414,6 +415,7 @@ const projects = [
         ],
         deployedLink: "https://sh.coach",
         repoLink: "https://github.com/benjamindotdev/sh-case-study",
+        tags: ["SEO Optimization"],
         client: {
             name: "Stephanie H.",
             image: "images/clients/Steph.webp",
@@ -424,6 +426,54 @@ const projects = [
             challenge: "Ensured consistent responsive design and smooth layout behavior across breakpoints.",
             testimonial: "Benjamin is a true professional. Truthfully, I first used an AI-only tool to create my website, but the result was generic and not special enough. I then turned to Ben, and his website is another level, thanks to his attention to detail, creativity and suggestions from experience. He is also a joy to work with, patiently listening and implementing my wishes and vision in a documented, structured manner.",
         },
+    },
+    {
+        key: 1,
+        name: "sherds.eu",
+        image: "logos/clients/sherds.png",
+        subTitle: "Anonymized job and candidate matching platform.",
+        description: "Removing gender bias in tech recruitment through by removing biases.",
+        status: "in progress",
+        type: "freelance",
+        createdBy: me,
+        stackscanKey: "sherds",
+        techStack: [],
+        tags: ["Server-side Rendering"],
+        deployedLink: "https://sherds.eu",
+        repoLink: "https://github.com/benjamindotdev/sherds-case-study",
+        client: {
+            name: "Jennifer G.",
+            image: "images/clients/jennifer.jpeg",
+            linkedIn: "https://www.linkedin.com/in/jennifer-gbologan-35453146/",
+            position: "Founder",
+            needed: "Jennifer needed an MVP to demonstrate the potential of her anonymized recruitment platform and attract investors.",
+            solution: "Designed and developed a server-side rendered web application with a focus on performance, security, and user experience to effectively showcase the platform's value proposition.",
+            challenge: "Programmed algorithm to ensure unbiased matching between job seekers and employers. Now part of the team to transition the MVP to a full production-ready platform.",
+            testimonial: "Benjamin is a great addition to the SHERDS.eu team. His full stack expertise was clear in both the front-end experience and the back-end architecture, which are clean, efficient, and easy to maintain. He anticipates potential issues, proposes smart solutions, and collaborates very well with the team, which will help us deliver a high-quality result on time.",
+        }
+    },
+    {
+    key: 2,
+    name: "foxybio.com",
+    image: "logos/clients/foxybio.png",
+    subTitle: "A bioinformatics data visualization tool.",
+    description: "Transforming complex scientific data into interactive plots and tables.",
+    status: "in progress",
+    type: "freelance",
+    stackscanKey: "foxybio",
+    tags: ["Data Visualization"],
+    deployedLink: "https://foxybio.com",
+    repoLink: "https://github.com/benjamindotdev/foxybio-case-study",
+    client: {
+        name: "Georg B.",
+        image: "images/clients/georg.jpeg",
+        linkedIn: "https://www.linkedin.com/in/georgbasler/",
+        position: "Founder",
+        needed: "Georg needed a modern, user-friendly interface for his bioinformatics platform to make complex scientific data accessible and actionable for researchers.",
+        solution: "Redesigned the frontend with a focus on intuitive data visualization, interactive features, and seamless integration with backend data sources to enhance the user experience for scientists.",
+        challenge: "Translating complex scientific workflows into a clean, user-friendly interface while ensuring optimal performance and responsiveness.",
+        testimonial: "Ben is an outstanding developer. He took our complex requirements and turned them into a clean, intuitive interface that our users love. His attention to detail, problem-solving skills, and ability to communicate technical concepts clearly made the entire process smooth and efficient. We couldn't be happier with the result.",
+    }
     },
     {
         key: 3,
@@ -441,7 +491,8 @@ const projects = [
         tags: ["Dev Tool", "CLI Tool", "Open Source"],
         packageLink: "https://www.npmjs.com/package/stackscan",
         repoLink: "https://github.com/benjamindotdev/stackscan",
-    }
+    },
+    
 ] as Project[];
 
 

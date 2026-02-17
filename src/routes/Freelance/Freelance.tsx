@@ -6,7 +6,7 @@ import { MobileFreelanceCard } from "./components/MobileFreelanceCard/MobileFree
 export const Freelance = ({ projects }: { projects?: Project[] }) => {
     // Filter for freelance projects only
     const freelanceProjects = projects
-        ?.filter((project) => project.status === "completed" && project.type === "freelance")
+        ?.filter((project) =>  project.type === "freelance")
         .sort((a, b) => a.key - b.key) || [];
 
     return (

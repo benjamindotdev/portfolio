@@ -1,5 +1,13 @@
 [
   {
+    "name": "TypeScript",
+    "slug": "typescript",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/language/typescript.svg",
+    "type": "language",
+    "color": "#3178C6",
+    "relativePath": "./public/assets/logos/language/typescript.svg"
+  },
+  {
     "name": "Next.js",
     "slug": "next",
     "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/frontend/nextdotjs.svg",
@@ -16,20 +24,12 @@
     "relativePath": "./public/assets/logos/frontend/react.svg"
   },
   {
-    "name": "Stripe",
-    "slug": "stripe",
-    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/payment/stripe.svg",
-    "type": "payment",
-    "color": "#635BFF",
-    "relativePath": "./public/assets/logos/payment/stripe.svg"
-  },
-  {
-    "name": "Zod",
-    "slug": "zod",
-    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/utility/zod.svg",
-    "type": "utility",
-    "color": "#408AFF",
-    "relativePath": "./public/assets/logos/utility/zod.svg"
+    "name": "TailwindCSS",
+    "slug": "tailwindcss",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/css/tailwindcss.svg",
+    "type": "css",
+    "color": "#06B6D4",
+    "relativePath": "./public/assets/logos/css/tailwindcss.svg"
   },
   {
     "name": "Testing Library",
@@ -38,6 +38,14 @@
     "type": "testing",
     "color": "#E33332",
     "relativePath": "./public/assets/logos/testing/testinglibrary.svg"
+  },
+  {
+    "name": "Vitest",
+    "slug": "vitest",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/testing/vitest.svg",
+    "type": "testing",
+    "color": "#6E9F18",
+    "relativePath": "./public/assets/logos/testing/vitest.svg"
   },
   {
     "name": "ESLint",
@@ -64,27 +72,19 @@
     "relativePath": "./public/assets/logos/lint/lintstaged.svg"
   },
   {
-    "name": "TailwindCSS",
-    "slug": "tailwindcss",
-    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/css/tailwindcss.svg",
-    "type": "css",
-    "color": "#06B6D4",
-    "relativePath": "./public/assets/logos/css/tailwindcss.svg"
+    "name": "Zod",
+    "slug": "zod",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/utility/zod.svg",
+    "type": "utility",
+    "color": "#408AFF",
+    "relativePath": "./public/assets/logos/utility/zod.svg"
   },
   {
-    "name": "TypeScript",
-    "slug": "typescript",
-    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/language/typescript.svg",
-    "type": "language",
-    "color": "#3178C6",
-    "relativePath": "./public/assets/logos/language/typescript.svg"
-  },
-  {
-    "name": "Vitest",
-    "slug": "vitest",
-    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/testing/vitest.svg",
-    "type": "testing",
-    "color": "#6E9F18",
-    "relativePath": "./public/assets/logos/testing/vitest.svg"
+    "name": "Stripe",
+    "slug": "stripe",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/payment/stripe.svg",
+    "type": "payment",
+    "color": "#635BFF",
+    "relativePath": "./public/assets/logos/payment/stripe.svg"
   }
 ]

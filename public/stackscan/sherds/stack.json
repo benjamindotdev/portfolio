@@ -24,12 +24,28 @@
     "relativePath": "./public/assets/logos/frontend/react.svg"
   },
   {
-    "name": "PostCSS",
-    "slug": "postcss",
-    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/css/postcss.svg",
-    "type": "css",
-    "color": "#DD3A0A",
-    "relativePath": "./public/assets/logos/css/postcss.svg"
+    "name": "PostgreSQL",
+    "slug": "pg",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/database/postgresql.svg",
+    "type": "database",
+    "color": "#4169E1",
+    "relativePath": "./public/assets/logos/database/postgresql.svg"
+  },
+  {
+    "name": "Prisma",
+    "slug": "prisma",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/orm/prisma.svg",
+    "type": "orm",
+    "color": "#2D3748",
+    "relativePath": "./public/assets/logos/orm/prisma.svg"
+  },
+  {
+    "name": "Auth.js",
+    "slug": "next-auth",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/auth/authjs.svg",
+    "type": "auth",
+    "color": null,
+    "relativePath": "./public/assets/logos/auth/authjs.svg"
   },
   {
     "name": "TailwindCSS",
@@ -48,12 +64,12 @@
     "relativePath": "./public/assets/logos/testing/testinglibrary.svg"
   },
   {
-    "name": "Jest",
-    "slug": "jest",
-    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/testing/jest.svg",
+    "name": "Vitest",
+    "slug": "vitest",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/testing/vitest.svg",
     "type": "testing",
-    "color": "#C21325",
-    "relativePath": "./public/assets/logos/testing/jest.svg"
+    "color": "#6E9F18",
+    "relativePath": "./public/assets/logos/testing/vitest.svg"
   },
   {
     "name": "ESLint",
@@ -80,11 +96,11 @@
     "relativePath": "./public/assets/logos/lint/lintstaged.svg"
   },
   {
-    "name": "Lodash",
-    "slug": "lodash",
-    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/utility/lodash.svg",
-    "type": "utility",
-    "color": "#3492FF",
-    "relativePath": "./public/assets/logos/utility/lodash.svg"
+    "name": "Prettier",
+    "slug": "prettier",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/format/prettier.svg",
+    "type": "format",
+    "color": "#F7B93E",
+    "relativePath": "./public/assets/logos/format/prettier.svg"
   }
 ]

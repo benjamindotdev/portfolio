@@ -16,6 +16,14 @@
     "relativePath": "./public/assets/logos/frontend/react.svg"
   },
   {
+    "name": "Firebase Auth",
+    "slug": "firebase",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/auth/firebase.svg",
+    "type": "auth",
+    "color": "#DD2C00",
+    "relativePath": "./public/assets/logos/auth/firebase.svg"
+  },
+  {
     "name": "PostCSS",
     "slug": "postcss",
     "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/css/postcss.svg",
@@ -32,30 +40,6 @@
     "relativePath": "./public/assets/logos/css/tailwindcss.svg"
   },
   {
-    "name": "Playwright",
-    "slug": "@playwright/test",
-    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/testing/playwright.svg",
-    "type": "testing",
-    "color": null,
-    "relativePath": "./public/assets/logos/testing/playwright.svg"
-  },
-  {
-    "name": "Testing Library",
-    "slug": "@testing-library/react",
-    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/testing/testinglibrary.svg",
-    "type": "testing",
-    "color": "#E33332",
-    "relativePath": "./public/assets/logos/testing/testinglibrary.svg"
-  },
-  {
-    "name": "Jest",
-    "slug": "jest",
-    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/testing/jest.svg",
-    "type": "testing",
-    "color": "#C21325",
-    "relativePath": "./public/assets/logos/testing/jest.svg"
-  },
-  {
     "name": "Vite",
     "slug": "vite",
     "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/build/vite.svg",
@@ -64,11 +48,11 @@
     "relativePath": "./public/assets/logos/build/vite.svg"
   },
   {
-    "name": "Husky",
-    "slug": "husky",
-    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/lint/husky.svg",
+    "name": "ESLint",
+    "slug": "eslint",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/lint/eslint.svg",
     "type": "lint",
-    "color": null,
-    "relativePath": "./public/assets/logos/lint/husky.svg"
+    "color": "#4B32C3",
+    "relativePath": "./public/assets/logos/lint/eslint.svg"
   }
 ]

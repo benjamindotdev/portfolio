@@ -56,22 +56,6 @@
     "relativePath": "./public/assets/logos/css/tailwindcss.svg"
   },
   {
-    "name": "Testing Library",
-    "slug": "@testing-library/react",
-    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/testing/testinglibrary.svg",
-    "type": "testing",
-    "color": "#E33332",
-    "relativePath": "./public/assets/logos/testing/testinglibrary.svg"
-  },
-  {
-    "name": "Vitest",
-    "slug": "vitest",
-    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/testing/vitest.svg",
-    "type": "testing",
-    "color": "#6E9F18",
-    "relativePath": "./public/assets/logos/testing/vitest.svg"
-  },
-  {
     "name": "ESLint",
     "slug": "eslint",
     "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/lint/eslint.svg",
@@ -94,6 +78,22 @@
     "type": "lint",
     "color": null,
     "relativePath": "./public/assets/logos/lint/lintstaged.svg"
+  },
+  {
+    "name": "Testing Library",
+    "slug": "@testing-library/react",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/testing/testinglibrary.svg",
+    "type": "testing",
+    "color": "#E33332",
+    "relativePath": "./public/assets/logos/testing/testinglibrary.svg"
+  },
+  {
+    "name": "Vitest",
+    "slug": "vitest",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/testing/vitest.svg",
+    "type": "testing",
+    "color": "#6E9F18",
+    "relativePath": "./public/assets/logos/testing/vitest.svg"
   },
   {
     "name": "Prettier",

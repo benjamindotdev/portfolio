@@ -17,7 +17,22 @@
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-router-dom": "^7.11.0",
-    "tailwind-merge": "^3.4.0"
+    "tailwind-merge": "^3.4.0",
+    "java": "^21.0.0",
+    "spring-boot": "^3.5.3",
+    "maven": "latest",
+    "spring-ai": "^1.1.1",
+    "openai": "latest",
+    "@google-cloud/vertexai": "latest",
+    "@qdrant/js-client-rest": "latest",
+    "tika": "latest",
+    "firebase-admin": "latest",
+    "stripe": "latest",
+    "swagger-ui": "latest",
+    "junit": "^5.0.0",
+    "testcontainers": "latest",
+    "mockito": "latest",
+    "docker": "latest"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",

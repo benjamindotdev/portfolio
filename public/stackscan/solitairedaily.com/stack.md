@@ -11,8 +11,8 @@
 
 ## Testing
 
-- <img src="https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/testing/testinglibrary.svg" alt="Testing Library" width="24" height="24" /> **Testing Library**
 - <img src="https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/testing/jest.svg" alt="Jest" width="24" height="24" /> **Jest**
+- <img src="https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/testing/testinglibrary.svg" alt="Testing Library" width="24" height="24" /> **Testing Library**
 
 ## Css
 

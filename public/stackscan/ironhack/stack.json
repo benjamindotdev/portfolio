@@ -1,0 +1,42 @@
+[
+  {
+    "name": "TypeScript",
+    "slug": "typescript",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/language/typescript.svg",
+    "type": "language",
+    "color": "#3178C6",
+    "relativePath": "./public/assets/logos/language/typescript.svg"
+  },
+  {
+    "name": "React",
+    "slug": "react",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/frontend/react.svg",
+    "type": "frontend",
+    "color": "#61DAFB",
+    "relativePath": "./public/assets/logos/frontend/react.svg"
+  },
+  {
+    "name": "Express",
+    "slug": "express",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/backend/express.svg",
+    "type": "backend",
+    "color": "#000000",
+    "relativePath": "./public/assets/logos/backend/express.svg"
+  },
+  {
+    "name": "MongoDB",
+    "slug": "mongodb",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/database/mongodb.svg",
+    "type": "database",
+    "color": "#47A248",
+    "relativePath": "./public/assets/logos/database/mongodb.svg"
+  },
+  {
+    "name": "TailwindCSS",
+    "slug": "tailwindcss",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/css/tailwindcss.svg",
+    "type": "css",
+    "color": "#06B6D4",
+    "relativePath": "./public/assets/logos/css/tailwindcss.svg"
+  }
+]

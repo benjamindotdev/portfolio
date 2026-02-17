@@ -1,0 +1,34 @@
+[
+  {
+    "name": "JavaScript",
+    "slug": "javascript",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/language/javascript.svg",
+    "type": "language",
+    "color": "#F7DF1E",
+    "relativePath": "./public/assets/logos/language/javascript.svg"
+  },
+  {
+    "name": "Webpack",
+    "slug": "webpack",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/build/webpack.svg",
+    "type": "build",
+    "color": "#8DD6F9",
+    "relativePath": "./public/assets/logos/build/webpack.svg"
+  },
+  {
+    "name": "Shopify",
+    "slug": "@shopify/shopify-api",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/cms/shopify.svg",
+    "type": "cms",
+    "color": "#7AB55C",
+    "relativePath": "./public/assets/logos/cms/shopify.svg"
+  },
+  {
+    "name": "WordPress",
+    "slug": "wordpress",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/cms/wordpress.svg",
+    "type": "cms",
+    "color": "#21759B",
+    "relativePath": "./public/assets/logos/cms/wordpress.svg"
+  }
+]

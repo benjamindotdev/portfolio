@@ -1,0 +1,11 @@
+{
+  "name": "organicsbest-stack",
+  "dependencies": {
+    "html5": "latest",
+    "css3": "latest",
+    "javascript": "latest",
+    "webpack": "5.94.0",
+    "@shopify/shopify-api": "latest",
+    "wordpress": "latest"
+  }
+}

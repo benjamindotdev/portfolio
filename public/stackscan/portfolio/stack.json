@@ -32,12 +32,12 @@
     "relativePath": "./public/assets/logos/css/tailwindcss.svg"
   },
   {
-    "name": "Husky",
-    "slug": "husky",
-    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/lint/husky.svg",
-    "type": "lint",
-    "color": null,
-    "relativePath": "./public/assets/logos/lint/husky.svg"
+    "name": "Jest",
+    "slug": "jest",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/testing/jest.svg",
+    "type": "testing",
+    "color": "#C21325",
+    "relativePath": "./public/assets/logos/testing/jest.svg"
   },
   {
     "name": "Playwright",
@@ -56,19 +56,19 @@
     "relativePath": "./public/assets/logos/testing/testinglibrary.svg"
   },
   {
-    "name": "Jest",
-    "slug": "jest",
-    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/testing/jest.svg",
-    "type": "testing",
-    "color": "#C21325",
-    "relativePath": "./public/assets/logos/testing/jest.svg"
-  },
-  {
     "name": "Vite",
     "slug": "vite",
     "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/build/vite.svg",
     "type": "build",
     "color": null,
     "relativePath": "./public/assets/logos/build/vite.svg"
+  },
+  {
+    "name": "Husky",
+    "slug": "husky",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/lint/husky.svg",
+    "type": "lint",
+    "color": null,
+    "relativePath": "./public/assets/logos/lint/husky.svg"
   }
 ]

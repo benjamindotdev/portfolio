@@ -32,22 +32,6 @@
     "relativePath": "./public/assets/logos/css/tailwindcss.svg"
   },
   {
-    "name": "ESLint",
-    "slug": "eslint",
-    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/lint/eslint.svg",
-    "type": "lint",
-    "color": "#4B32C3",
-    "relativePath": "./public/assets/logos/lint/eslint.svg"
-  },
-  {
-    "name": "Husky",
-    "slug": "husky",
-    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/lint/husky.svg",
-    "type": "lint",
-    "color": null,
-    "relativePath": "./public/assets/logos/lint/husky.svg"
-  },
-  {
     "name": "Testing Library",
     "slug": "@testing-library/react",
     "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/testing/testinglibrary.svg",
@@ -70,5 +54,21 @@
     "type": "build",
     "color": null,
     "relativePath": "./public/assets/logos/build/vite.svg"
+  },
+  {
+    "name": "ESLint",
+    "slug": "eslint",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/lint/eslint.svg",
+    "type": "lint",
+    "color": "#4B32C3",
+    "relativePath": "./public/assets/logos/lint/eslint.svg"
+  },
+  {
+    "name": "Husky",
+    "slug": "husky",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/lint/husky.svg",
+    "type": "lint",
+    "color": null,
+    "relativePath": "./public/assets/logos/lint/husky.svg"
   }
 ]

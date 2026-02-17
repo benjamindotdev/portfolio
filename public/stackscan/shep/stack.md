@@ -28,6 +28,10 @@
 
 - <img src="https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/payment/stripe.svg" alt="Stripe" width="24" height="24" /> **Stripe**
 
+## State
+
+- <img src="https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/fallback/reactquery.svg" alt="TanStack Query" width="24" height="24" /> **TanStack Query**
+
 ## Utility
 
 - <img src="https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/utility/zod.svg" alt="Zod" width="24" height="24" /> **Zod**

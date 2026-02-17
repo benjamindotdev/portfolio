@@ -24,20 +24,20 @@
     "relativePath": "./public/assets/logos/frontend/react.svg"
   },
   {
-    "name": "TailwindCSS",
-    "slug": "tailwindcss",
-    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/css/tailwindcss.svg",
-    "type": "css",
-    "color": "#06B6D4",
-    "relativePath": "./public/assets/logos/css/tailwindcss.svg"
-  },
-  {
     "name": "Zustand",
     "slug": "zustand",
     "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/state/zustand.svg",
     "type": "state",
     "color": null,
     "relativePath": "./public/assets/logos/state/zustand.svg"
+  },
+  {
+    "name": "TailwindCSS",
+    "slug": "tailwindcss",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/css/tailwindcss.svg",
+    "type": "css",
+    "color": "#06B6D4",
+    "relativePath": "./public/assets/logos/css/tailwindcss.svg"
   },
   {
     "name": "AWS",

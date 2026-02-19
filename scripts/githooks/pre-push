@@ -1,0 +1,30 @@
+#!/bin/sh
+
+# Get current branch
+current_branch=$(git symbolic-ref --short HEAD)
+
+# Logic based on branch
+if [ "$current_branch" = "main" ]; then
+    echo "🚫 ERROR: Direct pushes to 'main' are RESTRICTED locally. (By pre-push hook)"
+    echo "   The 'main' branch should only receive merges from 'dev'."
+    echo "   Please checkout 'dev', merge your changes there, and then create a Pull Request to 'main'."
+    echo "   (If you MUST push, bypass with 'git push --no-verify', but be warned!)"
+    exit 1
+elif [ "$current_branch" = "dev" ]; then
+    echo ""
+    echo "⚠️  WARNING: You are pushing directly to 'dev'."
+    echo "   Best practice: Create a feature branch (e.g. 'feat/new-feature') and merge it back."
+    echo ""
+    echo "⏳ introducing a 10-second delay for you to reconsider..."
+    echo "   (Press Ctrl+C to cancel this push)"
+    
+    # Simple countdown
+    for i in 10 9 8 7 6 5 4 3 2 1; do
+        printf "$i... "
+        sleep 1
+    done
+    echo ""
+    echo "✅ Proceeding with push to 'dev'..."
+fi
+
+exit 0

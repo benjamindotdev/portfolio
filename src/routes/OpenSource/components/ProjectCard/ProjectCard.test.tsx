@@ -53,7 +53,7 @@ describe("ProjectCard", () => {
             </BrowserRouter>
         );
 
-        const link = screen.getByRole("link", { name: "Link" });
+        const link = screen.getByRole("link", { name: "Test Project" });
         expect(link).toBeInTheDocument();
         expect(link).toHaveAttribute("href", "https://example.com");
     });

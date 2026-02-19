@@ -2,7 +2,7 @@ import { createMemoryRouter } from "react-router-dom";
 import { Root } from "./routes/Root/Root";
 import { Home } from "./routes/Home/Home";
 import { About } from "./routes/About/About";
-import { Projects } from "./routes/Projects/Projects";
+import { OpenSource } from "./routes/OpenSource/OpenSource";
 
 describe("Router tests", () => {
     it("should render Root component", () => {
@@ -20,8 +20,8 @@ describe("Router tests", () => {
                         element: <About />,
                     },
                     {
-                        path: "*projects",
-                        element: <Projects />,
+                        path: "*open-source",
+                        element: <OpenSource />,
                     },
                 ],
             },

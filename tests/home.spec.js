@@ -17,7 +17,7 @@ test.describe('Home Page', () => {
         // Check for main navigation
         await expect(page.getByRole('link', { name: /about/i })).toBeVisible();
         await expect(page.getByRole('link', { name: /experience/i })).toBeVisible();
-        await expect(page.getByRole('link', { name: /projects/i })).toBeVisible();
+        await expect(page.getByRole('link', { name: /open source/i })).toBeVisible();
         await expect(page.getByRole('link', { name: /certifications/i })).toBeVisible();
     });
     test('should display hero image', async ({ page }) => {

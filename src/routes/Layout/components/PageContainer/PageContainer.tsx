@@ -28,7 +28,11 @@ export const PageContainer = ({
 
     const renderContent = () => {
         if (layout === "scroll") {
-            return <ScrollSection>{children}</ScrollSection>;
+            return (
+                <div className="w-full h-full animate-fadeIn">
+                    <ScrollSection>{children}</ScrollSection>
+                </div>
+            );
         }
 
         if (layout === "hero") {

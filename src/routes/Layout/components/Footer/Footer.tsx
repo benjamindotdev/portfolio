@@ -19,7 +19,7 @@ export const Footer = ({
         <footer className="min-h-[5dvh] w-full flex flex-row flex-nowrap items-end justify-end px-0 py-4 md:p-8" aria-label="Site footer">
             <nav className="flex flex-row justify-evenly w-full md:w-auto md:gap-8 items-end" aria-label="Social media links">
 
-                <LanguageFlag countryCode="gb" proficiency="C2" />
+                <LanguageFlag countryCode="gb" proficiency="F" />
                 <LanguageFlag countryCode="de" proficiency="B1" />
 
                 {socials.map((social) => (

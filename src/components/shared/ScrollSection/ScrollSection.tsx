@@ -1,4 +1,4 @@
-import { useState, useEffect, ReactNode } from "react";
+import { useState, useEffect, useRef, ReactNode } from "react";
 
 export const ScrollSection = ({
     children,
@@ -8,12 +8,13 @@ export const ScrollSection = ({
     showBreadcrumbs?: boolean;
 }) => {
     const [activeSection, setActiveSection] = useState(0);
+    const scrollContainerRef = useRef<HTMLDivElement>(null);
 
     // Ensure children is always an array
     const childrenArray = Array.isArray(children) ? children : [children];
 
     useEffect(() => {
-        const scrollContainer = document.querySelector('.scroll-container');
+        const scrollContainer = scrollContainerRef.current;
         if (!scrollContainer) return;
 
         const handleScroll = () => {
@@ -24,6 +25,9 @@ export const ScrollSection = ({
         };
 
         scrollContainer.addEventListener('scroll', handleScroll);
+        // Initial check in case of refresh with scroll position
+        handleScroll();
+        
         return () => scrollContainer.removeEventListener('scroll', handleScroll);
     }, []);
 
@@ -46,7 +50,10 @@ export const ScrollSection = ({
                 </nav>
             )}
 
-            <div className="h-full overflow-y-scroll snap-y snap-mandatory scrollbar-hide scroll-container">
+            <div 
+                ref={scrollContainerRef}
+                className="h-full overflow-y-scroll snap-y snap-mandatory scrollbar-hide scroll-container"
+            >
                 {childrenArray.map((child, index) => (
                     <article
                         key={index}

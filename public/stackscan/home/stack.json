@@ -1,0 +1,58 @@
+[
+  {
+    "name": "TypeScript",
+    "slug": "typescript",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/language/typescript.svg",
+    "type": "language",
+    "color": "#3178C6",
+    "relativePath": "./public/assets/logos/language/typescript.svg"
+  },
+  {
+    "name": "Next.js",
+    "slug": "next",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/frontend/nextdotjs.svg",
+    "type": "frontend",
+    "color": null,
+    "relativePath": "./public/assets/logos/frontend/nextdotjs.svg"
+  },
+  {
+    "name": "React",
+    "slug": "react",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/frontend/react.svg",
+    "type": "frontend",
+    "color": "#61DAFB",
+    "relativePath": "./public/assets/logos/frontend/react.svg"
+  },
+  {
+    "name": "Node.js",
+    "slug": "@types/node",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/runtime/nodejs.svg",
+    "type": "runtime",
+    "color": null,
+    "relativePath": "./public/assets/logos/runtime/nodejs.svg"
+  },
+  {
+    "name": "PostgreSQL",
+    "slug": "pg",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/database/postgresql.svg",
+    "type": "database",
+    "color": "#4169E1",
+    "relativePath": "./public/assets/logos/database/postgresql.svg"
+  },
+  {
+    "name": "Prisma",
+    "slug": "prisma",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/orm/prisma.svg",
+    "type": "orm",
+    "color": "#2D3748",
+    "relativePath": "./public/assets/logos/orm/prisma.svg"
+  },
+  {
+    "name": "TailwindCSS",
+    "slug": "tailwindcss",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/css/tailwindcss.svg",
+    "type": "css",
+    "color": "#06B6D4",
+    "relativePath": "./public/assets/logos/css/tailwindcss.svg"
+  }
+]

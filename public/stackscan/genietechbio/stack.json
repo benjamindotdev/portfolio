@@ -42,9 +42,9 @@
   {
     "name": "AWS",
     "slug": "aws-sdk",
-    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/defaults/cloud.svg",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/cloud/aws.svg",
     "type": "cloud",
     "color": null,
-    "relativePath": "./public/assets/logos/defaults/cloud.svg"
+    "relativePath": "./public/assets/logos/cloud/aws.svg"
   }
 ]

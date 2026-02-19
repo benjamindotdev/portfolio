@@ -27,3 +27,11 @@
 - <img src="https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/lint/eslint.svg" alt="ESLint" width="24" height="24" /> **ESLint**
 - <img src="https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/lint/husky.svg" alt="Husky" width="24" height="24" /> **Husky**
 
+## Runtime
+
+- <img src="https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/runtime/nodejs.svg" alt="Node.js" width="24" height="24" /> **Node.js**
+
+## Utility
+
+- <img src="https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/utility/lucide.svg" alt="Lucide" width="24" height="24" /> **Lucide**
+

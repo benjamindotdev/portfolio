@@ -32,6 +32,7 @@ module.exports = {
       animation: {
         rotate: "rotate 10s linear infinite",
         fadeIn: "fadeIn 0.5s ease-in",
+        "scroll-ping-pong": "scroll-ping-pong 10s ease-in-out infinite alternate",
       },
       keyframes: {
         rotate: {
@@ -40,6 +41,10 @@ module.exports = {
         fadeIn: {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
+        },
+        "scroll-ping-pong": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(var(--scroll-target))" },
         },
       },
       fontFamily: {

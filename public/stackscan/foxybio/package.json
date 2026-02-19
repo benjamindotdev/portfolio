@@ -32,7 +32,8 @@
     "junit": "^5.0.0",
     "testcontainers": "latest",
     "mockito": "latest",
-    "docker": "latest"
+    "docker": "latest",
+    "rust": "latest"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",

@@ -16,6 +16,14 @@
     "relativePath": "./public/assets/logos/frontend/react.svg"
   },
   {
+    "name": "Node.js",
+    "slug": "@types/node",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/runtime/nodejs.svg",
+    "type": "runtime",
+    "color": null,
+    "relativePath": "./public/assets/logos/runtime/nodejs.svg"
+  },
+  {
     "name": "PostCSS",
     "slug": "postcss",
     "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/css/postcss.svg",
@@ -70,5 +78,13 @@
     "type": "lint",
     "color": null,
     "relativePath": "./public/assets/logos/lint/husky.svg"
+  },
+  {
+    "name": "Lucide",
+    "slug": "lucide-react",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/utility/lucide.svg",
+    "type": "utility",
+    "color": "#F56565",
+    "relativePath": "./public/assets/logos/utility/lucide.svg"
   }
 ]

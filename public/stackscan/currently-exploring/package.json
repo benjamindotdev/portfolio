@@ -1,0 +1,9 @@
+{
+  "name": "currently-exploring",
+  "version": "1.0.0",
+  "dependencies": {
+    "graphql": "1.0.0",
+    "expo": "1.0.0",
+    "docker": "1.0.0"
+  }
+}

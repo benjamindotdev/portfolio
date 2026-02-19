@@ -6,7 +6,25 @@ import { ThemeProvider } from "../../contexts/ThemeContext";
 import type { Technology } from "@/global";
 import "@testing-library/jest-dom";
 
-const mockTechnologies = benjamin.technologies as Technology[];
+const mockTechnologies: Technology[] = [
+    {
+        key: 1,
+        name: "React",
+        image: "react.png",
+        link: "https://react.dev",
+        type: "Frontend",
+        homepage: true,
+        stackSection: "Core Technologies",
+    },
+    {
+        key: 2,
+        name: "Docker",
+        image: "docker.png",
+        link: "https://docker.com",
+        type: "Tool",
+        stackSection: "Additional Tools",
+    },
+];
 
 describe("Stack Component", () => {
     it("renders the Stack component with technologies", () => {

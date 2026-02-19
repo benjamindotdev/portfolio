@@ -1,13 +1,13 @@
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import { ExperienceItem, Tech, Technology } from "@/global";
+import { ExperienceItem } from "@/global";
 import { SubHeading } from "@/components/shared/SubHeading/SubHeading";
 import { TechList } from "@/components/shared/TechList/TechList";
-import { benjamin } from "@/constants";
 import { useTheme } from "../../../../contexts/ThemeContext";
 import { Separator } from "@/components/shared/Separator/Separator";
 import { Badge } from "@/components/shared/Badge/Badge";
 import { SkillBadge } from "@/components/shared/SkillBadge/SkillBadge";
 import { MetadataText } from "@/components/shared/MetadataText/MetadataText";
+import { useStackscanTechs } from "@/hooks/useStackscanTechs";
 
 export const MobileExperienceCard = ({
     experience,
@@ -15,7 +15,19 @@ export const MobileExperienceCard = ({
     experience: ExperienceItem;
 }) => {
     const { theme } = useTheme();
-    const { title, company, location, date, description, details, techStack, skills, logo, type, isCurrent } = experience;
+    // Destructure properties from experience
+    const { 
+        title, 
+        company, 
+        location, 
+        date, 
+        description, 
+        details, 
+        skills, 
+        logo, 
+        type, 
+        isCurrent 
+    } = experience;
 
     const logoSrc = typeof logo === "string"
         ? logo
@@ -23,41 +35,7 @@ export const MobileExperienceCard = ({
             ? logo.darkImage
             : logo.lightImage;
 
-    // Transform techStack similar to ProjectSection
-    const transformTechStack = (
-        techStack: Technology[] | string[]
-    ): Tech[] => {
-        return techStack.map((tech, index) => {
-            if (typeof tech === "string") {
-                const foundTech = benjamin.technologies.find(
-                    (technology) => technology.name === tech
-                );
-                if (foundTech) {
-                    return {
-                        key: foundTech.key,
-                        name: foundTech.name,
-                        image: foundTech.image,
-                        link: foundTech.link,
-                        className: (foundTech.name === "Express" || foundTech.name === "MongoDB") ? "ml-12" : "",
-                    };
-                }
-                return {
-                    key: index,
-                    name: tech,
-                    image: "",
-                    link: "",
-                };
-            }
-            return {
-                key: tech.key || index,
-                name: tech.name,
-                image: tech.image || "",
-                link: tech.link || "",
-            };
-        });
-    };
-
-    const techsForDisplay = techStack ? transformTechStack(techStack) : [];
+    const techsForDisplay = useStackscanTechs(experience);
 
     return (
         <div className="w-full h-full flex items-center justify-start pl-4">

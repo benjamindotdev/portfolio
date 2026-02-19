@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Expo",
+    "slug": "expo",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/mobile/expo.svg",
+    "type": "mobile",
+    "color": "#1C2024",
+    "relativePath": "./public/assets/logos/mobile/expo.svg"
+  },
+  {
+    "name": "GraphQL",
+    "slug": "graphql",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/api/graphql.svg",
+    "type": "api",
+    "color": "#E10098",
+    "relativePath": "./public/assets/logos/api/graphql.svg"
+  },
+  {
+    "name": "Docker",
+    "slug": "docker",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/container/docker.svg",
+    "type": "container",
+    "color": "#2496ED",
+    "relativePath": "./public/assets/logos/container/docker.svg"
+  }
+]

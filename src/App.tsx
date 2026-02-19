@@ -4,7 +4,7 @@ import { Home } from "./routes/Home/Home";
 import { About } from "./routes/About/About";
 import { Certifications } from "./routes/Certifications/Certifications";
 import { Experience } from "./routes/Experience/Experience";
-import { Projects } from "./routes/Projects/Projects";
+import { OpenSource } from "./routes/OpenSource/OpenSource";
 import { Freelance } from "./routes/Freelance/Freelance";
 import { Stack } from "./routes/Stack/Stack";
 // import { Events } from "./routes/Events/Events";
@@ -43,8 +43,8 @@ export const App = () => (
                     element={<Experience experience={benjamin.experience} />}
                 />
                 <Route
-                    path="projects"
-                    element={<Projects projects={benjamin.projects} />}
+                    path="open-source"
+                    element={<OpenSource projects={benjamin.projects} />}
                 />
                 <Route
                     path="freelance"

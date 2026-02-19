@@ -25,7 +25,13 @@
 - <img src="https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/lint/husky.svg" alt="Husky" width="24" height="24" /> **Husky**
 - <img src="https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/lint/lintstaged.svg" alt="Lint-staged" width="24" height="24" /> **Lint-staged**
 
+## Runtime
+
+- <img src="https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/runtime/nodejs.svg" alt="Node.js" width="24" height="24" /> **Node.js**
+- <img src="https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/runtime/tsnode.svg" alt="ts-node" width="24" height="24" /> **ts-node**
+
 ## Utility
 
 - <img src="https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/utility/lodash.svg" alt="Lodash" width="24" height="24" /> **Lodash**
+- <img src="https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/utility/lucide.svg" alt="Lucide" width="24" height="24" /> **Lucide**
 

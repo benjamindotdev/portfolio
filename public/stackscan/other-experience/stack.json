@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Convex",
+    "slug": "convex",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/backend/convex.svg",
+    "type": "backend",
+    "color": null,
+    "relativePath": "./public/assets/logos/backend/convex.svg"
+  },
+  {
+    "name": "MongoDB",
+    "slug": "mongodb",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/database/mongodb.svg",
+    "type": "database",
+    "color": "#47A248",
+    "relativePath": "./public/assets/logos/database/mongodb.svg"
+  },
+  {
+    "name": "Mantine",
+    "slug": "@mantine/core",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/css/mantine.svg",
+    "type": "css",
+    "color": "#339AF0",
+    "relativePath": "./public/assets/logos/css/mantine.svg"
+  },
+  {
+    "name": "Material UI",
+    "slug": "@mui/material",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/css/mui.svg",
+    "type": "css",
+    "color": null,
+    "relativePath": "./public/assets/logos/css/mui.svg"
+  },
+  {
+    "name": "shadcn/ui",
+    "slug": "shadcn-ui",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/css/shadcn.svg",
+    "type": "css",
+    "color": null,
+    "relativePath": "./public/assets/logos/css/shadcn.svg"
+  },
+  {
+    "name": "Netlify",
+    "slug": "netlify",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/hosting/netlify.svg",
+    "type": "hosting",
+    "color": "#00C7B7",
+    "relativePath": "./public/assets/logos/hosting/netlify.svg"
+  },
+  {
+    "name": "Railway",
+    "slug": "@railway/cli",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/hosting/railway.svg",
+    "type": "hosting",
+    "color": "#0B0D0E",
+    "relativePath": "./public/assets/logos/hosting/railway.svg"
+  },
+  {
+    "name": "Notion",
+    "slug": "notion",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/utility/notion.svg",
+    "type": "utility",
+    "color": "#000000",
+    "relativePath": "./public/assets/logos/utility/notion.svg"
+  },
+  {
+    "name": "Slack",
+    "slug": "slack",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/utility/slack.svg",
+    "type": "utility",
+    "color": "#4A154B",
+    "relativePath": "./public/assets/logos/utility/slack.svg"
+  },
+  {
+    "name": "Trello",
+    "slug": "trello",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/utility/trello.svg",
+    "type": "utility",
+    "color": "#0052CC",
+    "relativePath": "./public/assets/logos/utility/trello.svg"
+  }
+]

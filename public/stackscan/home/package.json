@@ -1,0 +1,13 @@
+{
+  "name": "home",
+  "version": "1.0.0",
+  "dependencies": {
+    "typescript": "latest",
+    "next": "latest",
+    "react": "latest",
+    "@types/node": "latest",
+    "pg": "latest",
+    "prisma": "latest",
+    "tailwindcss": "latest"
+  }
+}

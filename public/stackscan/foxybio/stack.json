@@ -8,6 +8,14 @@
     "relativePath": "./public/assets/logos/language/openjdk.svg"
   },
   {
+    "name": "Rust",
+    "slug": "rust",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/language/rust.svg",
+    "type": "language",
+    "color": "#000000",
+    "relativePath": "./public/assets/logos/language/rust.svg"
+  },
+  {
     "name": "TypeScript",
     "slug": "typescript",
     "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/language/typescript.svg",
@@ -22,6 +30,22 @@
     "type": "frontend",
     "color": "#61DAFB",
     "relativePath": "./public/assets/logos/frontend/react.svg"
+  },
+  {
+    "name": "Spring Boot",
+    "slug": "spring-boot",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/backend/springboot.svg",
+    "type": "backend",
+    "color": "#6DB33F",
+    "relativePath": "./public/assets/logos/backend/springboot.svg"
+  },
+  {
+    "name": "Node.js",
+    "slug": "@types/node",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/runtime/nodejs.svg",
+    "type": "runtime",
+    "color": null,
+    "relativePath": "./public/assets/logos/runtime/nodejs.svg"
   },
   {
     "name": "Firebase Auth",
@@ -78,6 +102,14 @@
     "type": "ai",
     "color": "#412991",
     "relativePath": "./public/assets/logos/ai/openai.svg"
+  },
+  {
+    "name": "Lucide",
+    "slug": "lucide-react",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/utility/lucide.svg",
+    "type": "utility",
+    "color": "#F56565",
+    "relativePath": "./public/assets/logos/utility/lucide.svg"
   },
   {
     "name": "Stripe",

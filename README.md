@@ -246,94 +246,220 @@ lhci autorun
 <!-- STACKSYNC_START -->
 ## My Projects
 
+### additional-tools
+<p>
+  <img src="./public/assets/logos/state/zustand.svg" alt="Zustand" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/hosting/vercel.svg" alt="Vercel" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/testing/jest.svg" alt="Jest" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/testing/testinglibrary.svg" alt="Testing Library" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/build/vite.svg" alt="Vite" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/ai/githubcopilot.svg" alt="GitHub Copilot" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/utility/figma.svg" alt="Figma" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/payment/stripe.svg" alt="Stripe" height="25" style="margin-right: 10px;" />
+</p>
+
+### core-technologies
+<p>
+  <img src="./public/assets/logos/language/typescript.svg" alt="TypeScript" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/frontend/nextdotjs.svg" alt="Next.js" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/frontend/react.svg" alt="React" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/runtime/nodejs.svg" alt="Node.js" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/database/postgresql.svg" alt="PostgreSQL" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/orm/prisma.svg" alt="Prisma" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/css/tailwindcss.svg" alt="TailwindCSS" height="25" style="margin-right: 10px;" />
+</p>
+
+### currently-exploring
+<p>
+  <img src="./public/assets/logos/mobile/expo.svg" alt="Expo" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/api/graphql.svg" alt="GraphQL" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/container/docker.svg" alt="Docker" height="25" style="margin-right: 10px;" />
+</p>
+
 ### foxybio
 <p>
-  <img src="./public/assets/logos/auth/firebase.svg" alt="Firebase Auth" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/language/openjdk.svg" alt="Java" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/language/rust.svg" alt="Rust" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/language/typescript.svg" alt="TypeScript" height="25" style="margin-right: 10px;" />
   <img src="./public/assets/logos/frontend/react.svg" alt="React" height="25" style="margin-right: 10px;" />
-  <img src="./public/assets/logos/lint/eslint.svg" alt="ESLint" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/backend/springboot.svg" alt="Spring Boot" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/runtime/nodejs.svg" alt="Node.js" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/auth/firebase.svg" alt="Firebase Auth" height="25" style="margin-right: 10px;" />
   <img src="./public/assets/logos/css/postcss.svg" alt="PostCSS" height="25" style="margin-right: 10px;" />
   <img src="./public/assets/logos/css/tailwindcss.svg" alt="TailwindCSS" height="25" style="margin-right: 10px;" />
-  <img src="./public/assets/logos/language/typescript.svg" alt="TypeScript" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/container/docker.svg" alt="Docker" height="25" style="margin-right: 10px;" />
   <img src="./public/assets/logos/build/vite.svg" alt="Vite" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/lint/eslint.svg" alt="ESLint" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/ai/openai.svg" alt="OpenAI SDK" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/utility/lucide.svg" alt="Lucide" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/payment/stripe.svg" alt="Stripe" height="25" style="margin-right: 10px;" />
+</p>
+
+### genietechbio
+<p>
+  <img src="./public/assets/logos/language/python.svg" alt="Python" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/language/typescript.svg" alt="TypeScript" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/frontend/react.svg" alt="React" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/state/zustand.svg" alt="Zustand" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/css/tailwindcss.svg" alt="TailwindCSS" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/cloud/aws.svg" alt="AWS" height="25" style="margin-right: 10px;" />
+</p>
+
+### home
+<p>
+  <img src="./public/assets/logos/language/typescript.svg" alt="TypeScript" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/frontend/nextdotjs.svg" alt="Next.js" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/frontend/react.svg" alt="React" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/runtime/nodejs.svg" alt="Node.js" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/database/postgresql.svg" alt="PostgreSQL" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/orm/prisma.svg" alt="Prisma" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/css/tailwindcss.svg" alt="TailwindCSS" height="25" style="margin-right: 10px;" />
+</p>
+
+### ironhack
+<p>
+  <img src="./public/assets/logos/language/typescript.svg" alt="TypeScript" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/frontend/react.svg" alt="React" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/backend/express.svg" alt="Express" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/database/mongodb.svg" alt="MongoDB" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/css/tailwindcss.svg" alt="TailwindCSS" height="25" style="margin-right: 10px;" />
+</p>
+
+### mvp
+<p>
+  <img src="./public/assets/logos/language/typescript.svg" alt="TypeScript" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/frontend/nextdotjs.svg" alt="Next.js" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/frontend/react.svg" alt="React" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/runtime/nodejs.svg" alt="Node.js" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/runtime/tsnode.svg" alt="ts-node" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/css/tailwindcss.svg" alt="TailwindCSS" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/testing/jest.svg" alt="Jest" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/testing/testinglibrary.svg" alt="Testing Library" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/lint/eslint.svg" alt="ESLint" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/utility/lucide.svg" alt="Lucide" height="25" style="margin-right: 10px;" />
+</p>
+
+### organicsbest
+<p>
+  <img src="./public/assets/logos/language/javascript.svg" alt="JavaScript" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/build/webpack.svg" alt="Webpack" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/cms/shopify.svg" alt="Shopify" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/cms/wordpress.svg" alt="WordPress" height="25" style="margin-right: 10px;" />
+</p>
+
+### other-experience
+<p>
+  <img src="./public/assets/logos/backend/convex.svg" alt="Convex" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/database/mongodb.svg" alt="MongoDB" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/css/mantine.svg" alt="Mantine" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/css/mui.svg" alt="Material UI" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/css/shadcn.svg" alt="shadcn/ui" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/hosting/netlify.svg" alt="Netlify" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/hosting/railway.svg" alt="Railway" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/utility/notion.svg" alt="Notion" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/utility/slack.svg" alt="Slack" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/utility/trello.svg" alt="Trello" height="25" style="margin-right: 10px;" />
 </p>
 
 ### portfolio
 <p>
-  <img src="./public/assets/logos/frontend/react.svg" alt="React" height="25" style="margin-right: 10px;" />
   <img src="./public/assets/logos/language/typescript.svg" alt="TypeScript" height="25" style="margin-right: 10px;" />
-  <img src="./public/assets/logos/testing/playwright.svg" alt="Playwright" height="25" style="margin-right: 10px;" />
-  <img src="./public/assets/logos/testing/testinglibrary.svg" alt="Testing Library" height="25" style="margin-right: 10px;" />
-  <img src="./public/assets/logos/lint/husky.svg" alt="Husky" height="25" style="margin-right: 10px;" />
-  <img src="./public/assets/logos/testing/jest.svg" alt="Jest" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/frontend/react.svg" alt="React" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/runtime/nodejs.svg" alt="Node.js" height="25" style="margin-right: 10px;" />
   <img src="./public/assets/logos/css/postcss.svg" alt="PostCSS" height="25" style="margin-right: 10px;" />
   <img src="./public/assets/logos/css/tailwindcss.svg" alt="TailwindCSS" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/testing/jest.svg" alt="Jest" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/testing/playwright.svg" alt="Playwright" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/testing/testinglibrary.svg" alt="Testing Library" height="25" style="margin-right: 10px;" />
   <img src="./public/assets/logos/build/vite.svg" alt="Vite" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/lint/husky.svg" alt="Husky" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/utility/lucide.svg" alt="Lucide" height="25" style="margin-right: 10px;" />
 </p>
 
 ### sh.coach
 <p>
+  <img src="./public/assets/logos/language/typescript.svg" alt="TypeScript" height="25" style="margin-right: 10px;" />
   <img src="./public/assets/logos/frontend/react.svg" alt="React" height="25" style="margin-right: 10px;" />
-  <img src="./public/assets/logos/testing/testinglibrary.svg" alt="Testing Library" height="25" style="margin-right: 10px;" />
-  <img src="./public/assets/logos/lint/eslint.svg" alt="ESLint" height="25" style="margin-right: 10px;" />
-  <img src="./public/assets/logos/lint/husky.svg" alt="Husky" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/runtime/nodejs.svg" alt="Node.js" height="25" style="margin-right: 10px;" />
   <img src="./public/assets/logos/css/postcss.svg" alt="PostCSS" height="25" style="margin-right: 10px;" />
   <img src="./public/assets/logos/css/tailwindcss.svg" alt="TailwindCSS" height="25" style="margin-right: 10px;" />
-  <img src="./public/assets/logos/language/typescript.svg" alt="TypeScript" height="25" style="margin-right: 10px;" />
-  <img src="./public/assets/logos/build/vite.svg" alt="Vite" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/testing/testinglibrary.svg" alt="Testing Library" height="25" style="margin-right: 10px;" />
   <img src="./public/assets/logos/testing/vitest.svg" alt="Vitest" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/build/vite.svg" alt="Vite" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/lint/eslint.svg" alt="ESLint" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/lint/husky.svg" alt="Husky" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/utility/lucide.svg" alt="Lucide" height="25" style="margin-right: 10px;" />
 </p>
 
 ### shep
 <p>
+  <img src="./public/assets/logos/language/typescript.svg" alt="TypeScript" height="25" style="margin-right: 10px;" />
   <img src="./public/assets/logos/frontend/nextdotjs.svg" alt="Next.js" height="25" style="margin-right: 10px;" />
   <img src="./public/assets/logos/frontend/react.svg" alt="React" height="25" style="margin-right: 10px;" />
-  <img src="./public/assets/logos/payment/stripe.svg" alt="Stripe" height="25" style="margin-right: 10px;" />
-  <img src="./public/assets/logos/utility/zod.svg" alt="Zod" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/backend/convex.svg" alt="Convex" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/runtime/nodejs.svg" alt="Node.js" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/fallback/reactquery.svg" alt="TanStack Query" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/css/shadcn.svg" alt="shadcn/ui" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/css/tailwindcss.svg" alt="TailwindCSS" height="25" style="margin-right: 10px;" />
   <img src="./public/assets/logos/testing/testinglibrary.svg" alt="Testing Library" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/testing/vitest.svg" alt="Vitest" height="25" style="margin-right: 10px;" />
   <img src="./public/assets/logos/lint/eslint.svg" alt="ESLint" height="25" style="margin-right: 10px;" />
   <img src="./public/assets/logos/lint/husky.svg" alt="Husky" height="25" style="margin-right: 10px;" />
   <img src="./public/assets/logos/lint/lintstaged.svg" alt="Lint-staged" height="25" style="margin-right: 10px;" />
-  <img src="./public/assets/logos/css/tailwindcss.svg" alt="TailwindCSS" height="25" style="margin-right: 10px;" />
-  <img src="./public/assets/logos/language/typescript.svg" alt="TypeScript" height="25" style="margin-right: 10px;" />
-  <img src="./public/assets/logos/testing/vitest.svg" alt="Vitest" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/utility/lucide.svg" alt="Lucide" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/utility/zod.svg" alt="Zod" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/payment/stripe.svg" alt="Stripe" height="25" style="margin-right: 10px;" />
 </p>
 
 ### sherds
 <p>
+  <img src="./public/assets/logos/language/typescript.svg" alt="TypeScript" height="25" style="margin-right: 10px;" />
   <img src="./public/assets/logos/frontend/nextdotjs.svg" alt="Next.js" height="25" style="margin-right: 10px;" />
-  <img src="./public/assets/logos/auth/authjs.svg" alt="Auth.js" height="25" style="margin-right: 10px;" />
-  <img src="./public/assets/logos/database/postgresql.svg" alt="PostgreSQL" height="25" style="margin-right: 10px;" />
   <img src="./public/assets/logos/frontend/react.svg" alt="React" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/runtime/nodejs.svg" alt="Node.js" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/database/postgresql.svg" alt="PostgreSQL" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/orm/prisma.svg" alt="Prisma" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/auth/authjs.svg" alt="Auth.js" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/css/tailwindcss.svg" alt="TailwindCSS" height="25" style="margin-right: 10px;" />
   <img src="./public/assets/logos/testing/testinglibrary.svg" alt="Testing Library" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/testing/vitest.svg" alt="Vitest" height="25" style="margin-right: 10px;" />
   <img src="./public/assets/logos/lint/eslint.svg" alt="ESLint" height="25" style="margin-right: 10px;" />
   <img src="./public/assets/logos/lint/husky.svg" alt="Husky" height="25" style="margin-right: 10px;" />
   <img src="./public/assets/logos/lint/lintstaged.svg" alt="Lint-staged" height="25" style="margin-right: 10px;" />
   <img src="./public/assets/logos/format/prettier.svg" alt="Prettier" height="25" style="margin-right: 10px;" />
-  <img src="./public/assets/logos/orm/prisma.svg" alt="Prisma" height="25" style="margin-right: 10px;" />
-  <img src="./public/assets/logos/css/tailwindcss.svg" alt="TailwindCSS" height="25" style="margin-right: 10px;" />
-  <img src="./public/assets/logos/language/typescript.svg" alt="TypeScript" height="25" style="margin-right: 10px;" />
-  <img src="./public/assets/logos/testing/vitest.svg" alt="Vitest" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/utility/lucide.svg" alt="Lucide" height="25" style="margin-right: 10px;" />
 </p>
 
 ### solitairedaily.com
 <p>
-  <img src="./public/assets/logos/utility/lodash.svg" alt="Lodash" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/language/typescript.svg" alt="TypeScript" height="25" style="margin-right: 10px;" />
   <img src="./public/assets/logos/frontend/nextdotjs.svg" alt="Next.js" height="25" style="margin-right: 10px;" />
   <img src="./public/assets/logos/frontend/react.svg" alt="React" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/runtime/nodejs.svg" alt="Node.js" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/runtime/tsnode.svg" alt="ts-node" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/css/postcss.svg" alt="PostCSS" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/css/tailwindcss.svg" alt="TailwindCSS" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/testing/jest.svg" alt="Jest" height="25" style="margin-right: 10px;" />
   <img src="./public/assets/logos/testing/testinglibrary.svg" alt="Testing Library" height="25" style="margin-right: 10px;" />
   <img src="./public/assets/logos/lint/eslint.svg" alt="ESLint" height="25" style="margin-right: 10px;" />
   <img src="./public/assets/logos/lint/husky.svg" alt="Husky" height="25" style="margin-right: 10px;" />
-  <img src="./public/assets/logos/testing/jest.svg" alt="Jest" height="25" style="margin-right: 10px;" />
   <img src="./public/assets/logos/lint/lintstaged.svg" alt="Lint-staged" height="25" style="margin-right: 10px;" />
-  <img src="./public/assets/logos/css/postcss.svg" alt="PostCSS" height="25" style="margin-right: 10px;" />
-  <img src="./public/assets/logos/css/tailwindcss.svg" alt="TailwindCSS" height="25" style="margin-right: 10px;" />
-  <img src="./public/assets/logos/language/typescript.svg" alt="TypeScript" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/utility/lodash.svg" alt="Lodash" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/utility/lucide.svg" alt="Lucide" height="25" style="margin-right: 10px;" />
 </p>
 
 ### stackscan
 <p>
-  <img src="./public/assets/logos/defaults/package.svg" alt="Tsup" height="25" style="margin-right: 10px;" />
   <img src="./public/assets/logos/language/typescript.svg" alt="TypeScript" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/runtime/nodejs.svg" alt="Node.js" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/defaults/package.svg" alt="Tsup" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/utility/cosmiconfig.svg" alt="Cosmiconfig" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/utility/fast-glob.svg" alt="fast-glob" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/utility/fs-extra.svg" alt="fs-extra" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/utility/lucide.svg" alt="Lucide" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/cli/chalk.svg" alt="Chalk" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/cli/commander.svg" alt="Commander.js" height="25" style="margin-right: 10px;" />
+  <img src="./public/assets/logos/cli/ora.svg" alt="Ora" height="25" style="margin-right: 10px;" />
 </p>
 
 <!-- STACKSYNC_END -->

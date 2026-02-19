@@ -23,7 +23,6 @@ export const FreelanceCard = ({
             : image.lightImage;
 
     const techsForDisplay = useStackscanTechs(project);
-    const link = deployedLink || repoLink || packageLink;
 
     return (
         <div
@@ -40,7 +39,7 @@ export const FreelanceCard = ({
                         loading="lazy"
                     />
                     <div className="flex flex-col gap-2 flex-1">
-                        <SubHeading text={name} />
+                        <SubHeading text={name} url={deployedLink} />
 
                     </div>
                 </div>
@@ -55,7 +54,6 @@ export const FreelanceCard = ({
                             <img src={theme === "dark" ? "logos/socials/githubWhite.png" : "logos/socials/githubBlack.png"} alt="GitHub" className="w-6 h-6" />
                         </a>
                     )}
-                    {link && <LinkButton link={link} />}
                 </div>
             </div>
 
@@ -73,7 +71,7 @@ export const FreelanceCard = ({
                 <div className="grid grid-cols-[auto_1fr] gap-x-3 gap-y-2 items-center">
                     {client.needed && (
                         <>
-                            <span className="text-sm">🎯</span>
+                            <span className="text-sm">💡</span>
                             <p className="text-sm leading-relaxed m-0 text-slate-700 dark:text-portfolio-white">{client.needed}</p>
                         </>
                     )}
@@ -85,7 +83,7 @@ export const FreelanceCard = ({
                     )}
                     {client.challenge && (
                         <>
-                            <span className="text-sm">⚙️</span>
+                            <span className="text-sm">⚡</span>
                             <p className="text-sm leading-relaxed m-0 text-slate-700 dark:text-portfolio-white">{client.challenge}</p>
                         </>
                     )}

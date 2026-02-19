@@ -1,3 +1,4 @@
+import { useStackscanTechs } from "@/hooks/useStackscanTechs";
 import type { Technology } from "@/global";
 import { HeroImage } from "@/components/shared/HeroImage/HeroImage";
 import { CTAButton } from "@/components/shared/CTAButton/CTAButton";
@@ -16,7 +17,13 @@ export const Home = ({
     name?: string;
 }) => {
     const { theme } = useTheme();
-    const homepageTechs = technologies.filter(tech => tech.homepage);
+    // Use the hook with a dummy project that includes the stackscanKey
+    const stackscanTechs = useStackscanTechs({ stackscanKey: "home" } as any);
+    
+    // If stackscan hook returns data, use it. Otherwise retain the filtering logic on 'technologies' prop.
+    const homepageTechs = (stackscanTechs && stackscanTechs.length > 0)
+        ? stackscanTechs
+        : technologies.filter(tech => tech.homepage);
 
     return (
         <>
@@ -59,9 +66,9 @@ export const Home = ({
                             <p>I'm focused on modern JavaScript, full-stack development, and clean UX</p>
                         </div>
                         <div className="flex flex-wrap items-center gap-6">
-                            {homepageTechs.map((tech, index) => (
+                            {(homepageTechs || []).map((tech, index) => (
                                 <TechLogoImage
-                                    key={tech.key}
+                                    key={tech.key || index}
                                     image={tech.image}
                                     name={tech.name}
                                     link={tech.link}

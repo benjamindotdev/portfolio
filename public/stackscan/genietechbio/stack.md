@@ -11,7 +11,7 @@
 
 ## Cloud
 
-- <img src="https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/defaults/cloud.svg" alt="AWS" width="24" height="24" /> **AWS**
+- <img src="https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/cloud/aws.svg" alt="AWS" width="24" height="24" /> **AWS**
 
 ## Css
 

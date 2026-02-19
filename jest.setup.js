@@ -1,3 +1,5 @@
+require('@testing-library/jest-dom');
+
 // Mock config/env module for Jest
 jest.mock('./src/config/env', () => ({
     config: {
@@ -8,4 +10,11 @@ jest.mock('./src/config/env', () => ({
     },
     endpoints: {},
 }));
+
+// Mock ResizeObserver
+global.ResizeObserver = class ResizeObserver {
+    observe() {}
+    unobserve() {}
+    disconnect() {}
+};
 

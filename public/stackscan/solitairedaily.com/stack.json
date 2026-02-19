@@ -24,6 +24,22 @@
     "relativePath": "./public/assets/logos/frontend/react.svg"
   },
   {
+    "name": "Node.js",
+    "slug": "@types/node",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/runtime/nodejs.svg",
+    "type": "runtime",
+    "color": null,
+    "relativePath": "./public/assets/logos/runtime/nodejs.svg"
+  },
+  {
+    "name": "ts-node",
+    "slug": "ts-node",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/runtime/tsnode.svg",
+    "type": "runtime",
+    "color": null,
+    "relativePath": "./public/assets/logos/runtime/tsnode.svg"
+  },
+  {
     "name": "PostCSS",
     "slug": "postcss",
     "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/css/postcss.svg",
@@ -86,5 +102,13 @@
     "type": "utility",
     "color": "#3492FF",
     "relativePath": "./public/assets/logos/utility/lodash.svg"
+  },
+  {
+    "name": "Lucide",
+    "slug": "lucide-react",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/utility/lucide.svg",
+    "type": "utility",
+    "color": "#F56565",
+    "relativePath": "./public/assets/logos/utility/lucide.svg"
   }
 ]

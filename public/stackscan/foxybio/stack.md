@@ -3,11 +3,16 @@
 ## Language
 
 - <img src="https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/language/openjdk.svg" alt="Java" width="24" height="24" /> **Java**
+- <img src="https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/language/rust.svg" alt="Rust" width="24" height="24" /> **Rust**
 - <img src="https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/language/typescript.svg" alt="TypeScript" width="24" height="24" /> **TypeScript**
 
 ## Frontend
 
 - <img src="https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/frontend/react.svg" alt="React" width="24" height="24" /> **React**
+
+## Backend
+
+- <img src="https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/backend/springboot.svg" alt="Spring Boot" width="24" height="24" /> **Spring Boot**
 
 ## Auth
 
@@ -37,4 +42,12 @@
 ## Payment
 
 - <img src="https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/payment/stripe.svg" alt="Stripe" width="24" height="24" /> **Stripe**
+
+## Runtime
+
+- <img src="https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/runtime/nodejs.svg" alt="Node.js" width="24" height="24" /> **Node.js**
+
+## Utility
+
+- <img src="https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/utility/lucide.svg" alt="Lucide" width="24" height="24" /> **Lucide**
 

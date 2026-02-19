@@ -32,7 +32,8 @@ type ExperienceItem = {
         key: number;
         text: string;
     }[];
-    techStack: Technology[] | string[];
+    techStack?: Technology[] | string[];
+    stackscanKey?: string;
     skills?: string[];
     link?: string;
     logo: string | { lightImage: string; darkImage: string };
@@ -92,7 +93,7 @@ type Certification = {
 type Technology = {
     key: number;
     name: string;
-    image: string | { lightImage: string; darkImage: string };
+    image?: string | { lightImage: string; darkImage: string };
     category?: string;
     type:
     | "Frontend"
@@ -113,7 +114,7 @@ type Technology = {
 type Tech = {
     key: number;
     name: string;
-    image: string | { lightImage: string; darkImage: string };
+    image?: string | { lightImage: string; darkImage: string };
     link: string;
     className?: string;
 };
@@ -143,6 +144,11 @@ type Project = {
         position?: string;
         testimonial?: string;
         image?: string;
+        needed?: string;
+        solution?: string;
+        challenge?: string;
+    };
+    reason?: {
         needed?: string;
         solution?: string;
         challenge?: string;

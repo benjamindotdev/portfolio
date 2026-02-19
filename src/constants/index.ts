@@ -1,356 +1,274 @@
 import type { Benjamin, Technology, Project } from "@/global";
 
 const technologies = [
-    // Frontend Technologies
     {
         key: 0,
-        name: "HTML5",
-        image: "logos/stack/html5.svg",
-        link: "https://html.spec.whatwg.org/",
+        name: "HTML5",link: "https://html.spec.whatwg.org/",
         type: "Frontend",
     },
+    
     {
         key: 1,
-        name: "Javascript",
-        image: "logos/stack/js.svg",
-        link: "https://www.ecma-international.org/publications-and-standards/standards/ecma-262/",
+        name: "Javascript",link: "https://www.ecma-international.org/publications-and-standards/standards/ecma-262/",
         type: "Frontend",
     },
+    
+    {
+        key: 56,
+        name: "Python",link: "https://www.python.org/",
+        type: "Backend",
+    },
+    
     {
         key: 2,
-        name: "Typescript",
-        image: "logos/stack/typescript.svg",
-        link: "https://www.typescriptlang.org/",
+        name: "Typescript",link: "https://www.typescriptlang.org/",
         type: "Frontend",
         homepage: true,
         stackSection: "Core Technologies",
     },
+    
     {
-        key: 3,
-        name: "React",
-        image: "logos/stack/react.svg",
-        link: "https://react.dev/",
+        key: 38,
+        name: "Mantine",link: "https://mantine.dev/",
         type: "Frontend",
-        homepage: true,
-        stackSection: "Core Technologies",
+        stackSection: "Other Experience",
     },
+    
+    {
+        key: 34,
+        name: "Material-UI",link: "https://material-ui.com/",
+        type: "Frontend",
+        stackSection: "Other Experience",
+    },
+    
     {
         key: 4,
-        name: "Next.js",
-        image: "logos/stack/nextjs.svg",
-        link: "https://nextjs.org/",
+        name: "Next.js",link: "https://nextjs.org/",
         type: "Frontend",
         stackSection: "Core Technologies",
         homepage: true,
     },
+    
     {
-        key: 11,
-        name: "Webpack",
-        image: "logos/stack/webpack.png",
-        link: "https://webpack.js.org/",
+        key: 3,
+        name: "React",link: "https://react.dev/",
         type: "Frontend",
+        homepage: true,
+        stackSection: "Core Technologies",
     },
+    
+    {
+        key: 37,
+        name: "shadcn",link: "https://ui.shadcn.com/",
+        type: "Frontend",
+        stackSection: "Other Experience",
+    },
+    
     {
         key: 13,
-        name: "Zustand",
-        image: "logos/stack/zustand.svg",
-        link: "https://github.com/pmndrs/zustand",
+        name: "Zustand",link: "https://github.com/pmndrs/zustand",
         type: "Frontend",
         stackSection: "Additional Tools",
     },
+    
     {
-        key: 30,
-        name: "CSS3",
-        image: "logos/stack/css3.svg",
-        link: "https://www.w3.org/TR/CSS/#css",
-        type: "Frontend",
-    },
-    {
-        key: 32,
-        name: "tailwindcss",
-        image: "logos/stack/tailwind.svg",
-        link: "https://tailwindcss.com/",
-        type: "Frontend",
-        homepage: true,
-        stackSection: "Core Technologies",
-    },
-
-    {
-        key: 34,
-        name: "Material-UI",
-        image: "logos/stack/materialui.svg",
-        link: "https://material-ui.com/",
-        type: "Frontend",
-        stackSection: "Other Experience",
-    },
-    {
-        key: 37,
-        name: "shadcn",
-        image: "logos/stack/shadcn.png",
-        link: "https://ui.shadcn.com/",
-        type: "Frontend",
-        stackSection: "Other Experience",
-    },
-    {
-        key: 38,
-        name: "Mantine",
-        image: "logos/stack/mantine.svg",
-        link: "https://mantine.dev/",
-        type: "Frontend",
-        stackSection: "Other Experience",
-    },
-
-    // Backend Technologies
-    {
-        key: 50,
-        name: "Node.js",
-        image: "logos/stack/nodejs.svg",
-        link: "https://nodejs.org/",
+        key: 68,
+        name: "Convex",link: "https://www.convex.dev/",
         type: "Backend",
-        stackSection: "Core Technologies",
-        homepage: true,
+        stackSection: "Other Experience",
     },
+    
     {
         key: 51,
-        name: "Express",
-        image: {
-            lightImage: "logos/stack/ExpressLight.svg",
-            darkImage: "logos/stack/ExpressDark.svg",
-        },
-        link: "https://expressjs.com/",
+        name: "Express",link: "https://expressjs.com/",
         type: "Backend",
     },
-    {
-        key: 56,
-        name: "Python",
-        image: "logos/stack/python.svg",
-        link: "https://www.python.org/",
-        type: "Backend",
-    },
+    
     {
         key: 58,
-        name: "GraphQL",
-        image: "logos/stack/graphql.png",
-        link: "https://graphql.org/",
+        name: "GraphQL",link: "https://graphql.org/",
         type: "Backend",
         stackSection: "Currently Exploring",
     },
+    
     {
-        key: 68,
-        name: "Convex",
-        image: "logos/stack/convex.svg",
-        link: "https://www.convex.dev/",
+        key: 50,
+        name: "Node.js",link: "https://nodejs.org/",
         type: "Backend",
-        stackSection: "Other Experience",
-    },
-
-    // Databases
-    {
-        key: 52,
-        name: "MongoDB",
-        image: {
-            lightImage: "logos/stack/mongoDBLight.svg",
-            darkImage: "logos/stack/mongoDBDark.svg",
-        },
-        link: "https://www.mongodb.com/",
-        type: "Database",
-        stackSection: "Other Experience",
-    },
-    {
-        key: 54,
-        name: "Prisma",
-        image: {
-            lightImage: "logos/stack/PrismaPurple.svg",
-            darkImage: "logos/stack/Prisma.svg"
-        },
-        link: "https://www.prisma.io/",
-        type: "Database",
-        homepage: true,
         stackSection: "Core Technologies",
-    },
-    {
-        key: 55,
-        name: "PostgreSQL",
-        image: "logos/stack/postgresql.svg",
-        link: "https://www.postgresql.org/",
-        type: "Database",
         homepage: true,
-        stackSection: "Core Technologies",
     },
-
-    // Mobile
+    
     {
         key: 101,
-        name: "Expo",
-        image: {
-            darkImage: "logos/stack/expo.png",
-            lightImage: "logos/stack/expoDark.svg",
-        },
-        link: "https://expo.dev/",
+        name: "Expo",link: "https://expo.dev/",
         type: "Mobile",
         stackSection: "Currently Exploring",
     },
-
-    // Tools
+    
     {
-        key: 71,
-        name: "Figma",
-        image: "logos/stack/figma.svg",
-        link: "https://www.figma.com",
-        type: "Tool",
-        stackSection: "Additional Tools",
+        key: 52,
+        name: "MongoDB",link: "https://www.mongodb.com/",
+        type: "Database",
+        stackSection: "Other Experience",
     },
+    
     {
-        key: 72,
-        name: "Commander",
-        image: {
-            lightImage: "logos/stack/commanderBlack.svg",
-            darkImage: "logos/stack/commanderWhite.svg",
-        },
-        link: "https://github.com/tj/commander.js",
-        type: "Tool",
-        stackSection: "Additional Tools",
+        key: 55,
+        name: "PostgreSQL",link: "https://www.postgresql.org/",
+        type: "Database",
+        homepage: true,
+        stackSection: "Core Technologies",
     },
+    
     {
-        key: 73,
-        name: "Vite",
-        image: "logos/stack/vite.svg",
-        link: "https://vitejs.dev/",
-        type: "Tool",
-        stackSection: "Additional Tools",
+        key: 54,
+        name: "Prisma",link: "https://www.prisma.io/",
+        type: "Database",
+        homepage: true,
+        stackSection: "Core Technologies",
     },
-    {
-        key: 74,
-        name: "GitHub Copilot",
-        image: "logos/stack/copilot.png",
-        link: "https://github.com/features/copilot",
-        type: "Tool",
-        stackSection: "Additional Tools",
-    },
-    {
-        key: 75,
-        name: "ChatGPT",
-        image: "logos/stack/ChatGPT_logo.svg.png",
-        link: "https://chat.openai.com/",
-        type: "Tool",
-    },
+    
     {
         key: 76,
-        name: "Stripe",
-        image: "logos/stack/stripe.png",
-        link: "https://www.stripe.com/",
+        name: "Stripe",link: "https://www.stripe.com/",
         type: "Tool",
         stackSection: "Additional Tools",
     },
-
-    // CI/CD
+    
+    {
+        key: 75,
+        name: "ChatGPT",link: "https://chat.openai.com/",
+        type: "Tool",
+    },
+    
+    {
+        key: 74,
+        name: "GitHub Copilot",link: "https://github.com/features/copilot",
+        type: "Tool",
+        stackSection: "Additional Tools",
+    },
+    
+    {
+        key: 30,
+        name: "CSS3",link: "https://www.w3.org/TR/CSS/#css",
+        type: "Frontend",
+    },
+    
+    {
+        key: 32,
+        name: "tailwindcss",link: "https://tailwindcss.com/",
+        type: "Frontend",
+        homepage: true,
+        stackSection: "Core Technologies",
+    },
+    
+    {
+        key: 80,
+        name: "Jest",link: "https://jestjs.io/",
+        type: "CI/CD",
+        stackSection: "Additional Tools",
+    },
+    
+    {
+        key: 81,
+        name: "React Testing Library",link: "https://testing-library.com/docs/react-testing-library/intro/",
+        type: "CI/CD",
+        stackSection: "Additional Tools",
+    },
+    
+    {
+        key: 73,
+        name: "Vite",link: "https://vitejs.dev/",
+        type: "Tool",
+        stackSection: "Additional Tools",
+    },
+    
+    {
+        key: 11,
+        name: "Webpack",link: "https://webpack.js.org/",
+        type: "Frontend",
+    },
+    
     {
         key: 86,
-        name: "Docker",
-        image: "logos/stack/docker.svg",
-        link: "https://www.docker.com/",
+        name: "Docker",link: "https://www.docker.com/",
         type: "CI/CD",
         stackSection: "Currently Exploring",
     },
-    {
-        key: 80,
-        name: "Jest",
-        image: "logos/stack/jest.svg",
-        link: "https://jestjs.io/",
-        type: "CI/CD",
-        stackSection: "Additional Tools",
-    },
-    {
-        key: 81,
-        name: "React Testing Library",
-        image: "logos/stack/rtl.png",
-        link: "https://testing-library.com/docs/react-testing-library/intro/",
-        type: "CI/CD",
-        stackSection: "Additional Tools",
-    },
-    {
-        key: 87,
-        name: "Vercel",
-        image: {
-            lightImage: "logos/stack/vercelLight.svg",
-            darkImage: "logos/stack/vercelDark.svg",
-        },
-        link: "https://vercel.com/",
-        type: "CI/CD",
-        stackSection: "Additional Tools",
-    },
-    {
-        key: 88,
-        name: "Netlify",
-        image: "logos/stack/netlify.png",
-        link: "https://www.netlify.com/",
-        type: "CI/CD",
-        stackSection: "Other Experience",
-    },
-    {
-        key: 89,
-        name: "Railway",
-        image: {
-            lightImage: "logos/stack/railwayDark.svg",
-            darkImage: "logos/stack/railwayLight.svg",
-        },
-        link: "https://www.railway.app/",
-        type: "CI/CD",
-        stackSection: "Other Experience",
-    },
-
-    // Project Management
-    {
-        key: 110,
-        name: "Notion",
-        image: "logos/stack/notion.svg",
-        link: "https://www.notion.so/",
-        type: "Project Management",
-        stackSection: "Other Experience",
-    },
-    {
-        key: 111,
-        name: "Trello",
-        image: "logos/stack/trello.svg",
-        link: "https://www.trello.com/",
-        type: "Project Management",
-        stackSection: "Other Experience",
-    },
-    {
-        key: 112,
-        name: "Slack",
-        image: "logos/stack/slack.svg",
-        link: "https://www.slack.com/",
-        type: "Project Management",
-        stackSection: "Other Experience",
-    },
-
-    // Content Management
-    {
-        key: 120,
-        name: "Wordpress",
-        image: "logos/stack/wordpress.png",
-        link: "https://www.wordpress.com/",
-        type: "Content Management",
-    },
-    {
-        key: 121,
-        name: "Shopify",
-        image: "logos/stack/shopify.svg",
-        link: "https://www.shopify.com/",
-        type: "Content Management",
-    },
-
-    // Cloud Technologies
+    
     {
         key: 130,
-        name: "AWS",
-        image: {
-            darkImage: "logos/stack/awsDark.png",
-            lightImage: "logos/stack/awsLight.png",
-        },
-        link: "https://aws.amazon.com/",
+        name: "AWS",link: "https://aws.amazon.com/",
         type: "Cloud",
+    },
+    
+    {
+        key: 72,
+        name: "Commander",link: "https://github.com/tj/commander.js",
+        type: "Tool",
+        stackSection: "Additional Tools",
+    },
+    
+    {
+        key: 71,
+        name: "Figma",link: "https://www.figma.com",
+        type: "Tool",
+        stackSection: "Additional Tools",
+    },
+    
+    {
+        key: 88,
+        name: "Netlify",link: "https://www.netlify.com/",
+        type: "CI/CD",
+        stackSection: "Other Experience",
+    },
+    
+    {
+        key: 110,
+        name: "Notion",link: "https://www.notion.so/",
+        type: "Project Management",
+        stackSection: "Other Experience",
+    },
+    
+    {
+        key: 89,
+        name: "Railway",link: "https://www.railway.app/",
+        type: "CI/CD",
+        stackSection: "Other Experience",
+    },
+    
+    {
+        key: 121,
+        name: "Shopify",link: "https://www.shopify.com/",
+        type: "Content Management",
+    },
+    
+    {
+        key: 112,
+        name: "Slack",link: "https://www.slack.com/",
+        type: "Project Management",
+        stackSection: "Other Experience",
+    },
+    
+    {
+        key: 111,
+        name: "Trello",link: "https://www.trello.com/",
+        type: "Project Management",
+        stackSection: "Other Experience",
+    },
+    
+    {
+        key: 87,
+        name: "Vercel",link: "https://vercel.com/",
+        type: "CI/CD",
+        stackSection: "Additional Tools",
+    },
+    
+    {
+        key: 120,
+        name: "Wordpress",link: "https://www.wordpress.com/",
+        type: "Content Management",
     },
 ] as Technology[];
 
@@ -431,8 +349,8 @@ const projects = [
         key: 1,
         name: "sherds.eu",
         image: "logos/clients/sherds.png",
-        subTitle: "Anonymized job and candidate matching platform.",
-        description: "Removing gender bias in tech recruitment through by removing biases.",
+        subTitle: "Anonymized recruitment platform.",
+        description: "Ensuring equality in tech recruitment by removing biases.",
         status: "in progress",
         type: "freelance",
         createdBy: me,
@@ -446,9 +364,9 @@ const projects = [
             image: "images/clients/jennifer.jpeg",
             linkedIn: "https://www.linkedin.com/in/jennifer-gbologan-35453146/",
             position: "Founder",
-            needed: "Jennifer needed an MVP to demonstrate the potential of her anonymized recruitment platform and attract investors.",
-            solution: "Designed and developed a server-side rendered web application with a focus on performance, security, and user experience to effectively showcase the platform's value proposition.",
-            challenge: "Programmed algorithm to ensure unbiased matching between job seekers and employers. Now part of the team to transition the MVP to a full production-ready platform.",
+            needed: "Jennifer needed an MVP to demonstrate the potential of her platform and attract investors.",
+            solution: "Designed and developed a server-side rendered app to effectively showcase the platform's value.",
+            challenge: "Programmed algorithm to ensure unbiased matching. Now part of the team to make the MVP a reality.",
             testimonial: "Benjamin is a great addition to the SHERDS.eu team. His full stack expertise was clear in both the front-end experience and the back-end architecture, which are clean, efficient, and easy to maintain. He anticipates potential issues, proposes smart solutions, and collaborates very well with the team, which will help us deliver a high-quality result on time.",
         }
     },
@@ -469,9 +387,9 @@ const projects = [
         image: "images/clients/georg.jpeg",
         linkedIn: "https://www.linkedin.com/in/georgbasler/",
         position: "Founder",
-        needed: "Georg needed a modern, user-friendly interface for his bioinformatics platform to make complex scientific data accessible and actionable for researchers.",
-        solution: "Redesigned the frontend with a focus on intuitive data visualization, interactive features, and seamless integration with backend data sources to enhance the user experience for scientists.",
-        challenge: "Translating complex scientific workflows into a clean, user-friendly interface while ensuring optimal performance and responsiveness.",
+        needed: "Georg needed a user-friendly interface  to make complex scientific data accessible for researchers.",
+        solution: "Redesigned the UI with best practices and interactive features to enhance the UX.",
+        challenge: "Translating complex scientific workflows into a clean interface while ensuring optimal performance.",
         testimonial: "Ben is an outstanding developer. He took our complex requirements and turned them into a clean, intuitive interface that our users love. His attention to detail, problem-solving skills, and ability to communicate technical concepts clearly made the entire process smooth and efficient. We couldn't be happier with the result.",
     }
     },
@@ -482,16 +400,45 @@ const projects = [
             lightImage: "logos/clients/stackscanBlack.svg",
             darkImage: "logos/clients/stackscanWhite.svg",
         },
-        description: "Automatically detect the tech stack of any project and generate structured output (JSON, Markdown, or badges).",
+        subTitle: "A CLI tool to detect project tech stacks.",
+        description: "Automatically import logos for detected technologies and generate structured output in JSON & Markdown.",
         status: "completed",
         type: "personal",
         createdBy: me,
         stackscanKey: "stackscan",
         techStack: [],
-        tags: ["Dev Tool", "CLI Tool", "Open Source"],
+        tags: ["CLI Tool"],
         packageLink: "https://www.npmjs.com/package/stackscan",
         repoLink: "https://github.com/benjamindotdev/stackscan",
+        reason: {
+            needed: "I found having to trawl the internet for specific tech stack logos repetitive and annoying, clearly in need of automation.",
+            solution: "Stackscan reads the package.json of a project to automatically detect the technologies used and import logos into your project's public directory and updating your README.md.",
+            challenge: "The main challenge has been exporting the logos in a clean and consistent way, preserving branding while allowing the user to change their colour if needed."
+        }
     },
+    {
+        key: 4,
+        name: "Modular Vector Playground",
+        image: {
+            lightImage: "logos/clients/mvpLight.svg",
+            darkImage: "logos/clients/mvpDark.svg"
+        },
+        subTitle: "A tool for making logos for MVPs, quickly.",
+        description: "Generate modular vector logos with customizable colors and shapes for rapid MVP branding.",
+        status: "completed",
+        type: "personal",
+        createdBy: me,
+        stackscanKey: "mvp",
+        techStack: [],
+        tags: ["UX/UI Design"],
+        deployedLink: "https://mvp-nu-three.vercel.app/",
+        repoLink: "https://github.com/benjamindotdev/mvp",
+        reason: {
+            needed: "I found myself needing to make quick logos for MVPs and projects, but didn't want to spend time on complex design tools or settle for generic AI-generated ones.",
+            solution: "The Modular Vector Playground allows users to create simple, modular logos by customizing shapes and colors, providing a fast and flexible way to generate unique branding assets for MVPs.",
+            challenge: "The main challenge was designing an intuitive interface that allows for creativity while keeping the logo generation process quick and straightforward."
+        }
+    }
     
 ] as Project[];
 
@@ -570,13 +517,7 @@ const benjamin = {
                     text: "Assisted with curriculum delivery, troubleshooting, and general student mentorship",
                 },
             ],
-            techStack: [
-                "React",
-                "Typescript",
-                "tailwindcss",
-                "Express",
-                "MongoDB",
-            ],
+            stackscanKey: "ironhack",
             skills: ["Teaching"],
             link: "https://www.ironhack.com/de-en",
             logo: {
@@ -608,14 +549,7 @@ const benjamin = {
                     text: "Integrated frontend components with backend APIs, ensuring smooth data flow and stable user experience",
                 },
             ],
-            techStack: [
-                "HTML5",
-                "CSS3",
-                "Javascript",
-                "Webpack",
-                "Shopify",
-                "Wordpress",
-            ],
+            stackscanKey: "organicsbest",
             skills: ["Basic integration"],
             link: "https://www.organicsbestshop.com",
             logo: "logos/experience/organicsbest.webp",
@@ -648,14 +582,7 @@ const benjamin = {
                     text: "Collaborated closely with the founder on rapid prototyping and refinement of user-facing features",
                 },
             ],
-            techStack: [
-                "React",
-                "Typescript",
-                "Zustand",
-                "tailwindcss",
-                "Python",
-                "AWS",
-            ],
+            stackscanKey: "genietechbio",
             skills: ["REST APIs"],
             link: "https://www.genietechbio.com",
             logo: "logos/experience/genie.jpeg",
@@ -688,13 +615,7 @@ const benjamin = {
                     text: "Implemented scalable state and API patterns to support rapid iteration and future product expansion",
                 }
             ],
-            techStack: [
-                "Next.js",
-                "Typescript",
-                "shadcn",
-                "tailwindcss",
-                "Convex",
-            ],
+            stackscanKey: "shep",
             skills: ["Full-stack architecture"],
             link: "https://www.shephq.com/",
             logo: "logos/experience/shep.png",
@@ -726,8 +647,8 @@ const benjamin = {
         },
         {
             key: 4,
-            title: "Projects",
-            route: "/projects",
+            title: "Open Source",
+            route: "/open-source",
         },
         {
             key: 5,

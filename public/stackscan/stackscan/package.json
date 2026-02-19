@@ -1,12 +1,12 @@
 {
   "name": "stackscan",
-  "version": "0.1.8",
+  "version": "0.1.19",
   "description": "Automatically detect tech stacks from repositories and generate logos, JSON, and markdown for portfolios.",
-  "main": "dist/index.cjs",
-  "module": "dist/index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "bin": {
-    "stackscan": "./dist/cli.js"
+    "stackscan": "dist/cli.js"
   },
   "scripts": {
     "build": "tsup src --format cjs,esm --dts --shims",
@@ -26,7 +26,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/benjamindotdev/stackscan.git"
+    "url": "git+https://github.com/benjamindotdev/stackscan.git"
   },
   "files": [
     "dist",

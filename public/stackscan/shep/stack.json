@@ -24,12 +24,36 @@
     "relativePath": "./public/assets/logos/frontend/react.svg"
   },
   {
+    "name": "Convex",
+    "slug": "convex",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/backend/convex.svg",
+    "type": "backend",
+    "color": null,
+    "relativePath": "./public/assets/logos/backend/convex.svg"
+  },
+  {
+    "name": "Node.js",
+    "slug": "@types/node",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/runtime/nodejs.svg",
+    "type": "runtime",
+    "color": null,
+    "relativePath": "./public/assets/logos/runtime/nodejs.svg"
+  },
+  {
     "name": "TanStack Query",
     "slug": "@tanstack/react-query",
     "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/fallback/reactquery.svg",
     "type": "state",
     "color": null,
     "relativePath": "./public/assets/logos/fallback/reactquery.svg"
+  },
+  {
+    "name": "shadcn/ui",
+    "slug": "shadcn-ui",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/css/shadcn.svg",
+    "type": "css",
+    "color": null,
+    "relativePath": "./public/assets/logos/css/shadcn.svg"
   },
   {
     "name": "TailwindCSS",
@@ -78,6 +102,14 @@
     "type": "lint",
     "color": null,
     "relativePath": "./public/assets/logos/lint/lintstaged.svg"
+  },
+  {
+    "name": "Lucide",
+    "slug": "lucide-react",
+    "logo": "https://raw.githubusercontent.com/benjamindotdev/stackscan/main/public/assets/logos/utility/lucide.svg",
+    "type": "utility",
+    "color": "#F56565",
+    "relativePath": "./public/assets/logos/utility/lucide.svg"
   },
   {
     "name": "Zod",

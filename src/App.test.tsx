@@ -6,7 +6,7 @@ import { Layout } from "./routes/Layout/Layout";
 import { Home } from "./routes/Home/Home";
 import { About } from "./routes/About/About";
 import { Certifications } from "./routes/Certifications/Certifications";
-import { Projects } from "./routes/Projects/Projects";
+import { OpenSource } from "./routes/OpenSource/OpenSource";
 import { benjamin } from "./constants";
 import { ThemeProvider } from "./contexts/ThemeContext";
 
@@ -66,8 +66,8 @@ describe("Root Component", () => {
                                 }
                             />
                             <Route
-                                path="projects"
-                                element={<Projects projects={benjamin.projects} />}
+                                path="open-source"
+                                element={<OpenSource projects={benjamin.projects} />}
                             />
                             <Route path="*" element={<Navigate to="../public/index.html" />} />
                         </Route>

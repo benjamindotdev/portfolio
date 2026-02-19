@@ -23,7 +23,6 @@ export const MobileFreelanceCard = ({
             : image.lightImage;
 
     const techsForDisplay = useStackscanTechs(project);
-    const link = deployedLink || repoLink || packageLink;
 
     return (
         <div className="w-full h-full flex items-center justify-center px-4">
@@ -38,7 +37,7 @@ export const MobileFreelanceCard = ({
                             loading="lazy"
                         />
                         <div className="flex flex-col gap-2 flex-1">
-                            <SubHeading text={name} className="text-xl"/>
+                            <SubHeading text={name} className="text-xl" url={deployedLink} />
                         </div>
                     </div>
                     <div className="flex items-center gap-2">
@@ -52,7 +51,7 @@ export const MobileFreelanceCard = ({
                                 <img src={theme === "dark" ? "logos/socials/githubWhite.png" : "logos/socials/githubBlack.png"} alt="GitHub" className="w-6 h-6" />
                             </a>
                         )}
-                        {link && <LinkButton link={link} />}
+
                     </div>
                 </div>
 
@@ -66,13 +65,13 @@ export const MobileFreelanceCard = ({
                     <div className="grid grid-cols-[auto_1fr] gap-x-3 gap-y-2 items-center">
                         {client.needed && (
                             <>
-                                <span className="text-sm">🎯</span>
+                                <span className="text-sm">💡</span>
                                 <p className="text-sm leading-relaxed m-0 text-slate-700 dark:text-portfolio-white">{client.needed}</p>
                             </>
                         )}
                         {client.solution && (
                             <>
-                                <span className="text-sm">💡</span>
+                                <span className="text-sm">🧠</span>
                                 <p className="text-sm leading-relaxed m-0 text-slate-700 dark:text-portfolio-white">{client.solution}</p>
                             </>
                         )}
@@ -119,12 +118,12 @@ export const MobileFreelanceCard = ({
 
                 {/* Tech Stack */}
                 {(techsForDisplay.length > 0 || (tags && tags.length > 0)) && (
-                    <div className="w-full mt-auto flex flex-col gap-2">
+                    <div className="w-full flex flex-col gap-4 mt-2 md:mt-0">
                         {techsForDisplay.length > 0 && (
                             <TechList techs={techsForDisplay} />
                         )}
                         {tags && tags.length > 0 && (
-                            <div className="flex flex-wrap gap-2 items-center">
+                            <div className="flex flex-wrap gap-2 items-center justify-center">
                                 {tags.map((tag, index) => (
                                     <SkillBadge key={index} skill={tag} />
                                 ))}

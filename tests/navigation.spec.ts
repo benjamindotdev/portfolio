@@ -14,10 +14,10 @@ test.describe('Navigation', () => {
         await expect(page).toHaveURL(/\/experience/);
     });
 
-    test('should navigate to Projects page', async ({ page }) => {
+    test('should navigate to Open Source page', async ({ page }) => {
         await page.goto('/');
-        await page.getByRole('link', { name: /projects/i }).click();
-        await expect(page).toHaveURL(/\/projects/);
+        await page.getByRole('link', { name: /open source/i }).click();
+        await expect(page).toHaveURL(/\/open-source/);
     });
 
     test('should navigate to Certifications page', async ({ page }) => {

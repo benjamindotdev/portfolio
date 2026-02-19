@@ -241,4 +241,3 @@ Track performance in production:
 # Lighthouse CI (optional)
 npm install -g @lhci/cli
 lhci autorun
-```

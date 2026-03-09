@@ -39,20 +39,20 @@ export const Home = ({
                         </h1>
                         <div className="flex flex-col gap-4 text-slate-700 dark:text-portfolio-white text-md md:text-xl font-lunasima">
                             <p>
-                                I'm the sole developer at{" "}
+                                I'm the Founding Engineer at{" "}
                                 <a
-                                    href="https://www.shephq.com/"
+                                    href="https://www.sherds.eu/"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-1 transition-colors duration-300 hover:text-portfolio-green"
+                                    className="transition-colors duration-300 hover:text-portfolio-green"
                                 >
-                                    Shep
-                                </a>
+                                    <p className="m-0 hidden">Sherds</p>
                                 <LazyLoadImage
-                                    src="logos/experience/shep.png"
-                                    alt="Shep logo"
-                                    className="inline-block w-8 h-8 ml-1 object-contain"
+                                    src="logos/clients/sherds.png"
+                                    alt="sherds logo"
+                                    className="inline-block w-auto h-5 md:h-6 lg:h-8 ml-2 mb-1 object-contain"
                                 />
+                                </a>
                             </p>
                             <p>
                                 I'm an

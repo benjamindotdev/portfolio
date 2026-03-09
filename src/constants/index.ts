@@ -558,7 +558,7 @@ const benjamin = {
         },
         {
             key: 4,
-            title: "Full Stack Web Developer",
+            title: "Full Stack Engineer",
             company: "Genie TechBio",
             location: "Berlin, DE",
             date: "April 2025 - June 2025",
@@ -591,7 +591,7 @@ const benjamin = {
         },
         {
             key: 6,
-            title: "Full Stack Web Developer",
+            title: "Founding Engineer",
             company: "Shep",
             location: "Berlin, DE",
             date: "July 2025 - Present",

@@ -2,18 +2,17 @@ import { PageText } from "../PageText/PageText";
 import { AboutImage } from "../AboutImage/AboutImage";
 import { CTAButton } from "@/components/shared/CTAButton/CTAButton";
 import { Briefcase, FolderGit2, Mail } from "lucide-react";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export const AboutCard = ({ image, text, showCTAs }: { image?: string; text: string; showCTAs?: boolean }) => {
-    // Check if text contains "Shep" and replace it with a link and logo
+    // Check if text contains "foxy bio" and replace it with a wordmark image
     const renderText = () => {
-        if (text.includes("Shep")) {
-            const parts = text.split("Shep");
+        if (text.includes("foxy bio")) {
+            const parts = text.split("foxy bio");
             return (
                 <p
                     className="text-slate-700 dark:text-portfolio-white text-lg md:text-xl lg:text-2xl/10 text-left"
                     dangerouslySetInnerHTML={{
-                        __html: `${parts[0]}<a href="https://www.shephq.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 transition-colors duration-300 hover:text-portfolio-green">Shep</a><img src="logos/experience/shep.png" alt="Shep logo" class="inline-block w-8 h-8 ml-1 object-contain" />${parts[1]}`
+                        __html: `${parts[0]}<img src="logos/experience/foxywordmark.svg" alt="foxy bio" class="inline-block h-5 md:h-6 w-auto mx-1.5 object-contain align-text-bottom" />${parts[1]}`
                     }}
                 />
             );

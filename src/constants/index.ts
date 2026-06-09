@@ -459,7 +459,7 @@ const benjamin = {
         },
         {
             key: 2,
-            text: "Today I'm the sole developer at Shep, working directly with the two founders of this early-stage fintech startup. I own the entire stack — from prototyping features to shipping production-ready code — and help define the architecture and product direction. Every feature is built end-to-end, which has given me strong experience in autonomy, stakeholder communication, and rapid iteration.",
+            text: "Today I'm the CTO at foxy bio, an AI bioinformatics startup that's been accepted into the SIBB incubator here in Berlin. I lead the technical strategy and build the platform end-to-end — making architecture decisions, shipping production-ready code, and driving product direction. Working at the intersection of AI and life sciences has deepened my experience in technical leadership, cross-domain problem solving, and building software with real-world scientific impact.",
             showCTAs: true,
         }
     ],
@@ -558,7 +558,7 @@ const benjamin = {
         },
         {
             key: 4,
-            title: "Full Stack Web Developer",
+            title: "Full Stack Engineer",
             company: "Genie TechBio",
             location: "Berlin, DE",
             date: "April 2025 - June 2025",
@@ -591,10 +591,10 @@ const benjamin = {
         },
         {
             key: 6,
-            title: "Full Stack Web Developer",
+            title: "Founding Engineer",
             company: "Shep",
             location: "Berlin, DE",
-            date: "July 2025 - Present",
+            date: "July 2025 - May 2026",
             description:
                 "AI-powered financial dashboard enabling unified visibility across multiple SaaS tools and analytics sources",
             details: [
@@ -620,8 +620,44 @@ const benjamin = {
             link: "https://www.shephq.com/",
             logo: "logos/experience/shep.png",
             type: "Full-time",
-            isCurrent: true,
+            isCurrent: false,
 
+        },
+        {
+            key: 7,
+            title: "CTO",
+            company: "foxy bio",
+            location: "Berlin, DE",
+            date: "June 2026 - Present",
+            description:
+                "AI bioinformatics startup accepted into the SIBB incubator",
+            details: [
+                {
+                    key: 0,
+                    text: "Lead technical strategy and architecture for an AI-driven bioinformatics platform",
+                },
+                {
+                    key: 1,
+                    text: "Accepted into the SIBB (Startup Initiative Biotech Berlin) incubator programme",
+                },
+                {
+                    key: 2,
+                    text: "Building the full-stack platform end-to-end, from data pipelines to user-facing interfaces",
+                },
+                {
+                    key: 3,
+                    text: "Driving product direction in close collaboration with the founding team",
+                },
+            ],
+            stackscanKey: "foxybio",
+            skills: ["Technical Leadership"],
+            link: "https://foxybio.com",
+            additionalLinks: [
+                { url: "https://sibb.de/en/", logo: "logos/experience/SIBB.svg", alt: "SIBB", className: "brightness-0 dark:invert" },
+            ],
+            logo: "logos/experience/foxyicon.svg",
+            type: "Full-time",
+            isCurrent: true,
         }
     ],
     links: [

@@ -46,12 +46,12 @@ export const FreelanceCard = ({
                 <div className="flex items-center gap-2">
                     {packageLink && (
                         <a href={packageLink} target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100 transition-opacity">
-                            <img src="logos/socials/npm.png" alt="npm" className="h-6" />
+                            <img src="logos/socials/npm.png" alt="npm" className="h-6" loading="lazy" />
                         </a>
                     )}
                     {repoLink && (
                         <a href={repoLink} target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100 transition-opacity">
-                            <img src={theme === "dark" ? "logos/socials/githubWhite.png" : "logos/socials/githubBlack.png"} alt="GitHub" className="w-6 h-6" />
+                            <img src={theme === "dark" ? "logos/socials/githubWhite.png" : "logos/socials/githubBlack.png"} alt="GitHub" className="w-6 h-6" loading="lazy" />
                         </a>
                     )}
                 </div>
@@ -93,7 +93,7 @@ export const FreelanceCard = ({
             {client?.image && client?.name &&
                 <div className="w-full grid grid-cols-[auto_auto_1fr] gap-4 items-start">
                     <div className="flex items-center gap-4">
-                        <img src={client.image} alt={client.name} className="w-12 h-12 rounded-full object-cover" />
+                        <img src={client.image} alt={client.name} className="w-12 h-12 rounded-full object-cover" loading="lazy" />
                         <div className="flex flex-col justify-center">
                             <p className="text-sm font-medium text-slate-700 dark:text-portfolio-white text-nowrap">{client.name}</p>
                             <p className="text-xs opacity-80 text-slate-700 dark:text-portfolio-white text-nowrap">{client.position}</p>

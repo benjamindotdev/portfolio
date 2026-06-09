@@ -36,6 +36,7 @@ type ExperienceItem = {
     stackscanKey?: string;
     skills?: string[];
     link?: string;
+    additionalLinks?: { url: string; logo: string; alt: string; className?: string }[];
     logo: string | { lightImage: string; darkImage: string };
     type: "Full-time" | "Part-time" | "Internship" | "Contract" | "Freelance" | "Volunteer";
     isCurrent?: boolean;

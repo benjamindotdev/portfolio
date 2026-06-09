@@ -117,6 +117,7 @@ export const Card = ({ item, type }: CardProps) => {
                         className="h-auto w-12 rounded"
                         src={getLogoSrc(cardData.logo)}
                         alt={cardData.title}
+                        loading="lazy"
                     />
                     <div className="flex flex-col gap-2 flex-1">
                         <SubHeading text={cardData.title} />

@@ -44,10 +44,10 @@ describe("Home Component", () => {
             screen.getByText((content) => content.includes("Benjamin"))
         ).toBeInTheDocument();
         expect(
-            screen.getByText((content) => content.includes("Founding Engineer at"))
+            screen.getByText((content) => content.includes("CTO at"))
         ).toBeInTheDocument();
         expect(
-            screen.getByAltText("sherds logo")
+            screen.getByAltText("foxy bio")
         ).toBeInTheDocument();
         expect(
             screen.getByAltText("Ironhack")

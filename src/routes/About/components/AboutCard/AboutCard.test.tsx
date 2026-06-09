@@ -32,11 +32,11 @@ test("renders without image when image prop is not provided", () => {
     expect(screen.queryByRole("img")).not.toBeInTheDocument();
 });
 
-test("renders text with Shep link and logo", () => {
-    render(<AboutCard text="I work at Shep building amazing products" />);
-    const link = screen.getByText("Shep").closest("a");
-    expect(link).toHaveAttribute("href", "https://www.shephq.com/");
-    expect(link).toHaveAttribute("target", "_blank");
+test("renders text with foxy bio wordmark", () => {
+    render(<AboutCard text="I'm the CTO at foxy bio, an AI bioinformatics startup" />);
+    const img = screen.getByAltText("foxy bio");
+    expect(img).toBeInTheDocument();
+    expect(img).toHaveAttribute("src", "logos/experience/foxywordmark.svg");
 });
 
 test("renders CTAs when showCTAs is true", () => {

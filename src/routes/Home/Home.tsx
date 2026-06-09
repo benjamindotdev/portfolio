@@ -5,7 +5,6 @@ import { CTAButton } from "@/components/shared/CTAButton/CTAButton";
 import { PixelBClipDefs } from "@/components/shared/PixelBClipDefs/PixelBClipDefs";
 import { TechLogoImage } from "@/components/shared/TechLogoImage/TechLogoImage";
 import { Rocket, BookOpen, Lightbulb } from "lucide-react";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 import { PageContainer } from "@/routes/Layout/components/PageContainer/PageContainer";
 import { useTheme } from "@/contexts/ThemeContext";
 
@@ -38,25 +37,30 @@ export const Home = ({
                             </strong>
                         </h1>
                         <div className="flex flex-col gap-4 text-slate-700 dark:text-portfolio-white text-md md:text-xl font-lunasima">
-                            <p>
-                                I'm the Founding Engineer at{" "}
+                            <div className="flex flex-row items-center gap-1.5 flex-wrap">
+                                <span>I'm the CTO at</span>
+                                <img
+                                    src="logos/experience/foxywordmark.svg"
+                                    alt="foxy bio"
+                                    className="h-5 md:h-6 w-auto object-contain translate-y-0.5 ml-1.5"
+                                />
+                                <span>, a startup with</span>
                                 <a
-                                    href="https://www.sherds.eu/"
+                                    href="https://sibb.de/en/"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="transition-colors duration-300 hover:text-portfolio-green"
+                                    className="flex items-center"
                                 >
-                                    <p className="m-0 hidden">Sherds</p>
-                                <LazyLoadImage
-                                    src="logos/clients/sherds.png"
-                                    alt="sherds logo"
-                                    className="inline-block w-auto h-5 md:h-6 lg:h-8 ml-2 mb-1 object-contain"
-                                />
+                                    <img
+                                        src="logos/experience/SIBB.svg"
+                                        alt="SIBB"
+                                        className="h-8 md:h-10 w-auto object-contain brightness-0 dark:invert translate-y-1"
+                                    />
                                 </a>
-                            </p>
+                            </div>
                             <p>
                                 I'm an
-                                <LazyLoadImage
+                                <img
                                     src={theme === "dark" ? "logos/experience/IronhackDark.png" : "logos/experience/IronhackLight.png"}
                                     alt="Ironhack"
                                     className="inline-block h-5 md:h-6 w-auto mx-1.5 object-contain align-text-bottom"

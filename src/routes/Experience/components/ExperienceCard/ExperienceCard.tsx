@@ -25,7 +25,8 @@ export const ExperienceCard = ({
         description, 
         details, 
         skills, 
-        link, 
+        link,
+        additionalLinks,
         logo, 
         type, 
         isCurrent 
@@ -48,7 +49,7 @@ export const ExperienceCard = ({
             <div className="w-full flex flex-row justify-between items-start overflow-hidden">
                 <div className="flex flex-row items-center gap-6">
                     <LazyLoadImage
-                        className="h-auto w-12 rounded"
+                        className="h-12 w-12 rounded object-contain"
                         src={logoSrc}
                         alt={company}
                         loading="lazy"
@@ -70,7 +71,24 @@ export const ExperienceCard = ({
                         </div>
                     </div>
                 </div>
-                {link && <LinkButton link={link} />}
+                <div className="flex flex-row items-center gap-2">
+                    {additionalLinks && additionalLinks.map((al, i) => (
+                        <a
+                            key={i}
+                            href={al.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center"
+                        >
+                            <img
+                                src={al.logo}
+                                alt={al.alt}
+                                className={`h-6 w-auto object-contain${al.className ? ` ${al.className}` : ""}`}
+                            />
+                        </a>
+                    ))}
+                    {link && <LinkButton link={link} />}
+                </div>
             </div>
 
             {/* Description - 10% */}

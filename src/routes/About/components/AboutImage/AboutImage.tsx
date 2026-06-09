@@ -11,6 +11,7 @@ export const AboutImage = ({
                 src={src}
                 alt={alt}
                 className="w-full h-full object-cover object-center"
+                loading="lazy"
             />
         </div>
     );

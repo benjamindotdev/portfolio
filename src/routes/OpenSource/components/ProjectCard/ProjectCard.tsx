@@ -40,12 +40,12 @@ export const ProjectCard = ({
                 <div className="flex items-center gap-2">
                     {packageLink && (
                         <a href={packageLink} target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100 transition-opacity">
-                            <img src="logos/socials/npm.png" alt="npm" className="h-6" />
+                            <img src="logos/socials/npm.png" alt="npm" className="h-6" loading="lazy" />
                         </a>
                     )}
                     {repoLink && (
                         <a href={repoLink} target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100 transition-opacity">
-                            <img src={theme === "dark" ? "logos/socials/githubWhite.png" : "logos/socials/githubBlack.png"} alt="GitHub" className="w-6 h-6" />
+                            <img src={theme === "dark" ? "logos/socials/githubWhite.png" : "logos/socials/githubBlack.png"} alt="GitHub" className="w-6 h-6" loading="lazy" />
                         </a>
                     )}
                 </div>

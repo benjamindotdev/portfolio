@@ -296,7 +296,7 @@ const projects = [
             "tailwindcss",
             "Vercel"
         ],
-        deployedLink: "https://solitairedaily.com",
+        deployedLink: "https://solitaire-daily.vercel.app",
         repoLink: "https://github.com/benjamindotdev/solitaire-case-study",
         tags: ["Performance Optimization"],
         client: {
@@ -370,29 +370,29 @@ const projects = [
             testimonial: "Benjamin is a great addition to the SHERDS.eu team. His full stack expertise was clear in both the front-end experience and the back-end architecture, which are clean, efficient, and easy to maintain. He anticipates potential issues, proposes smart solutions, and collaborates very well with the team, which will help us deliver a high-quality result on time.",
         }
     },
-    {
-    key: 2,
-    name: "foxybio.com",
-    image: "logos/clients/foxybio.png",
-    subTitle: "A bioinformatics data visualization tool.",
-    description: "Transforming complex scientific data into interactive plots and tables.",
-    status: "in progress",
-    type: "freelance",
-    stackscanKey: "foxybio",
-    tags: ["Data Visualization"],
-    deployedLink: "https://foxybio.com",
-    repoLink: "https://github.com/benjamindotdev/foxybio-case-study",
-    client: {
-        name: "Georg B.",
-        image: "images/clients/georg.jpeg",
-        linkedIn: "https://www.linkedin.com/in/georgbasler/",
-        position: "Founder",
-        needed: "Georg needed a user-friendly interface  to make complex scientific data accessible for researchers.",
-        solution: "Redesigned the UI with best practices and interactive features to enhance the UX.",
-        challenge: "Translating complex scientific workflows into a clean interface while ensuring optimal performance.",
-        testimonial: "Ben is an outstanding developer. He took our complex requirements and turned them into a clean, intuitive interface that our users love. His attention to detail, problem-solving skills, and ability to communicate technical concepts clearly made the entire process smooth and efficient. We couldn't be happier with the result.",
-    }
-    },
+    // {
+    // key: 2,
+    // name: "foxybio.com",
+    // image: "logos/clients/foxybio.png",
+    // subTitle: "A bioinformatics data visualization tool.",
+    // description: "Transforming complex scientific data into interactive plots and tables.",
+    // status: "in progress",
+    // type: "freelance",
+    // stackscanKey: "foxybio",
+    // tags: ["Data Visualization"],
+    // deployedLink: "https://foxybio.com",
+    // repoLink: "https://github.com/benjamindotdev/foxybio-case-study",
+    // client: {
+    //     name: "Georg B.",
+    //     image: "images/clients/georg.jpeg",
+    //     linkedIn: "https://www.linkedin.com/in/georgbasler/",
+    //     position: "Founder",
+    //     needed: "Georg needed a user-friendly interface  to make complex scientific data accessible for researchers.",
+    //     solution: "Redesigned the UI with best practices and interactive features to enhance the UX.",
+    //     challenge: "Translating complex scientific workflows into a clean interface while ensuring optimal performance.",
+    //     testimonial: "Ben is an outstanding developer. He took our complex requirements and turned them into a clean, intuitive interface that our users love. His attention to detail, problem-solving skills, and ability to communicate technical concepts clearly made the entire process smooth and efficient. We couldn't be happier with the result.",
+    // }
+    // },
     {
         key: 3,
         name: "stackscan",
